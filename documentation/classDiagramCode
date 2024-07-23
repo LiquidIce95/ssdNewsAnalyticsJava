@@ -1,0 +1,155 @@
+stateDiagram-v2
+    state javaBackend{
+        state filters{
+
+            state controller{
+                request1 : GET /all
+                request2 : GET /search?term={searchTerm}
+                request3 : GET /article/{articleId}
+                request4 : GET /newspaper/{newspaperId}
+                request5 : GET /publisher/{publisherId}
+                request6 : GET /author/{authorId}
+                request7 : GET /owner/{ownerId}
+
+                note left of request1
+                    returns all the articels in the order in which
+                    they will appear. This is based on the user visiting
+                    the site and their preferences.
+                end note
+
+                note left of request2
+                    searches for articles based on a search term and
+                    returnes a list of articels that match, in
+                    descending order. searchterms can be anything
+                    from keywords to continuous text.
+
+                    For example:
+                    "13. AHV",
+                    "Was sind die Probleme mit der 13. AHV"
+                end note
+
+                note left of request3
+                    returns the full page of an article with anything
+                    it needs to display the full information of
+                    the article page.
+
+                    For example:
+                    The article, all articles of other
+                    newspapers that are about the same topic, the author,
+                    the publilsher, the owner, statistics about biases etc and
+                    other indices that allow the user to contextualise this
+                    article
+                end note
+
+                note left of request4
+                    returns all the articles of a certain newspaper,
+                    identified by the id, as well as all the infromation
+                    needed about this newspaper, to show the page of the
+                    newspaper.
+
+                    For example:
+                    All articles of a newspaper, the publisher, the authors,
+                    the owners, bias infrmation etc.
+                end note
+
+                note left of request5
+                    returns all the newspapers and magazins of a
+                    certain publisher, identified by the id, as well as
+                    all the infromation needed about this publisher,
+                    to show the page of the publisher.
+
+                    For example:
+                    All newspapers and magazinsof a publisher,
+                    the authors and the owners, bias infrmation etc.
+
+                end note
+
+                note left of request6
+                    all info about some author.
+                end note
+
+                note left of request7
+                    returns all the publishing houses this entity owns
+                    and inforamtion about it.
+                end note
+            }
+
+
+
+            controller --> services
+
+            state services{
+                service1 : service
+                service2 : ...
+                service3 : service
+            }
+
+            services --> repositories
+
+            state repositories{
+                repository1 : repository
+                repository2 : ...
+                repository3 : repository
+            }
+
+
+        }
+
+        state javaManager{
+            state DatabaseBackupManager {
+                databaseBackupProcessInstance : databaseBackupProcess Instance
+            }
+
+            state DataManager{
+
+                state ScraperDeployment {
+                    scraperInstance : scraper Instance
+                }
+                state DataParserDeployment {
+                    dataParserInstance : dataParser Instance
+                }
+                state ProfileAssemblerDeployment {
+                    ProfileAssemblerINstance : ProfileAssembler Instance
+                }
+            }
+        }
+
+    }
+
+    javaManager --> dataBase
+
+    repositories --> dataBase
+
+
+    javaManager --> pythonBackend
+
+    state pythonBackend{
+        pythonModules
+
+        note left of pythonModules
+            All the stuff needed to find the
+            Data as well as processing it etc.
+        end note
+    }
+
+    pythonBackend --> dataBase
+
+    note right of dataBase
+        The different schemas to save the data in different
+        processing steps. We never know when we develop better
+        processes, thus keep all the steps all the time, for future.
+    end note
+
+    state dataBase{
+        state relationOne{
+            data1 : Data
+        }
+
+        state relation...{
+            data2: Data
+        }
+
+        state relationN{
+            data3: Data
+        }
+    }
