@@ -1,44 +1,126 @@
+# IntelliJ IDEA
+.idea/
+*.iws
+*.iml
+*.ipr
+
+# Compiled class files
 *.class
 
-# Mobile Tools for Java (J2ME)
-.mtj.tmp/
+# Log files
+*.log
 
-# Package Files #
+# Maven
+target/
+pom.xml.tag
+pom.xml.releaseBackup
+pom.xml.versionsBackup
+pom.xml.next
+pom.xml.properties
+release.properties
+dependency-reduced-pom.xml
+buildNumber.properties
+
+# Temporary files
+*.swp
+*.swo
+
+# Package Files
 *.jar
 *.war
 *.ear
 
-#Gradle temporary files
-target/
+# IntelliJ IDEA plugin
+.idea_modules/
 
-# track the following gradle files
-!gradlew
-!gradlew.bat
-!gradle/wrapper/gradle-wrapper.jar
-!gradle/wrapper/gradle-wrapper.properties
+# OS-specific files
+.DS_Store
+Thumbs.db
 
-#Eclipse files
-**/.project
-**/.classpath
-**/.settings/
-blog/bin/
-**/.tern-project
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.pydist
+*.pyz
+*.pyz.zip
 
-#IntelliJ files
-**/*.iml
-**/.idea
-**/.gradle
+# Virtual Environment
+.env/
+.venv/
+env/
+venv/
+ENV/
+ENV.bak/
+venv.bak/
 
+# PyCharm
+*.idea/*
+*.pyc
+.pytest_cache/
+*.pypirc
+.vscode/
+.mypy_cache/
+.pyre/
+# Spyder project settings
+.spyderproject
+.spyproject
 
-# virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
-hs_err_pid*
+# Jupyter Notebook
+.ipynb_checkpoints
 
-/build
-*.DS_STORE
+# Environments
+.env
+.venv
+env.bak/
+.env.bak/
 
-# don't track the local.properties -> contains secrets
-local.properties
+# Test Coverage
+htmlcov/
+.tox/
+.nox/
+coverage.xml
+*.cover
+*.coverage
+.cache
+nosetests.xml
+coverage/
+*.code-workspace
 
-.vscode
+# PyInstaller
+#  Usually these files are written by a python script from a template
+#  before PyInstaller builds the exe, so as to inject date/other infos into it.
+*.manifest
+*.spec
 
-/bin
+# Installer logs
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Unit test / coverage reports
+.coverage
+.pytest_cache
+*,cover
+
+# Translations
+*.mo
+*.pot
+
+# Sphinx documentation
+docs/_build/
+
+# mypy
+dmypy.json
+dmypy.log
+
+# PyCharm sensitive or temporary files
+*.sublime-workspace
+*.sublime-project
+.idea/*
+
+sonar-project.properties
+.jqwik-database
+BUG!
+Run
+.gradle/*
