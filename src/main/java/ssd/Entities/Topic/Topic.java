@@ -14,7 +14,7 @@ public class Topic implements Serializable {
     @Column(name = "topic_id")
     private Long topicId;
 
-    @Column(nullable = false)
+    @Column(name = "topic_name",nullable = false)
     private String name;
 
     @ManyToOne

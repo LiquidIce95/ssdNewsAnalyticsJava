@@ -14,8 +14,8 @@ public class Publisher implements Serializable {
     @Column(name = "publisher_id")
     private Long publisherId;
 
-    @Column(name = "publisher_name", nullable = false)
-    private String publisherName;
+    @Column(name = "publisher_name",nullable = false)
+    private String name;
 
     @ManyToOne
     @JoinColumn(name = "publisher_analytics_id",nullable = false)
@@ -32,11 +32,11 @@ public class Publisher implements Serializable {
     }
 
     public String getPublisherName() {
-        return publisherName;
+        return name;
     }
 
     public void setPublisherName(String publisherName) {
-        this.publisherName = publisherName;
+        this.name = publisherName;
     }
 
     public PublisherAnalytics getPublisherAnalytics() {

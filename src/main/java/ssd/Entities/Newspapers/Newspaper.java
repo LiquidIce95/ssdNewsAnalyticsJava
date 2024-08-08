@@ -14,7 +14,7 @@ public class Newspaper implements Serializable {
     @Column(name = "newspaper_id")
     private Long newspaperId;
 
-    @Column(nullable = false)
+    @Column(name = "newspaper_name",nullable = false)
     private String name;
 
     @ManyToOne

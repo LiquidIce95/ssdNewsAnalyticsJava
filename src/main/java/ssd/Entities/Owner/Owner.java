@@ -14,7 +14,7 @@ public class Owner implements Serializable {
     @Column(name = "owner_id")
     private Long ownerId;
 
-    @Column(nullable = false)
+    @Column(name = "owner_name",nullable = false)
     private String name;
 
     @ManyToOne

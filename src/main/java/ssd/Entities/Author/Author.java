@@ -19,10 +19,10 @@ public class Author implements Serializable {
     @Column(name = "author_id")
     private Long authorId;
 
-    @Column(nullable = false)
+    @Column(name = "author_name",nullable = false)
     private String name;
 
-    @Column(nullable = false)
+    @Column(name = "author_age",nullable = false)
     private int age;
 
     @ManyToOne
