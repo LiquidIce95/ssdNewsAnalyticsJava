@@ -3,7 +3,7 @@ package ssd.Entities.Article;
 import javax.persistence.*;
 import java.io.Serializable;
 import ssd.Entities.Author.*;
-import ssd.Entities.Newspapers.*;
+import ssd.Entities.Newspaper.*;
 import ssd.Entities.Owner.*;
 import ssd.Entities.Publisher.*;
 import ssd.Entities.Topic.*;

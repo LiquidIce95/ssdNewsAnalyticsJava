@@ -1,4 +1,4 @@
-package ssd.Entities.Newspapers;
+package ssd.Entities.Newspaper;
 
 import org.mapstruct.*;
 import org.mapstruct.factory.Mappers;

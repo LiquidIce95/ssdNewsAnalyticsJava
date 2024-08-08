@@ -31,11 +31,11 @@ public class Publisher implements Serializable {
         this.publisherId = publisherId;
     }
 
-    public String getPublisherName() {
+    public String getName() {
         return name;
     }
 
-    public void setPublisherName(String publisherName) {
+    public void setName(String publisherName) {
         this.name = publisherName;
     }
 

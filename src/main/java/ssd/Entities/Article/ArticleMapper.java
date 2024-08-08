@@ -3,7 +3,7 @@ package ssd.Entities.Article;
 import org.mapstruct.*;
 import org.mapstruct.factory.Mappers;
 import ssd.Entities.Author.AuthorGetDTO;
-import ssd.Entities.Newspapers.NewspaperGetDTO;
+import ssd.Entities.Newspaper.NewspaperGetDTO;
 import ssd.Entities.Owner.OwnerGetDTO;
 import ssd.Entities.Publisher.PublisherGetDTO;
 import ssd.Entities.Topic.TopicGetDTO;

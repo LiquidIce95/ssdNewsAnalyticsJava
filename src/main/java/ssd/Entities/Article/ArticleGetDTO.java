@@ -1,10 +1,10 @@
 package ssd.Entities.Article;
 
 import ssd.Entities.Author.AuthorGetDTO;
+import ssd.Entities.Newspaper.NewspaperGetDTO;
 import ssd.Entities.Publisher.PublisherGetDTO;
 import ssd.Entities.Topic.TopicGetDTO;
 import ssd.Entities.Owner.OwnerGetDTO;
-import ssd.Entities.Newspapers.NewspaperGetDTO;
 
 public class ArticleGetDTO {
     private Long articleId;

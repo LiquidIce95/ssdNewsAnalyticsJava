@@ -1,4 +1,4 @@
-package ssd.Entities.Newspapers;
+package ssd.Entities.Newspaper;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;

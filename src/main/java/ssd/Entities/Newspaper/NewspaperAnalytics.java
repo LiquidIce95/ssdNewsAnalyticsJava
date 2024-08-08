@@ -1,4 +1,4 @@
-package ssd.Entities.Newspapers;
+package ssd.Entities.Newspaper;
 
 import javax.persistence.*;
 import java.io.Serializable;

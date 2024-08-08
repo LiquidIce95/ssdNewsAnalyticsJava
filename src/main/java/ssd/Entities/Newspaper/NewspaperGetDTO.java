@@ -1,4 +1,4 @@
-package ssd.Entities.Newspapers;
+package ssd.Entities.Newspaper;
 
 public class NewspaperGetDTO {
     private Long newspaperId;

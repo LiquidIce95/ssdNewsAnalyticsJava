@@ -1,4 +1,4 @@
-package ssd.Entities.Newspapers;
+package ssd.Entities.Newspaper;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;

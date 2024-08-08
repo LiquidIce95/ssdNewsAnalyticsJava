@@ -19,7 +19,7 @@ public class PublisherGetDTO {
         return name;
     }
 
-    public void setPublisherName(String publisherName) {
+    public void setName(String publisherName) {
         this.name = publisherName;
     }
 
