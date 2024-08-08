@@ -4,7 +4,7 @@ public class AuthorGetDTO {
     private Long authorId;
     private String name;
     private int age;
-    private AuthorAnalytics analytics;
+    private AuthorAnalytics authorAnalytics;
 
     // Getters and Setters
 
@@ -33,10 +33,10 @@ public class AuthorGetDTO {
     }
 
     public AuthorAnalytics getAnalytics() {
-        return analytics;
+        return authorAnalytics;
     }
 
     public void setAnalytics(AuthorAnalytics analytics) {
-        this.analytics = analytics;
+        this.authorAnalytics = analytics;
     }
 }

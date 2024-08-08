@@ -47,7 +47,7 @@ public class Article implements Serializable {
 
     @ManyToOne
     @JoinColumn(name = "article_analytics_id", nullable = false)
-    private ArticleAnalytics articleAnalytics;
+    private ArticleAnalytics analytics;
 
     // Getters and Setters
 
@@ -116,10 +116,10 @@ public class Article implements Serializable {
     }
 
     public ArticleAnalytics getArticleAnalytics() {
-        return articleAnalytics;
+        return analytics;
     }
 
     public void setArticleAnalytics(ArticleAnalytics articleAnalytics) {
-        this.articleAnalytics = articleAnalytics;
+        this.analytics = articleAnalytics;
     }
 }

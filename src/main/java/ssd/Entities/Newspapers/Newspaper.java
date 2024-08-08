@@ -19,7 +19,7 @@ public class Newspaper implements Serializable {
 
     @ManyToOne
     @JoinColumn(name = "newspaper_analytics_id",nullable = false)
-    private NewspaperAnalytics NewspaperAnalytics;
+    private NewspaperAnalytics analytics;
 
     // Getters and Setters
 
@@ -40,10 +40,10 @@ public class Newspaper implements Serializable {
     }
 
     public NewspaperAnalytics getNewspaperAnalytics() {
-        return NewspaperAnalytics;
+        return analytics;
     }
 
     public void setNewspaperAnalytics(NewspaperAnalytics NewspaperAnalytics) {
-        this.NewspaperAnalytics = NewspaperAnalytics;
+        this.analytics = NewspaperAnalytics;
     }
 }

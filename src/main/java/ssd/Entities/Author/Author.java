@@ -27,7 +27,7 @@ public class Author implements Serializable {
 
     @ManyToOne
     @JoinColumn(name = "author_analytics_id",nullable = false)
-    private AuthorAnalytics AuthorAnalytics;
+    private AuthorAnalytics analytics;
 
     // Getters and Setters
 
@@ -56,10 +56,10 @@ public class Author implements Serializable {
     }
 
     public AuthorAnalytics getAuthorAnalytics() {
-        return AuthorAnalytics;
+        return analytics;
     }
 
     public void setAuthorAnalytics(AuthorAnalytics AuthorAnalytics) {
-        this.AuthorAnalytics = AuthorAnalytics;
+        this.analytics = AuthorAnalytics;
     }
 }
