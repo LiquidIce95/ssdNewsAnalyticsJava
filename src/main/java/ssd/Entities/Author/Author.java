@@ -55,11 +55,11 @@ public class Author implements Serializable {
         this.age = age;
     }
 
-    public AuthorAnalytics getAuthorAnalytics() {
+    public AuthorAnalytics getAnalytics() {
         return analytics;
     }
 
-    public void setAuthorAnalytics(AuthorAnalytics AuthorAnalytics) {
+    public void setAnalytics(AuthorAnalytics AuthorAnalytics) {
         this.analytics = AuthorAnalytics;
     }
 }

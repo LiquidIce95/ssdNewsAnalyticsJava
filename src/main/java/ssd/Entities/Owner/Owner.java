@@ -39,11 +39,11 @@ public class Owner implements Serializable {
         this.name = name;
     }
 
-    public OwnerAnalytics getOwnerAnalytics() {
+    public OwnerAnalytics getAnalytics() {
         return analytics;
     }
 
-    public void setOwnerAnalytics(OwnerAnalytics analytics) {
+    public void setAnalytics(OwnerAnalytics analytics) {
         this.analytics = analytics;
     }
 }

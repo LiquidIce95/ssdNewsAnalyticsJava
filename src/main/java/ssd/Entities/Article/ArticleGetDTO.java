@@ -15,7 +15,7 @@ public class ArticleGetDTO {
     private OwnerGetDTO owner;
     private NewspaperGetDTO newspaper;
     private String content;
-    private ArticleAnalytics articleAnalytics;
+    private ArticleAnalytics analytics;
 
     // Getters and Setters
 
@@ -83,11 +83,11 @@ public class ArticleGetDTO {
         this.content = content;
     }
 
-    public ArticleAnalytics getArticleAnalytics() {
-        return articleAnalytics;
+    public ArticleAnalytics getAnalytics() {
+        return analytics;
     }
 
-    public void setArticleAnalytics(ArticleAnalytics articleAnalytics) {
-        this.articleAnalytics = articleAnalytics;
+    public void setAnalytics(ArticleAnalytics articleAnalytics) {
+        this.analytics = articleAnalytics;
     }
 }

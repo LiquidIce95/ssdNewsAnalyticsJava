@@ -39,11 +39,11 @@ public class Newspaper implements Serializable {
         this.name = name;
     }
 
-    public NewspaperAnalytics getNewspaperAnalytics() {
+    public NewspaperAnalytics getAnalytics() {
         return analytics;
     }
 
-    public void setNewspaperAnalytics(NewspaperAnalytics NewspaperAnalytics) {
+    public void setAnalytics(NewspaperAnalytics NewspaperAnalytics) {
         this.analytics = NewspaperAnalytics;
     }
 }

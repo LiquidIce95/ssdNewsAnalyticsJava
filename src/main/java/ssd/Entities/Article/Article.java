@@ -115,11 +115,11 @@ public class Article implements Serializable {
         this.content = content;
     }
 
-    public ArticleAnalytics getArticleAnalytics() {
+    public ArticleAnalytics getAnalytics() {
         return analytics;
     }
 
-    public void setArticleAnalytics(ArticleAnalytics articleAnalytics) {
+    public void setAnalytics(ArticleAnalytics articleAnalytics) {
         this.analytics = articleAnalytics;
     }
 }

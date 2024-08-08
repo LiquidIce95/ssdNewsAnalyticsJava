@@ -39,11 +39,11 @@ public class Publisher implements Serializable {
         this.name = publisherName;
     }
 
-    public PublisherAnalytics getPublisherAnalytics() {
+    public PublisherAnalytics getAnalytics() {
         return analytics;
     }
 
-    public void setPublisherAnalytics(PublisherAnalytics analytics) {
+    public void setAnalytics(PublisherAnalytics analytics) {
         this.analytics = analytics;
     }
 }

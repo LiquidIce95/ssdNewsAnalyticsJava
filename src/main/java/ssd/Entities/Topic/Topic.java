@@ -39,11 +39,11 @@ public class Topic implements Serializable {
         this.name = name;
     }
 
-    public TopicAnalytics getTopicAnalytics() {
+    public TopicAnalytics getAnalytics() {
         return analytics;
     }
 
-    public void setTopicAnalytics(TopicAnalytics analytics) {
+    public void setAnalytics(TopicAnalytics analytics) {
         this.analytics = analytics;
     }
 }
