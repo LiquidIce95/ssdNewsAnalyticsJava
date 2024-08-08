@@ -2,10 +2,12 @@ package ssd.Entities.Owner;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
+import java.util.List;
+
 
 @Repository("ownerRepository")
 public interface OwnerRepository extends JpaRepository<Owner, Long> {
-    Owner findByName(String name);
+    List<Owner> findByName(String name);
 
     Owner findById(long ownerId);
 }
