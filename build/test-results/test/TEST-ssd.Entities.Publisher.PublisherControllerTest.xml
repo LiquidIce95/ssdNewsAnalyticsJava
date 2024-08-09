@@ -1,0 +1,616 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="ssd.Entities.Publisher.PublisherControllerTest" tests="8" skipped="0" failures="0" errors="0" timestamp="2024-08-09T07:30:19" hostname="COMMODORE" time="0.115">
+  <properties/>
+  <testcase name="testGetAllPublishers_emptyDatabase()" classname="ssd.Entities.Publisher.PublisherControllerTest" time="0.012"/>
+  <testcase name="testGetAllPublishers()" classname="ssd.Entities.Publisher.PublisherControllerTest" time="0.01"/>
+  <testcase name="testGetPopularPublishers_noContent()" classname="ssd.Entities.Publisher.PublisherControllerTest" time="0.012"/>
+  <testcase name="testGetPublisherById()" classname="ssd.Entities.Publisher.PublisherControllerTest" time="0.023"/>
+  <testcase name="testGetPublishersByName_notFound()" classname="ssd.Entities.Publisher.PublisherControllerTest" time="0.015"/>
+  <testcase name="testGetPublisherById_notFound()" classname="ssd.Entities.Publisher.PublisherControllerTest" time="0.01"/>
+  <testcase name="testGetPopularPublishers()" classname="ssd.Entities.Publisher.PublisherControllerTest" time="0.012"/>
+  <testcase name="testGetPublishersByName()" classname="ssd.Entities.Publisher.PublisherControllerTest" time="0.014"/>
+  <system-out><![CDATA[2024-08-09 09:30:19.155  INFO 81449 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Neither @ContextConfiguration nor @ContextHierarchy found for test class [ssd.Entities.Publisher.PublisherControllerTest], using SpringBootContextLoader
+2024-08-09 09:30:19.156  INFO 81449 --- [    Test worker] o.s.t.c.support.AbstractContextLoader    : Could not detect default resource locations for test class [ssd.Entities.Publisher.PublisherControllerTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+2024-08-09 09:30:19.156  INFO 81449 --- [    Test worker] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [ssd.Entities.Publisher.PublisherControllerTest]: PublisherControllerTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2024-08-09 09:30:19.158  INFO 81449 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration ssd.SSDApplication for test class ssd.Entities.Publisher.PublisherControllerTest
+2024-08-09 09:30:19.159  INFO 81449 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.event.ApplicationEventsTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
+2024-08-09 09:30:19.159  INFO 81449 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@764bf20d, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@363bf9d, org.springframework.test.context.event.ApplicationEventsTestExecutionListener@184218af, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@e7423bb, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@270663e2, org.springframework.test.context.support.DirtiesContextTestExecutionListener@3987bfc8, org.springframework.test.context.transaction.TransactionalTestExecutionListener@31084f37, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@1ececb56, org.springframework.test.context.event.EventPublishingTestExecutionListener@a43a21e, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@ebe3561, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@7d3cb276, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@15c042fc, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@2045108, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener@7dee7914, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@6559cbdd]
+2024-08-09 09:30:19.162  INFO 81449 --- [    Test worker] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2024-08-09 09:30:19.162  INFO 81449 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2024-08-09 09:30:19.163  INFO 81449 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 1 ms
+Hibernate: 
+    select
+        publisher0_.publisher_id as publishe1_8_,
+        publisher0_.publisher_analytics_id as publishe3_8_,
+        publisher0_.publisher_name as publishe2_8_ 
+    from
+        publisher publisher0_
+Hibernate: 
+    select
+        publishera0_.publisher_analytics_id as publishe1_9_0_,
+        publishera0_.bias as bias2_9_0_,
+        publishera0_.engagementRate as engageme3_9_0_,
+        publishera0_.likes as likes4_9_0_,
+        publishera0_.shares as shares5_9_0_,
+        publishera0_.views as views6_9_0_ 
+    from
+        publisher_analytics publishera0_ 
+    where
+        publishera0_.publisher_analytics_id=?
+Hibernate: 
+    delete 
+    from
+        publisher 
+    where
+        publisher_id=?
+Hibernate: 
+    select
+        publishera0_.publisher_analytics_id as publishe1_9_,
+        publishera0_.bias as bias2_9_,
+        publishera0_.engagementRate as engageme3_9_,
+        publishera0_.likes as likes4_9_,
+        publishera0_.shares as shares5_9_,
+        publishera0_.views as views6_9_ 
+    from
+        publisher_analytics publishera0_
+Hibernate: 
+    delete 
+    from
+        publisher_analytics 
+    where
+        publisher_analytics_id=?
+Hibernate: 
+    insert 
+    into
+        publisher_analytics
+        (bias, engagementRate, likes, shares, views) 
+    values
+        (?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        publisher
+        (publisher_analytics_id, publisher_name) 
+    values
+        (?, ?)
+Hibernate: 
+    select
+        publisher0_.publisher_id as publishe1_8_,
+        publisher0_.publisher_analytics_id as publishe3_8_,
+        publisher0_.publisher_name as publishe2_8_ 
+    from
+        publisher publisher0_
+Hibernate: 
+    select
+        publishera0_.publisher_analytics_id as publishe1_9_0_,
+        publishera0_.bias as bias2_9_0_,
+        publishera0_.engagementRate as engageme3_9_0_,
+        publishera0_.likes as likes4_9_0_,
+        publishera0_.shares as shares5_9_0_,
+        publishera0_.views as views6_9_0_ 
+    from
+        publisher_analytics publishera0_ 
+    where
+        publishera0_.publisher_analytics_id=?
+Hibernate: 
+    delete 
+    from
+        publisher 
+    where
+        publisher_id=?
+Hibernate: 
+    select
+        publisher0_.publisher_id as publishe1_8_,
+        publisher0_.publisher_analytics_id as publishe3_8_,
+        publisher0_.publisher_name as publishe2_8_ 
+    from
+        publisher publisher0_
+2024-08-09 09:30:19.175  INFO 81449 --- [    Test worker] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2024-08-09 09:30:19.175  INFO 81449 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2024-08-09 09:30:19.175  INFO 81449 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 0 ms
+Hibernate: 
+    select
+        publisher0_.publisher_id as publishe1_8_,
+        publisher0_.publisher_analytics_id as publishe3_8_,
+        publisher0_.publisher_name as publishe2_8_ 
+    from
+        publisher publisher0_
+Hibernate: 
+    select
+        publishera0_.publisher_analytics_id as publishe1_9_,
+        publishera0_.bias as bias2_9_,
+        publishera0_.engagementRate as engageme3_9_,
+        publishera0_.likes as likes4_9_,
+        publishera0_.shares as shares5_9_,
+        publishera0_.views as views6_9_ 
+    from
+        publisher_analytics publishera0_
+Hibernate: 
+    delete 
+    from
+        publisher_analytics 
+    where
+        publisher_analytics_id=?
+Hibernate: 
+    insert 
+    into
+        publisher_analytics
+        (bias, engagementRate, likes, shares, views) 
+    values
+        (?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        publisher
+        (publisher_analytics_id, publisher_name) 
+    values
+        (?, ?)
+Hibernate: 
+    select
+        publisher0_.publisher_id as publishe1_8_,
+        publisher0_.publisher_analytics_id as publishe3_8_,
+        publisher0_.publisher_name as publishe2_8_ 
+    from
+        publisher publisher0_
+Hibernate: 
+    select
+        publishera0_.publisher_analytics_id as publishe1_9_0_,
+        publishera0_.bias as bias2_9_0_,
+        publishera0_.engagementRate as engageme3_9_0_,
+        publishera0_.likes as likes4_9_0_,
+        publishera0_.shares as shares5_9_0_,
+        publishera0_.views as views6_9_0_ 
+    from
+        publisher_analytics publishera0_ 
+    where
+        publishera0_.publisher_analytics_id=?
+2024-08-09 09:30:19.186  INFO 81449 --- [    Test worker] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2024-08-09 09:30:19.186  INFO 81449 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2024-08-09 09:30:19.186  INFO 81449 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 0 ms
+Hibernate: 
+    select
+        publisher0_.publisher_id as publishe1_8_,
+        publisher0_.publisher_analytics_id as publishe3_8_,
+        publisher0_.publisher_name as publishe2_8_ 
+    from
+        publisher publisher0_
+Hibernate: 
+    select
+        publishera0_.publisher_analytics_id as publishe1_9_0_,
+        publishera0_.bias as bias2_9_0_,
+        publishera0_.engagementRate as engageme3_9_0_,
+        publishera0_.likes as likes4_9_0_,
+        publishera0_.shares as shares5_9_0_,
+        publishera0_.views as views6_9_0_ 
+    from
+        publisher_analytics publishera0_ 
+    where
+        publishera0_.publisher_analytics_id=?
+Hibernate: 
+    delete 
+    from
+        publisher 
+    where
+        publisher_id=?
+Hibernate: 
+    select
+        publishera0_.publisher_analytics_id as publishe1_9_,
+        publishera0_.bias as bias2_9_,
+        publishera0_.engagementRate as engageme3_9_,
+        publishera0_.likes as likes4_9_,
+        publishera0_.shares as shares5_9_,
+        publishera0_.views as views6_9_ 
+    from
+        publisher_analytics publishera0_
+Hibernate: 
+    delete 
+    from
+        publisher_analytics 
+    where
+        publisher_analytics_id=?
+Hibernate: 
+    insert 
+    into
+        publisher_analytics
+        (bias, engagementRate, likes, shares, views) 
+    values
+        (?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        publisher
+        (publisher_analytics_id, publisher_name) 
+    values
+        (?, ?)
+Hibernate: 
+    select
+        publisher0_.publisher_id as publishe1_8_,
+        publisher0_.publisher_analytics_id as publishe3_8_,
+        publisher0_.publisher_name as publishe2_8_ 
+    from
+        publisher publisher0_
+Hibernate: 
+    select
+        publishera0_.publisher_analytics_id as publishe1_9_0_,
+        publishera0_.bias as bias2_9_0_,
+        publishera0_.engagementRate as engageme3_9_0_,
+        publishera0_.likes as likes4_9_0_,
+        publishera0_.shares as shares5_9_0_,
+        publishera0_.views as views6_9_0_ 
+    from
+        publisher_analytics publishera0_ 
+    where
+        publishera0_.publisher_analytics_id=?
+Hibernate: 
+    delete 
+    from
+        publisher 
+    where
+        publisher_id=?
+Hibernate: 
+    select
+        publisher0_.publisher_id as publishe1_8_,
+        publisher0_.publisher_analytics_id as publishe3_8_,
+        publisher0_.publisher_name as publishe2_8_ 
+    from
+        publisher publisher0_
+2024-08-09 09:30:19.200  INFO 81449 --- [    Test worker] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2024-08-09 09:30:19.200  INFO 81449 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2024-08-09 09:30:19.201  INFO 81449 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 1 ms
+Hibernate: 
+    select
+        publisher0_.publisher_id as publishe1_8_,
+        publisher0_.publisher_analytics_id as publishe3_8_,
+        publisher0_.publisher_name as publishe2_8_ 
+    from
+        publisher publisher0_
+Hibernate: 
+    select
+        publishera0_.publisher_analytics_id as publishe1_9_,
+        publishera0_.bias as bias2_9_,
+        publishera0_.engagementRate as engageme3_9_,
+        publishera0_.likes as likes4_9_,
+        publishera0_.shares as shares5_9_,
+        publishera0_.views as views6_9_ 
+    from
+        publisher_analytics publishera0_
+Hibernate: 
+    delete 
+    from
+        publisher_analytics 
+    where
+        publisher_analytics_id=?
+Hibernate: 
+    insert 
+    into
+        publisher_analytics
+        (bias, engagementRate, likes, shares, views) 
+    values
+        (?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        publisher
+        (publisher_analytics_id, publisher_name) 
+    values
+        (?, ?)
+Hibernate: 
+    select
+        publisher0_.publisher_id as publishe1_8_0_,
+        publisher0_.publisher_analytics_id as publishe3_8_0_,
+        publisher0_.publisher_name as publishe2_8_0_,
+        publishera1_.publisher_analytics_id as publishe1_9_1_,
+        publishera1_.bias as bias2_9_1_,
+        publishera1_.engagementRate as engageme3_9_1_,
+        publishera1_.likes as likes4_9_1_,
+        publishera1_.shares as shares5_9_1_,
+        publishera1_.views as views6_9_1_ 
+    from
+        publisher publisher0_ 
+    inner join
+        publisher_analytics publishera1_ 
+            on publisher0_.publisher_analytics_id=publishera1_.publisher_analytics_id 
+    where
+        publisher0_.publisher_id=?
+2024-08-09 09:30:19.224  INFO 81449 --- [    Test worker] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2024-08-09 09:30:19.224  INFO 81449 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2024-08-09 09:30:19.224  INFO 81449 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 0 ms
+Hibernate: 
+    select
+        publisher0_.publisher_id as publishe1_8_,
+        publisher0_.publisher_analytics_id as publishe3_8_,
+        publisher0_.publisher_name as publishe2_8_ 
+    from
+        publisher publisher0_
+Hibernate: 
+    select
+        publishera0_.publisher_analytics_id as publishe1_9_0_,
+        publishera0_.bias as bias2_9_0_,
+        publishera0_.engagementRate as engageme3_9_0_,
+        publishera0_.likes as likes4_9_0_,
+        publishera0_.shares as shares5_9_0_,
+        publishera0_.views as views6_9_0_ 
+    from
+        publisher_analytics publishera0_ 
+    where
+        publishera0_.publisher_analytics_id=?
+Hibernate: 
+    delete 
+    from
+        publisher 
+    where
+        publisher_id=?
+Hibernate: 
+    select
+        publishera0_.publisher_analytics_id as publishe1_9_,
+        publishera0_.bias as bias2_9_,
+        publishera0_.engagementRate as engageme3_9_,
+        publishera0_.likes as likes4_9_,
+        publishera0_.shares as shares5_9_,
+        publishera0_.views as views6_9_ 
+    from
+        publisher_analytics publishera0_
+Hibernate: 
+    delete 
+    from
+        publisher_analytics 
+    where
+        publisher_analytics_id=?
+Hibernate: 
+    insert 
+    into
+        publisher_analytics
+        (bias, engagementRate, likes, shares, views) 
+    values
+        (?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        publisher
+        (publisher_analytics_id, publisher_name) 
+    values
+        (?, ?)
+Hibernate: 
+    select
+        publisher0_.publisher_id as publishe1_8_,
+        publisher0_.publisher_analytics_id as publishe3_8_,
+        publisher0_.publisher_name as publishe2_8_ 
+    from
+        publisher publisher0_ 
+    where
+        publisher0_.publisher_name=?
+2024-08-09 09:30:19.239  INFO 81449 --- [    Test worker] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2024-08-09 09:30:19.239  INFO 81449 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2024-08-09 09:30:19.239  INFO 81449 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 0 ms
+Hibernate: 
+    select
+        publisher0_.publisher_id as publishe1_8_,
+        publisher0_.publisher_analytics_id as publishe3_8_,
+        publisher0_.publisher_name as publishe2_8_ 
+    from
+        publisher publisher0_
+Hibernate: 
+    select
+        publishera0_.publisher_analytics_id as publishe1_9_0_,
+        publishera0_.bias as bias2_9_0_,
+        publishera0_.engagementRate as engageme3_9_0_,
+        publishera0_.likes as likes4_9_0_,
+        publishera0_.shares as shares5_9_0_,
+        publishera0_.views as views6_9_0_ 
+    from
+        publisher_analytics publishera0_ 
+    where
+        publishera0_.publisher_analytics_id=?
+Hibernate: 
+    delete 
+    from
+        publisher 
+    where
+        publisher_id=?
+Hibernate: 
+    select
+        publishera0_.publisher_analytics_id as publishe1_9_,
+        publishera0_.bias as bias2_9_,
+        publishera0_.engagementRate as engageme3_9_,
+        publishera0_.likes as likes4_9_,
+        publishera0_.shares as shares5_9_,
+        publishera0_.views as views6_9_ 
+    from
+        publisher_analytics publishera0_
+Hibernate: 
+    delete 
+    from
+        publisher_analytics 
+    where
+        publisher_analytics_id=?
+Hibernate: 
+    insert 
+    into
+        publisher_analytics
+        (bias, engagementRate, likes, shares, views) 
+    values
+        (?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        publisher
+        (publisher_analytics_id, publisher_name) 
+    values
+        (?, ?)
+Hibernate: 
+    select
+        publisher0_.publisher_id as publishe1_8_0_,
+        publisher0_.publisher_analytics_id as publishe3_8_0_,
+        publisher0_.publisher_name as publishe2_8_0_,
+        publishera1_.publisher_analytics_id as publishe1_9_1_,
+        publishera1_.bias as bias2_9_1_,
+        publishera1_.engagementRate as engageme3_9_1_,
+        publishera1_.likes as likes4_9_1_,
+        publishera1_.shares as shares5_9_1_,
+        publishera1_.views as views6_9_1_ 
+    from
+        publisher publisher0_ 
+    inner join
+        publisher_analytics publishera1_ 
+            on publisher0_.publisher_analytics_id=publishera1_.publisher_analytics_id 
+    where
+        publisher0_.publisher_id=?
+2024-08-09 09:30:19.250  INFO 81449 --- [    Test worker] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2024-08-09 09:30:19.250  INFO 81449 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2024-08-09 09:30:19.250  INFO 81449 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 0 ms
+Hibernate: 
+    select
+        publisher0_.publisher_id as publishe1_8_,
+        publisher0_.publisher_analytics_id as publishe3_8_,
+        publisher0_.publisher_name as publishe2_8_ 
+    from
+        publisher publisher0_
+Hibernate: 
+    select
+        publishera0_.publisher_analytics_id as publishe1_9_0_,
+        publishera0_.bias as bias2_9_0_,
+        publishera0_.engagementRate as engageme3_9_0_,
+        publishera0_.likes as likes4_9_0_,
+        publishera0_.shares as shares5_9_0_,
+        publishera0_.views as views6_9_0_ 
+    from
+        publisher_analytics publishera0_ 
+    where
+        publishera0_.publisher_analytics_id=?
+Hibernate: 
+    delete 
+    from
+        publisher 
+    where
+        publisher_id=?
+Hibernate: 
+    select
+        publishera0_.publisher_analytics_id as publishe1_9_,
+        publishera0_.bias as bias2_9_,
+        publishera0_.engagementRate as engageme3_9_,
+        publishera0_.likes as likes4_9_,
+        publishera0_.shares as shares5_9_,
+        publishera0_.views as views6_9_ 
+    from
+        publisher_analytics publishera0_
+Hibernate: 
+    delete 
+    from
+        publisher_analytics 
+    where
+        publisher_analytics_id=?
+Hibernate: 
+    insert 
+    into
+        publisher_analytics
+        (bias, engagementRate, likes, shares, views) 
+    values
+        (?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        publisher
+        (publisher_analytics_id, publisher_name) 
+    values
+        (?, ?)
+Hibernate: 
+    select
+        publisher0_.publisher_id as publishe1_8_,
+        publisher0_.publisher_analytics_id as publishe3_8_,
+        publisher0_.publisher_name as publishe2_8_ 
+    from
+        publisher publisher0_
+Hibernate: 
+    select
+        publishera0_.publisher_analytics_id as publishe1_9_0_,
+        publishera0_.bias as bias2_9_0_,
+        publishera0_.engagementRate as engageme3_9_0_,
+        publishera0_.likes as likes4_9_0_,
+        publishera0_.shares as shares5_9_0_,
+        publishera0_.views as views6_9_0_ 
+    from
+        publisher_analytics publishera0_ 
+    where
+        publishera0_.publisher_analytics_id=?
+2024-08-09 09:30:19.263  INFO 81449 --- [    Test worker] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2024-08-09 09:30:19.264  INFO 81449 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2024-08-09 09:30:19.264  INFO 81449 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 0 ms
+Hibernate: 
+    select
+        publisher0_.publisher_id as publishe1_8_,
+        publisher0_.publisher_analytics_id as publishe3_8_,
+        publisher0_.publisher_name as publishe2_8_ 
+    from
+        publisher publisher0_
+Hibernate: 
+    select
+        publishera0_.publisher_analytics_id as publishe1_9_0_,
+        publishera0_.bias as bias2_9_0_,
+        publishera0_.engagementRate as engageme3_9_0_,
+        publishera0_.likes as likes4_9_0_,
+        publishera0_.shares as shares5_9_0_,
+        publishera0_.views as views6_9_0_ 
+    from
+        publisher_analytics publishera0_ 
+    where
+        publishera0_.publisher_analytics_id=?
+Hibernate: 
+    delete 
+    from
+        publisher 
+    where
+        publisher_id=?
+Hibernate: 
+    select
+        publishera0_.publisher_analytics_id as publishe1_9_,
+        publishera0_.bias as bias2_9_,
+        publishera0_.engagementRate as engageme3_9_,
+        publishera0_.likes as likes4_9_,
+        publishera0_.shares as shares5_9_,
+        publishera0_.views as views6_9_ 
+    from
+        publisher_analytics publishera0_
+Hibernate: 
+    delete 
+    from
+        publisher_analytics 
+    where
+        publisher_analytics_id=?
+Hibernate: 
+    insert 
+    into
+        publisher_analytics
+        (bias, engagementRate, likes, shares, views) 
+    values
+        (?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        publisher
+        (publisher_analytics_id, publisher_name) 
+    values
+        (?, ?)
+Hibernate: 
+    select
+        publisher0_.publisher_id as publishe1_8_,
+        publisher0_.publisher_analytics_id as publishe3_8_,
+        publisher0_.publisher_name as publishe2_8_ 
+    from
+        publisher publisher0_ 
+    where
+        publisher0_.publisher_name=?
+Hibernate: 
+    select
+        publishera0_.publisher_analytics_id as publishe1_9_0_,
+        publishera0_.bias as bias2_9_0_,
+        publishera0_.engagementRate as engageme3_9_0_,
+        publishera0_.likes as likes4_9_0_,
+        publishera0_.shares as shares5_9_0_,
+        publishera0_.views as views6_9_0_ 
+    from
+        publisher_analytics publishera0_ 
+    where
+        publishera0_.publisher_analytics_id=?
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

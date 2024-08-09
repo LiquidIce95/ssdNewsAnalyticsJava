@@ -1,0 +1,616 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="ssd.Entities.Owner.OwnerControllerTest" tests="8" skipped="0" failures="0" errors="0" timestamp="2024-08-09T07:30:19" hostname="COMMODORE" time="0.111">
+  <properties/>
+  <testcase name="testGetPopularOwners_noContent()" classname="ssd.Entities.Owner.OwnerControllerTest" time="0.023"/>
+  <testcase name="testGetOwnersByName()" classname="ssd.Entities.Owner.OwnerControllerTest" time="0.015"/>
+  <testcase name="testGetOwnersByName_notFound()" classname="ssd.Entities.Owner.OwnerControllerTest" time="0.014"/>
+  <testcase name="testGetPopularOwners()" classname="ssd.Entities.Owner.OwnerControllerTest" time="0.013"/>
+  <testcase name="testGetAllOwners()" classname="ssd.Entities.Owner.OwnerControllerTest" time="0.011"/>
+  <testcase name="testGetOwnerById_notFound()" classname="ssd.Entities.Owner.OwnerControllerTest" time="0.011"/>
+  <testcase name="testGetAllOwners_emptyDatabase()" classname="ssd.Entities.Owner.OwnerControllerTest" time="0.01"/>
+  <testcase name="testGetOwnerById()" classname="ssd.Entities.Owner.OwnerControllerTest" time="0.008"/>
+  <system-out><![CDATA[2024-08-09 09:30:19.036  INFO 81449 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Neither @ContextConfiguration nor @ContextHierarchy found for test class [ssd.Entities.Owner.OwnerControllerTest], using SpringBootContextLoader
+2024-08-09 09:30:19.036  INFO 81449 --- [    Test worker] o.s.t.c.support.AbstractContextLoader    : Could not detect default resource locations for test class [ssd.Entities.Owner.OwnerControllerTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+2024-08-09 09:30:19.036  INFO 81449 --- [    Test worker] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [ssd.Entities.Owner.OwnerControllerTest]: OwnerControllerTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2024-08-09 09:30:19.040  INFO 81449 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration ssd.SSDApplication for test class ssd.Entities.Owner.OwnerControllerTest
+2024-08-09 09:30:19.041  INFO 81449 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.event.ApplicationEventsTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
+2024-08-09 09:30:19.041  INFO 81449 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@423325e0, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@5a5c041f, org.springframework.test.context.event.ApplicationEventsTestExecutionListener@7a4ea134, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@16124894, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@4dd56393, org.springframework.test.context.support.DirtiesContextTestExecutionListener@7793eaca, org.springframework.test.context.transaction.TransactionalTestExecutionListener@785ba20d, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@7c09037a, org.springframework.test.context.event.EventPublishingTestExecutionListener@1a262e93, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@720b52a7, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@5765cd21, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@63c31664, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@48bafe39, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener@608c03e3, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@1979d616]
+2024-08-09 09:30:19.045  INFO 81449 --- [    Test worker] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2024-08-09 09:30:19.045  INFO 81449 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2024-08-09 09:30:19.045  INFO 81449 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 0 ms
+Hibernate: 
+    select
+        owner0_.owner_id as owner_id1_6_,
+        owner0_.owner_analytics_id as owner_an3_6_,
+        owner0_.owner_name as owner_na2_6_ 
+    from
+        owner owner0_
+Hibernate: 
+    select
+        owneranaly0_.owner_analytics_id as owner_an1_7_0_,
+        owneranaly0_.bias as bias2_7_0_,
+        owneranaly0_.engagementRate as engageme3_7_0_,
+        owneranaly0_.likes as likes4_7_0_,
+        owneranaly0_.shares as shares5_7_0_,
+        owneranaly0_.views as views6_7_0_ 
+    from
+        owner_analytics owneranaly0_ 
+    where
+        owneranaly0_.owner_analytics_id=?
+Hibernate: 
+    delete 
+    from
+        owner 
+    where
+        owner_id=?
+Hibernate: 
+    select
+        owneranaly0_.owner_analytics_id as owner_an1_7_,
+        owneranaly0_.bias as bias2_7_,
+        owneranaly0_.engagementRate as engageme3_7_,
+        owneranaly0_.likes as likes4_7_,
+        owneranaly0_.shares as shares5_7_,
+        owneranaly0_.views as views6_7_ 
+    from
+        owner_analytics owneranaly0_
+Hibernate: 
+    delete 
+    from
+        owner_analytics 
+    where
+        owner_analytics_id=?
+Hibernate: 
+    insert 
+    into
+        owner_analytics
+        (bias, engagementRate, likes, shares, views) 
+    values
+        (?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        owner
+        (owner_analytics_id, owner_name) 
+    values
+        (?, ?)
+Hibernate: 
+    select
+        owner0_.owner_id as owner_id1_6_,
+        owner0_.owner_analytics_id as owner_an3_6_,
+        owner0_.owner_name as owner_na2_6_ 
+    from
+        owner owner0_
+Hibernate: 
+    select
+        owneranaly0_.owner_analytics_id as owner_an1_7_0_,
+        owneranaly0_.bias as bias2_7_0_,
+        owneranaly0_.engagementRate as engageme3_7_0_,
+        owneranaly0_.likes as likes4_7_0_,
+        owneranaly0_.shares as shares5_7_0_,
+        owneranaly0_.views as views6_7_0_ 
+    from
+        owner_analytics owneranaly0_ 
+    where
+        owneranaly0_.owner_analytics_id=?
+Hibernate: 
+    delete 
+    from
+        owner 
+    where
+        owner_id=?
+Hibernate: 
+    select
+        owner0_.owner_id as owner_id1_6_,
+        owner0_.owner_analytics_id as owner_an3_6_,
+        owner0_.owner_name as owner_na2_6_ 
+    from
+        owner owner0_
+2024-08-09 09:30:19.068  INFO 81449 --- [    Test worker] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2024-08-09 09:30:19.068  INFO 81449 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2024-08-09 09:30:19.069  INFO 81449 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 1 ms
+Hibernate: 
+    select
+        owner0_.owner_id as owner_id1_6_,
+        owner0_.owner_analytics_id as owner_an3_6_,
+        owner0_.owner_name as owner_na2_6_ 
+    from
+        owner owner0_
+Hibernate: 
+    select
+        owneranaly0_.owner_analytics_id as owner_an1_7_,
+        owneranaly0_.bias as bias2_7_,
+        owneranaly0_.engagementRate as engageme3_7_,
+        owneranaly0_.likes as likes4_7_,
+        owneranaly0_.shares as shares5_7_,
+        owneranaly0_.views as views6_7_ 
+    from
+        owner_analytics owneranaly0_
+Hibernate: 
+    delete 
+    from
+        owner_analytics 
+    where
+        owner_analytics_id=?
+Hibernate: 
+    insert 
+    into
+        owner_analytics
+        (bias, engagementRate, likes, shares, views) 
+    values
+        (?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        owner
+        (owner_analytics_id, owner_name) 
+    values
+        (?, ?)
+Hibernate: 
+    select
+        owner0_.owner_id as owner_id1_6_,
+        owner0_.owner_analytics_id as owner_an3_6_,
+        owner0_.owner_name as owner_na2_6_ 
+    from
+        owner owner0_ 
+    where
+        owner0_.owner_name=?
+Hibernate: 
+    select
+        owneranaly0_.owner_analytics_id as owner_an1_7_0_,
+        owneranaly0_.bias as bias2_7_0_,
+        owneranaly0_.engagementRate as engageme3_7_0_,
+        owneranaly0_.likes as likes4_7_0_,
+        owneranaly0_.shares as shares5_7_0_,
+        owneranaly0_.views as views6_7_0_ 
+    from
+        owner_analytics owneranaly0_ 
+    where
+        owneranaly0_.owner_analytics_id=?
+2024-08-09 09:30:19.084  INFO 81449 --- [    Test worker] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2024-08-09 09:30:19.084  INFO 81449 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2024-08-09 09:30:19.085  INFO 81449 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 1 ms
+Hibernate: 
+    select
+        owner0_.owner_id as owner_id1_6_,
+        owner0_.owner_analytics_id as owner_an3_6_,
+        owner0_.owner_name as owner_na2_6_ 
+    from
+        owner owner0_
+Hibernate: 
+    select
+        owneranaly0_.owner_analytics_id as owner_an1_7_0_,
+        owneranaly0_.bias as bias2_7_0_,
+        owneranaly0_.engagementRate as engageme3_7_0_,
+        owneranaly0_.likes as likes4_7_0_,
+        owneranaly0_.shares as shares5_7_0_,
+        owneranaly0_.views as views6_7_0_ 
+    from
+        owner_analytics owneranaly0_ 
+    where
+        owneranaly0_.owner_analytics_id=?
+Hibernate: 
+    delete 
+    from
+        owner 
+    where
+        owner_id=?
+Hibernate: 
+    select
+        owneranaly0_.owner_analytics_id as owner_an1_7_,
+        owneranaly0_.bias as bias2_7_,
+        owneranaly0_.engagementRate as engageme3_7_,
+        owneranaly0_.likes as likes4_7_,
+        owneranaly0_.shares as shares5_7_,
+        owneranaly0_.views as views6_7_ 
+    from
+        owner_analytics owneranaly0_
+Hibernate: 
+    delete 
+    from
+        owner_analytics 
+    where
+        owner_analytics_id=?
+Hibernate: 
+    insert 
+    into
+        owner_analytics
+        (bias, engagementRate, likes, shares, views) 
+    values
+        (?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        owner
+        (owner_analytics_id, owner_name) 
+    values
+        (?, ?)
+Hibernate: 
+    select
+        owner0_.owner_id as owner_id1_6_,
+        owner0_.owner_analytics_id as owner_an3_6_,
+        owner0_.owner_name as owner_na2_6_ 
+    from
+        owner owner0_ 
+    where
+        owner0_.owner_name=?
+2024-08-09 09:30:19.098  INFO 81449 --- [    Test worker] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2024-08-09 09:30:19.099  INFO 81449 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2024-08-09 09:30:19.099  INFO 81449 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 0 ms
+Hibernate: 
+    select
+        owner0_.owner_id as owner_id1_6_,
+        owner0_.owner_analytics_id as owner_an3_6_,
+        owner0_.owner_name as owner_na2_6_ 
+    from
+        owner owner0_
+Hibernate: 
+    select
+        owneranaly0_.owner_analytics_id as owner_an1_7_0_,
+        owneranaly0_.bias as bias2_7_0_,
+        owneranaly0_.engagementRate as engageme3_7_0_,
+        owneranaly0_.likes as likes4_7_0_,
+        owneranaly0_.shares as shares5_7_0_,
+        owneranaly0_.views as views6_7_0_ 
+    from
+        owner_analytics owneranaly0_ 
+    where
+        owneranaly0_.owner_analytics_id=?
+Hibernate: 
+    delete 
+    from
+        owner 
+    where
+        owner_id=?
+Hibernate: 
+    select
+        owneranaly0_.owner_analytics_id as owner_an1_7_,
+        owneranaly0_.bias as bias2_7_,
+        owneranaly0_.engagementRate as engageme3_7_,
+        owneranaly0_.likes as likes4_7_,
+        owneranaly0_.shares as shares5_7_,
+        owneranaly0_.views as views6_7_ 
+    from
+        owner_analytics owneranaly0_
+Hibernate: 
+    delete 
+    from
+        owner_analytics 
+    where
+        owner_analytics_id=?
+Hibernate: 
+    insert 
+    into
+        owner_analytics
+        (bias, engagementRate, likes, shares, views) 
+    values
+        (?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        owner
+        (owner_analytics_id, owner_name) 
+    values
+        (?, ?)
+Hibernate: 
+    select
+        owner0_.owner_id as owner_id1_6_,
+        owner0_.owner_analytics_id as owner_an3_6_,
+        owner0_.owner_name as owner_na2_6_ 
+    from
+        owner owner0_
+Hibernate: 
+    select
+        owneranaly0_.owner_analytics_id as owner_an1_7_0_,
+        owneranaly0_.bias as bias2_7_0_,
+        owneranaly0_.engagementRate as engageme3_7_0_,
+        owneranaly0_.likes as likes4_7_0_,
+        owneranaly0_.shares as shares5_7_0_,
+        owneranaly0_.views as views6_7_0_ 
+    from
+        owner_analytics owneranaly0_ 
+    where
+        owneranaly0_.owner_analytics_id=?
+2024-08-09 09:30:19.113  INFO 81449 --- [    Test worker] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2024-08-09 09:30:19.113  INFO 81449 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2024-08-09 09:30:19.113  INFO 81449 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 0 ms
+Hibernate: 
+    select
+        owner0_.owner_id as owner_id1_6_,
+        owner0_.owner_analytics_id as owner_an3_6_,
+        owner0_.owner_name as owner_na2_6_ 
+    from
+        owner owner0_
+Hibernate: 
+    select
+        owneranaly0_.owner_analytics_id as owner_an1_7_0_,
+        owneranaly0_.bias as bias2_7_0_,
+        owneranaly0_.engagementRate as engageme3_7_0_,
+        owneranaly0_.likes as likes4_7_0_,
+        owneranaly0_.shares as shares5_7_0_,
+        owneranaly0_.views as views6_7_0_ 
+    from
+        owner_analytics owneranaly0_ 
+    where
+        owneranaly0_.owner_analytics_id=?
+Hibernate: 
+    delete 
+    from
+        owner 
+    where
+        owner_id=?
+Hibernate: 
+    select
+        owneranaly0_.owner_analytics_id as owner_an1_7_,
+        owneranaly0_.bias as bias2_7_,
+        owneranaly0_.engagementRate as engageme3_7_,
+        owneranaly0_.likes as likes4_7_,
+        owneranaly0_.shares as shares5_7_,
+        owneranaly0_.views as views6_7_ 
+    from
+        owner_analytics owneranaly0_
+Hibernate: 
+    delete 
+    from
+        owner_analytics 
+    where
+        owner_analytics_id=?
+Hibernate: 
+    insert 
+    into
+        owner_analytics
+        (bias, engagementRate, likes, shares, views) 
+    values
+        (?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        owner
+        (owner_analytics_id, owner_name) 
+    values
+        (?, ?)
+Hibernate: 
+    select
+        owner0_.owner_id as owner_id1_6_,
+        owner0_.owner_analytics_id as owner_an3_6_,
+        owner0_.owner_name as owner_na2_6_ 
+    from
+        owner owner0_
+Hibernate: 
+    select
+        owneranaly0_.owner_analytics_id as owner_an1_7_0_,
+        owneranaly0_.bias as bias2_7_0_,
+        owneranaly0_.engagementRate as engageme3_7_0_,
+        owneranaly0_.likes as likes4_7_0_,
+        owneranaly0_.shares as shares5_7_0_,
+        owneranaly0_.views as views6_7_0_ 
+    from
+        owner_analytics owneranaly0_ 
+    where
+        owneranaly0_.owner_analytics_id=?
+2024-08-09 09:30:19.125  INFO 81449 --- [    Test worker] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2024-08-09 09:30:19.125  INFO 81449 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2024-08-09 09:30:19.125  INFO 81449 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 0 ms
+Hibernate: 
+    select
+        owner0_.owner_id as owner_id1_6_,
+        owner0_.owner_analytics_id as owner_an3_6_,
+        owner0_.owner_name as owner_na2_6_ 
+    from
+        owner owner0_
+Hibernate: 
+    select
+        owneranaly0_.owner_analytics_id as owner_an1_7_0_,
+        owneranaly0_.bias as bias2_7_0_,
+        owneranaly0_.engagementRate as engageme3_7_0_,
+        owneranaly0_.likes as likes4_7_0_,
+        owneranaly0_.shares as shares5_7_0_,
+        owneranaly0_.views as views6_7_0_ 
+    from
+        owner_analytics owneranaly0_ 
+    where
+        owneranaly0_.owner_analytics_id=?
+Hibernate: 
+    delete 
+    from
+        owner 
+    where
+        owner_id=?
+Hibernate: 
+    select
+        owneranaly0_.owner_analytics_id as owner_an1_7_,
+        owneranaly0_.bias as bias2_7_,
+        owneranaly0_.engagementRate as engageme3_7_,
+        owneranaly0_.likes as likes4_7_,
+        owneranaly0_.shares as shares5_7_,
+        owneranaly0_.views as views6_7_ 
+    from
+        owner_analytics owneranaly0_
+Hibernate: 
+    delete 
+    from
+        owner_analytics 
+    where
+        owner_analytics_id=?
+Hibernate: 
+    insert 
+    into
+        owner_analytics
+        (bias, engagementRate, likes, shares, views) 
+    values
+        (?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        owner
+        (owner_analytics_id, owner_name) 
+    values
+        (?, ?)
+Hibernate: 
+    select
+        owner0_.owner_id as owner_id1_6_0_,
+        owner0_.owner_analytics_id as owner_an3_6_0_,
+        owner0_.owner_name as owner_na2_6_0_,
+        owneranaly1_.owner_analytics_id as owner_an1_7_1_,
+        owneranaly1_.bias as bias2_7_1_,
+        owneranaly1_.engagementRate as engageme3_7_1_,
+        owneranaly1_.likes as likes4_7_1_,
+        owneranaly1_.shares as shares5_7_1_,
+        owneranaly1_.views as views6_7_1_ 
+    from
+        owner owner0_ 
+    inner join
+        owner_analytics owneranaly1_ 
+            on owner0_.owner_analytics_id=owneranaly1_.owner_analytics_id 
+    where
+        owner0_.owner_id=?
+2024-08-09 09:30:19.136  INFO 81449 --- [    Test worker] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2024-08-09 09:30:19.136  INFO 81449 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2024-08-09 09:30:19.137  INFO 81449 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 1 ms
+Hibernate: 
+    select
+        owner0_.owner_id as owner_id1_6_,
+        owner0_.owner_analytics_id as owner_an3_6_,
+        owner0_.owner_name as owner_na2_6_ 
+    from
+        owner owner0_
+Hibernate: 
+    select
+        owneranaly0_.owner_analytics_id as owner_an1_7_0_,
+        owneranaly0_.bias as bias2_7_0_,
+        owneranaly0_.engagementRate as engageme3_7_0_,
+        owneranaly0_.likes as likes4_7_0_,
+        owneranaly0_.shares as shares5_7_0_,
+        owneranaly0_.views as views6_7_0_ 
+    from
+        owner_analytics owneranaly0_ 
+    where
+        owneranaly0_.owner_analytics_id=?
+Hibernate: 
+    delete 
+    from
+        owner 
+    where
+        owner_id=?
+Hibernate: 
+    select
+        owneranaly0_.owner_analytics_id as owner_an1_7_,
+        owneranaly0_.bias as bias2_7_,
+        owneranaly0_.engagementRate as engageme3_7_,
+        owneranaly0_.likes as likes4_7_,
+        owneranaly0_.shares as shares5_7_,
+        owneranaly0_.views as views6_7_ 
+    from
+        owner_analytics owneranaly0_
+Hibernate: 
+    delete 
+    from
+        owner_analytics 
+    where
+        owner_analytics_id=?
+Hibernate: 
+    insert 
+    into
+        owner_analytics
+        (bias, engagementRate, likes, shares, views) 
+    values
+        (?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        owner
+        (owner_analytics_id, owner_name) 
+    values
+        (?, ?)
+Hibernate: 
+    select
+        owner0_.owner_id as owner_id1_6_,
+        owner0_.owner_analytics_id as owner_an3_6_,
+        owner0_.owner_name as owner_na2_6_ 
+    from
+        owner owner0_
+Hibernate: 
+    select
+        owneranaly0_.owner_analytics_id as owner_an1_7_0_,
+        owneranaly0_.bias as bias2_7_0_,
+        owneranaly0_.engagementRate as engageme3_7_0_,
+        owneranaly0_.likes as likes4_7_0_,
+        owneranaly0_.shares as shares5_7_0_,
+        owneranaly0_.views as views6_7_0_ 
+    from
+        owner_analytics owneranaly0_ 
+    where
+        owneranaly0_.owner_analytics_id=?
+Hibernate: 
+    delete 
+    from
+        owner 
+    where
+        owner_id=?
+Hibernate: 
+    select
+        owner0_.owner_id as owner_id1_6_,
+        owner0_.owner_analytics_id as owner_an3_6_,
+        owner0_.owner_name as owner_na2_6_ 
+    from
+        owner owner0_
+2024-08-09 09:30:19.147  INFO 81449 --- [    Test worker] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2024-08-09 09:30:19.147  INFO 81449 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2024-08-09 09:30:19.147  INFO 81449 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 0 ms
+Hibernate: 
+    select
+        owner0_.owner_id as owner_id1_6_,
+        owner0_.owner_analytics_id as owner_an3_6_,
+        owner0_.owner_name as owner_na2_6_ 
+    from
+        owner owner0_
+Hibernate: 
+    select
+        owneranaly0_.owner_analytics_id as owner_an1_7_,
+        owneranaly0_.bias as bias2_7_,
+        owneranaly0_.engagementRate as engageme3_7_,
+        owneranaly0_.likes as likes4_7_,
+        owneranaly0_.shares as shares5_7_,
+        owneranaly0_.views as views6_7_ 
+    from
+        owner_analytics owneranaly0_
+Hibernate: 
+    delete 
+    from
+        owner_analytics 
+    where
+        owner_analytics_id=?
+Hibernate: 
+    insert 
+    into
+        owner_analytics
+        (bias, engagementRate, likes, shares, views) 
+    values
+        (?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        owner
+        (owner_analytics_id, owner_name) 
+    values
+        (?, ?)
+Hibernate: 
+    select
+        owner0_.owner_id as owner_id1_6_0_,
+        owner0_.owner_analytics_id as owner_an3_6_0_,
+        owner0_.owner_name as owner_na2_6_0_,
+        owneranaly1_.owner_analytics_id as owner_an1_7_1_,
+        owneranaly1_.bias as bias2_7_1_,
+        owneranaly1_.engagementRate as engageme3_7_1_,
+        owneranaly1_.likes as likes4_7_1_,
+        owneranaly1_.shares as shares5_7_1_,
+        owneranaly1_.views as views6_7_1_ 
+    from
+        owner owner0_ 
+    inner join
+        owner_analytics owneranaly1_ 
+            on owner0_.owner_analytics_id=owneranaly1_.owner_analytics_id 
+    where
+        owner0_.owner_id=?
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

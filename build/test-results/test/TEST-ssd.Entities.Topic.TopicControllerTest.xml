@@ -1,0 +1,616 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="ssd.Entities.Topic.TopicControllerTest" tests="8" skipped="0" failures="0" errors="0" timestamp="2024-08-09T07:30:19" hostname="COMMODORE" time="0.114">
+  <properties/>
+  <testcase name="testGetAllTopics_emptyDatabase()" classname="ssd.Entities.Topic.TopicControllerTest" time="0.017"/>
+  <testcase name="testGetTopicsByName_notFound()" classname="ssd.Entities.Topic.TopicControllerTest" time="0.015"/>
+  <testcase name="testGetPopularTopics()" classname="ssd.Entities.Topic.TopicControllerTest" time="0.015"/>
+  <testcase name="testGetAllTopics()" classname="ssd.Entities.Topic.TopicControllerTest" time="0.011"/>
+  <testcase name="testGetPopularTopics_noContent()" classname="ssd.Entities.Topic.TopicControllerTest" time="0.013"/>
+  <testcase name="testGetTopicById()" classname="ssd.Entities.Topic.TopicControllerTest" time="0.012"/>
+  <testcase name="testGetTopicById_notFound()" classname="ssd.Entities.Topic.TopicControllerTest" time="0.012"/>
+  <testcase name="testGetTopicsByName()" classname="ssd.Entities.Topic.TopicControllerTest" time="0.013"/>
+  <system-out><![CDATA[2024-08-09 09:30:19.277  INFO 81449 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Neither @ContextConfiguration nor @ContextHierarchy found for test class [ssd.Entities.Topic.TopicControllerTest], using SpringBootContextLoader
+2024-08-09 09:30:19.278  INFO 81449 --- [    Test worker] o.s.t.c.support.AbstractContextLoader    : Could not detect default resource locations for test class [ssd.Entities.Topic.TopicControllerTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+2024-08-09 09:30:19.278  INFO 81449 --- [    Test worker] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [ssd.Entities.Topic.TopicControllerTest]: TopicControllerTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2024-08-09 09:30:19.281  INFO 81449 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration ssd.SSDApplication for test class ssd.Entities.Topic.TopicControllerTest
+2024-08-09 09:30:19.282  INFO 81449 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.event.ApplicationEventsTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
+2024-08-09 09:30:19.282  INFO 81449 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@3b96ea23, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@74c58f64, org.springframework.test.context.event.ApplicationEventsTestExecutionListener@65640109, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@5feceb2f, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@5327c503, org.springframework.test.context.support.DirtiesContextTestExecutionListener@b41ceac, org.springframework.test.context.transaction.TransactionalTestExecutionListener@4ee8ea84, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@76e5d5e5, org.springframework.test.context.event.EventPublishingTestExecutionListener@1b0709e7, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@1e368085, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@1703e50d, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@4f1150f5, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@6cfa20c1, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener@46e2a773, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@4ec1192f]
+2024-08-09 09:30:19.284  INFO 81449 --- [    Test worker] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2024-08-09 09:30:19.284  INFO 81449 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2024-08-09 09:30:19.285  INFO 81449 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 1 ms
+Hibernate: 
+    select
+        topic0_.topic_id as topic_id1_10_,
+        topic0_.topic_analytics_id as topic_an3_10_,
+        topic0_.topic_name as topic_na2_10_ 
+    from
+        topic topic0_
+Hibernate: 
+    select
+        topicanaly0_.topic_analytics_id as topic_an1_11_0_,
+        topicanaly0_.bias as bias2_11_0_,
+        topicanaly0_.engagementRate as engageme3_11_0_,
+        topicanaly0_.likes as likes4_11_0_,
+        topicanaly0_.shares as shares5_11_0_,
+        topicanaly0_.views as views6_11_0_ 
+    from
+        topic_analytics topicanaly0_ 
+    where
+        topicanaly0_.topic_analytics_id=?
+Hibernate: 
+    delete 
+    from
+        topic 
+    where
+        topic_id=?
+Hibernate: 
+    select
+        topicanaly0_.topic_analytics_id as topic_an1_11_,
+        topicanaly0_.bias as bias2_11_,
+        topicanaly0_.engagementRate as engageme3_11_,
+        topicanaly0_.likes as likes4_11_,
+        topicanaly0_.shares as shares5_11_,
+        topicanaly0_.views as views6_11_ 
+    from
+        topic_analytics topicanaly0_
+Hibernate: 
+    delete 
+    from
+        topic_analytics 
+    where
+        topic_analytics_id=?
+Hibernate: 
+    insert 
+    into
+        topic_analytics
+        (bias, engagementRate, likes, shares, views) 
+    values
+        (?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        topic
+        (topic_analytics_id, topic_name) 
+    values
+        (?, ?)
+Hibernate: 
+    select
+        topic0_.topic_id as topic_id1_10_,
+        topic0_.topic_analytics_id as topic_an3_10_,
+        topic0_.topic_name as topic_na2_10_ 
+    from
+        topic topic0_
+Hibernate: 
+    select
+        topicanaly0_.topic_analytics_id as topic_an1_11_0_,
+        topicanaly0_.bias as bias2_11_0_,
+        topicanaly0_.engagementRate as engageme3_11_0_,
+        topicanaly0_.likes as likes4_11_0_,
+        topicanaly0_.shares as shares5_11_0_,
+        topicanaly0_.views as views6_11_0_ 
+    from
+        topic_analytics topicanaly0_ 
+    where
+        topicanaly0_.topic_analytics_id=?
+Hibernate: 
+    delete 
+    from
+        topic 
+    where
+        topic_id=?
+Hibernate: 
+    select
+        topic0_.topic_id as topic_id1_10_,
+        topic0_.topic_analytics_id as topic_an3_10_,
+        topic0_.topic_name as topic_na2_10_ 
+    from
+        topic topic0_
+2024-08-09 09:30:19.303  INFO 81449 --- [    Test worker] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2024-08-09 09:30:19.303  INFO 81449 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2024-08-09 09:30:19.303  INFO 81449 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 0 ms
+Hibernate: 
+    select
+        topic0_.topic_id as topic_id1_10_,
+        topic0_.topic_analytics_id as topic_an3_10_,
+        topic0_.topic_name as topic_na2_10_ 
+    from
+        topic topic0_
+Hibernate: 
+    select
+        topicanaly0_.topic_analytics_id as topic_an1_11_,
+        topicanaly0_.bias as bias2_11_,
+        topicanaly0_.engagementRate as engageme3_11_,
+        topicanaly0_.likes as likes4_11_,
+        topicanaly0_.shares as shares5_11_,
+        topicanaly0_.views as views6_11_ 
+    from
+        topic_analytics topicanaly0_
+Hibernate: 
+    delete 
+    from
+        topic_analytics 
+    where
+        topic_analytics_id=?
+Hibernate: 
+    insert 
+    into
+        topic_analytics
+        (bias, engagementRate, likes, shares, views) 
+    values
+        (?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        topic
+        (topic_analytics_id, topic_name) 
+    values
+        (?, ?)
+Hibernate: 
+    select
+        topic0_.topic_id as topic_id1_10_,
+        topic0_.topic_analytics_id as topic_an3_10_,
+        topic0_.topic_name as topic_na2_10_ 
+    from
+        topic topic0_ 
+    where
+        topic0_.topic_name=?
+2024-08-09 09:30:19.317  INFO 81449 --- [    Test worker] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2024-08-09 09:30:19.317  INFO 81449 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2024-08-09 09:30:19.318  INFO 81449 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 1 ms
+Hibernate: 
+    select
+        topic0_.topic_id as topic_id1_10_,
+        topic0_.topic_analytics_id as topic_an3_10_,
+        topic0_.topic_name as topic_na2_10_ 
+    from
+        topic topic0_
+Hibernate: 
+    select
+        topicanaly0_.topic_analytics_id as topic_an1_11_0_,
+        topicanaly0_.bias as bias2_11_0_,
+        topicanaly0_.engagementRate as engageme3_11_0_,
+        topicanaly0_.likes as likes4_11_0_,
+        topicanaly0_.shares as shares5_11_0_,
+        topicanaly0_.views as views6_11_0_ 
+    from
+        topic_analytics topicanaly0_ 
+    where
+        topicanaly0_.topic_analytics_id=?
+Hibernate: 
+    delete 
+    from
+        topic 
+    where
+        topic_id=?
+Hibernate: 
+    select
+        topicanaly0_.topic_analytics_id as topic_an1_11_,
+        topicanaly0_.bias as bias2_11_,
+        topicanaly0_.engagementRate as engageme3_11_,
+        topicanaly0_.likes as likes4_11_,
+        topicanaly0_.shares as shares5_11_,
+        topicanaly0_.views as views6_11_ 
+    from
+        topic_analytics topicanaly0_
+Hibernate: 
+    delete 
+    from
+        topic_analytics 
+    where
+        topic_analytics_id=?
+Hibernate: 
+    insert 
+    into
+        topic_analytics
+        (bias, engagementRate, likes, shares, views) 
+    values
+        (?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        topic
+        (topic_analytics_id, topic_name) 
+    values
+        (?, ?)
+Hibernate: 
+    select
+        topic0_.topic_id as topic_id1_10_,
+        topic0_.topic_analytics_id as topic_an3_10_,
+        topic0_.topic_name as topic_na2_10_ 
+    from
+        topic topic0_
+Hibernate: 
+    select
+        topicanaly0_.topic_analytics_id as topic_an1_11_0_,
+        topicanaly0_.bias as bias2_11_0_,
+        topicanaly0_.engagementRate as engageme3_11_0_,
+        topicanaly0_.likes as likes4_11_0_,
+        topicanaly0_.shares as shares5_11_0_,
+        topicanaly0_.views as views6_11_0_ 
+    from
+        topic_analytics topicanaly0_ 
+    where
+        topicanaly0_.topic_analytics_id=?
+2024-08-09 09:30:19.333  INFO 81449 --- [    Test worker] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2024-08-09 09:30:19.333  INFO 81449 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2024-08-09 09:30:19.333  INFO 81449 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 0 ms
+Hibernate: 
+    select
+        topic0_.topic_id as topic_id1_10_,
+        topic0_.topic_analytics_id as topic_an3_10_,
+        topic0_.topic_name as topic_na2_10_ 
+    from
+        topic topic0_
+Hibernate: 
+    select
+        topicanaly0_.topic_analytics_id as topic_an1_11_0_,
+        topicanaly0_.bias as bias2_11_0_,
+        topicanaly0_.engagementRate as engageme3_11_0_,
+        topicanaly0_.likes as likes4_11_0_,
+        topicanaly0_.shares as shares5_11_0_,
+        topicanaly0_.views as views6_11_0_ 
+    from
+        topic_analytics topicanaly0_ 
+    where
+        topicanaly0_.topic_analytics_id=?
+Hibernate: 
+    delete 
+    from
+        topic 
+    where
+        topic_id=?
+Hibernate: 
+    select
+        topicanaly0_.topic_analytics_id as topic_an1_11_,
+        topicanaly0_.bias as bias2_11_,
+        topicanaly0_.engagementRate as engageme3_11_,
+        topicanaly0_.likes as likes4_11_,
+        topicanaly0_.shares as shares5_11_,
+        topicanaly0_.views as views6_11_ 
+    from
+        topic_analytics topicanaly0_
+Hibernate: 
+    delete 
+    from
+        topic_analytics 
+    where
+        topic_analytics_id=?
+Hibernate: 
+    insert 
+    into
+        topic_analytics
+        (bias, engagementRate, likes, shares, views) 
+    values
+        (?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        topic
+        (topic_analytics_id, topic_name) 
+    values
+        (?, ?)
+Hibernate: 
+    select
+        topic0_.topic_id as topic_id1_10_,
+        topic0_.topic_analytics_id as topic_an3_10_,
+        topic0_.topic_name as topic_na2_10_ 
+    from
+        topic topic0_
+Hibernate: 
+    select
+        topicanaly0_.topic_analytics_id as topic_an1_11_0_,
+        topicanaly0_.bias as bias2_11_0_,
+        topicanaly0_.engagementRate as engageme3_11_0_,
+        topicanaly0_.likes as likes4_11_0_,
+        topicanaly0_.shares as shares5_11_0_,
+        topicanaly0_.views as views6_11_0_ 
+    from
+        topic_analytics topicanaly0_ 
+    where
+        topicanaly0_.topic_analytics_id=?
+2024-08-09 09:30:19.345  INFO 81449 --- [    Test worker] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2024-08-09 09:30:19.345  INFO 81449 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2024-08-09 09:30:19.345  INFO 81449 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 0 ms
+Hibernate: 
+    select
+        topic0_.topic_id as topic_id1_10_,
+        topic0_.topic_analytics_id as topic_an3_10_,
+        topic0_.topic_name as topic_na2_10_ 
+    from
+        topic topic0_
+Hibernate: 
+    select
+        topicanaly0_.topic_analytics_id as topic_an1_11_0_,
+        topicanaly0_.bias as bias2_11_0_,
+        topicanaly0_.engagementRate as engageme3_11_0_,
+        topicanaly0_.likes as likes4_11_0_,
+        topicanaly0_.shares as shares5_11_0_,
+        topicanaly0_.views as views6_11_0_ 
+    from
+        topic_analytics topicanaly0_ 
+    where
+        topicanaly0_.topic_analytics_id=?
+Hibernate: 
+    delete 
+    from
+        topic 
+    where
+        topic_id=?
+Hibernate: 
+    select
+        topicanaly0_.topic_analytics_id as topic_an1_11_,
+        topicanaly0_.bias as bias2_11_,
+        topicanaly0_.engagementRate as engageme3_11_,
+        topicanaly0_.likes as likes4_11_,
+        topicanaly0_.shares as shares5_11_,
+        topicanaly0_.views as views6_11_ 
+    from
+        topic_analytics topicanaly0_
+Hibernate: 
+    delete 
+    from
+        topic_analytics 
+    where
+        topic_analytics_id=?
+Hibernate: 
+    insert 
+    into
+        topic_analytics
+        (bias, engagementRate, likes, shares, views) 
+    values
+        (?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        topic
+        (topic_analytics_id, topic_name) 
+    values
+        (?, ?)
+Hibernate: 
+    select
+        topic0_.topic_id as topic_id1_10_,
+        topic0_.topic_analytics_id as topic_an3_10_,
+        topic0_.topic_name as topic_na2_10_ 
+    from
+        topic topic0_
+Hibernate: 
+    select
+        topicanaly0_.topic_analytics_id as topic_an1_11_0_,
+        topicanaly0_.bias as bias2_11_0_,
+        topicanaly0_.engagementRate as engageme3_11_0_,
+        topicanaly0_.likes as likes4_11_0_,
+        topicanaly0_.shares as shares5_11_0_,
+        topicanaly0_.views as views6_11_0_ 
+    from
+        topic_analytics topicanaly0_ 
+    where
+        topicanaly0_.topic_analytics_id=?
+Hibernate: 
+    delete 
+    from
+        topic 
+    where
+        topic_id=?
+Hibernate: 
+    select
+        topic0_.topic_id as topic_id1_10_,
+        topic0_.topic_analytics_id as topic_an3_10_,
+        topic0_.topic_name as topic_na2_10_ 
+    from
+        topic topic0_
+2024-08-09 09:30:19.359  INFO 81449 --- [    Test worker] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2024-08-09 09:30:19.359  INFO 81449 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2024-08-09 09:30:19.360  INFO 81449 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 1 ms
+Hibernate: 
+    select
+        topic0_.topic_id as topic_id1_10_,
+        topic0_.topic_analytics_id as topic_an3_10_,
+        topic0_.topic_name as topic_na2_10_ 
+    from
+        topic topic0_
+Hibernate: 
+    select
+        topicanaly0_.topic_analytics_id as topic_an1_11_,
+        topicanaly0_.bias as bias2_11_,
+        topicanaly0_.engagementRate as engageme3_11_,
+        topicanaly0_.likes as likes4_11_,
+        topicanaly0_.shares as shares5_11_,
+        topicanaly0_.views as views6_11_ 
+    from
+        topic_analytics topicanaly0_
+Hibernate: 
+    delete 
+    from
+        topic_analytics 
+    where
+        topic_analytics_id=?
+Hibernate: 
+    insert 
+    into
+        topic_analytics
+        (bias, engagementRate, likes, shares, views) 
+    values
+        (?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        topic
+        (topic_analytics_id, topic_name) 
+    values
+        (?, ?)
+Hibernate: 
+    select
+        topic0_.topic_id as topic_id1_10_0_,
+        topic0_.topic_analytics_id as topic_an3_10_0_,
+        topic0_.topic_name as topic_na2_10_0_,
+        topicanaly1_.topic_analytics_id as topic_an1_11_1_,
+        topicanaly1_.bias as bias2_11_1_,
+        topicanaly1_.engagementRate as engageme3_11_1_,
+        topicanaly1_.likes as likes4_11_1_,
+        topicanaly1_.shares as shares5_11_1_,
+        topicanaly1_.views as views6_11_1_ 
+    from
+        topic topic0_ 
+    inner join
+        topic_analytics topicanaly1_ 
+            on topic0_.topic_analytics_id=topicanaly1_.topic_analytics_id 
+    where
+        topic0_.topic_id=?
+2024-08-09 09:30:19.372  INFO 81449 --- [    Test worker] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2024-08-09 09:30:19.372  INFO 81449 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2024-08-09 09:30:19.373  INFO 81449 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 1 ms
+Hibernate: 
+    select
+        topic0_.topic_id as topic_id1_10_,
+        topic0_.topic_analytics_id as topic_an3_10_,
+        topic0_.topic_name as topic_na2_10_ 
+    from
+        topic topic0_
+Hibernate: 
+    select
+        topicanaly0_.topic_analytics_id as topic_an1_11_0_,
+        topicanaly0_.bias as bias2_11_0_,
+        topicanaly0_.engagementRate as engageme3_11_0_,
+        topicanaly0_.likes as likes4_11_0_,
+        topicanaly0_.shares as shares5_11_0_,
+        topicanaly0_.views as views6_11_0_ 
+    from
+        topic_analytics topicanaly0_ 
+    where
+        topicanaly0_.topic_analytics_id=?
+Hibernate: 
+    delete 
+    from
+        topic 
+    where
+        topic_id=?
+Hibernate: 
+    select
+        topicanaly0_.topic_analytics_id as topic_an1_11_,
+        topicanaly0_.bias as bias2_11_,
+        topicanaly0_.engagementRate as engageme3_11_,
+        topicanaly0_.likes as likes4_11_,
+        topicanaly0_.shares as shares5_11_,
+        topicanaly0_.views as views6_11_ 
+    from
+        topic_analytics topicanaly0_
+Hibernate: 
+    delete 
+    from
+        topic_analytics 
+    where
+        topic_analytics_id=?
+Hibernate: 
+    insert 
+    into
+        topic_analytics
+        (bias, engagementRate, likes, shares, views) 
+    values
+        (?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        topic
+        (topic_analytics_id, topic_name) 
+    values
+        (?, ?)
+Hibernate: 
+    select
+        topic0_.topic_id as topic_id1_10_0_,
+        topic0_.topic_analytics_id as topic_an3_10_0_,
+        topic0_.topic_name as topic_na2_10_0_,
+        topicanaly1_.topic_analytics_id as topic_an1_11_1_,
+        topicanaly1_.bias as bias2_11_1_,
+        topicanaly1_.engagementRate as engageme3_11_1_,
+        topicanaly1_.likes as likes4_11_1_,
+        topicanaly1_.shares as shares5_11_1_,
+        topicanaly1_.views as views6_11_1_ 
+    from
+        topic topic0_ 
+    inner join
+        topic_analytics topicanaly1_ 
+            on topic0_.topic_analytics_id=topicanaly1_.topic_analytics_id 
+    where
+        topic0_.topic_id=?
+2024-08-09 09:30:19.385  INFO 81449 --- [    Test worker] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2024-08-09 09:30:19.385  INFO 81449 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2024-08-09 09:30:19.385  INFO 81449 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 0 ms
+Hibernate: 
+    select
+        topic0_.topic_id as topic_id1_10_,
+        topic0_.topic_analytics_id as topic_an3_10_,
+        topic0_.topic_name as topic_na2_10_ 
+    from
+        topic topic0_
+Hibernate: 
+    select
+        topicanaly0_.topic_analytics_id as topic_an1_11_0_,
+        topicanaly0_.bias as bias2_11_0_,
+        topicanaly0_.engagementRate as engageme3_11_0_,
+        topicanaly0_.likes as likes4_11_0_,
+        topicanaly0_.shares as shares5_11_0_,
+        topicanaly0_.views as views6_11_0_ 
+    from
+        topic_analytics topicanaly0_ 
+    where
+        topicanaly0_.topic_analytics_id=?
+Hibernate: 
+    delete 
+    from
+        topic 
+    where
+        topic_id=?
+Hibernate: 
+    select
+        topicanaly0_.topic_analytics_id as topic_an1_11_,
+        topicanaly0_.bias as bias2_11_,
+        topicanaly0_.engagementRate as engageme3_11_,
+        topicanaly0_.likes as likes4_11_,
+        topicanaly0_.shares as shares5_11_,
+        topicanaly0_.views as views6_11_ 
+    from
+        topic_analytics topicanaly0_
+Hibernate: 
+    delete 
+    from
+        topic_analytics 
+    where
+        topic_analytics_id=?
+Hibernate: 
+    insert 
+    into
+        topic_analytics
+        (bias, engagementRate, likes, shares, views) 
+    values
+        (?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        topic
+        (topic_analytics_id, topic_name) 
+    values
+        (?, ?)
+Hibernate: 
+    select
+        topic0_.topic_id as topic_id1_10_,
+        topic0_.topic_analytics_id as topic_an3_10_,
+        topic0_.topic_name as topic_na2_10_ 
+    from
+        topic topic0_ 
+    where
+        topic0_.topic_name=?
+Hibernate: 
+    select
+        topicanaly0_.topic_analytics_id as topic_an1_11_0_,
+        topicanaly0_.bias as bias2_11_0_,
+        topicanaly0_.engagementRate as engageme3_11_0_,
+        topicanaly0_.likes as likes4_11_0_,
+        topicanaly0_.shares as shares5_11_0_,
+        topicanaly0_.views as views6_11_0_ 
+    from
+        topic_analytics topicanaly0_ 
+    where
+        topicanaly0_.topic_analytics_id=?
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
