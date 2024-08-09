@@ -9,10 +9,19 @@ import ssd.Entities.Analytics;
 @Table(name = "topic_analytics")
 public class TopicAnalytics implements Analytics,Serializable {
 
+    @Column(name = "bias", nullable = false)
     private String bias;
+
+    @Column(name = "views", nullable = false)
     private int views;
+
+    @Column(name = "shares", nullable = false)
     private int shares;
+
+    @Column(name = "likes", nullable = false)
     private int likes;
+
+    @Column(name = "engagement_rate", nullable = false)
     private double engagementRate;
 
     @Id

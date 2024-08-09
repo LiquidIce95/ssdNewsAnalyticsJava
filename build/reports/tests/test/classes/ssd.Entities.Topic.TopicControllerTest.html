@@ -41,7 +41,7 @@
 </td>
 <td>
 <div class="infoBox" id="duration">
-<div class="counter">0.108s</div>
+<div class="counter">0.126s</div>
 <p>duration</p>
 </div>
 </td>
@@ -79,32 +79,32 @@
 </thead>
 <tr>
 <td class="success">testGetAllTopics()</td>
-<td class="success">0.011s</td>
+<td class="success">0.014s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">testGetAllTopics_emptyDatabase()</td>
-<td class="success">0.017s</td>
+<td class="success">0.019s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">testGetPopularTopics()</td>
-<td class="success">0.015s</td>
+<td class="success">0.016s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">testGetPopularTopics_noContent()</td>
-<td class="success">0.013s</td>
+<td class="success">0.014s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">testGetTopicById()</td>
-<td class="success">0.012s</td>
+<td class="success">0.019s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">testGetTopicById_notFound()</td>
-<td class="success">0.012s</td>
+<td class="success">0.016s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
@@ -122,15 +122,39 @@
 <div id="tab1" class="tab">
 <h2>Standard output</h2>
 <span class="code">
-<pre>2024-08-09 09:30:19.277  INFO 81449 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Neither @ContextConfiguration nor @ContextHierarchy found for test class [ssd.Entities.Topic.TopicControllerTest], using SpringBootContextLoader
-2024-08-09 09:30:19.278  INFO 81449 --- [    Test worker] o.s.t.c.support.AbstractContextLoader    : Could not detect default resource locations for test class [ssd.Entities.Topic.TopicControllerTest]: no resource found for suffixes {-context.xml, Context.groovy}.
-2024-08-09 09:30:19.278  INFO 81449 --- [    Test worker] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [ssd.Entities.Topic.TopicControllerTest]: TopicControllerTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
-2024-08-09 09:30:19.281  INFO 81449 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration ssd.SSDApplication for test class ssd.Entities.Topic.TopicControllerTest
-2024-08-09 09:30:19.282  INFO 81449 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.event.ApplicationEventsTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
-2024-08-09 09:30:19.282  INFO 81449 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@3b96ea23, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@74c58f64, org.springframework.test.context.event.ApplicationEventsTestExecutionListener@65640109, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@5feceb2f, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@5327c503, org.springframework.test.context.support.DirtiesContextTestExecutionListener@b41ceac, org.springframework.test.context.transaction.TransactionalTestExecutionListener@4ee8ea84, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@76e5d5e5, org.springframework.test.context.event.EventPublishingTestExecutionListener@1b0709e7, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@1e368085, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@1703e50d, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@4f1150f5, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@6cfa20c1, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener@46e2a773, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@4ec1192f]
-2024-08-09 09:30:19.284  INFO 81449 --- [    Test worker] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
-2024-08-09 09:30:19.284  INFO 81449 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
-2024-08-09 09:30:19.285  INFO 81449 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 1 ms
+<pre>2024-08-09 17:11:07.698  INFO 658341 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Neither @ContextConfiguration nor @ContextHierarchy found for test class [ssd.Entities.Topic.TopicControllerTest], using SpringBootContextLoader
+2024-08-09 17:11:07.698  INFO 658341 --- [    Test worker] o.s.t.c.support.AbstractContextLoader    : Could not detect default resource locations for test class [ssd.Entities.Topic.TopicControllerTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+2024-08-09 17:11:07.698  INFO 658341 --- [    Test worker] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [ssd.Entities.Topic.TopicControllerTest]: TopicControllerTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2024-08-09 17:11:07.703  INFO 658341 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration ssd.SSDApplication for test class ssd.Entities.Topic.TopicControllerTest
+2024-08-09 17:11:07.704  INFO 658341 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.event.ApplicationEventsTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
+2024-08-09 17:11:07.704  INFO 658341 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@5c519da4, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@4f67d628, org.springframework.test.context.event.ApplicationEventsTestExecutionListener@3ef2f84c, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@14f8fdae, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@4414ee28, org.springframework.test.context.support.DirtiesContextTestExecutionListener@3533b614, org.springframework.test.context.transaction.TransactionalTestExecutionListener@1caa1866, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@4fec93d0, org.springframework.test.context.event.EventPublishingTestExecutionListener@2cea41ab, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@4c1c134, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@486480e2, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@63bdf82d, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@1da40ae8, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener@1766b009, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@7be95197]
+Hibernate: 
+    select
+        article0_.article_id as article_1_0_,
+        article0_.article_analytics_id as article_4_0_,
+        article0_.author_id as author_i5_0_,
+        article0_.content as content2_0_,
+        article0_.newspaper_id as newspape6_0_,
+        article0_.owner_id as owner_id7_0_,
+        article0_.publisher_id as publishe8_0_,
+        article0_.title as title3_0_,
+        article0_.topic_id as topic_id9_0_ 
+    from
+        article article0_
+Hibernate: 
+    select
+        newspaper0_.newspaper_id as newspape1_4_,
+        newspaper0_.newspaper_analytics_id as newspape3_4_,
+        newspaper0_.newspaper_name as newspape2_4_ 
+    from
+        newspaper newspaper0_
+Hibernate: 
+    select
+        owner0_.owner_id as owner_id1_6_,
+        owner0_.owner_analytics_id as owner_an3_6_,
+        owner0_.owner_name as owner_na2_6_ 
+    from
+        owner owner0_
 Hibernate: 
     select
         topic0_.topic_id as topic_id1_10_,
@@ -140,43 +164,108 @@ Hibernate:
         topic topic0_
 Hibernate: 
     select
-        topicanaly0_.topic_analytics_id as topic_an1_11_0_,
-        topicanaly0_.bias as bias2_11_0_,
-        topicanaly0_.engagementRate as engageme3_11_0_,
-        topicanaly0_.likes as likes4_11_0_,
-        topicanaly0_.shares as shares5_11_0_,
-        topicanaly0_.views as views6_11_0_ 
+        publisher0_.publisher_id as publishe1_8_,
+        publisher0_.publisher_analytics_id as publishe3_8_,
+        publisher0_.publisher_name as publishe2_8_ 
     from
-        topic_analytics topicanaly0_ 
+        publisher publisher0_
+Hibernate: 
+    select
+        publishera0_.publisher_analytics_id as publishe1_9_0_,
+        publishera0_.bias as bias2_9_0_,
+        publishera0_.engagement_rate as engageme3_9_0_,
+        publishera0_.likes as likes4_9_0_,
+        publishera0_.shares as shares5_9_0_,
+        publishera0_.views as views6_9_0_ 
+    from
+        publisher_analytics publishera0_ 
     where
-        topicanaly0_.topic_analytics_id=?
+        publishera0_.publisher_analytics_id=?
 Hibernate: 
     delete 
     from
-        topic 
+        publisher 
     where
-        topic_id=?
+        publisher_id=?
+Hibernate: 
+    select
+        author0_.author_id as author_i1_2_,
+        author0_.author_age as author_a2_2_,
+        author0_.author_analytics_id as author_a4_2_,
+        author0_.author_name as author_n3_2_ 
+    from
+        author author0_
+Hibernate: 
+    select
+        articleana0_.article_analytics_id as article_1_1_,
+        articleana0_.bias as bias2_1_,
+        articleana0_.engagement_rate as engageme3_1_,
+        articleana0_.likes as likes4_1_,
+        articleana0_.shares as shares5_1_,
+        articleana0_.views as views6_1_ 
+    from
+        article_analytics articleana0_
+Hibernate: 
+    select
+        newspapera0_.newspaper_analytics_id as newspape1_5_,
+        newspapera0_.bias as bias2_5_,
+        newspapera0_.engagement_rate as engageme3_5_,
+        newspapera0_.likes as likes4_5_,
+        newspapera0_.shares as shares5_5_,
+        newspapera0_.views as views6_5_ 
+    from
+        newspaper_analytics newspapera0_
+Hibernate: 
+    select
+        owneranaly0_.owner_analytics_id as owner_an1_7_,
+        owneranaly0_.bias as bias2_7_,
+        owneranaly0_.engagement_rate as engageme3_7_,
+        owneranaly0_.likes as likes4_7_,
+        owneranaly0_.shares as shares5_7_,
+        owneranaly0_.views as views6_7_ 
+    from
+        owner_analytics owneranaly0_
 Hibernate: 
     select
         topicanaly0_.topic_analytics_id as topic_an1_11_,
         topicanaly0_.bias as bias2_11_,
-        topicanaly0_.engagementRate as engageme3_11_,
+        topicanaly0_.engagement_rate as engageme3_11_,
         topicanaly0_.likes as likes4_11_,
         topicanaly0_.shares as shares5_11_,
         topicanaly0_.views as views6_11_ 
     from
         topic_analytics topicanaly0_
 Hibernate: 
+    select
+        publishera0_.publisher_analytics_id as publishe1_9_,
+        publishera0_.bias as bias2_9_,
+        publishera0_.engagement_rate as engageme3_9_,
+        publishera0_.likes as likes4_9_,
+        publishera0_.shares as shares5_9_,
+        publishera0_.views as views6_9_ 
+    from
+        publisher_analytics publishera0_
+Hibernate: 
     delete 
     from
-        topic_analytics 
+        publisher_analytics 
     where
-        topic_analytics_id=?
+        publisher_analytics_id=?
+Hibernate: 
+    select
+        authoranal0_.author_analytics_id as author_a1_3_,
+        authoranal0_.bias as bias2_3_,
+        authoranal0_.engagement_rate as engageme3_3_,
+        authoranal0_.likes as likes4_3_,
+        authoranal0_.shares as shares5_3_,
+        authoranal0_.views as views6_3_ 
+    from
+        author_analytics authoranal0_
 Hibernate: 
     insert 
     into
         topic_analytics
-        (bias, engagementRate, likes, shares, views) 
+        (bias, engagement_rate, likes, shares, views) 
     values
         (?, ?, ?, ?, ?)
 Hibernate: 
@@ -197,7 +286,7 @@ Hibernate:
     select
         topicanaly0_.topic_analytics_id as topic_an1_11_0_,
         topicanaly0_.bias as bias2_11_0_,
-        topicanaly0_.engagementRate as engageme3_11_0_,
+        topicanaly0_.engagement_rate as engageme3_11_0_,
         topicanaly0_.likes as likes4_11_0_,
         topicanaly0_.shares as shares5_11_0_,
         topicanaly0_.views as views6_11_0_ 
@@ -218,9 +307,33 @@ Hibernate:
         topic0_.topic_name as topic_na2_10_ 
     from
         topic topic0_
-2024-08-09 09:30:19.303  INFO 81449 --- [    Test worker] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
-2024-08-09 09:30:19.303  INFO 81449 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
-2024-08-09 09:30:19.303  INFO 81449 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 0 ms
+Hibernate: 
+    select
+        article0_.article_id as article_1_0_,
+        article0_.article_analytics_id as article_4_0_,
+        article0_.author_id as author_i5_0_,
+        article0_.content as content2_0_,
+        article0_.newspaper_id as newspape6_0_,
+        article0_.owner_id as owner_id7_0_,
+        article0_.publisher_id as publishe8_0_,
+        article0_.title as title3_0_,
+        article0_.topic_id as topic_id9_0_ 
+    from
+        article article0_
+Hibernate: 
+    select
+        newspaper0_.newspaper_id as newspape1_4_,
+        newspaper0_.newspaper_analytics_id as newspape3_4_,
+        newspaper0_.newspaper_name as newspape2_4_ 
+    from
+        newspaper newspaper0_
+Hibernate: 
+    select
+        owner0_.owner_id as owner_id1_6_,
+        owner0_.owner_analytics_id as owner_an3_6_,
+        owner0_.owner_name as owner_na2_6_ 
+    from
+        owner owner0_
 Hibernate: 
     select
         topic0_.topic_id as topic_id1_10_,
@@ -230,9 +343,54 @@ Hibernate:
         topic topic0_
 Hibernate: 
     select
+        publisher0_.publisher_id as publishe1_8_,
+        publisher0_.publisher_analytics_id as publishe3_8_,
+        publisher0_.publisher_name as publishe2_8_ 
+    from
+        publisher publisher0_
+Hibernate: 
+    select
+        author0_.author_id as author_i1_2_,
+        author0_.author_age as author_a2_2_,
+        author0_.author_analytics_id as author_a4_2_,
+        author0_.author_name as author_n3_2_ 
+    from
+        author author0_
+Hibernate: 
+    select
+        articleana0_.article_analytics_id as article_1_1_,
+        articleana0_.bias as bias2_1_,
+        articleana0_.engagement_rate as engageme3_1_,
+        articleana0_.likes as likes4_1_,
+        articleana0_.shares as shares5_1_,
+        articleana0_.views as views6_1_ 
+    from
+        article_analytics articleana0_
+Hibernate: 
+    select
+        newspapera0_.newspaper_analytics_id as newspape1_5_,
+        newspapera0_.bias as bias2_5_,
+        newspapera0_.engagement_rate as engageme3_5_,
+        newspapera0_.likes as likes4_5_,
+        newspapera0_.shares as shares5_5_,
+        newspapera0_.views as views6_5_ 
+    from
+        newspaper_analytics newspapera0_
+Hibernate: 
+    select
+        owneranaly0_.owner_analytics_id as owner_an1_7_,
+        owneranaly0_.bias as bias2_7_,
+        owneranaly0_.engagement_rate as engageme3_7_,
+        owneranaly0_.likes as likes4_7_,
+        owneranaly0_.shares as shares5_7_,
+        owneranaly0_.views as views6_7_ 
+    from
+        owner_analytics owneranaly0_
+Hibernate: 
+    select
         topicanaly0_.topic_analytics_id as topic_an1_11_,
         topicanaly0_.bias as bias2_11_,
-        topicanaly0_.engagementRate as engageme3_11_,
+        topicanaly0_.engagement_rate as engageme3_11_,
         topicanaly0_.likes as likes4_11_,
         topicanaly0_.shares as shares5_11_,
         topicanaly0_.views as views6_11_ 
@@ -245,455 +403,30 @@ Hibernate:
     where
         topic_analytics_id=?
 Hibernate: 
-    insert 
-    into
-        topic_analytics
-        (bias, engagementRate, likes, shares, views) 
-    values
-        (?, ?, ?, ?, ?)
-Hibernate: 
-    insert 
-    into
-        topic
-        (topic_analytics_id, topic_name) 
-    values
-        (?, ?)
+    select
+        publishera0_.publisher_analytics_id as publishe1_9_,
+        publishera0_.bias as bias2_9_,
+        publishera0_.engagement_rate as engageme3_9_,
+        publishera0_.likes as likes4_9_,
+        publishera0_.shares as shares5_9_,
+        publishera0_.views as views6_9_ 
+    from
+        publisher_analytics publishera0_
 Hibernate: 
     select
-        topic0_.topic_id as topic_id1_10_,
-        topic0_.topic_analytics_id as topic_an3_10_,
-        topic0_.topic_name as topic_na2_10_ 
+        authoranal0_.author_analytics_id as author_a1_3_,
+        authoranal0_.bias as bias2_3_,
+        authoranal0_.engagement_rate as engageme3_3_,
+        authoranal0_.likes as likes4_3_,
+        authoranal0_.shares as shares5_3_,
+        authoranal0_.views as views6_3_ 
     from
-        topic topic0_ 
-    where
-        topic0_.topic_name=?
-2024-08-09 09:30:19.317  INFO 81449 --- [    Test worker] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
-2024-08-09 09:30:19.317  INFO 81449 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
-2024-08-09 09:30:19.318  INFO 81449 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 1 ms
-Hibernate: 
-    select
-        topic0_.topic_id as topic_id1_10_,
-        topic0_.topic_analytics_id as topic_an3_10_,
-        topic0_.topic_name as topic_na2_10_ 
-    from
-        topic topic0_
-Hibernate: 
-    select
-        topicanaly0_.topic_analytics_id as topic_an1_11_0_,
-        topicanaly0_.bias as bias2_11_0_,
-        topicanaly0_.engagementRate as engageme3_11_0_,
-        topicanaly0_.likes as likes4_11_0_,
-        topicanaly0_.shares as shares5_11_0_,
-        topicanaly0_.views as views6_11_0_ 
-    from
-        topic_analytics topicanaly0_ 
-    where
-        topicanaly0_.topic_analytics_id=?
-Hibernate: 
-    delete 
-    from
-        topic 
-    where
-        topic_id=?
-Hibernate: 
-    select
-        topicanaly0_.topic_analytics_id as topic_an1_11_,
-        topicanaly0_.bias as bias2_11_,
-        topicanaly0_.engagementRate as engageme3_11_,
-        topicanaly0_.likes as likes4_11_,
-        topicanaly0_.shares as shares5_11_,
-        topicanaly0_.views as views6_11_ 
-    from
-        topic_analytics topicanaly0_
-Hibernate: 
-    delete 
-    from
-        topic_analytics 
-    where
-        topic_analytics_id=?
+        author_analytics authoranal0_
 Hibernate: 
     insert 
     into
         topic_analytics
-        (bias, engagementRate, likes, shares, views) 
-    values
-        (?, ?, ?, ?, ?)
-Hibernate: 
-    insert 
-    into
-        topic
-        (topic_analytics_id, topic_name) 
-    values
-        (?, ?)
-Hibernate: 
-    select
-        topic0_.topic_id as topic_id1_10_,
-        topic0_.topic_analytics_id as topic_an3_10_,
-        topic0_.topic_name as topic_na2_10_ 
-    from
-        topic topic0_
-Hibernate: 
-    select
-        topicanaly0_.topic_analytics_id as topic_an1_11_0_,
-        topicanaly0_.bias as bias2_11_0_,
-        topicanaly0_.engagementRate as engageme3_11_0_,
-        topicanaly0_.likes as likes4_11_0_,
-        topicanaly0_.shares as shares5_11_0_,
-        topicanaly0_.views as views6_11_0_ 
-    from
-        topic_analytics topicanaly0_ 
-    where
-        topicanaly0_.topic_analytics_id=?
-2024-08-09 09:30:19.333  INFO 81449 --- [    Test worker] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
-2024-08-09 09:30:19.333  INFO 81449 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
-2024-08-09 09:30:19.333  INFO 81449 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 0 ms
-Hibernate: 
-    select
-        topic0_.topic_id as topic_id1_10_,
-        topic0_.topic_analytics_id as topic_an3_10_,
-        topic0_.topic_name as topic_na2_10_ 
-    from
-        topic topic0_
-Hibernate: 
-    select
-        topicanaly0_.topic_analytics_id as topic_an1_11_0_,
-        topicanaly0_.bias as bias2_11_0_,
-        topicanaly0_.engagementRate as engageme3_11_0_,
-        topicanaly0_.likes as likes4_11_0_,
-        topicanaly0_.shares as shares5_11_0_,
-        topicanaly0_.views as views6_11_0_ 
-    from
-        topic_analytics topicanaly0_ 
-    where
-        topicanaly0_.topic_analytics_id=?
-Hibernate: 
-    delete 
-    from
-        topic 
-    where
-        topic_id=?
-Hibernate: 
-    select
-        topicanaly0_.topic_analytics_id as topic_an1_11_,
-        topicanaly0_.bias as bias2_11_,
-        topicanaly0_.engagementRate as engageme3_11_,
-        topicanaly0_.likes as likes4_11_,
-        topicanaly0_.shares as shares5_11_,
-        topicanaly0_.views as views6_11_ 
-    from
-        topic_analytics topicanaly0_
-Hibernate: 
-    delete 
-    from
-        topic_analytics 
-    where
-        topic_analytics_id=?
-Hibernate: 
-    insert 
-    into
-        topic_analytics
-        (bias, engagementRate, likes, shares, views) 
-    values
-        (?, ?, ?, ?, ?)
-Hibernate: 
-    insert 
-    into
-        topic
-        (topic_analytics_id, topic_name) 
-    values
-        (?, ?)
-Hibernate: 
-    select
-        topic0_.topic_id as topic_id1_10_,
-        topic0_.topic_analytics_id as topic_an3_10_,
-        topic0_.topic_name as topic_na2_10_ 
-    from
-        topic topic0_
-Hibernate: 
-    select
-        topicanaly0_.topic_analytics_id as topic_an1_11_0_,
-        topicanaly0_.bias as bias2_11_0_,
-        topicanaly0_.engagementRate as engageme3_11_0_,
-        topicanaly0_.likes as likes4_11_0_,
-        topicanaly0_.shares as shares5_11_0_,
-        topicanaly0_.views as views6_11_0_ 
-    from
-        topic_analytics topicanaly0_ 
-    where
-        topicanaly0_.topic_analytics_id=?
-2024-08-09 09:30:19.345  INFO 81449 --- [    Test worker] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
-2024-08-09 09:30:19.345  INFO 81449 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
-2024-08-09 09:30:19.345  INFO 81449 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 0 ms
-Hibernate: 
-    select
-        topic0_.topic_id as topic_id1_10_,
-        topic0_.topic_analytics_id as topic_an3_10_,
-        topic0_.topic_name as topic_na2_10_ 
-    from
-        topic topic0_
-Hibernate: 
-    select
-        topicanaly0_.topic_analytics_id as topic_an1_11_0_,
-        topicanaly0_.bias as bias2_11_0_,
-        topicanaly0_.engagementRate as engageme3_11_0_,
-        topicanaly0_.likes as likes4_11_0_,
-        topicanaly0_.shares as shares5_11_0_,
-        topicanaly0_.views as views6_11_0_ 
-    from
-        topic_analytics topicanaly0_ 
-    where
-        topicanaly0_.topic_analytics_id=?
-Hibernate: 
-    delete 
-    from
-        topic 
-    where
-        topic_id=?
-Hibernate: 
-    select
-        topicanaly0_.topic_analytics_id as topic_an1_11_,
-        topicanaly0_.bias as bias2_11_,
-        topicanaly0_.engagementRate as engageme3_11_,
-        topicanaly0_.likes as likes4_11_,
-        topicanaly0_.shares as shares5_11_,
-        topicanaly0_.views as views6_11_ 
-    from
-        topic_analytics topicanaly0_
-Hibernate: 
-    delete 
-    from
-        topic_analytics 
-    where
-        topic_analytics_id=?
-Hibernate: 
-    insert 
-    into
-        topic_analytics
-        (bias, engagementRate, likes, shares, views) 
-    values
-        (?, ?, ?, ?, ?)
-Hibernate: 
-    insert 
-    into
-        topic
-        (topic_analytics_id, topic_name) 
-    values
-        (?, ?)
-Hibernate: 
-    select
-        topic0_.topic_id as topic_id1_10_,
-        topic0_.topic_analytics_id as topic_an3_10_,
-        topic0_.topic_name as topic_na2_10_ 
-    from
-        topic topic0_
-Hibernate: 
-    select
-        topicanaly0_.topic_analytics_id as topic_an1_11_0_,
-        topicanaly0_.bias as bias2_11_0_,
-        topicanaly0_.engagementRate as engageme3_11_0_,
-        topicanaly0_.likes as likes4_11_0_,
-        topicanaly0_.shares as shares5_11_0_,
-        topicanaly0_.views as views6_11_0_ 
-    from
-        topic_analytics topicanaly0_ 
-    where
-        topicanaly0_.topic_analytics_id=?
-Hibernate: 
-    delete 
-    from
-        topic 
-    where
-        topic_id=?
-Hibernate: 
-    select
-        topic0_.topic_id as topic_id1_10_,
-        topic0_.topic_analytics_id as topic_an3_10_,
-        topic0_.topic_name as topic_na2_10_ 
-    from
-        topic topic0_
-2024-08-09 09:30:19.359  INFO 81449 --- [    Test worker] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
-2024-08-09 09:30:19.359  INFO 81449 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
-2024-08-09 09:30:19.360  INFO 81449 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 1 ms
-Hibernate: 
-    select
-        topic0_.topic_id as topic_id1_10_,
-        topic0_.topic_analytics_id as topic_an3_10_,
-        topic0_.topic_name as topic_na2_10_ 
-    from
-        topic topic0_
-Hibernate: 
-    select
-        topicanaly0_.topic_analytics_id as topic_an1_11_,
-        topicanaly0_.bias as bias2_11_,
-        topicanaly0_.engagementRate as engageme3_11_,
-        topicanaly0_.likes as likes4_11_,
-        topicanaly0_.shares as shares5_11_,
-        topicanaly0_.views as views6_11_ 
-    from
-        topic_analytics topicanaly0_
-Hibernate: 
-    delete 
-    from
-        topic_analytics 
-    where
-        topic_analytics_id=?
-Hibernate: 
-    insert 
-    into
-        topic_analytics
-        (bias, engagementRate, likes, shares, views) 
-    values
-        (?, ?, ?, ?, ?)
-Hibernate: 
-    insert 
-    into
-        topic
-        (topic_analytics_id, topic_name) 
-    values
-        (?, ?)
-Hibernate: 
-    select
-        topic0_.topic_id as topic_id1_10_0_,
-        topic0_.topic_analytics_id as topic_an3_10_0_,
-        topic0_.topic_name as topic_na2_10_0_,
-        topicanaly1_.topic_analytics_id as topic_an1_11_1_,
-        topicanaly1_.bias as bias2_11_1_,
-        topicanaly1_.engagementRate as engageme3_11_1_,
-        topicanaly1_.likes as likes4_11_1_,
-        topicanaly1_.shares as shares5_11_1_,
-        topicanaly1_.views as views6_11_1_ 
-    from
-        topic topic0_ 
-    inner join
-        topic_analytics topicanaly1_ 
-            on topic0_.topic_analytics_id=topicanaly1_.topic_analytics_id 
-    where
-        topic0_.topic_id=?
-2024-08-09 09:30:19.372  INFO 81449 --- [    Test worker] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
-2024-08-09 09:30:19.372  INFO 81449 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
-2024-08-09 09:30:19.373  INFO 81449 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 1 ms
-Hibernate: 
-    select
-        topic0_.topic_id as topic_id1_10_,
-        topic0_.topic_analytics_id as topic_an3_10_,
-        topic0_.topic_name as topic_na2_10_ 
-    from
-        topic topic0_
-Hibernate: 
-    select
-        topicanaly0_.topic_analytics_id as topic_an1_11_0_,
-        topicanaly0_.bias as bias2_11_0_,
-        topicanaly0_.engagementRate as engageme3_11_0_,
-        topicanaly0_.likes as likes4_11_0_,
-        topicanaly0_.shares as shares5_11_0_,
-        topicanaly0_.views as views6_11_0_ 
-    from
-        topic_analytics topicanaly0_ 
-    where
-        topicanaly0_.topic_analytics_id=?
-Hibernate: 
-    delete 
-    from
-        topic 
-    where
-        topic_id=?
-Hibernate: 
-    select
-        topicanaly0_.topic_analytics_id as topic_an1_11_,
-        topicanaly0_.bias as bias2_11_,
-        topicanaly0_.engagementRate as engageme3_11_,
-        topicanaly0_.likes as likes4_11_,
-        topicanaly0_.shares as shares5_11_,
-        topicanaly0_.views as views6_11_ 
-    from
-        topic_analytics topicanaly0_
-Hibernate: 
-    delete 
-    from
-        topic_analytics 
-    where
-        topic_analytics_id=?
-Hibernate: 
-    insert 
-    into
-        topic_analytics
-        (bias, engagementRate, likes, shares, views) 
-    values
-        (?, ?, ?, ?, ?)
-Hibernate: 
-    insert 
-    into
-        topic
-        (topic_analytics_id, topic_name) 
-    values
-        (?, ?)
-Hibernate: 
-    select
-        topic0_.topic_id as topic_id1_10_0_,
-        topic0_.topic_analytics_id as topic_an3_10_0_,
-        topic0_.topic_name as topic_na2_10_0_,
-        topicanaly1_.topic_analytics_id as topic_an1_11_1_,
-        topicanaly1_.bias as bias2_11_1_,
-        topicanaly1_.engagementRate as engageme3_11_1_,
-        topicanaly1_.likes as likes4_11_1_,
-        topicanaly1_.shares as shares5_11_1_,
-        topicanaly1_.views as views6_11_1_ 
-    from
-        topic topic0_ 
-    inner join
-        topic_analytics topicanaly1_ 
-            on topic0_.topic_analytics_id=topicanaly1_.topic_analytics_id 
-    where
-        topic0_.topic_id=?
-2024-08-09 09:30:19.385  INFO 81449 --- [    Test worker] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
-2024-08-09 09:30:19.385  INFO 81449 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
-2024-08-09 09:30:19.385  INFO 81449 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 0 ms
-Hibernate: 
-    select
-        topic0_.topic_id as topic_id1_10_,
-        topic0_.topic_analytics_id as topic_an3_10_,
-        topic0_.topic_name as topic_na2_10_ 
-    from
-        topic topic0_
-Hibernate: 
-    select
-        topicanaly0_.topic_analytics_id as topic_an1_11_0_,
-        topicanaly0_.bias as bias2_11_0_,
-        topicanaly0_.engagementRate as engageme3_11_0_,
-        topicanaly0_.likes as likes4_11_0_,
-        topicanaly0_.shares as shares5_11_0_,
-        topicanaly0_.views as views6_11_0_ 
-    from
-        topic_analytics topicanaly0_ 
-    where
-        topicanaly0_.topic_analytics_id=?
-Hibernate: 
-    delete 
-    from
-        topic 
-    where
-        topic_id=?
-Hibernate: 
-    select
-        topicanaly0_.topic_analytics_id as topic_an1_11_,
-        topicanaly0_.bias as bias2_11_,
-        topicanaly0_.engagementRate as engageme3_11_,
-        topicanaly0_.likes as likes4_11_,
-        topicanaly0_.shares as shares5_11_,
-        topicanaly0_.views as views6_11_ 
-    from
-        topic_analytics topicanaly0_
-Hibernate: 
-    delete 
-    from
-        topic_analytics 
-    where
-        topic_analytics_id=?
-Hibernate: 
-    insert 
-    into
-        topic_analytics
-        (bias, engagementRate, likes, shares, views) 
+        (bias, engagement_rate, likes, shares, views) 
     values
         (?, ?, ?, ?, ?)
 Hibernate: 
@@ -714,9 +447,1007 @@ Hibernate:
         topic0_.topic_name=?
 Hibernate: 
     select
+        article0_.article_id as article_1_0_,
+        article0_.article_analytics_id as article_4_0_,
+        article0_.author_id as author_i5_0_,
+        article0_.content as content2_0_,
+        article0_.newspaper_id as newspape6_0_,
+        article0_.owner_id as owner_id7_0_,
+        article0_.publisher_id as publishe8_0_,
+        article0_.title as title3_0_,
+        article0_.topic_id as topic_id9_0_ 
+    from
+        article article0_
+Hibernate: 
+    select
+        newspaper0_.newspaper_id as newspape1_4_,
+        newspaper0_.newspaper_analytics_id as newspape3_4_,
+        newspaper0_.newspaper_name as newspape2_4_ 
+    from
+        newspaper newspaper0_
+Hibernate: 
+    select
+        owner0_.owner_id as owner_id1_6_,
+        owner0_.owner_analytics_id as owner_an3_6_,
+        owner0_.owner_name as owner_na2_6_ 
+    from
+        owner owner0_
+Hibernate: 
+    select
+        topic0_.topic_id as topic_id1_10_,
+        topic0_.topic_analytics_id as topic_an3_10_,
+        topic0_.topic_name as topic_na2_10_ 
+    from
+        topic topic0_
+Hibernate: 
+    select
         topicanaly0_.topic_analytics_id as topic_an1_11_0_,
         topicanaly0_.bias as bias2_11_0_,
-        topicanaly0_.engagementRate as engageme3_11_0_,
+        topicanaly0_.engagement_rate as engageme3_11_0_,
+        topicanaly0_.likes as likes4_11_0_,
+        topicanaly0_.shares as shares5_11_0_,
+        topicanaly0_.views as views6_11_0_ 
+    from
+        topic_analytics topicanaly0_ 
+    where
+        topicanaly0_.topic_analytics_id=?
+Hibernate: 
+    delete 
+    from
+        topic 
+    where
+        topic_id=?
+Hibernate: 
+    select
+        publisher0_.publisher_id as publishe1_8_,
+        publisher0_.publisher_analytics_id as publishe3_8_,
+        publisher0_.publisher_name as publishe2_8_ 
+    from
+        publisher publisher0_
+Hibernate: 
+    select
+        author0_.author_id as author_i1_2_,
+        author0_.author_age as author_a2_2_,
+        author0_.author_analytics_id as author_a4_2_,
+        author0_.author_name as author_n3_2_ 
+    from
+        author author0_
+Hibernate: 
+    select
+        articleana0_.article_analytics_id as article_1_1_,
+        articleana0_.bias as bias2_1_,
+        articleana0_.engagement_rate as engageme3_1_,
+        articleana0_.likes as likes4_1_,
+        articleana0_.shares as shares5_1_,
+        articleana0_.views as views6_1_ 
+    from
+        article_analytics articleana0_
+Hibernate: 
+    select
+        newspapera0_.newspaper_analytics_id as newspape1_5_,
+        newspapera0_.bias as bias2_5_,
+        newspapera0_.engagement_rate as engageme3_5_,
+        newspapera0_.likes as likes4_5_,
+        newspapera0_.shares as shares5_5_,
+        newspapera0_.views as views6_5_ 
+    from
+        newspaper_analytics newspapera0_
+Hibernate: 
+    select
+        owneranaly0_.owner_analytics_id as owner_an1_7_,
+        owneranaly0_.bias as bias2_7_,
+        owneranaly0_.engagement_rate as engageme3_7_,
+        owneranaly0_.likes as likes4_7_,
+        owneranaly0_.shares as shares5_7_,
+        owneranaly0_.views as views6_7_ 
+    from
+        owner_analytics owneranaly0_
+Hibernate: 
+    select
+        topicanaly0_.topic_analytics_id as topic_an1_11_,
+        topicanaly0_.bias as bias2_11_,
+        topicanaly0_.engagement_rate as engageme3_11_,
+        topicanaly0_.likes as likes4_11_,
+        topicanaly0_.shares as shares5_11_,
+        topicanaly0_.views as views6_11_ 
+    from
+        topic_analytics topicanaly0_
+Hibernate: 
+    delete 
+    from
+        topic_analytics 
+    where
+        topic_analytics_id=?
+Hibernate: 
+    select
+        publishera0_.publisher_analytics_id as publishe1_9_,
+        publishera0_.bias as bias2_9_,
+        publishera0_.engagement_rate as engageme3_9_,
+        publishera0_.likes as likes4_9_,
+        publishera0_.shares as shares5_9_,
+        publishera0_.views as views6_9_ 
+    from
+        publisher_analytics publishera0_
+Hibernate: 
+    select
+        authoranal0_.author_analytics_id as author_a1_3_,
+        authoranal0_.bias as bias2_3_,
+        authoranal0_.engagement_rate as engageme3_3_,
+        authoranal0_.likes as likes4_3_,
+        authoranal0_.shares as shares5_3_,
+        authoranal0_.views as views6_3_ 
+    from
+        author_analytics authoranal0_
+Hibernate: 
+    insert 
+    into
+        topic_analytics
+        (bias, engagement_rate, likes, shares, views) 
+    values
+        (?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        topic
+        (topic_analytics_id, topic_name) 
+    values
+        (?, ?)
+Hibernate: 
+    select
+        topic0_.topic_id as topic_id1_10_,
+        topic0_.topic_analytics_id as topic_an3_10_,
+        topic0_.topic_name as topic_na2_10_ 
+    from
+        topic topic0_
+Hibernate: 
+    select
+        topicanaly0_.topic_analytics_id as topic_an1_11_0_,
+        topicanaly0_.bias as bias2_11_0_,
+        topicanaly0_.engagement_rate as engageme3_11_0_,
+        topicanaly0_.likes as likes4_11_0_,
+        topicanaly0_.shares as shares5_11_0_,
+        topicanaly0_.views as views6_11_0_ 
+    from
+        topic_analytics topicanaly0_ 
+    where
+        topicanaly0_.topic_analytics_id=?
+Hibernate: 
+    select
+        article0_.article_id as article_1_0_,
+        article0_.article_analytics_id as article_4_0_,
+        article0_.author_id as author_i5_0_,
+        article0_.content as content2_0_,
+        article0_.newspaper_id as newspape6_0_,
+        article0_.owner_id as owner_id7_0_,
+        article0_.publisher_id as publishe8_0_,
+        article0_.title as title3_0_,
+        article0_.topic_id as topic_id9_0_ 
+    from
+        article article0_
+Hibernate: 
+    select
+        newspaper0_.newspaper_id as newspape1_4_,
+        newspaper0_.newspaper_analytics_id as newspape3_4_,
+        newspaper0_.newspaper_name as newspape2_4_ 
+    from
+        newspaper newspaper0_
+Hibernate: 
+    select
+        owner0_.owner_id as owner_id1_6_,
+        owner0_.owner_analytics_id as owner_an3_6_,
+        owner0_.owner_name as owner_na2_6_ 
+    from
+        owner owner0_
+Hibernate: 
+    select
+        topic0_.topic_id as topic_id1_10_,
+        topic0_.topic_analytics_id as topic_an3_10_,
+        topic0_.topic_name as topic_na2_10_ 
+    from
+        topic topic0_
+Hibernate: 
+    select
+        topicanaly0_.topic_analytics_id as topic_an1_11_0_,
+        topicanaly0_.bias as bias2_11_0_,
+        topicanaly0_.engagement_rate as engageme3_11_0_,
+        topicanaly0_.likes as likes4_11_0_,
+        topicanaly0_.shares as shares5_11_0_,
+        topicanaly0_.views as views6_11_0_ 
+    from
+        topic_analytics topicanaly0_ 
+    where
+        topicanaly0_.topic_analytics_id=?
+Hibernate: 
+    delete 
+    from
+        topic 
+    where
+        topic_id=?
+Hibernate: 
+    select
+        publisher0_.publisher_id as publishe1_8_,
+        publisher0_.publisher_analytics_id as publishe3_8_,
+        publisher0_.publisher_name as publishe2_8_ 
+    from
+        publisher publisher0_
+Hibernate: 
+    select
+        author0_.author_id as author_i1_2_,
+        author0_.author_age as author_a2_2_,
+        author0_.author_analytics_id as author_a4_2_,
+        author0_.author_name as author_n3_2_ 
+    from
+        author author0_
+Hibernate: 
+    select
+        articleana0_.article_analytics_id as article_1_1_,
+        articleana0_.bias as bias2_1_,
+        articleana0_.engagement_rate as engageme3_1_,
+        articleana0_.likes as likes4_1_,
+        articleana0_.shares as shares5_1_,
+        articleana0_.views as views6_1_ 
+    from
+        article_analytics articleana0_
+Hibernate: 
+    select
+        newspapera0_.newspaper_analytics_id as newspape1_5_,
+        newspapera0_.bias as bias2_5_,
+        newspapera0_.engagement_rate as engageme3_5_,
+        newspapera0_.likes as likes4_5_,
+        newspapera0_.shares as shares5_5_,
+        newspapera0_.views as views6_5_ 
+    from
+        newspaper_analytics newspapera0_
+Hibernate: 
+    select
+        owneranaly0_.owner_analytics_id as owner_an1_7_,
+        owneranaly0_.bias as bias2_7_,
+        owneranaly0_.engagement_rate as engageme3_7_,
+        owneranaly0_.likes as likes4_7_,
+        owneranaly0_.shares as shares5_7_,
+        owneranaly0_.views as views6_7_ 
+    from
+        owner_analytics owneranaly0_
+Hibernate: 
+    select
+        topicanaly0_.topic_analytics_id as topic_an1_11_,
+        topicanaly0_.bias as bias2_11_,
+        topicanaly0_.engagement_rate as engageme3_11_,
+        topicanaly0_.likes as likes4_11_,
+        topicanaly0_.shares as shares5_11_,
+        topicanaly0_.views as views6_11_ 
+    from
+        topic_analytics topicanaly0_
+Hibernate: 
+    delete 
+    from
+        topic_analytics 
+    where
+        topic_analytics_id=?
+Hibernate: 
+    select
+        publishera0_.publisher_analytics_id as publishe1_9_,
+        publishera0_.bias as bias2_9_,
+        publishera0_.engagement_rate as engageme3_9_,
+        publishera0_.likes as likes4_9_,
+        publishera0_.shares as shares5_9_,
+        publishera0_.views as views6_9_ 
+    from
+        publisher_analytics publishera0_
+Hibernate: 
+    select
+        authoranal0_.author_analytics_id as author_a1_3_,
+        authoranal0_.bias as bias2_3_,
+        authoranal0_.engagement_rate as engageme3_3_,
+        authoranal0_.likes as likes4_3_,
+        authoranal0_.shares as shares5_3_,
+        authoranal0_.views as views6_3_ 
+    from
+        author_analytics authoranal0_
+Hibernate: 
+    insert 
+    into
+        topic_analytics
+        (bias, engagement_rate, likes, shares, views) 
+    values
+        (?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        topic
+        (topic_analytics_id, topic_name) 
+    values
+        (?, ?)
+Hibernate: 
+    select
+        topic0_.topic_id as topic_id1_10_,
+        topic0_.topic_analytics_id as topic_an3_10_,
+        topic0_.topic_name as topic_na2_10_ 
+    from
+        topic topic0_
+Hibernate: 
+    select
+        topicanaly0_.topic_analytics_id as topic_an1_11_0_,
+        topicanaly0_.bias as bias2_11_0_,
+        topicanaly0_.engagement_rate as engageme3_11_0_,
+        topicanaly0_.likes as likes4_11_0_,
+        topicanaly0_.shares as shares5_11_0_,
+        topicanaly0_.views as views6_11_0_ 
+    from
+        topic_analytics topicanaly0_ 
+    where
+        topicanaly0_.topic_analytics_id=?
+Hibernate: 
+    select
+        article0_.article_id as article_1_0_,
+        article0_.article_analytics_id as article_4_0_,
+        article0_.author_id as author_i5_0_,
+        article0_.content as content2_0_,
+        article0_.newspaper_id as newspape6_0_,
+        article0_.owner_id as owner_id7_0_,
+        article0_.publisher_id as publishe8_0_,
+        article0_.title as title3_0_,
+        article0_.topic_id as topic_id9_0_ 
+    from
+        article article0_
+Hibernate: 
+    select
+        newspaper0_.newspaper_id as newspape1_4_,
+        newspaper0_.newspaper_analytics_id as newspape3_4_,
+        newspaper0_.newspaper_name as newspape2_4_ 
+    from
+        newspaper newspaper0_
+Hibernate: 
+    select
+        owner0_.owner_id as owner_id1_6_,
+        owner0_.owner_analytics_id as owner_an3_6_,
+        owner0_.owner_name as owner_na2_6_ 
+    from
+        owner owner0_
+Hibernate: 
+    select
+        topic0_.topic_id as topic_id1_10_,
+        topic0_.topic_analytics_id as topic_an3_10_,
+        topic0_.topic_name as topic_na2_10_ 
+    from
+        topic topic0_
+Hibernate: 
+    select
+        topicanaly0_.topic_analytics_id as topic_an1_11_0_,
+        topicanaly0_.bias as bias2_11_0_,
+        topicanaly0_.engagement_rate as engageme3_11_0_,
+        topicanaly0_.likes as likes4_11_0_,
+        topicanaly0_.shares as shares5_11_0_,
+        topicanaly0_.views as views6_11_0_ 
+    from
+        topic_analytics topicanaly0_ 
+    where
+        topicanaly0_.topic_analytics_id=?
+Hibernate: 
+    delete 
+    from
+        topic 
+    where
+        topic_id=?
+Hibernate: 
+    select
+        publisher0_.publisher_id as publishe1_8_,
+        publisher0_.publisher_analytics_id as publishe3_8_,
+        publisher0_.publisher_name as publishe2_8_ 
+    from
+        publisher publisher0_
+Hibernate: 
+    select
+        author0_.author_id as author_i1_2_,
+        author0_.author_age as author_a2_2_,
+        author0_.author_analytics_id as author_a4_2_,
+        author0_.author_name as author_n3_2_ 
+    from
+        author author0_
+Hibernate: 
+    select
+        articleana0_.article_analytics_id as article_1_1_,
+        articleana0_.bias as bias2_1_,
+        articleana0_.engagement_rate as engageme3_1_,
+        articleana0_.likes as likes4_1_,
+        articleana0_.shares as shares5_1_,
+        articleana0_.views as views6_1_ 
+    from
+        article_analytics articleana0_
+Hibernate: 
+    select
+        newspapera0_.newspaper_analytics_id as newspape1_5_,
+        newspapera0_.bias as bias2_5_,
+        newspapera0_.engagement_rate as engageme3_5_,
+        newspapera0_.likes as likes4_5_,
+        newspapera0_.shares as shares5_5_,
+        newspapera0_.views as views6_5_ 
+    from
+        newspaper_analytics newspapera0_
+Hibernate: 
+    select
+        owneranaly0_.owner_analytics_id as owner_an1_7_,
+        owneranaly0_.bias as bias2_7_,
+        owneranaly0_.engagement_rate as engageme3_7_,
+        owneranaly0_.likes as likes4_7_,
+        owneranaly0_.shares as shares5_7_,
+        owneranaly0_.views as views6_7_ 
+    from
+        owner_analytics owneranaly0_
+Hibernate: 
+    select
+        topicanaly0_.topic_analytics_id as topic_an1_11_,
+        topicanaly0_.bias as bias2_11_,
+        topicanaly0_.engagement_rate as engageme3_11_,
+        topicanaly0_.likes as likes4_11_,
+        topicanaly0_.shares as shares5_11_,
+        topicanaly0_.views as views6_11_ 
+    from
+        topic_analytics topicanaly0_
+Hibernate: 
+    delete 
+    from
+        topic_analytics 
+    where
+        topic_analytics_id=?
+Hibernate: 
+    select
+        publishera0_.publisher_analytics_id as publishe1_9_,
+        publishera0_.bias as bias2_9_,
+        publishera0_.engagement_rate as engageme3_9_,
+        publishera0_.likes as likes4_9_,
+        publishera0_.shares as shares5_9_,
+        publishera0_.views as views6_9_ 
+    from
+        publisher_analytics publishera0_
+Hibernate: 
+    select
+        authoranal0_.author_analytics_id as author_a1_3_,
+        authoranal0_.bias as bias2_3_,
+        authoranal0_.engagement_rate as engageme3_3_,
+        authoranal0_.likes as likes4_3_,
+        authoranal0_.shares as shares5_3_,
+        authoranal0_.views as views6_3_ 
+    from
+        author_analytics authoranal0_
+Hibernate: 
+    insert 
+    into
+        topic_analytics
+        (bias, engagement_rate, likes, shares, views) 
+    values
+        (?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        topic
+        (topic_analytics_id, topic_name) 
+    values
+        (?, ?)
+Hibernate: 
+    select
+        topic0_.topic_id as topic_id1_10_,
+        topic0_.topic_analytics_id as topic_an3_10_,
+        topic0_.topic_name as topic_na2_10_ 
+    from
+        topic topic0_
+Hibernate: 
+    select
+        topicanaly0_.topic_analytics_id as topic_an1_11_0_,
+        topicanaly0_.bias as bias2_11_0_,
+        topicanaly0_.engagement_rate as engageme3_11_0_,
+        topicanaly0_.likes as likes4_11_0_,
+        topicanaly0_.shares as shares5_11_0_,
+        topicanaly0_.views as views6_11_0_ 
+    from
+        topic_analytics topicanaly0_ 
+    where
+        topicanaly0_.topic_analytics_id=?
+Hibernate: 
+    delete 
+    from
+        topic 
+    where
+        topic_id=?
+Hibernate: 
+    select
+        topic0_.topic_id as topic_id1_10_,
+        topic0_.topic_analytics_id as topic_an3_10_,
+        topic0_.topic_name as topic_na2_10_ 
+    from
+        topic topic0_
+Hibernate: 
+    select
+        article0_.article_id as article_1_0_,
+        article0_.article_analytics_id as article_4_0_,
+        article0_.author_id as author_i5_0_,
+        article0_.content as content2_0_,
+        article0_.newspaper_id as newspape6_0_,
+        article0_.owner_id as owner_id7_0_,
+        article0_.publisher_id as publishe8_0_,
+        article0_.title as title3_0_,
+        article0_.topic_id as topic_id9_0_ 
+    from
+        article article0_
+Hibernate: 
+    select
+        newspaper0_.newspaper_id as newspape1_4_,
+        newspaper0_.newspaper_analytics_id as newspape3_4_,
+        newspaper0_.newspaper_name as newspape2_4_ 
+    from
+        newspaper newspaper0_
+Hibernate: 
+    select
+        owner0_.owner_id as owner_id1_6_,
+        owner0_.owner_analytics_id as owner_an3_6_,
+        owner0_.owner_name as owner_na2_6_ 
+    from
+        owner owner0_
+Hibernate: 
+    select
+        topic0_.topic_id as topic_id1_10_,
+        topic0_.topic_analytics_id as topic_an3_10_,
+        topic0_.topic_name as topic_na2_10_ 
+    from
+        topic topic0_
+Hibernate: 
+    select
+        publisher0_.publisher_id as publishe1_8_,
+        publisher0_.publisher_analytics_id as publishe3_8_,
+        publisher0_.publisher_name as publishe2_8_ 
+    from
+        publisher publisher0_
+Hibernate: 
+    select
+        author0_.author_id as author_i1_2_,
+        author0_.author_age as author_a2_2_,
+        author0_.author_analytics_id as author_a4_2_,
+        author0_.author_name as author_n3_2_ 
+    from
+        author author0_
+Hibernate: 
+    select
+        articleana0_.article_analytics_id as article_1_1_,
+        articleana0_.bias as bias2_1_,
+        articleana0_.engagement_rate as engageme3_1_,
+        articleana0_.likes as likes4_1_,
+        articleana0_.shares as shares5_1_,
+        articleana0_.views as views6_1_ 
+    from
+        article_analytics articleana0_
+Hibernate: 
+    select
+        newspapera0_.newspaper_analytics_id as newspape1_5_,
+        newspapera0_.bias as bias2_5_,
+        newspapera0_.engagement_rate as engageme3_5_,
+        newspapera0_.likes as likes4_5_,
+        newspapera0_.shares as shares5_5_,
+        newspapera0_.views as views6_5_ 
+    from
+        newspaper_analytics newspapera0_
+Hibernate: 
+    select
+        owneranaly0_.owner_analytics_id as owner_an1_7_,
+        owneranaly0_.bias as bias2_7_,
+        owneranaly0_.engagement_rate as engageme3_7_,
+        owneranaly0_.likes as likes4_7_,
+        owneranaly0_.shares as shares5_7_,
+        owneranaly0_.views as views6_7_ 
+    from
+        owner_analytics owneranaly0_
+Hibernate: 
+    select
+        topicanaly0_.topic_analytics_id as topic_an1_11_,
+        topicanaly0_.bias as bias2_11_,
+        topicanaly0_.engagement_rate as engageme3_11_,
+        topicanaly0_.likes as likes4_11_,
+        topicanaly0_.shares as shares5_11_,
+        topicanaly0_.views as views6_11_ 
+    from
+        topic_analytics topicanaly0_
+Hibernate: 
+    delete 
+    from
+        topic_analytics 
+    where
+        topic_analytics_id=?
+Hibernate: 
+    select
+        publishera0_.publisher_analytics_id as publishe1_9_,
+        publishera0_.bias as bias2_9_,
+        publishera0_.engagement_rate as engageme3_9_,
+        publishera0_.likes as likes4_9_,
+        publishera0_.shares as shares5_9_,
+        publishera0_.views as views6_9_ 
+    from
+        publisher_analytics publishera0_
+Hibernate: 
+    select
+        authoranal0_.author_analytics_id as author_a1_3_,
+        authoranal0_.bias as bias2_3_,
+        authoranal0_.engagement_rate as engageme3_3_,
+        authoranal0_.likes as likes4_3_,
+        authoranal0_.shares as shares5_3_,
+        authoranal0_.views as views6_3_ 
+    from
+        author_analytics authoranal0_
+Hibernate: 
+    insert 
+    into
+        topic_analytics
+        (bias, engagement_rate, likes, shares, views) 
+    values
+        (?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        topic
+        (topic_analytics_id, topic_name) 
+    values
+        (?, ?)
+Hibernate: 
+    select
+        topic0_.topic_id as topic_id1_10_,
+        topic0_.topic_analytics_id as topic_an3_10_,
+        topic0_.topic_name as topic_na2_10_ 
+    from
+        topic topic0_
+Hibernate: 
+    select
+        topicanaly0_.topic_analytics_id as topic_an1_11_0_,
+        topicanaly0_.bias as bias2_11_0_,
+        topicanaly0_.engagement_rate as engageme3_11_0_,
+        topicanaly0_.likes as likes4_11_0_,
+        topicanaly0_.shares as shares5_11_0_,
+        topicanaly0_.views as views6_11_0_ 
+    from
+        topic_analytics topicanaly0_ 
+    where
+        topicanaly0_.topic_analytics_id=?
+Hibernate: 
+    select
+        topic0_.topic_id as topic_id1_10_0_,
+        topic0_.topic_analytics_id as topic_an3_10_0_,
+        topic0_.topic_name as topic_na2_10_0_,
+        topicanaly1_.topic_analytics_id as topic_an1_11_1_,
+        topicanaly1_.bias as bias2_11_1_,
+        topicanaly1_.engagement_rate as engageme3_11_1_,
+        topicanaly1_.likes as likes4_11_1_,
+        topicanaly1_.shares as shares5_11_1_,
+        topicanaly1_.views as views6_11_1_ 
+    from
+        topic topic0_ 
+    inner join
+        topic_analytics topicanaly1_ 
+            on topic0_.topic_analytics_id=topicanaly1_.topic_analytics_id 
+    where
+        topic0_.topic_id=?
+Hibernate: 
+    select
+        article0_.article_id as article_1_0_,
+        article0_.article_analytics_id as article_4_0_,
+        article0_.author_id as author_i5_0_,
+        article0_.content as content2_0_,
+        article0_.newspaper_id as newspape6_0_,
+        article0_.owner_id as owner_id7_0_,
+        article0_.publisher_id as publishe8_0_,
+        article0_.title as title3_0_,
+        article0_.topic_id as topic_id9_0_ 
+    from
+        article article0_
+Hibernate: 
+    select
+        newspaper0_.newspaper_id as newspape1_4_,
+        newspaper0_.newspaper_analytics_id as newspape3_4_,
+        newspaper0_.newspaper_name as newspape2_4_ 
+    from
+        newspaper newspaper0_
+Hibernate: 
+    select
+        owner0_.owner_id as owner_id1_6_,
+        owner0_.owner_analytics_id as owner_an3_6_,
+        owner0_.owner_name as owner_na2_6_ 
+    from
+        owner owner0_
+Hibernate: 
+    select
+        topic0_.topic_id as topic_id1_10_,
+        topic0_.topic_analytics_id as topic_an3_10_,
+        topic0_.topic_name as topic_na2_10_ 
+    from
+        topic topic0_
+Hibernate: 
+    select
+        topicanaly0_.topic_analytics_id as topic_an1_11_0_,
+        topicanaly0_.bias as bias2_11_0_,
+        topicanaly0_.engagement_rate as engageme3_11_0_,
+        topicanaly0_.likes as likes4_11_0_,
+        topicanaly0_.shares as shares5_11_0_,
+        topicanaly0_.views as views6_11_0_ 
+    from
+        topic_analytics topicanaly0_ 
+    where
+        topicanaly0_.topic_analytics_id=?
+Hibernate: 
+    delete 
+    from
+        topic 
+    where
+        topic_id=?
+Hibernate: 
+    select
+        publisher0_.publisher_id as publishe1_8_,
+        publisher0_.publisher_analytics_id as publishe3_8_,
+        publisher0_.publisher_name as publishe2_8_ 
+    from
+        publisher publisher0_
+Hibernate: 
+    select
+        author0_.author_id as author_i1_2_,
+        author0_.author_age as author_a2_2_,
+        author0_.author_analytics_id as author_a4_2_,
+        author0_.author_name as author_n3_2_ 
+    from
+        author author0_
+Hibernate: 
+    select
+        articleana0_.article_analytics_id as article_1_1_,
+        articleana0_.bias as bias2_1_,
+        articleana0_.engagement_rate as engageme3_1_,
+        articleana0_.likes as likes4_1_,
+        articleana0_.shares as shares5_1_,
+        articleana0_.views as views6_1_ 
+    from
+        article_analytics articleana0_
+Hibernate: 
+    select
+        newspapera0_.newspaper_analytics_id as newspape1_5_,
+        newspapera0_.bias as bias2_5_,
+        newspapera0_.engagement_rate as engageme3_5_,
+        newspapera0_.likes as likes4_5_,
+        newspapera0_.shares as shares5_5_,
+        newspapera0_.views as views6_5_ 
+    from
+        newspaper_analytics newspapera0_
+Hibernate: 
+    select
+        owneranaly0_.owner_analytics_id as owner_an1_7_,
+        owneranaly0_.bias as bias2_7_,
+        owneranaly0_.engagement_rate as engageme3_7_,
+        owneranaly0_.likes as likes4_7_,
+        owneranaly0_.shares as shares5_7_,
+        owneranaly0_.views as views6_7_ 
+    from
+        owner_analytics owneranaly0_
+Hibernate: 
+    select
+        topicanaly0_.topic_analytics_id as topic_an1_11_,
+        topicanaly0_.bias as bias2_11_,
+        topicanaly0_.engagement_rate as engageme3_11_,
+        topicanaly0_.likes as likes4_11_,
+        topicanaly0_.shares as shares5_11_,
+        topicanaly0_.views as views6_11_ 
+    from
+        topic_analytics topicanaly0_
+Hibernate: 
+    delete 
+    from
+        topic_analytics 
+    where
+        topic_analytics_id=?
+Hibernate: 
+    select
+        publishera0_.publisher_analytics_id as publishe1_9_,
+        publishera0_.bias as bias2_9_,
+        publishera0_.engagement_rate as engageme3_9_,
+        publishera0_.likes as likes4_9_,
+        publishera0_.shares as shares5_9_,
+        publishera0_.views as views6_9_ 
+    from
+        publisher_analytics publishera0_
+Hibernate: 
+    select
+        authoranal0_.author_analytics_id as author_a1_3_,
+        authoranal0_.bias as bias2_3_,
+        authoranal0_.engagement_rate as engageme3_3_,
+        authoranal0_.likes as likes4_3_,
+        authoranal0_.shares as shares5_3_,
+        authoranal0_.views as views6_3_ 
+    from
+        author_analytics authoranal0_
+Hibernate: 
+    insert 
+    into
+        topic_analytics
+        (bias, engagement_rate, likes, shares, views) 
+    values
+        (?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        topic
+        (topic_analytics_id, topic_name) 
+    values
+        (?, ?)
+Hibernate: 
+    select
+        topic0_.topic_id as topic_id1_10_0_,
+        topic0_.topic_analytics_id as topic_an3_10_0_,
+        topic0_.topic_name as topic_na2_10_0_,
+        topicanaly1_.topic_analytics_id as topic_an1_11_1_,
+        topicanaly1_.bias as bias2_11_1_,
+        topicanaly1_.engagement_rate as engageme3_11_1_,
+        topicanaly1_.likes as likes4_11_1_,
+        topicanaly1_.shares as shares5_11_1_,
+        topicanaly1_.views as views6_11_1_ 
+    from
+        topic topic0_ 
+    inner join
+        topic_analytics topicanaly1_ 
+            on topic0_.topic_analytics_id=topicanaly1_.topic_analytics_id 
+    where
+        topic0_.topic_id=?
+Hibernate: 
+    select
+        article0_.article_id as article_1_0_,
+        article0_.article_analytics_id as article_4_0_,
+        article0_.author_id as author_i5_0_,
+        article0_.content as content2_0_,
+        article0_.newspaper_id as newspape6_0_,
+        article0_.owner_id as owner_id7_0_,
+        article0_.publisher_id as publishe8_0_,
+        article0_.title as title3_0_,
+        article0_.topic_id as topic_id9_0_ 
+    from
+        article article0_
+Hibernate: 
+    select
+        newspaper0_.newspaper_id as newspape1_4_,
+        newspaper0_.newspaper_analytics_id as newspape3_4_,
+        newspaper0_.newspaper_name as newspape2_4_ 
+    from
+        newspaper newspaper0_
+Hibernate: 
+    select
+        owner0_.owner_id as owner_id1_6_,
+        owner0_.owner_analytics_id as owner_an3_6_,
+        owner0_.owner_name as owner_na2_6_ 
+    from
+        owner owner0_
+Hibernate: 
+    select
+        topic0_.topic_id as topic_id1_10_,
+        topic0_.topic_analytics_id as topic_an3_10_,
+        topic0_.topic_name as topic_na2_10_ 
+    from
+        topic topic0_
+Hibernate: 
+    select
+        topicanaly0_.topic_analytics_id as topic_an1_11_0_,
+        topicanaly0_.bias as bias2_11_0_,
+        topicanaly0_.engagement_rate as engageme3_11_0_,
+        topicanaly0_.likes as likes4_11_0_,
+        topicanaly0_.shares as shares5_11_0_,
+        topicanaly0_.views as views6_11_0_ 
+    from
+        topic_analytics topicanaly0_ 
+    where
+        topicanaly0_.topic_analytics_id=?
+Hibernate: 
+    delete 
+    from
+        topic 
+    where
+        topic_id=?
+Hibernate: 
+    select
+        publisher0_.publisher_id as publishe1_8_,
+        publisher0_.publisher_analytics_id as publishe3_8_,
+        publisher0_.publisher_name as publishe2_8_ 
+    from
+        publisher publisher0_
+Hibernate: 
+    select
+        author0_.author_id as author_i1_2_,
+        author0_.author_age as author_a2_2_,
+        author0_.author_analytics_id as author_a4_2_,
+        author0_.author_name as author_n3_2_ 
+    from
+        author author0_
+Hibernate: 
+    select
+        articleana0_.article_analytics_id as article_1_1_,
+        articleana0_.bias as bias2_1_,
+        articleana0_.engagement_rate as engageme3_1_,
+        articleana0_.likes as likes4_1_,
+        articleana0_.shares as shares5_1_,
+        articleana0_.views as views6_1_ 
+    from
+        article_analytics articleana0_
+Hibernate: 
+    select
+        newspapera0_.newspaper_analytics_id as newspape1_5_,
+        newspapera0_.bias as bias2_5_,
+        newspapera0_.engagement_rate as engageme3_5_,
+        newspapera0_.likes as likes4_5_,
+        newspapera0_.shares as shares5_5_,
+        newspapera0_.views as views6_5_ 
+    from
+        newspaper_analytics newspapera0_
+Hibernate: 
+    select
+        owneranaly0_.owner_analytics_id as owner_an1_7_,
+        owneranaly0_.bias as bias2_7_,
+        owneranaly0_.engagement_rate as engageme3_7_,
+        owneranaly0_.likes as likes4_7_,
+        owneranaly0_.shares as shares5_7_,
+        owneranaly0_.views as views6_7_ 
+    from
+        owner_analytics owneranaly0_
+Hibernate: 
+    select
+        topicanaly0_.topic_analytics_id as topic_an1_11_,
+        topicanaly0_.bias as bias2_11_,
+        topicanaly0_.engagement_rate as engageme3_11_,
+        topicanaly0_.likes as likes4_11_,
+        topicanaly0_.shares as shares5_11_,
+        topicanaly0_.views as views6_11_ 
+    from
+        topic_analytics topicanaly0_
+Hibernate: 
+    delete 
+    from
+        topic_analytics 
+    where
+        topic_analytics_id=?
+Hibernate: 
+    select
+        publishera0_.publisher_analytics_id as publishe1_9_,
+        publishera0_.bias as bias2_9_,
+        publishera0_.engagement_rate as engageme3_9_,
+        publishera0_.likes as likes4_9_,
+        publishera0_.shares as shares5_9_,
+        publishera0_.views as views6_9_ 
+    from
+        publisher_analytics publishera0_
+Hibernate: 
+    select
+        authoranal0_.author_analytics_id as author_a1_3_,
+        authoranal0_.bias as bias2_3_,
+        authoranal0_.engagement_rate as engageme3_3_,
+        authoranal0_.likes as likes4_3_,
+        authoranal0_.shares as shares5_3_,
+        authoranal0_.views as views6_3_ 
+    from
+        author_analytics authoranal0_
+Hibernate: 
+    insert 
+    into
+        topic_analytics
+        (bias, engagement_rate, likes, shares, views) 
+    values
+        (?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        topic
+        (topic_analytics_id, topic_name) 
+    values
+        (?, ?)
+Hibernate: 
+    select
+        topic0_.topic_id as topic_id1_10_,
+        topic0_.topic_analytics_id as topic_an3_10_,
+        topic0_.topic_name as topic_na2_10_ 
+    from
+        topic topic0_ 
+    where
+        topic0_.topic_name=?
+Hibernate: 
+    select
+        topicanaly0_.topic_analytics_id as topic_an1_11_0_,
+        topicanaly0_.bias as bias2_11_0_,
+        topicanaly0_.engagement_rate as engageme3_11_0_,
         topicanaly0_.likes as likes4_11_0_,
         topicanaly0_.shares as shares5_11_0_,
         topicanaly0_.views as views6_11_0_ 
@@ -735,7 +1466,7 @@ Hibernate:
 <input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
 </label>
 </div>Generated by 
-<a href="http://www.gradle.org">Gradle 7.6</a> at Aug 9, 2024, 9:30:19 AM</p>
+<a href="http://www.gradle.org">Gradle 7.6</a> at Aug 9, 2024, 5:11:07 PM</p>
 </div>
 </div>
 </body>

@@ -8,10 +8,19 @@ import java.io.Serializable;
 @Table(name = "article_analytics")
 public class ArticleAnalytics implements Analytics,Serializable {
 
+    @Column(name = "bias", nullable = false)
     private String bias;
+
+    @Column(name = "views", nullable = false)
     private int views;
+
+    @Column(name = "shares", nullable = false)
     private int shares;
+
+    @Column(name = "likes", nullable = false)
     private int likes;
+
+    @Column(name = "engagement_rate", nullable = false)
     private double engagementRate;
 
     @Id
