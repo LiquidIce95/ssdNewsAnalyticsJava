@@ -3,43 +3,76 @@ package ssd.Entities.Topic;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMockMvc;
 import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.http.MediaType;
-import org.springframework.test.web.servlet.MockMvc;
-import org.springframework.test.web.servlet.setup.MockMvcBuilders;
-import org.springframework.web.context.WebApplicationContext;
+import org.springframework.boot.test.web.client.TestRestTemplate;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
+import ssd.Entities.Article.*;
+import ssd.Entities.Author.*;
+import ssd.Entities.Newspaper.*;
+import ssd.Entities.Owner.*;
+import ssd.Entities.Publisher.*;
 
-import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
-import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.*;
+import static org.assertj.core.api.Assertions.assertThat;
 
-import java.util.List;
-
-@SpringBootTest
-@AutoConfigureMockMvc
+@SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.DEFINED_PORT)
 public class TopicControllerTest {
 
     @Autowired
-    private WebApplicationContext webApplicationContext;
+    private TestRestTemplate restTemplate;
+
+    @Autowired
+    private ArticleRepository articleRepository;
+
+    @Autowired
+    private AuthorRepository authorRepository;
+
+    @Autowired
+    private PublisherRepository publisherRepository;
 
     @Autowired
     private TopicRepository topicRepository;
 
     @Autowired
+    private OwnerRepository ownerRepository;
+
+    @Autowired
+    private NewspaperRepository newspaperRepository;
+
+    @Autowired
+    private ArticleAnalyticsRepository articleAnalyticsRepository;
+
+    @Autowired
+    private AuthorAnalyticsRepository authorAnalyticsRepository;
+
+    @Autowired
+    private PublisherAnalyticsRepository publisherAnalyticsRepository;
+
+    @Autowired
     private TopicAnalyticsRepository topicAnalyticsRepository;
 
-    private MockMvc mockMvc;
+    @Autowired
+    private OwnerAnalyticsRepository ownerAnalyticsRepository;
 
-    private Topic topic;
+    @Autowired
+    private NewspaperAnalyticsRepository newspaperAnalyticsRepository;
 
     @BeforeEach
     public void setup() {
-        this.mockMvc = MockMvcBuilders.webAppContextSetup(this.webApplicationContext).build();
-
+        articleRepository.deleteAll();
+        newspaperRepository.deleteAll();
+        ownerRepository.deleteAll();
         topicRepository.deleteAll();
-        topicAnalyticsRepository.deleteAll();
+        publisherRepository.deleteAll();
+        authorRepository.deleteAll();
 
-        // Create and save necessary entities for testing
+        articleAnalyticsRepository.deleteAll();
+        newspaperAnalyticsRepository.deleteAll();
+        ownerAnalyticsRepository.deleteAll();
+        topicAnalyticsRepository.deleteAll();
+        publisherAnalyticsRepository.deleteAll();
+        authorAnalyticsRepository.deleteAll();
+
         TopicAnalytics topicAnalytics = new TopicAnalytics();
         topicAnalytics.setBias("Neutral");
         topicAnalytics.setViews(12000);
@@ -48,96 +81,100 @@ public class TopicControllerTest {
         topicAnalytics.setEngagementRate(0.15);
         TopicAnalytics savedTopicAnalytics = topicAnalyticsRepository.saveAndFlush(topicAnalytics);
 
-        topic = new Topic();
+        Topic topic = new Topic();
         topic.setName("Climate Change");
         topic.setAnalytics(savedTopicAnalytics);
         topicRepository.saveAndFlush(topic);
     }
 
     @Test
-    public void testGetAllTopics_emptyDatabase() throws Exception {
+    public void testGetAllTopics_emptyDatabase() {
         topicRepository.deleteAll();
 
-        this.mockMvc.perform(get("/topics/")
-                .accept(MediaType.APPLICATION_JSON))
-                .andExpect(status().isOk())
-                .andExpect(content().json("[]"));
+        ResponseEntity<Topic[]> response = restTemplate.getForEntity("/topics/", Topic[].class);
+        assertThat(response.getStatusCode()).isEqualTo(HttpStatus.OK);
+        assertThat(response.getBody()).isEmpty();
     }
 
     @Test
-    public void testGetAllTopics() throws Exception {
-        this.mockMvc.perform(get("/topics/")
-                .accept(MediaType.APPLICATION_JSON))
-                .andExpect(status().isOk())
-                .andExpect(jsonPath("$[0].name").value("Climate Change"))
-                .andExpect(jsonPath("$[0].analytics.bias").value("Neutral"))
-                .andExpect(jsonPath("$[0].analytics.views").value(12000))
-                .andExpect(jsonPath("$[0].analytics.shares").value(450))
-                .andExpect(jsonPath("$[0].analytics.likes").value(300))
-                .andExpect(jsonPath("$[0].analytics.engagementRate").value(0.15));
+    public void testGetAllTopics() {
+        ResponseEntity<Topic[]> response = restTemplate.getForEntity("/topics/", Topic[].class);
+        assertThat(response.getStatusCode()).isEqualTo(HttpStatus.OK);
+        Topic[] topics = response.getBody();
+        assertThat(topics).isNotNull();
+        assertThat(topics.length).isGreaterThan(0);
+        assertThat(topics[0].getName()).isEqualTo("Climate Change");
+        assertThat(topics[0].getAnalytics().getBias()).isEqualTo("Neutral");
+        assertThat(topics[0].getAnalytics().getViews()).isEqualTo(12000);
+        assertThat(topics[0].getAnalytics().getShares()).isEqualTo(450);
+        assertThat(topics[0].getAnalytics().getLikes()).isEqualTo(300);
+        assertThat(topics[0].getAnalytics().getEngagementRate()).isEqualTo(0.15);
     }
 
     @Test
-    public void testGetTopicById_notFound() throws Exception {
-        this.mockMvc.perform(get("/topics/999")
-                .accept(MediaType.APPLICATION_JSON))
-                .andExpect(status().isNotFound());
+    public void testGetTopicById_notFound() {
+        ResponseEntity<String> response = restTemplate.getForEntity("/topics/999", String.class);
+        assertThat(response.getStatusCode()).isEqualTo(HttpStatus.NOT_FOUND);
     }
 
     @Test
-    public void testGetTopicById() throws Exception {
+    public void testGetTopicById() {
+        Topic topic = topicRepository.findAll().get(0);
         Long topicId = topic.getTopicId();
 
-        this.mockMvc.perform(get("/topics/" + topicId)
-                .accept(MediaType.APPLICATION_JSON))
-                .andExpect(status().isOk())
-                .andExpect(jsonPath("$.name").value("Climate Change"))
-                .andExpect(jsonPath("$.analytics.bias").value("Neutral"))
-                .andExpect(jsonPath("$.analytics.views").value(12000))
-                .andExpect(jsonPath("$.analytics.shares").value(450))
-                .andExpect(jsonPath("$.analytics.likes").value(300))
-                .andExpect(jsonPath("$.analytics.engagementRate").value(0.15));
+        ResponseEntity<Topic> response = restTemplate.getForEntity("/topics/" + topicId, Topic.class);
+        assertThat(response.getStatusCode()).isEqualTo(HttpStatus.OK);
+        Topic retrievedTopic = response.getBody();
+        assertThat(retrievedTopic).isNotNull();
+        assertThat(retrievedTopic.getName()).isEqualTo("Climate Change");
+        assertThat(retrievedTopic.getAnalytics().getBias()).isEqualTo("Neutral");
+        assertThat(retrievedTopic.getAnalytics().getViews()).isEqualTo(12000);
+        assertThat(retrievedTopic.getAnalytics().getShares()).isEqualTo(450);
+        assertThat(retrievedTopic.getAnalytics().getLikes()).isEqualTo(300);
+        assertThat(retrievedTopic.getAnalytics().getEngagementRate()).isEqualTo(0.15);
     }
 
     @Test
-    public void testGetTopicsByName_notFound() throws Exception {
-        this.mockMvc.perform(get("/topics/name/Nonexistent Name")
-                .accept(MediaType.APPLICATION_JSON))
-                .andExpect(status().isNotFound());
+    public void testGetTopicsByName_notFound() {
+        ResponseEntity<String> response = restTemplate.getForEntity("/topics/name/Nonexistent Name", String.class);
+        assertThat(response.getStatusCode()).isEqualTo(HttpStatus.NOT_FOUND);
     }
 
     @Test
-    public void testGetTopicsByName() throws Exception {
-        this.mockMvc.perform(get("/topics/name/Climate Change")
-                .accept(MediaType.APPLICATION_JSON))
-                .andExpect(status().isOk())
-                .andExpect(jsonPath("$[0].name").value("Climate Change"))
-                .andExpect(jsonPath("$[0].analytics.bias").value("Neutral"))
-                .andExpect(jsonPath("$[0].analytics.views").value(12000))
-                .andExpect(jsonPath("$[0].analytics.shares").value(450))
-                .andExpect(jsonPath("$[0].analytics.likes").value(300))
-                .andExpect(jsonPath("$[0].analytics.engagementRate").value(0.15));
+    public void testGetTopicsByName() {
+        ResponseEntity<Topic[]> response = restTemplate.getForEntity("/topics/name/Climate Change", Topic[].class);
+        assertThat(response.getStatusCode()).isEqualTo(HttpStatus.OK);
+        Topic[] topics = response.getBody();
+        assertThat(topics).isNotNull();
+        assertThat(topics.length).isGreaterThan(0);
+        assertThat(topics[0].getName()).isEqualTo("Climate Change");
+        assertThat(topics[0].getAnalytics().getBias()).isEqualTo("Neutral");
+        assertThat(topics[0].getAnalytics().getViews()).isEqualTo(12000);
+        assertThat(topics[0].getAnalytics().getShares()).isEqualTo(450);
+        assertThat(topics[0].getAnalytics().getLikes()).isEqualTo(300);
+        assertThat(topics[0].getAnalytics().getEngagementRate()).isEqualTo(0.15);
     }
 
     @Test
-    public void testGetPopularTopics() throws Exception {
-        this.mockMvc.perform(get("/topics/popular/1")
-                .accept(MediaType.APPLICATION_JSON))
-                .andExpect(status().isOk())
-                .andExpect(jsonPath("$[0].name").value("Climate Change"))
-                .andExpect(jsonPath("$[0].analytics.bias").value("Neutral"))
-                .andExpect(jsonPath("$[0].analytics.views").value(12000))
-                .andExpect(jsonPath("$[0].analytics.shares").value(450))
-                .andExpect(jsonPath("$[0].analytics.likes").value(300))
-                .andExpect(jsonPath("$[0].analytics.engagementRate").value(0.15));
+    public void testGetPopularTopics() {
+        ResponseEntity<Topic[]> response = restTemplate.getForEntity("/topics/popular/1", Topic[].class);
+        assertThat(response.getStatusCode()).isEqualTo(HttpStatus.OK);
+        Topic[] topics = response.getBody();
+        assertThat(topics).isNotNull();
+        assertThat(topics.length).isEqualTo(1);
+        assertThat(topics[0].getName()).isEqualTo("Climate Change");
+        assertThat(topics[0].getAnalytics().getBias()).isEqualTo("Neutral");
+        assertThat(topics[0].getAnalytics().getViews()).isEqualTo(12000);
+        assertThat(topics[0].getAnalytics().getShares()).isEqualTo(450);
+        assertThat(topics[0].getAnalytics().getLikes()).isEqualTo(300);
+        assertThat(topics[0].getAnalytics().getEngagementRate()).isEqualTo(0.15);
     }
 
     @Test
-    public void testGetPopularTopics_noContent() throws Exception {
+    public void testGetPopularTopics_noContent() {
         topicRepository.deleteAll();
 
-        this.mockMvc.perform(get("/topics/popular/1")
-                .accept(MediaType.APPLICATION_JSON))
-                .andExpect(status().isNoContent());
+        ResponseEntity<String> response = restTemplate.getForEntity("/topics/popular/1", String.class);
+        assertThat(response.getStatusCode()).isEqualTo(HttpStatus.NO_CONTENT);
     }
 }

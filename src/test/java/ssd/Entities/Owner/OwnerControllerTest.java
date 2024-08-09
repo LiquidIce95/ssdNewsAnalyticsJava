@@ -3,43 +3,76 @@ package ssd.Entities.Owner;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMockMvc;
 import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.http.MediaType;
-import org.springframework.test.web.servlet.MockMvc;
-import org.springframework.test.web.servlet.setup.MockMvcBuilders;
-import org.springframework.web.context.WebApplicationContext;
+import org.springframework.boot.test.web.client.TestRestTemplate;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
+import ssd.Entities.Article.*;
+import ssd.Entities.Author.*;
+import ssd.Entities.Newspaper.*;
+import ssd.Entities.Publisher.*;
+import ssd.Entities.Topic.*;
 
-import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
-import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.*;
+import static org.assertj.core.api.Assertions.assertThat;
 
-import java.util.List;
-
-@SpringBootTest
-@AutoConfigureMockMvc
+@SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.DEFINED_PORT)
 public class OwnerControllerTest {
 
     @Autowired
-    private WebApplicationContext webApplicationContext;
+    private TestRestTemplate restTemplate;
+
+    @Autowired
+    private ArticleRepository articleRepository;
+
+    @Autowired
+    private AuthorRepository authorRepository;
+
+    @Autowired
+    private PublisherRepository publisherRepository;
+
+    @Autowired
+    private TopicRepository topicRepository;
 
     @Autowired
     private OwnerRepository ownerRepository;
 
     @Autowired
+    private NewspaperRepository newspaperRepository;
+
+    @Autowired
+    private ArticleAnalyticsRepository articleAnalyticsRepository;
+
+    @Autowired
+    private AuthorAnalyticsRepository authorAnalyticsRepository;
+
+    @Autowired
+    private PublisherAnalyticsRepository publisherAnalyticsRepository;
+
+    @Autowired
+    private TopicAnalyticsRepository topicAnalyticsRepository;
+
+    @Autowired
     private OwnerAnalyticsRepository ownerAnalyticsRepository;
 
-    private MockMvc mockMvc;
-
-    private Owner owner;
+    @Autowired
+    private NewspaperAnalyticsRepository newspaperAnalyticsRepository;
 
     @BeforeEach
     public void setup() {
-        this.mockMvc = MockMvcBuilders.webAppContextSetup(this.webApplicationContext).build();
-
+        articleRepository.deleteAll();
+        newspaperRepository.deleteAll();
         ownerRepository.deleteAll();
-        ownerAnalyticsRepository.deleteAll();
+        topicRepository.deleteAll();
+        publisherRepository.deleteAll();
+        authorRepository.deleteAll();
 
-        // Create and save necessary entities for testing
+        articleAnalyticsRepository.deleteAll();
+        newspaperAnalyticsRepository.deleteAll();
+        ownerAnalyticsRepository.deleteAll();
+        topicAnalyticsRepository.deleteAll();
+        publisherAnalyticsRepository.deleteAll();
+        authorAnalyticsRepository.deleteAll();
+
         OwnerAnalytics ownerAnalytics = new OwnerAnalytics();
         ownerAnalytics.setBias("Neutral");
         ownerAnalytics.setViews(12000);
@@ -48,96 +81,100 @@ public class OwnerControllerTest {
         ownerAnalytics.setEngagementRate(0.15);
         OwnerAnalytics savedOwnerAnalytics = ownerAnalyticsRepository.saveAndFlush(ownerAnalytics);
 
-        owner = new Owner();
+        Owner owner = new Owner();
         owner.setName("John Smith");
         owner.setAnalytics(savedOwnerAnalytics);
         ownerRepository.saveAndFlush(owner);
     }
 
     @Test
-    public void testGetAllOwners_emptyDatabase() throws Exception {
+    public void testGetAllOwners_emptyDatabase() {
         ownerRepository.deleteAll();
 
-        this.mockMvc.perform(get("/owners/")
-                .accept(MediaType.APPLICATION_JSON))
-                .andExpect(status().isOk())
-                .andExpect(content().json("[]"));
+        ResponseEntity<Owner[]> response = restTemplate.getForEntity("/owners/", Owner[].class);
+        assertThat(response.getStatusCode()).isEqualTo(HttpStatus.OK);
+        assertThat(response.getBody()).isEmpty();
     }
 
     @Test
-    public void testGetAllOwners() throws Exception {
-        this.mockMvc.perform(get("/owners/")
-                .accept(MediaType.APPLICATION_JSON))
-                .andExpect(status().isOk())
-                .andExpect(jsonPath("$[0].name").value("John Smith"))
-                .andExpect(jsonPath("$[0].analytics.bias").value("Neutral"))
-                .andExpect(jsonPath("$[0].analytics.views").value(12000))
-                .andExpect(jsonPath("$[0].analytics.shares").value(450))
-                .andExpect(jsonPath("$[0].analytics.likes").value(300))
-                .andExpect(jsonPath("$[0].analytics.engagementRate").value(0.15));
+    public void testGetAllOwners() {
+        ResponseEntity<Owner[]> response = restTemplate.getForEntity("/owners/", Owner[].class);
+        assertThat(response.getStatusCode()).isEqualTo(HttpStatus.OK);
+        Owner[] owners = response.getBody();
+        assertThat(owners).isNotNull();
+        assertThat(owners.length).isGreaterThan(0);
+        assertThat(owners[0].getName()).isEqualTo("John Smith");
+        assertThat(owners[0].getAnalytics().getBias()).isEqualTo("Neutral");
+        assertThat(owners[0].getAnalytics().getViews()).isEqualTo(12000);
+        assertThat(owners[0].getAnalytics().getShares()).isEqualTo(450);
+        assertThat(owners[0].getAnalytics().getLikes()).isEqualTo(300);
+        assertThat(owners[0].getAnalytics().getEngagementRate()).isEqualTo(0.15);
     }
 
     @Test
-    public void testGetOwnerById_notFound() throws Exception {
-        this.mockMvc.perform(get("/owners/999")
-                .accept(MediaType.APPLICATION_JSON))
-                .andExpect(status().isNotFound());
+    public void testGetOwnerById_notFound() {
+        ResponseEntity<String> response = restTemplate.getForEntity("/owners/999", String.class);
+        assertThat(response.getStatusCode()).isEqualTo(HttpStatus.NOT_FOUND);
     }
 
     @Test
-    public void testGetOwnerById() throws Exception {
+    public void testGetOwnerById() {
+        Owner owner = ownerRepository.findAll().get(0);
         Long ownerId = owner.getOwnerId();
 
-        this.mockMvc.perform(get("/owners/" + ownerId)
-                .accept(MediaType.APPLICATION_JSON))
-                .andExpect(status().isOk())
-                .andExpect(jsonPath("$.name").value("John Smith"))
-                .andExpect(jsonPath("$.analytics.bias").value("Neutral"))
-                .andExpect(jsonPath("$.analytics.views").value(12000))
-                .andExpect(jsonPath("$.analytics.shares").value(450))
-                .andExpect(jsonPath("$.analytics.likes").value(300))
-                .andExpect(jsonPath("$.analytics.engagementRate").value(0.15));
+        ResponseEntity<Owner> response = restTemplate.getForEntity("/owners/" + ownerId, Owner.class);
+        assertThat(response.getStatusCode()).isEqualTo(HttpStatus.OK);
+        Owner retrievedOwner = response.getBody();
+        assertThat(retrievedOwner).isNotNull();
+        assertThat(retrievedOwner.getName()).isEqualTo("John Smith");
+        assertThat(retrievedOwner.getAnalytics().getBias()).isEqualTo("Neutral");
+        assertThat(retrievedOwner.getAnalytics().getViews()).isEqualTo(12000);
+        assertThat(retrievedOwner.getAnalytics().getShares()).isEqualTo(450);
+        assertThat(retrievedOwner.getAnalytics().getLikes()).isEqualTo(300);
+        assertThat(retrievedOwner.getAnalytics().getEngagementRate()).isEqualTo(0.15);
     }
 
     @Test
-    public void testGetOwnersByName_notFound() throws Exception {
-        this.mockMvc.perform(get("/owners/name/Nonexistent Name")
-                .accept(MediaType.APPLICATION_JSON))
-                .andExpect(status().isNotFound());
+    public void testGetOwnersByName_notFound() {
+        ResponseEntity<String> response = restTemplate.getForEntity("/owners/name/Nonexistent Name", String.class);
+        assertThat(response.getStatusCode()).isEqualTo(HttpStatus.NOT_FOUND);
     }
 
     @Test
-    public void testGetOwnersByName() throws Exception {
-        this.mockMvc.perform(get("/owners/name/John Smith")
-                .accept(MediaType.APPLICATION_JSON))
-                .andExpect(status().isOk())
-                .andExpect(jsonPath("$[0].name").value("John Smith"))
-                .andExpect(jsonPath("$[0].analytics.bias").value("Neutral"))
-                .andExpect(jsonPath("$[0].analytics.views").value(12000))
-                .andExpect(jsonPath("$[0].analytics.shares").value(450))
-                .andExpect(jsonPath("$[0].analytics.likes").value(300))
-                .andExpect(jsonPath("$[0].analytics.engagementRate").value(0.15));
+    public void testGetOwnersByName() {
+        ResponseEntity<Owner[]> response = restTemplate.getForEntity("/owners/name/John Smith", Owner[].class);
+        assertThat(response.getStatusCode()).isEqualTo(HttpStatus.OK);
+        Owner[] owners = response.getBody();
+        assertThat(owners).isNotNull();
+        assertThat(owners.length).isGreaterThan(0);
+        assertThat(owners[0].getName()).isEqualTo("John Smith");
+        assertThat(owners[0].getAnalytics().getBias()).isEqualTo("Neutral");
+        assertThat(owners[0].getAnalytics().getViews()).isEqualTo(12000);
+        assertThat(owners[0].getAnalytics().getShares()).isEqualTo(450);
+        assertThat(owners[0].getAnalytics().getLikes()).isEqualTo(300);
+        assertThat(owners[0].getAnalytics().getEngagementRate()).isEqualTo(0.15);
     }
 
     @Test
-    public void testGetPopularOwners() throws Exception {
-        this.mockMvc.perform(get("/owners/popular/1")
-                .accept(MediaType.APPLICATION_JSON))
-                .andExpect(status().isOk())
-                .andExpect(jsonPath("$[0].name").value("John Smith"))
-                .andExpect(jsonPath("$[0].analytics.bias").value("Neutral"))
-                .andExpect(jsonPath("$[0].analytics.views").value(12000))
-                .andExpect(jsonPath("$[0].analytics.shares").value(450))
-                .andExpect(jsonPath("$[0].analytics.likes").value(300))
-                .andExpect(jsonPath("$[0].analytics.engagementRate").value(0.15));
+    public void testGetPopularOwners() {
+        ResponseEntity<Owner[]> response = restTemplate.getForEntity("/owners/popular/1", Owner[].class);
+        assertThat(response.getStatusCode()).isEqualTo(HttpStatus.OK);
+        Owner[] owners = response.getBody();
+        assertThat(owners).isNotNull();
+        assertThat(owners.length).isEqualTo(1);
+        assertThat(owners[0].getName()).isEqualTo("John Smith");
+        assertThat(owners[0].getAnalytics().getBias()).isEqualTo("Neutral");
+        assertThat(owners[0].getAnalytics().getViews()).isEqualTo(12000);
+        assertThat(owners[0].getAnalytics().getShares()).isEqualTo(450);
+        assertThat(owners[0].getAnalytics().getLikes()).isEqualTo(300);
+        assertThat(owners[0].getAnalytics().getEngagementRate()).isEqualTo(0.15);
     }
 
     @Test
-    public void testGetPopularOwners_noContent() throws Exception {
+    public void testGetPopularOwners_noContent() {
         ownerRepository.deleteAll();
 
-        this.mockMvc.perform(get("/owners/popular/1")
-                .accept(MediaType.APPLICATION_JSON))
-                .andExpect(status().isNoContent());
+        ResponseEntity<String> response = restTemplate.getForEntity("/owners/popular/1", String.class);
+        assertThat(response.getStatusCode()).isEqualTo(HttpStatus.NO_CONTENT);
     }
 }

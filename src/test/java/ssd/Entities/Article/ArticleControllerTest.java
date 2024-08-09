@@ -3,30 +3,25 @@ package ssd.Entities.Article;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMockMvc;
 import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.http.MediaType;
-import org.springframework.test.web.servlet.MockMvc;
-import org.springframework.test.web.servlet.setup.MockMvcBuilders;
-import org.springframework.web.context.WebApplicationContext;
-
+import org.springframework.boot.test.web.client.TestRestTemplate;
+import org.springframework.http.*;
 import ssd.Entities.Author.*;
 import ssd.Entities.Newspaper.*;
 import ssd.Entities.Owner.*;
 import ssd.Entities.Publisher.*;
 import ssd.Entities.Topic.*;
 
-import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
-import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.*;
-
+import java.util.Arrays;
 import java.util.List;
 
-@SpringBootTest
-@AutoConfigureMockMvc
+import static org.assertj.core.api.Assertions.assertThat;
+
+@SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.DEFINED_PORT)
 public class ArticleControllerTest {
 
     @Autowired
-    private WebApplicationContext webApplicationContext;
+    private TestRestTemplate restTemplate;
 
     @Autowired
     private ArticleRepository articleRepository;
@@ -64,14 +59,10 @@ public class ArticleControllerTest {
     @Autowired
     private NewspaperAnalyticsRepository newspaperAnalyticsRepository;
 
-    private MockMvc mockMvc;
-
     private Article article;
 
     @BeforeEach
     public void setup() {
-        this.mockMvc = MockMvcBuilders.webAppContextSetup(this.webApplicationContext).build();
-
         articleRepository.deleteAll();
         authorRepository.deleteAll();
         publisherRepository.deleteAll();
@@ -176,110 +167,90 @@ public class ArticleControllerTest {
     public void testGetAllArticles_emptyDatabase() throws Exception {
         articleRepository.deleteAll();
 
-        this.mockMvc.perform(get("/articles/")
-                .accept(MediaType.APPLICATION_JSON))
-                .andExpect(status().isOk())
-                .andExpect(content().json("[]"));
+        ResponseEntity<Article[]> response = restTemplate.getForEntity("/articles/", Article[].class);
+        assertThat(response.getStatusCode()).isEqualTo(HttpStatus.OK);
+        assertThat(response.getBody()).isEmpty();
     }
 
     @Test
     public void testGetAllArticles() throws Exception {
-        this.mockMvc.perform(get("/articles/")
-                .accept(MediaType.APPLICATION_JSON))
-                .andExpect(status().isOk())
-                .andExpect(jsonPath("$[0].title").value("The Impact of Climate Change on Coastal Communities"))
-                .andExpect(jsonPath("$[0].author.name").value("Jane Doe"))
-                .andExpect(jsonPath("$[0].publisher.name").value("Global News Network"))
-                .andExpect(jsonPath("$[0].topic.name").value("Climate Change"))
-                .andExpect(jsonPath("$[0].owner.name").value("John Smith"))
-                .andExpect(jsonPath("$[0].newspaper.name").value("Daily News"))
-                .andExpect(jsonPath("$[0].content").value("Coastal communities around the world are facing increasing threats from rising sea levels caused by climate change. This article explores the impact on these communities and the measures being taken to mitigate the damage."))
-                .andExpect(jsonPath("$[0].analytics.bias").value("Neutral"))
-                .andExpect(jsonPath("$[0].analytics.views").value(12000))
-                .andExpect(jsonPath("$[0].analytics.shares").value(450))
-                .andExpect(jsonPath("$[0].analytics.likes").value(300))
-                .andExpect(jsonPath("$[0].analytics.engagementRate").value(0.15));
+        ResponseEntity<Article[]> response = restTemplate.getForEntity("/articles/", Article[].class);
+        assertThat(response.getStatusCode()).isEqualTo(HttpStatus.OK);
+        Article[] articles = response.getBody();
+        assertThat(articles).isNotNull();
+        assertThat(articles.length).isGreaterThan(0);
+        assertThat(articles[0].getTitle()).isEqualTo("The Impact of Climate Change on Coastal Communities");
+        assertThat(articles[0].getAnalytics().getBias()).isEqualTo("Neutral");
+        assertThat(articles[0].getAnalytics().getViews()).isEqualTo(12000);
+        assertThat(articles[0].getAnalytics().getShares()).isEqualTo(450);
+        assertThat(articles[0].getAnalytics().getLikes()).isEqualTo(300);
+        assertThat(articles[0].getAnalytics().getEngagementRate()).isEqualTo(0.15);
     }
 
     @Test
     public void testGetArticleById_notFound() throws Exception {
-        this.mockMvc.perform(get("/articles/999")
-                .accept(MediaType.APPLICATION_JSON))
-                .andExpect(status().isNotFound());
+        ResponseEntity<String> response = restTemplate.getForEntity("/articles/999", String.class);
+        assertThat(response.getStatusCode()).isEqualTo(HttpStatus.NOT_FOUND);
     }
 
     @Test
     public void testGetArticleById() throws Exception {
         Long articleId = article.getArticleId();
 
-        this.mockMvc.perform(get("/articles/" + articleId)
-                .accept(MediaType.APPLICATION_JSON))
-                .andExpect(status().isOk())
-                .andExpect(jsonPath("$.title").value("The Impact of Climate Change on Coastal Communities"))
-                .andExpect(jsonPath("$.author.name").value("Jane Doe"))
-                .andExpect(jsonPath("$.publisher.name").value("Global News Network"))
-                .andExpect(jsonPath("$.topic.name").value("Climate Change"))
-                .andExpect(jsonPath("$.owner.name").value("John Smith"))
-                .andExpect(jsonPath("$.newspaper.name").value("Daily News"))
-                .andExpect(jsonPath("$.content").value("Coastal communities around the world are facing increasing threats from rising sea levels caused by climate change. This article explores the impact on these communities and the measures being taken to mitigate the damage."))
-                .andExpect(jsonPath("$.analytics.bias").value("Neutral"))
-                .andExpect(jsonPath("$.analytics.views").value(12000))
-                .andExpect(jsonPath("$.analytics.shares").value(450))
-                .andExpect(jsonPath("$.analytics.likes").value(300))
-                .andExpect(jsonPath("$.analytics.engagementRate").value(0.15));
+        ResponseEntity<Article> response = restTemplate.getForEntity("/articles/" + articleId, Article.class);
+        assertThat(response.getStatusCode()).isEqualTo(HttpStatus.OK);
+        Article retrievedArticle = response.getBody();
+        assertThat(retrievedArticle).isNotNull();
+        assertThat(retrievedArticle.getTitle()).isEqualTo("The Impact of Climate Change on Coastal Communities");
+        assertThat(retrievedArticle.getAnalytics().getBias()).isEqualTo("Neutral");
+        assertThat(retrievedArticle.getAnalytics().getViews()).isEqualTo(12000);
+        assertThat(retrievedArticle.getAnalytics().getShares()).isEqualTo(450);
+        assertThat(retrievedArticle.getAnalytics().getLikes()).isEqualTo(300);
+        assertThat(retrievedArticle.getAnalytics().getEngagementRate()).isEqualTo(0.15);
     }
 
     @Test
     public void testGetArticlesByTitle_notFound() throws Exception {
-        this.mockMvc.perform(get("/articles/title/Nonexistent Title")
-                .accept(MediaType.APPLICATION_JSON))
-                .andExpect(status().isNotFound());
+        ResponseEntity<String> response = restTemplate.getForEntity("/articles/title/Nonexistent Title", String.class);
+        assertThat(response.getStatusCode()).isEqualTo(HttpStatus.NOT_FOUND);
     }
 
     @Test
     public void testGetArticlesByTitle() throws Exception {
-        this.mockMvc.perform(get("/articles/title/The Impact of Climate Change on Coastal Communities")
-                .accept(MediaType.APPLICATION_JSON))
-                .andExpect(status().isOk())
-                .andExpect(jsonPath("$[0].title").value("The Impact of Climate Change on Coastal Communities"))
-                .andExpect(jsonPath("$[0].author.name").value("Jane Doe"))
-                .andExpect(jsonPath("$[0].publisher.name").value("Global News Network"))
-                .andExpect(jsonPath("$[0].topic.name").value("Climate Change"))
-                .andExpect(jsonPath("$[0].owner.name").value("John Smith"))
-                .andExpect(jsonPath("$[0].newspaper.name").value("Daily News"))
-                .andExpect(jsonPath("$[0].content").value("Coastal communities around the world are facing increasing threats from rising sea levels caused by climate change. This article explores the impact on these communities and the measures being taken to mitigate the damage."))
-                .andExpect(jsonPath("$[0].analytics.bias").value("Neutral"))
-                .andExpect(jsonPath("$[0].analytics.views").value(12000))
-                .andExpect(jsonPath("$[0].analytics.shares").value(450))
-                .andExpect(jsonPath("$[0].analytics.likes").value(300))
-                .andExpect(jsonPath("$[0].analytics.engagementRate").value(0.15));
+        String title = "The Impact of Climate Change on Coastal Communities";
+        ResponseEntity<Article[]> response = restTemplate.getForEntity("/articles/title/" + title, Article[].class);
+        assertThat(response.getStatusCode()).isEqualTo(HttpStatus.OK);
+        Article[] articles = response.getBody();
+        assertThat(articles).isNotNull();
+        assertThat(articles.length).isGreaterThan(0);
+        assertThat(articles[0].getTitle()).isEqualTo(title);
+        assertThat(articles[0].getAnalytics().getBias()).isEqualTo("Neutral");
+        assertThat(articles[0].getAnalytics().getViews()).isEqualTo(12000);
+        assertThat(articles[0].getAnalytics().getShares()).isEqualTo(450);
+        assertThat(articles[0].getAnalytics().getLikes()).isEqualTo(300);
+        assertThat(articles[0].getAnalytics().getEngagementRate()).isEqualTo(0.15);
     }
 
     @Test
     public void testGetPopularArticles() throws Exception {
-        this.mockMvc.perform(get("/articles/popular/1")
-                .accept(MediaType.APPLICATION_JSON))
-                .andExpect(status().isOk())
-                .andExpect(jsonPath("$[0].title").value("The Impact of Climate Change on Coastal Communities"))
-                .andExpect(jsonPath("$[0].author.name").value("Jane Doe"))
-                .andExpect(jsonPath("$[0].publisher.name").value("Global News Network"))
-                .andExpect(jsonPath("$[0].topic.name").value("Climate Change"))
-                .andExpect(jsonPath("$[0].owner.name").value("John Smith"))
-                .andExpect(jsonPath("$[0].newspaper.name").value("Daily News"))
-                .andExpect(jsonPath("$[0].content").value("Coastal communities around the world are facing increasing threats from rising sea levels caused by climate change. This article explores the impact on these communities and the measures being taken to mitigate the damage."))
-                .andExpect(jsonPath("$[0].analytics.bias").value("Neutral"))
-                .andExpect(jsonPath("$[0].analytics.views").value(12000))
-                .andExpect(jsonPath("$[0].analytics.shares").value(450))
-                .andExpect(jsonPath("$[0].analytics.likes").value(300))
-                .andExpect(jsonPath("$[0].analytics.engagementRate").value(0.15));
+        ResponseEntity<Article[]> response = restTemplate.getForEntity("/articles/popular/1", Article[].class);
+        assertThat(response.getStatusCode()).isEqualTo(HttpStatus.OK);
+        Article[] articles = response.getBody();
+        assertThat(articles).isNotNull();
+        assertThat(articles.length).isEqualTo(1);
+        assertThat(articles[0].getTitle()).isEqualTo("The Impact of Climate Change on Coastal Communities");
+        assertThat(articles[0].getAnalytics().getBias()).isEqualTo("Neutral");
+        assertThat(articles[0].getAnalytics().getViews()).isEqualTo(12000);
+        assertThat(articles[0].getAnalytics().getShares()).isEqualTo(450);
+        assertThat(articles[0].getAnalytics().getLikes()).isEqualTo(300);
+        assertThat(articles[0].getAnalytics().getEngagementRate()).isEqualTo(0.15);
     }
 
     @Test
     public void testGetPopularArticles_noContent() throws Exception {
         articleRepository.deleteAll();
 
-        this.mockMvc.perform(get("/articles/popular/1")
-                .accept(MediaType.APPLICATION_JSON))
-                .andExpect(status().isNoContent());
+        ResponseEntity<String> response = restTemplate.getForEntity("/articles/popular/1", String.class);
+        assertThat(response.getStatusCode()).isEqualTo(HttpStatus.NO_CONTENT);
     }
 }

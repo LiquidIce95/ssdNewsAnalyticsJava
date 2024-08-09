@@ -3,46 +3,76 @@ package ssd.Entities.Author;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMockMvc;
 import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.http.MediaType;
-import org.springframework.test.web.servlet.MockMvc;
-import org.springframework.test.web.servlet.setup.MockMvcBuilders;
-import org.springframework.web.context.WebApplicationContext;
-
+import org.springframework.boot.test.web.client.TestRestTemplate;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import ssd.Entities.Article.*;
+import ssd.Entities.Newspaper.*;
+import ssd.Entities.Owner.*;
 import ssd.Entities.Publisher.*;
+import ssd.Entities.Topic.*;
 
-import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
-import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.*;
+import static org.assertj.core.api.Assertions.assertThat;
 
-import java.util.List;
-
-@SpringBootTest
-@AutoConfigureMockMvc
+@SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.DEFINED_PORT)
 public class AuthorControllerTest {
 
     @Autowired
-    private WebApplicationContext webApplicationContext;
+    private TestRestTemplate restTemplate;
+
+    @Autowired
+    private ArticleRepository articleRepository;
 
     @Autowired
     private AuthorRepository authorRepository;
 
     @Autowired
+    private PublisherRepository publisherRepository;
+
+    @Autowired
+    private TopicRepository topicRepository;
+
+    @Autowired
+    private OwnerRepository ownerRepository;
+
+    @Autowired
+    private NewspaperRepository newspaperRepository;
+
+    @Autowired
+    private ArticleAnalyticsRepository articleAnalyticsRepository;
+
+    @Autowired
     private AuthorAnalyticsRepository authorAnalyticsRepository;
 
-    private MockMvc mockMvc;
+    @Autowired
+    private PublisherAnalyticsRepository publisherAnalyticsRepository;
 
-    private Author author;
+    @Autowired
+    private TopicAnalyticsRepository topicAnalyticsRepository;
+
+    @Autowired
+    private OwnerAnalyticsRepository ownerAnalyticsRepository;
+
+    @Autowired
+    private NewspaperAnalyticsRepository newspaperAnalyticsRepository;
 
     @BeforeEach
     public void setup() {
-        this.mockMvc = MockMvcBuilders.webAppContextSetup(this.webApplicationContext).build();
-
+        articleRepository.deleteAll();
+        newspaperRepository.deleteAll();
+        ownerRepository.deleteAll();
+        topicRepository.deleteAll();
+        publisherRepository.deleteAll();
         authorRepository.deleteAll();
+
+        articleAnalyticsRepository.deleteAll();
+        newspaperAnalyticsRepository.deleteAll();
+        ownerAnalyticsRepository.deleteAll();
+        topicAnalyticsRepository.deleteAll();
+        publisherAnalyticsRepository.deleteAll();
         authorAnalyticsRepository.deleteAll();
 
-        // Create and save necessary entities for testing
         AuthorAnalytics authorAnalytics = new AuthorAnalytics();
         authorAnalytics.setBias("Neutral");
         authorAnalytics.setViews(12000);
@@ -51,7 +81,7 @@ public class AuthorControllerTest {
         authorAnalytics.setEngagementRate(0.15);
         AuthorAnalytics savedAuthorAnalytics = authorAnalyticsRepository.saveAndFlush(authorAnalytics);
 
-        author = new Author();
+        Author author = new Author();
         author.setName("Jane Doe");
         author.setAge(30);
         author.setAnalytics(savedAuthorAnalytics);
@@ -59,93 +89,97 @@ public class AuthorControllerTest {
     }
 
     @Test
-    public void testGetAllAuthors_emptyDatabase() throws Exception {
+    public void testGetAllAuthors_emptyDatabase() {
         authorRepository.deleteAll();
 
-        this.mockMvc.perform(get("/authors/")
-                .accept(MediaType.APPLICATION_JSON))
-                .andExpect(status().isOk())
-                .andExpect(content().json("[]"));
+        ResponseEntity<Author[]> response = restTemplate.getForEntity("/authors/", Author[].class);
+        assertThat(response.getStatusCode()).isEqualTo(HttpStatus.OK);
+        assertThat(response.getBody()).isEmpty();
     }
 
     @Test
-    public void testGetAllAuthors() throws Exception {
-        this.mockMvc.perform(get("/authors/")
-                .accept(MediaType.APPLICATION_JSON))
-                .andExpect(status().isOk())
-                .andExpect(jsonPath("$[0].name").value("Jane Doe"))
-                .andExpect(jsonPath("$[0].age").value(30))
-                .andExpect(jsonPath("$[0].analytics.bias").value("Neutral"))
-                .andExpect(jsonPath("$[0].analytics.views").value(12000))
-                .andExpect(jsonPath("$[0].analytics.shares").value(450))
-                .andExpect(jsonPath("$[0].analytics.likes").value(300))
-                .andExpect(jsonPath("$[0].analytics.engagementRate").value(0.15));
+    public void testGetAllAuthors() {
+        ResponseEntity<Author[]> response = restTemplate.getForEntity("/authors/", Author[].class);
+        assertThat(response.getStatusCode()).isEqualTo(HttpStatus.OK);
+        Author[] authors = response.getBody();
+        assertThat(authors).isNotNull();
+        assertThat(authors.length).isGreaterThan(0);
+        assertThat(authors[0].getName()).isEqualTo("Jane Doe");
+        assertThat(authors[0].getAge()).isEqualTo(30);
+        assertThat(authors[0].getAnalytics().getBias()).isEqualTo("Neutral");
+        assertThat(authors[0].getAnalytics().getViews()).isEqualTo(12000);
+        assertThat(authors[0].getAnalytics().getShares()).isEqualTo(450);
+        assertThat(authors[0].getAnalytics().getLikes()).isEqualTo(300);
+        assertThat(authors[0].getAnalytics().getEngagementRate()).isEqualTo(0.15);
     }
 
     @Test
-    public void testGetAuthorById_notFound() throws Exception {
-        this.mockMvc.perform(get("/authors/999")
-                .accept(MediaType.APPLICATION_JSON))
-                .andExpect(status().isNotFound());
+    public void testGetAuthorById_notFound() {
+        ResponseEntity<String> response = restTemplate.getForEntity("/authors/999", String.class);
+        assertThat(response.getStatusCode()).isEqualTo(HttpStatus.NOT_FOUND);
     }
 
     @Test
-    public void testGetAuthorById() throws Exception {
+    public void testGetAuthorById() {
+        Author author = authorRepository.findAll().get(0);
         Long authorId = author.getAuthorId();
 
-        this.mockMvc.perform(get("/authors/" + authorId)
-                .accept(MediaType.APPLICATION_JSON))
-                .andExpect(status().isOk())
-                .andExpect(jsonPath("$.name").value("Jane Doe"))
-                .andExpect(jsonPath("$.age").value(30))
-                .andExpect(jsonPath("$.analytics.bias").value("Neutral"))
-                .andExpect(jsonPath("$.analytics.views").value(12000))
-                .andExpect(jsonPath("$.analytics.shares").value(450))
-                .andExpect(jsonPath("$.analytics.likes").value(300))
-                .andExpect(jsonPath("$.analytics.engagementRate").value(0.15));
+        ResponseEntity<Author> response = restTemplate.getForEntity("/authors/" + authorId, Author.class);
+        assertThat(response.getStatusCode()).isEqualTo(HttpStatus.OK);
+        Author retrievedAuthor = response.getBody();
+        assertThat(retrievedAuthor).isNotNull();
+        assertThat(retrievedAuthor.getName()).isEqualTo("Jane Doe");
+        assertThat(retrievedAuthor.getAge()).isEqualTo(30);
+        assertThat(retrievedAuthor.getAnalytics().getBias()).isEqualTo("Neutral");
+        assertThat(retrievedAuthor.getAnalytics().getViews()).isEqualTo(12000);
+        assertThat(retrievedAuthor.getAnalytics().getShares()).isEqualTo(450);
+        assertThat(retrievedAuthor.getAnalytics().getLikes()).isEqualTo(300);
+        assertThat(retrievedAuthor.getAnalytics().getEngagementRate()).isEqualTo(0.15);
     }
 
     @Test
-    public void testGetAuthorsByName_notFound() throws Exception {
-        this.mockMvc.perform(get("/authors/name/Nonexistent Name")
-                .accept(MediaType.APPLICATION_JSON))
-                .andExpect(status().isNotFound());
+    public void testGetAuthorsByName_notFound() {
+        ResponseEntity<String> response = restTemplate.getForEntity("/authors/name/Nonexistent Name", String.class);
+        assertThat(response.getStatusCode()).isEqualTo(HttpStatus.NOT_FOUND);
     }
 
     @Test
-    public void testGetAuthorsByName() throws Exception {
-        this.mockMvc.perform(get("/authors/name/Jane Doe")
-                .accept(MediaType.APPLICATION_JSON))
-                .andExpect(status().isOk())
-                .andExpect(jsonPath("$[0].name").value("Jane Doe"))
-                .andExpect(jsonPath("$[0].age").value(30))
-                .andExpect(jsonPath("$[0].analytics.bias").value("Neutral"))
-                .andExpect(jsonPath("$[0].analytics.views").value(12000))
-                .andExpect(jsonPath("$[0].analytics.shares").value(450))
-                .andExpect(jsonPath("$[0].analytics.likes").value(300))
-                .andExpect(jsonPath("$[0].analytics.engagementRate").value(0.15));
+    public void testGetAuthorsByName() {
+        ResponseEntity<Author[]> response = restTemplate.getForEntity("/authors/name/Jane Doe", Author[].class);
+        assertThat(response.getStatusCode()).isEqualTo(HttpStatus.OK);
+        Author[] authors = response.getBody();
+        assertThat(authors).isNotNull();
+        assertThat(authors.length).isGreaterThan(0);
+        assertThat(authors[0].getName()).isEqualTo("Jane Doe");
+        assertThat(authors[0].getAge()).isEqualTo(30);
+        assertThat(authors[0].getAnalytics().getBias()).isEqualTo("Neutral");
+        assertThat(authors[0].getAnalytics().getViews()).isEqualTo(12000);
+        assertThat(authors[0].getAnalytics().getShares()).isEqualTo(450);
+        assertThat(authors[0].getAnalytics().getLikes()).isEqualTo(300);
+        assertThat(authors[0].getAnalytics().getEngagementRate()).isEqualTo(0.15);
     }
 
     @Test
-    public void testGetPopularAuthors() throws Exception {
-        this.mockMvc.perform(get("/authors/popular/1")
-                .accept(MediaType.APPLICATION_JSON))
-                .andExpect(status().isOk())
-                .andExpect(jsonPath("$[0].name").value("Jane Doe"))
-                .andExpect(jsonPath("$[0].age").value(30))
-                .andExpect(jsonPath("$[0].analytics.bias").value("Neutral"))
-                .andExpect(jsonPath("$[0].analytics.views").value(12000))
-                .andExpect(jsonPath("$[0].analytics.shares").value(450))
-                .andExpect(jsonPath("$[0].analytics.likes").value(300))
-                .andExpect(jsonPath("$[0].analytics.engagementRate").value(0.15));
+    public void testGetPopularAuthors() {
+        ResponseEntity<Author[]> response = restTemplate.getForEntity("/authors/popular/1", Author[].class);
+        assertThat(response.getStatusCode()).isEqualTo(HttpStatus.OK);
+        Author[] authors = response.getBody();
+        assertThat(authors).isNotNull();
+        assertThat(authors.length).isEqualTo(1);
+        assertThat(authors[0].getName()).isEqualTo("Jane Doe");
+        assertThat(authors[0].getAge()).isEqualTo(30);
+        assertThat(authors[0].getAnalytics().getBias()).isEqualTo("Neutral");
+        assertThat(authors[0].getAnalytics().getViews()).isEqualTo(12000);
+        assertThat(authors[0].getAnalytics().getShares()).isEqualTo(450);
+        assertThat(authors[0].getAnalytics().getLikes()).isEqualTo(300);
+        assertThat(authors[0].getAnalytics().getEngagementRate()).isEqualTo(0.15);
     }
 
     @Test
-    public void testGetPopularAuthors_noContent() throws Exception {
+    public void testGetPopularAuthors_noContent() {
         authorRepository.deleteAll();
 
-        this.mockMvc.perform(get("/authors/popular/1")
-                .accept(MediaType.APPLICATION_JSON))
-                .andExpect(status().isNoContent());
+        ResponseEntity<String> response = restTemplate.getForEntity("/authors/popular/1", String.class);
+        assertThat(response.getStatusCode()).isEqualTo(HttpStatus.NO_CONTENT);
     }
 }
