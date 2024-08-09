@@ -17,8 +17,9 @@ import ssd.Entities.Publisher.*;
 import ssd.Entities.Topic.*;
 
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
-import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.content;
-import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
+import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.*;
+
+import java.util.List;
 
 @SpringBootTest
 @AutoConfigureMockMvc
@@ -65,6 +66,8 @@ public class ArticleControllerTest {
 
     private MockMvc mockMvc;
 
+    private Article article;
+
     @BeforeEach
     public void setup() {
         this.mockMvc = MockMvcBuilders.webAppContextSetup(this.webApplicationContext).build();
@@ -82,6 +85,7 @@ public class ArticleControllerTest {
         ownerAnalyticsRepository.deleteAll();
         newspaperAnalyticsRepository.deleteAll();
 
+        // Create and save necessary entities for testing
         AuthorAnalytics authorAnalytics = new AuthorAnalytics();
         authorAnalytics.setBias("Neutral");
         authorAnalytics.setViews(12000);
@@ -156,7 +160,7 @@ public class ArticleControllerTest {
         articleAnalytics.setEngagementRate(0.15);
         ArticleAnalytics savedArticleAnalytics = articleAnalyticsRepository.saveAndFlush(articleAnalytics);
 
-        Article article = new Article();
+        article = new Article();
         article.setTitle("The Impact of Climate Change on Coastal Communities");
         article.setAuthor(savedAuthor);
         article.setPublisher(savedPublisher);
@@ -183,33 +187,53 @@ public class ArticleControllerTest {
         this.mockMvc.perform(get("/articles/")
                 .accept(MediaType.APPLICATION_JSON))
                 .andExpect(status().isOk())
-                .andExpect(content().json("[{\"title\":\"The Impact of Climate Change on Coastal Communities\"}]"));
+                .andExpect(jsonPath("$[0].title").value("The Impact of Climate Change on Coastal Communities"))
+                .andExpect(jsonPath("$[0].author.name").value("Jane Doe"))
+                .andExpect(jsonPath("$[0].publisher.name").value("Global News Network"))
+                .andExpect(jsonPath("$[0].topic.name").value("Climate Change"))
+                .andExpect(jsonPath("$[0].owner.name").value("John Smith"))
+                .andExpect(jsonPath("$[0].newspaper.name").value("Daily News"))
+                .andExpect(jsonPath("$[0].content").value("Coastal communities around the world are facing increasing threats from rising sea levels caused by climate change. This article explores the impact on these communities and the measures being taken to mitigate the damage."))
+                .andExpect(jsonPath("$[0].analytics.bias").value("Neutral"))
+                .andExpect(jsonPath("$[0].analytics.views").value(12000))
+                .andExpect(jsonPath("$[0].analytics.shares").value(450))
+                .andExpect(jsonPath("$[0].analytics.likes").value(300))
+                .andExpect(jsonPath("$[0].analytics.engagementRate").value(0.15));
     }
 
     @Test
     public void testGetArticleById_notFound() throws Exception {
         this.mockMvc.perform(get("/articles/999")
                 .accept(MediaType.APPLICATION_JSON))
-                .andExpect(status().isOk());
+                .andExpect(status().isNotFound());
     }
 
     @Test
     public void testGetArticleById() throws Exception {
-        Article article = articleRepository.findByTitle("The Impact of Climate Change on Coastal Communities").get(0);
         Long articleId = article.getArticleId();
 
         this.mockMvc.perform(get("/articles/" + articleId)
                 .accept(MediaType.APPLICATION_JSON))
                 .andExpect(status().isOk())
-                .andExpect(content().json("{\"title\":\"The Impact of Climate Change on Coastal Communities\"}"));
+                .andExpect(jsonPath("$.title").value("The Impact of Climate Change on Coastal Communities"))
+                .andExpect(jsonPath("$.author.name").value("Jane Doe"))
+                .andExpect(jsonPath("$.publisher.name").value("Global News Network"))
+                .andExpect(jsonPath("$.topic.name").value("Climate Change"))
+                .andExpect(jsonPath("$.owner.name").value("John Smith"))
+                .andExpect(jsonPath("$.newspaper.name").value("Daily News"))
+                .andExpect(jsonPath("$.content").value("Coastal communities around the world are facing increasing threats from rising sea levels caused by climate change. This article explores the impact on these communities and the measures being taken to mitigate the damage."))
+                .andExpect(jsonPath("$.analytics.bias").value("Neutral"))
+                .andExpect(jsonPath("$.analytics.views").value(12000))
+                .andExpect(jsonPath("$.analytics.shares").value(450))
+                .andExpect(jsonPath("$.analytics.likes").value(300))
+                .andExpect(jsonPath("$.analytics.engagementRate").value(0.15));
     }
 
     @Test
     public void testGetArticlesByTitle_notFound() throws Exception {
         this.mockMvc.perform(get("/articles/title/Nonexistent Title")
                 .accept(MediaType.APPLICATION_JSON))
-                .andExpect(status().isOk())
-                .andExpect(content().json("[]"));
+                .andExpect(status().isNotFound());
     }
 
     @Test
@@ -217,6 +241,45 @@ public class ArticleControllerTest {
         this.mockMvc.perform(get("/articles/title/The Impact of Climate Change on Coastal Communities")
                 .accept(MediaType.APPLICATION_JSON))
                 .andExpect(status().isOk())
-                .andExpect(content().json("[{\"title\":\"The Impact of Climate Change on Coastal Communities\"}]"));
+                .andExpect(jsonPath("$[0].title").value("The Impact of Climate Change on Coastal Communities"))
+                .andExpect(jsonPath("$[0].author.name").value("Jane Doe"))
+                .andExpect(jsonPath("$[0].publisher.name").value("Global News Network"))
+                .andExpect(jsonPath("$[0].topic.name").value("Climate Change"))
+                .andExpect(jsonPath("$[0].owner.name").value("John Smith"))
+                .andExpect(jsonPath("$[0].newspaper.name").value("Daily News"))
+                .andExpect(jsonPath("$[0].content").value("Coastal communities around the world are facing increasing threats from rising sea levels caused by climate change. This article explores the impact on these communities and the measures being taken to mitigate the damage."))
+                .andExpect(jsonPath("$[0].analytics.bias").value("Neutral"))
+                .andExpect(jsonPath("$[0].analytics.views").value(12000))
+                .andExpect(jsonPath("$[0].analytics.shares").value(450))
+                .andExpect(jsonPath("$[0].analytics.likes").value(300))
+                .andExpect(jsonPath("$[0].analytics.engagementRate").value(0.15));
+    }
+
+    @Test
+    public void testGetPopularArticles() throws Exception {
+        this.mockMvc.perform(get("/articles/popular/1")
+                .accept(MediaType.APPLICATION_JSON))
+                .andExpect(status().isOk())
+                .andExpect(jsonPath("$[0].title").value("The Impact of Climate Change on Coastal Communities"))
+                .andExpect(jsonPath("$[0].author.name").value("Jane Doe"))
+                .andExpect(jsonPath("$[0].publisher.name").value("Global News Network"))
+                .andExpect(jsonPath("$[0].topic.name").value("Climate Change"))
+                .andExpect(jsonPath("$[0].owner.name").value("John Smith"))
+                .andExpect(jsonPath("$[0].newspaper.name").value("Daily News"))
+                .andExpect(jsonPath("$[0].content").value("Coastal communities around the world are facing increasing threats from rising sea levels caused by climate change. This article explores the impact on these communities and the measures being taken to mitigate the damage."))
+                .andExpect(jsonPath("$[0].analytics.bias").value("Neutral"))
+                .andExpect(jsonPath("$[0].analytics.views").value(12000))
+                .andExpect(jsonPath("$[0].analytics.shares").value(450))
+                .andExpect(jsonPath("$[0].analytics.likes").value(300))
+                .andExpect(jsonPath("$[0].analytics.engagementRate").value(0.15));
+    }
+
+    @Test
+    public void testGetPopularArticles_noContent() throws Exception {
+        articleRepository.deleteAll();
+
+        this.mockMvc.perform(get("/articles/popular/1")
+                .accept(MediaType.APPLICATION_JSON))
+                .andExpect(status().isNoContent());
     }
 }
