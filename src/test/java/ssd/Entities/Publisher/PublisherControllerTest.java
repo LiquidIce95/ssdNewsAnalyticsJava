@@ -7,18 +7,20 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.test.web.client.TestRestTemplate;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import ssd.Entities.Article.*;
 import ssd.Entities.Article.Analytics.ArticleAnalyticsRepository;
-import ssd.Entities.Author.*;
+import ssd.Entities.Article.Base.ArticleRepository;
 import ssd.Entities.Author.Analytics.AuthorAnalyticsRepository;
-import ssd.Entities.Newspaper.*;
+import ssd.Entities.Author.Base.AuthorRepository;
 import ssd.Entities.Newspaper.Analytics.NewspaperAnalyticsRepository;
-import ssd.Entities.Owner.*;
+import ssd.Entities.Newspaper.Base.NewspaperRepository;
 import ssd.Entities.Owner.Analytics.OwnerAnalyticsRepository;
+import ssd.Entities.Owner.Base.OwnerRepository;
 import ssd.Entities.Publisher.Analytics.PublisherAnalytics;
 import ssd.Entities.Publisher.Analytics.PublisherAnalyticsRepository;
-import ssd.Entities.Topic.*;
+import ssd.Entities.Publisher.Base.Publisher;
+import ssd.Entities.Publisher.Base.PublisherRepository;
 import ssd.Entities.Topic.Analytics.TopicAnalyticsRepository;
+import ssd.Entities.Topic.Base.TopicRepository;
 
 import static org.assertj.core.api.Assertions.assertThat;
 

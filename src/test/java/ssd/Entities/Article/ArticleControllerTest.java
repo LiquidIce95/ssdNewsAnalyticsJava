@@ -9,24 +9,29 @@ import org.springframework.http.*;
 
 import ssd.Entities.Article.Analytics.ArticleAnalytics;
 import ssd.Entities.Article.Analytics.ArticleAnalyticsRepository;
-import ssd.Entities.Author.*;
+import ssd.Entities.Article.Base.Article;
+import ssd.Entities.Article.Base.ArticleRepository;
 import ssd.Entities.Author.Analytics.AuthorAnalytics;
 import ssd.Entities.Author.Analytics.AuthorAnalyticsRepository;
-import ssd.Entities.Newspaper.*;
+import ssd.Entities.Author.Base.Author;
+import ssd.Entities.Author.Base.AuthorRepository;
 import ssd.Entities.Newspaper.Analytics.NewspaperAnalytics;
 import ssd.Entities.Newspaper.Analytics.NewspaperAnalyticsRepository;
-import ssd.Entities.Owner.*;
+import ssd.Entities.Newspaper.Base.Newspaper;
+import ssd.Entities.Newspaper.Base.NewspaperRepository;
 import ssd.Entities.Owner.Analytics.OwnerAnalytics;
 import ssd.Entities.Owner.Analytics.OwnerAnalyticsRepository;
-import ssd.Entities.Publisher.*;
+import ssd.Entities.Owner.Base.Owner;
+import ssd.Entities.Owner.Base.OwnerRepository;
 import ssd.Entities.Publisher.Analytics.PublisherAnalytics;
 import ssd.Entities.Publisher.Analytics.PublisherAnalyticsRepository;
-import ssd.Entities.Topic.*;
+import ssd.Entities.Publisher.Base.Publisher;
+import ssd.Entities.Publisher.Base.PublisherRepository;
 import ssd.Entities.Topic.Analytics.TopicAnalytics;
 import ssd.Entities.Topic.Analytics.TopicAnalyticsRepository;
+import ssd.Entities.Topic.Base.Topic;
+import ssd.Entities.Topic.Base.TopicRepository;
 
-import java.util.Arrays;
-import java.util.List;
 
 import static org.assertj.core.api.Assertions.assertThat;
 

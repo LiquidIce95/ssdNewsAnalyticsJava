@@ -1,7 +1,6 @@
 package ssd.Entities.Publisher.Analytics;
 
 import javax.persistence.*;
-import java.io.Serializable;
 import ssd.Entities.Analytics;
 
 

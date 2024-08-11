@@ -41,7 +41,7 @@
 </td>
 <td>
 <div class="infoBox" id="duration">
-<div class="counter">0.739s</div>
+<div class="counter">0.752s</div>
 <p>duration</p>
 </div>
 </td>
@@ -79,27 +79,27 @@
 </thead>
 <tr>
 <td class="success">testGetAllArticles()</td>
-<td class="success">0.042s</td>
+<td class="success">0.053s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">testGetAllArticles_emptyDatabase()</td>
-<td class="success">0.054s</td>
+<td class="success">0.045s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">testGetArticleById()</td>
-<td class="success">0.066s</td>
+<td class="success">0.088s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">testGetArticleById_notFound()</td>
-<td class="success">0.061s</td>
+<td class="success">0.051s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">testGetArticlesByTitle()</td>
-<td class="success">0.310s</td>
+<td class="success">0.336s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
@@ -109,12 +109,12 @@
 </tr>
 <tr>
 <td class="success">testGetPopularArticles()</td>
-<td class="success">0.100s</td>
+<td class="success">0.084s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">testGetPopularArticles_noContent()</td>
-<td class="success">0.057s</td>
+<td class="success">0.046s</td>
 <td class="success">passed</td>
 </tr>
 </table>
@@ -122,12 +122,12 @@
 <div id="tab1" class="tab">
 <h2>Standard output</h2>
 <span class="code">
-<pre>2024-08-11 13:24:24.414  INFO 217284 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Neither @ContextConfiguration nor @ContextHierarchy found for test class [ssd.Entities.Article.ArticleControllerTest], using SpringBootContextLoader
-2024-08-11 13:24:24.414  INFO 217284 --- [    Test worker] o.s.t.c.support.AbstractContextLoader    : Could not detect default resource locations for test class [ssd.Entities.Article.ArticleControllerTest]: no resource found for suffixes {-context.xml, Context.groovy}.
-2024-08-11 13:24:24.414  INFO 217284 --- [    Test worker] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [ssd.Entities.Article.ArticleControllerTest]: ArticleControllerTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
-2024-08-11 13:24:24.418  INFO 217284 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration ssd.SSDApplication for test class ssd.Entities.Article.ArticleControllerTest
-2024-08-11 13:24:24.419  INFO 217284 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.event.ApplicationEventsTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
-2024-08-11 13:24:24.419  INFO 217284 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@6418075c, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@f9919a2, org.springframework.test.context.event.ApplicationEventsTestExecutionListener@530ee11a, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@54d116d5, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@7057d9f4, org.springframework.test.context.support.DirtiesContextTestExecutionListener@37c49a55, org.springframework.test.context.transaction.TransactionalTestExecutionListener@13e6ab86, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@4f5d7091, org.springframework.test.context.event.EventPublishingTestExecutionListener@18b88f7, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@128ebca1, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@34128fed, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@10efb806, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@4dfe56dc, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener@2a728076, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@a3f1f32]
+<pre>2024-08-11 13:40:15.151  INFO 246421 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Neither @ContextConfiguration nor @ContextHierarchy found for test class [ssd.Entities.Article.ArticleControllerTest], using SpringBootContextLoader
+2024-08-11 13:40:15.152  INFO 246421 --- [    Test worker] o.s.t.c.support.AbstractContextLoader    : Could not detect default resource locations for test class [ssd.Entities.Article.ArticleControllerTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+2024-08-11 13:40:15.152  INFO 246421 --- [    Test worker] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [ssd.Entities.Article.ArticleControllerTest]: ArticleControllerTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2024-08-11 13:40:15.155  INFO 246421 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration ssd.SSDApplication for test class ssd.Entities.Article.ArticleControllerTest
+2024-08-11 13:40:15.156  INFO 246421 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.event.ApplicationEventsTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
+2024-08-11 13:40:15.156  INFO 246421 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@4e773b8a, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@579cfcc4, org.springframework.test.context.event.ApplicationEventsTestExecutionListener@57eb2555, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@490f2fad, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@3ed3e66d, org.springframework.test.context.support.DirtiesContextTestExecutionListener@e9947af, org.springframework.test.context.transaction.TransactionalTestExecutionListener@d60aa4, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@30942f54, org.springframework.test.context.event.EventPublishingTestExecutionListener@11d557a5, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@55b5ce0f, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@65067d37, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@74f9004c, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@4f2a0909, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener@34947355, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@62ad5f35]
 Hibernate: 
     select
         article0_.id as id1_0_,
@@ -244,6 +244,114 @@ Hibernate:
     where
         topic0_.id=?
 Hibernate: 
+    select
+        articleana0_.analytics_id as analytic1_1_0_,
+        articleana0_.bias as bias2_1_0_,
+        articleana0_.engagement_rate as engageme3_1_0_,
+        articleana0_.likes as likes4_1_0_,
+        articleana0_.shares as shares5_1_0_,
+        articleana0_.views as views6_1_0_ 
+    from
+        article_analytics articleana0_ 
+    where
+        articleana0_.analytics_id=?
+Hibernate: 
+    select
+        author0_.id as id1_3_0_,
+        author0_.analytics_id as analytic3_3_0_,
+        author0_.name as name2_3_0_,
+        authoranal1_.analytics_id as analytic1_4_1_,
+        authoranal1_.bias as bias2_4_1_,
+        authoranal1_.engagement_rate as engageme3_4_1_,
+        authoranal1_.likes as likes4_4_1_,
+        authoranal1_.shares as shares5_4_1_,
+        authoranal1_.views as views6_4_1_ 
+    from
+        author author0_ 
+    inner join
+        author_analytics authoranal1_ 
+            on author0_.analytics_id=authoranal1_.analytics_id 
+    where
+        author0_.id=?
+Hibernate: 
+    select
+        newspaper0_.id as id1_6_0_,
+        newspaper0_.analytics_id as analytic3_6_0_,
+        newspaper0_.name as name2_6_0_,
+        newspapera1_.analytics_id as analytic1_7_1_,
+        newspapera1_.bias as bias2_7_1_,
+        newspapera1_.engagement_rate as engageme3_7_1_,
+        newspapera1_.likes as likes4_7_1_,
+        newspapera1_.shares as shares5_7_1_,
+        newspapera1_.views as views6_7_1_ 
+    from
+        newspaper newspaper0_ 
+    inner join
+        newspaper_analytics newspapera1_ 
+            on newspaper0_.analytics_id=newspapera1_.analytics_id 
+    where
+        newspaper0_.id=?
+Hibernate: 
+    select
+        owner0_.id as id1_9_0_,
+        owner0_.analytics_id as analytic3_9_0_,
+        owner0_.name as name2_9_0_,
+        owneranaly1_.analytics_id as analytic1_10_1_,
+        owneranaly1_.bias as bias2_10_1_,
+        owneranaly1_.engagement_rate as engageme3_10_1_,
+        owneranaly1_.likes as likes4_10_1_,
+        owneranaly1_.shares as shares5_10_1_,
+        owneranaly1_.views as views6_10_1_ 
+    from
+        owner owner0_ 
+    inner join
+        owner_analytics owneranaly1_ 
+            on owner0_.analytics_id=owneranaly1_.analytics_id 
+    where
+        owner0_.id=?
+Hibernate: 
+    select
+        publisher0_.id as id1_12_0_,
+        publisher0_.analytics_id as analytic3_12_0_,
+        publisher0_.name as name2_12_0_,
+        publishera1_.analytics_id as analytic1_13_1_,
+        publishera1_.bias as bias2_13_1_,
+        publishera1_.engagement_rate as engageme3_13_1_,
+        publishera1_.likes as likes4_13_1_,
+        publishera1_.shares as shares5_13_1_,
+        publishera1_.views as views6_13_1_ 
+    from
+        publisher publisher0_ 
+    inner join
+        publisher_analytics publishera1_ 
+            on publisher0_.analytics_id=publishera1_.analytics_id 
+    where
+        publisher0_.id=?
+Hibernate: 
+    select
+        topic0_.id as id1_15_0_,
+        topic0_.analytics_id as analytic3_15_0_,
+        topic0_.name as name2_15_0_,
+        topicanaly1_.analytics_id as analytic1_16_1_,
+        topicanaly1_.bias as bias2_16_1_,
+        topicanaly1_.engagement_rate as engageme3_16_1_,
+        topicanaly1_.likes as likes4_16_1_,
+        topicanaly1_.shares as shares5_16_1_,
+        topicanaly1_.views as views6_16_1_ 
+    from
+        topic topic0_ 
+    inner join
+        topic_analytics topicanaly1_ 
+            on topic0_.analytics_id=topicanaly1_.analytics_id 
+    where
+        topic0_.id=?
+Hibernate: 
+    delete 
+    from
+        article 
+    where
+        id=?
+Hibernate: 
     delete 
     from
         article 
@@ -268,6 +376,24 @@ Hibernate:
         author_analytics authoranal0_ 
     where
         authoranal0_.analytics_id=?
+Hibernate: 
+    select
+        authoranal0_.analytics_id as analytic1_4_0_,
+        authoranal0_.bias as bias2_4_0_,
+        authoranal0_.engagement_rate as engageme3_4_0_,
+        authoranal0_.likes as likes4_4_0_,
+        authoranal0_.shares as shares5_4_0_,
+        authoranal0_.views as views6_4_0_ 
+    from
+        author_analytics authoranal0_ 
+    where
+        authoranal0_.analytics_id=?
+Hibernate: 
+    delete 
+    from
+        author 
+    where
+        id=?
 Hibernate: 
     delete 
     from
@@ -294,6 +420,24 @@ Hibernate:
     where
         publishera0_.analytics_id=?
 Hibernate: 
+    select
+        publishera0_.analytics_id as analytic1_13_0_,
+        publishera0_.bias as bias2_13_0_,
+        publishera0_.engagement_rate as engageme3_13_0_,
+        publishera0_.likes as likes4_13_0_,
+        publishera0_.shares as shares5_13_0_,
+        publishera0_.views as views6_13_0_ 
+    from
+        publisher_analytics publishera0_ 
+    where
+        publishera0_.analytics_id=?
+Hibernate: 
+    delete 
+    from
+        publisher 
+    where
+        id=?
+Hibernate: 
     delete 
     from
         publisher 
@@ -318,6 +462,42 @@ Hibernate:
         topic_analytics topicanaly0_ 
     where
         topicanaly0_.analytics_id=?
+Hibernate: 
+    select
+        topicanaly0_.analytics_id as analytic1_16_0_,
+        topicanaly0_.bias as bias2_16_0_,
+        topicanaly0_.engagement_rate as engageme3_16_0_,
+        topicanaly0_.likes as likes4_16_0_,
+        topicanaly0_.shares as shares5_16_0_,
+        topicanaly0_.views as views6_16_0_ 
+    from
+        topic_analytics topicanaly0_ 
+    where
+        topicanaly0_.analytics_id=?
+Hibernate: 
+    select
+        topicanaly0_.analytics_id as analytic1_16_0_,
+        topicanaly0_.bias as bias2_16_0_,
+        topicanaly0_.engagement_rate as engageme3_16_0_,
+        topicanaly0_.likes as likes4_16_0_,
+        topicanaly0_.shares as shares5_16_0_,
+        topicanaly0_.views as views6_16_0_ 
+    from
+        topic_analytics topicanaly0_ 
+    where
+        topicanaly0_.analytics_id=?
+Hibernate: 
+    delete 
+    from
+        topic 
+    where
+        id=?
+Hibernate: 
+    delete 
+    from
+        topic 
+    where
+        id=?
 Hibernate: 
     delete 
     from
@@ -344,6 +524,24 @@ Hibernate:
     where
         owneranaly0_.analytics_id=?
 Hibernate: 
+    select
+        owneranaly0_.analytics_id as analytic1_10_0_,
+        owneranaly0_.bias as bias2_10_0_,
+        owneranaly0_.engagement_rate as engageme3_10_0_,
+        owneranaly0_.likes as likes4_10_0_,
+        owneranaly0_.shares as shares5_10_0_,
+        owneranaly0_.views as views6_10_0_ 
+    from
+        owner_analytics owneranaly0_ 
+    where
+        owneranaly0_.analytics_id=?
+Hibernate: 
+    delete 
+    from
+        owner 
+    where
+        id=?
+Hibernate: 
     delete 
     from
         owner 
@@ -369,6 +567,24 @@ Hibernate:
     where
         newspapera0_.analytics_id=?
 Hibernate: 
+    select
+        newspapera0_.analytics_id as analytic1_7_0_,
+        newspapera0_.bias as bias2_7_0_,
+        newspapera0_.engagement_rate as engageme3_7_0_,
+        newspapera0_.likes as likes4_7_0_,
+        newspapera0_.shares as shares5_7_0_,
+        newspapera0_.views as views6_7_0_ 
+    from
+        newspaper_analytics newspapera0_ 
+    where
+        newspapera0_.analytics_id=?
+Hibernate: 
+    delete 
+    from
+        newspaper 
+    where
+        id=?
+Hibernate: 
     delete 
     from
         newspaper 
@@ -384,6 +600,12 @@ Hibernate:
         articleana0_.views as views6_1_ 
     from
         article_analytics articleana0_
+Hibernate: 
+    delete 
+    from
+        article_analytics 
+    where
+        analytics_id=?
 Hibernate: 
     delete 
     from
@@ -407,6 +629,12 @@ Hibernate:
     where
         analytics_id=?
 Hibernate: 
+    delete 
+    from
+        author_analytics 
+    where
+        analytics_id=?
+Hibernate: 
     select
         publishera0_.analytics_id as analytic1_13_,
         publishera0_.bias as bias2_13_,
@@ -416,6 +644,12 @@ Hibernate:
         publishera0_.views as views6_13_ 
     from
         publisher_analytics publishera0_
+Hibernate: 
+    delete 
+    from
+        publisher_analytics 
+    where
+        analytics_id=?
 Hibernate: 
     delete 
     from
@@ -439,6 +673,18 @@ Hibernate:
     where
         analytics_id=?
 Hibernate: 
+    delete 
+    from
+        topic_analytics 
+    where
+        analytics_id=?
+Hibernate: 
+    delete 
+    from
+        topic_analytics 
+    where
+        analytics_id=?
+Hibernate: 
     select
         owneranaly0_.analytics_id as analytic1_10_,
         owneranaly0_.bias as bias2_10_,
@@ -455,6 +701,12 @@ Hibernate:
     where
         analytics_id=?
 Hibernate: 
+    delete 
+    from
+        owner_analytics 
+    where
+        analytics_id=?
+Hibernate: 
     select
         newspapera0_.analytics_id as analytic1_7_,
         newspapera0_.bias as bias2_7_,
@@ -464,6 +716,12 @@ Hibernate:
         newspapera0_.views as views6_7_ 
     from
         newspaper_analytics newspapera0_
+Hibernate: 
+    delete 
+    from
+        newspaper_analytics 
+    where
+        analytics_id=?
 Hibernate: 
     delete 
     from
@@ -554,9 +812,9 @@ Hibernate:
         (analytics_id, name, author_id, content, newspaper_id, owner_id, publisher_id, topic_id) 
     values
         (?, ?, ?, ?, ?, ?, ?, ?)
-2024-08-11 13:24:24.619  INFO 217284 --- [nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2024-08-11 13:24:24.619  INFO 217284 --- [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2024-08-11 13:24:24.620  INFO 217284 --- [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2024-08-11 13:40:15.395  INFO 246421 --- [nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-08-11 13:40:15.395  INFO 246421 --- [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-08-11 13:40:15.396  INFO 246421 --- [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
 Hibernate: 
     select
         article0_.id as id1_0_,
@@ -4270,7 +4528,7 @@ Hibernate:
 <input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
 </label>
 </div>Generated by 
-<a href="http://www.gradle.org">Gradle 7.6</a> at Aug 11, 2024, 1:24:25 PM</p>
+<a href="http://www.gradle.org">Gradle 7.6</a> at Aug 11, 2024, 1:40:16 PM</p>
 </div>
 </div>
 </body>

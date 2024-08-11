@@ -41,7 +41,7 @@
 </td>
 <td>
 <div class="infoBox" id="duration">
-<div class="counter">0.117s</div>
+<div class="counter">0.108s</div>
 <p>duration</p>
 </div>
 </td>
@@ -79,17 +79,17 @@
 </thead>
 <tr>
 <td class="success">testGetAllTopics()</td>
-<td class="success">0.013s</td>
+<td class="success">0.016s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">testGetAllTopics_emptyDatabase()</td>
-<td class="success">0.018s</td>
+<td class="success">0.014s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">testGetPopularTopics()</td>
-<td class="success">0.014s</td>
+<td class="success">0.013s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
@@ -99,17 +99,17 @@
 </tr>
 <tr>
 <td class="success">testGetTopicById()</td>
-<td class="success">0.014s</td>
+<td class="success">0.012s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">testGetTopicById_notFound()</td>
-<td class="success">0.014s</td>
+<td class="success">0.013s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">testGetTopicsByName()</td>
-<td class="success">0.017s</td>
+<td class="success">0.013s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
@@ -122,12 +122,12 @@
 <div id="tab1" class="tab">
 <h2>Standard output</h2>
 <span class="code">
-<pre>2024-08-11 13:24:25.812  INFO 217284 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Neither @ContextConfiguration nor @ContextHierarchy found for test class [ssd.Entities.Topic.TopicControllerTest], using SpringBootContextLoader
-2024-08-11 13:24:25.812  INFO 217284 --- [    Test worker] o.s.t.c.support.AbstractContextLoader    : Could not detect default resource locations for test class [ssd.Entities.Topic.TopicControllerTest]: no resource found for suffixes {-context.xml, Context.groovy}.
-2024-08-11 13:24:25.812  INFO 217284 --- [    Test worker] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [ssd.Entities.Topic.TopicControllerTest]: TopicControllerTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
-2024-08-11 13:24:25.814  INFO 217284 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration ssd.SSDApplication for test class ssd.Entities.Topic.TopicControllerTest
-2024-08-11 13:24:25.815  INFO 217284 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.event.ApplicationEventsTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
-2024-08-11 13:24:25.815  INFO 217284 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@4434eb51, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@1d0b4b69, org.springframework.test.context.event.ApplicationEventsTestExecutionListener@5910c67e, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@1967c032, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@7a6ade2c, org.springframework.test.context.support.DirtiesContextTestExecutionListener@3d7d920b, org.springframework.test.context.transaction.TransactionalTestExecutionListener@628190ec, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@4540aade, org.springframework.test.context.event.EventPublishingTestExecutionListener@697797e4, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@38cbbd0b, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@56a34c0e, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@16750a5e, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@436867c3, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener@262ea940, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@6aa152b7]
+<pre>2024-08-11 13:40:16.564  INFO 246421 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Neither @ContextConfiguration nor @ContextHierarchy found for test class [ssd.Entities.Topic.TopicControllerTest], using SpringBootContextLoader
+2024-08-11 13:40:16.564  INFO 246421 --- [    Test worker] o.s.t.c.support.AbstractContextLoader    : Could not detect default resource locations for test class [ssd.Entities.Topic.TopicControllerTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+2024-08-11 13:40:16.564  INFO 246421 --- [    Test worker] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [ssd.Entities.Topic.TopicControllerTest]: TopicControllerTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2024-08-11 13:40:16.567  INFO 246421 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration ssd.SSDApplication for test class ssd.Entities.Topic.TopicControllerTest
+2024-08-11 13:40:16.567  INFO 246421 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.event.ApplicationEventsTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
+2024-08-11 13:40:16.567  INFO 246421 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@498d7c57, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@12ff0e4f, org.springframework.test.context.event.ApplicationEventsTestExecutionListener@66b9f727, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@f7e004d, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@2d33aa31, org.springframework.test.context.support.DirtiesContextTestExecutionListener@475454ae, org.springframework.test.context.transaction.TransactionalTestExecutionListener@6efd83ac, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@117e9a56, org.springframework.test.context.event.EventPublishingTestExecutionListener@21acc86a, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@443819d5, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@465a121d, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@23938caa, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@643bef2a, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener@6049b4c9, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@76958827]
 Hibernate: 
     select
         article0_.id as id1_0_,
@@ -1458,7 +1458,7 @@ Hibernate:
 <input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
 </label>
 </div>Generated by 
-<a href="http://www.gradle.org">Gradle 7.6</a> at Aug 11, 2024, 1:24:25 PM</p>
+<a href="http://www.gradle.org">Gradle 7.6</a> at Aug 11, 2024, 1:40:16 PM</p>
 </div>
 </div>
 </body>
