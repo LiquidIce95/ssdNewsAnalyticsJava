@@ -1,9 +1,9 @@
 package ssd.Entities.Owner.Raw;
 
-import ssd.Entities.EntityRaw;
-
 import javax.persistence.Entity;
 import javax.persistence.Table;
+
+import ssd.AbstractClasses.EntityRaw;
 
 @Entity
 @Table(name = "owner_raw")

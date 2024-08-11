@@ -2,7 +2,7 @@ package ssd.Entities.Newspaper.Base;
 
 import javax.persistence.*;
 
-import ssd.Entities.BaseEntity;
+import ssd.AbstractClasses.BaseEntity;
 import ssd.Entities.Newspaper.Analytics.NewspaperAnalytics;
 
 

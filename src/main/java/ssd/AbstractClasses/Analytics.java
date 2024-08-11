@@ -1,4 +1,4 @@
-package ssd.Entities;
+package ssd.AbstractClasses;
 
 import javax.persistence.*;
 import java.io.Serializable;

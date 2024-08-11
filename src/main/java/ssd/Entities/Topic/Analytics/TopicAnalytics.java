@@ -1,7 +1,8 @@
 package ssd.Entities.Topic.Analytics;
 
 import javax.persistence.*;
-import ssd.Entities.Analytics;
+
+import ssd.AbstractClasses.Analytics;
 
 
 @Entity

@@ -41,7 +41,7 @@
 </td>
 <td>
 <div class="infoBox" id="duration">
-<div class="counter">0.125s</div>
+<div class="counter">0.141s</div>
 <p>duration</p>
 </div>
 </td>
@@ -79,42 +79,42 @@
 </thead>
 <tr>
 <td class="success">testGetAllPublishers()</td>
-<td class="success">0.012s</td>
+<td class="success">0.014s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">testGetAllPublishers_emptyDatabase()</td>
-<td class="success">0.020s</td>
-<td class="success">passed</td>
-</tr>
-<tr>
-<td class="success">testGetPopularPublishers()</td>
-<td class="success">0.014s</td>
-<td class="success">passed</td>
-</tr>
-<tr>
-<td class="success">testGetPopularPublishers_noContent()</td>
-<td class="success">0.014s</td>
-<td class="success">passed</td>
-</tr>
-<tr>
-<td class="success">testGetPublisherById()</td>
 <td class="success">0.016s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
+<td class="success">testGetPopularPublishers()</td>
+<td class="success">0.016s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">testGetPopularPublishers_noContent()</td>
+<td class="success">0.019s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">testGetPublisherById()</td>
+<td class="success">0.020s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
 <td class="success">testGetPublisherById_notFound()</td>
-<td class="success">0.017s</td>
+<td class="success">0.016s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">testGetPublishersByName()</td>
-<td class="success">0.014s</td>
+<td class="success">0.019s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">testGetPublishersByName_notFound()</td>
-<td class="success">0.018s</td>
+<td class="success">0.021s</td>
 <td class="success">passed</td>
 </tr>
 </table>
@@ -122,12 +122,12 @@
 <div id="tab1" class="tab">
 <h2>Standard output</h2>
 <span class="code">
-<pre>2024-08-11 13:40:16.422  INFO 246421 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Neither @ContextConfiguration nor @ContextHierarchy found for test class [ssd.Entities.Publisher.PublisherControllerTest], using SpringBootContextLoader
-2024-08-11 13:40:16.422  INFO 246421 --- [    Test worker] o.s.t.c.support.AbstractContextLoader    : Could not detect default resource locations for test class [ssd.Entities.Publisher.PublisherControllerTest]: no resource found for suffixes {-context.xml, Context.groovy}.
-2024-08-11 13:40:16.423  INFO 246421 --- [    Test worker] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [ssd.Entities.Publisher.PublisherControllerTest]: PublisherControllerTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
-2024-08-11 13:40:16.427  INFO 246421 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration ssd.SSDApplication for test class ssd.Entities.Publisher.PublisherControllerTest
-2024-08-11 13:40:16.428  INFO 246421 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.event.ApplicationEventsTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
-2024-08-11 13:40:16.429  INFO 246421 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@2ea8f277, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@7244b40e, org.springframework.test.context.event.ApplicationEventsTestExecutionListener@5d8de4bd, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@405d123c, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@298f7b0a, org.springframework.test.context.support.DirtiesContextTestExecutionListener@7e3c5ef1, org.springframework.test.context.transaction.TransactionalTestExecutionListener@4ca6f587, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@6442c2dd, org.springframework.test.context.event.EventPublishingTestExecutionListener@3647b274, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@2a10a99b, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@51617b93, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@23471f48, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@2898cd46, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener@7ebf5bf, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@5d8cbb32]
+<pre>2024-08-11 14:16:31.463  INFO 306809 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Neither @ContextConfiguration nor @ContextHierarchy found for test class [ssd.Entities.Publisher.PublisherControllerTest], using SpringBootContextLoader
+2024-08-11 14:16:31.463  INFO 306809 --- [    Test worker] o.s.t.c.support.AbstractContextLoader    : Could not detect default resource locations for test class [ssd.Entities.Publisher.PublisherControllerTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+2024-08-11 14:16:31.463  INFO 306809 --- [    Test worker] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [ssd.Entities.Publisher.PublisherControllerTest]: PublisherControllerTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2024-08-11 14:16:31.465  INFO 306809 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration ssd.SSDApplication for test class ssd.Entities.Publisher.PublisherControllerTest
+2024-08-11 14:16:31.466  INFO 306809 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.event.ApplicationEventsTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
+2024-08-11 14:16:31.466  INFO 306809 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@4e09c3b0, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@64f34c91, org.springframework.test.context.event.ApplicationEventsTestExecutionListener@158f0af4, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@7a174e4b, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@7a8316fa, org.springframework.test.context.support.DirtiesContextTestExecutionListener@46a5aff, org.springframework.test.context.transaction.TransactionalTestExecutionListener@695f382c, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@29fa465a, org.springframework.test.context.event.EventPublishingTestExecutionListener@4b2ca159, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@1d47b761, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@d4962bd, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@76fa3dd8, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@58f27c37, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener@78ae34f7, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@3eb4fdd5]
 Hibernate: 
     select
         article0_.id as id1_0_,
@@ -1458,7 +1458,7 @@ Hibernate:
 <input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
 </label>
 </div>Generated by 
-<a href="http://www.gradle.org">Gradle 7.6</a> at Aug 11, 2024, 1:40:16 PM</p>
+<a href="http://www.gradle.org">Gradle 7.6</a> at Aug 11, 2024, 2:16:31 PM</p>
 </div>
 </div>
 </body>

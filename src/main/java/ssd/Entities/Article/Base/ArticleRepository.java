@@ -1,14 +1,10 @@
 package ssd.Entities.Article.Base;
 
-import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
-import java.util.List;
+import ssd.AbstractClasses.BaseEntityRepository;
 
-
-@Repository("articleRepository")
-public interface ArticleRepository extends JpaRepository<Article, Long> {
-    List<Article> findByName(String title);
-
-    Article findById(long articleId);
+@Repository
+public interface ArticleRepository extends BaseEntityRepository<Article> {
+    // Additional custom query methods specific to Article can be added here
 }

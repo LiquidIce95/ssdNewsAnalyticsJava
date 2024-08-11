@@ -2,7 +2,7 @@ package ssd.Entities.Publisher.Base;
 
 import javax.persistence.*;
 
-import ssd.Entities.BaseEntity;
+import ssd.AbstractClasses.BaseEntity;
 import ssd.Entities.Publisher.Analytics.PublisherAnalytics;
 
 @Entity
