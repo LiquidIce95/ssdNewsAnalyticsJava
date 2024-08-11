@@ -3,6 +3,7 @@ package ssd.Entities.Article;
 import javax.persistence.*;
 import java.io.Serializable;
 
+import ssd.Entities.BaseEntity;
 import ssd.Entities.Article.Analytics.ArticleAnalytics;
 import ssd.Entities.Author.*;
 import ssd.Entities.Newspaper.*;
@@ -12,18 +13,9 @@ import ssd.Entities.Topic.*;
 
 @Entity
 @Table(name = "article")
-public class Article implements Serializable {
+public class Article extends BaseEntity<ArticleAnalytics> {
 
-    private static final long serialVersionUID = 1L;
-
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "article_id")
-    private Long articleId;
-
-    @Column(nullable = false)
-    private String title;
-
+    
     @ManyToOne
     @JoinColumn(name = "author_id", nullable = false)
     private Author author;
@@ -52,22 +44,6 @@ public class Article implements Serializable {
     private ArticleAnalytics analytics;
 
     // Getters and Setters
-
-    public Long getArticleId() {
-        return articleId;
-    }
-
-    public void setArticleId(Long articleId) {
-        this.articleId = articleId;
-    }
-
-    public String getTitle() {
-        return title;
-    }
-
-    public void setTitle(String title) {
-        this.title = title;
-    }
 
     public Author getAuthor() {
         return author;

@@ -115,7 +115,6 @@ public class DataInitializer implements CommandLineRunner {
         // Initialize Entities with default constructor
         Author author = new Author();
         author.setName("Jane Doe");
-        author.setAge(30);
         author.setAnalytics(savedAuthorAnalytics);
         Author savedAuthor = authorRepository.save(author);
 
@@ -140,7 +139,7 @@ public class DataInitializer implements CommandLineRunner {
         Newspaper savedNewspaper = newspaperRepository.save(newspaper);
 
         Article article = new Article();
-        article.setTitle("The Impact of Climate Change on Coastal Communities");
+        article.setName("The Impact of Climate Change on Coastal Communities");
         article.setAuthor(savedAuthor);
         article.setPublisher(savedPublisher);
         article.setTopic(savedTopic);

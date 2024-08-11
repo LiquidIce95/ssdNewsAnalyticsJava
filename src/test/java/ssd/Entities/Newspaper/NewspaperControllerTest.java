@@ -127,7 +127,7 @@ public class NewspaperControllerTest {
     @Test
     public void testGetNewspaperById() {
         Newspaper newspaper = newspaperRepository.findAll().get(0);
-        Long newspaperId = newspaper.getNewspaperId();
+        Long newspaperId = newspaper.getId();
 
         ResponseEntity<Newspaper> response = restTemplate.getForEntity("/newspapers/" + newspaperId, Newspaper.class);
         assertThat(response.getStatusCode()).isEqualTo(HttpStatus.OK);

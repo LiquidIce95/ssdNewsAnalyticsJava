@@ -127,7 +127,7 @@ public class PublisherControllerTest {
     @Test
     public void testGetPublisherById() {
         Publisher publisher = publisherRepository.findAll().get(0);
-        Long publisherId = publisher.getPublisherId();
+        Long publisherId = publisher.getId();
 
         ResponseEntity<Publisher> response = restTemplate.getForEntity("/publishers/" + publisherId, Publisher.class);
         assertThat(response.getStatusCode()).isEqualTo(HttpStatus.OK);

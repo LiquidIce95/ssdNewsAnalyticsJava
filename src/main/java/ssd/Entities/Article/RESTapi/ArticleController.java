@@ -33,7 +33,7 @@ public class ArticleController {
 
     @GetMapping("/title/{title}")
     public ResponseEntity<List<Article>> getArticlesByTitle(@PathVariable String title) {
-        List<Article> articles = articleRepository.findByTitle(title);
+        List<Article> articles = articleRepository.findByName(title);
         if (articles.isEmpty()) {
             return new ResponseEntity<>(HttpStatus.NOT_FOUND);
         } else {

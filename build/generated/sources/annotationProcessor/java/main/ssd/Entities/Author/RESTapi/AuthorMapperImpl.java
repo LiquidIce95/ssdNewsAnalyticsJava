@@ -1,13 +1,12 @@
-package ssd.Entities.Author;
+package ssd.Entities.Author.RESTapi;
 
 import javax.annotation.processing.Generated;
-
-import ssd.Entities.Author.RESTapi.AuthorMapper;
+import ssd.Entities.Author.Author;
 import ssd.Entities.Author.RESTapi.DTO.AuthorGetDTO;
 
 @Generated(
     value = "org.mapstruct.ap.MappingProcessor",
-    date = "2024-08-11T11:46:09+0200",
+    date = "2024-08-11T13:24:20+0200",
     comments = "version: 1.3.1.Final, compiler: javac, environment: Java 17.0.10 (Debian)"
 )
 public class AuthorMapperImpl implements AuthorMapper {
@@ -22,8 +21,6 @@ public class AuthorMapperImpl implements AuthorMapper {
 
         authorGetDTO.setAnalytics( author.getAnalytics() );
         authorGetDTO.setName( author.getName() );
-        authorGetDTO.setAge( author.getAge() );
-        authorGetDTO.setAuthorId( author.getAuthorId() );
 
         return authorGetDTO;
     }

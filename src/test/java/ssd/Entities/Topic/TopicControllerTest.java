@@ -127,7 +127,7 @@ public class TopicControllerTest {
     @Test
     public void testGetTopicById() {
         Topic topic = topicRepository.findAll().get(0);
-        Long topicId = topic.getTopicId();
+        Long topicId = topic.getId();
 
         ResponseEntity<Topic> response = restTemplate.getForEntity("/topics/" + topicId, Topic.class);
         assertThat(response.getStatusCode()).isEqualTo(HttpStatus.OK);

@@ -1,8 +1,7 @@
-package ssd.Entities.Article;
+package ssd.Entities.Article.RESTapi;
 
 import javax.annotation.processing.Generated;
-
-import ssd.Entities.Article.RESTapi.ArticleMapper;
+import ssd.Entities.Article.Article;
 import ssd.Entities.Article.RESTapi.DTO.ArticleGetDTO;
 import ssd.Entities.Author.Author;
 import ssd.Entities.Author.RESTapi.DTO.AuthorGetDTO;
@@ -12,12 +11,12 @@ import ssd.Entities.Owner.Owner;
 import ssd.Entities.Owner.RESTapi.DTO.OwnerGetDTO;
 import ssd.Entities.Publisher.Publisher;
 import ssd.Entities.Publisher.RESTapi.DTO.PublisherGetDTO;
-import ssd.Entities.Topic.Topic;
 import ssd.Entities.Topic.RESTapi.DTO.TopicGetDTO;
+import ssd.Entities.Topic.Topic;
 
 @Generated(
     value = "org.mapstruct.ap.MappingProcessor",
-    date = "2024-08-11T11:46:09+0200",
+    date = "2024-08-11T13:24:20+0200",
     comments = "version: 1.3.1.Final, compiler: javac, environment: Java 17.0.10 (Debian)"
 )
 public class ArticleMapperImpl implements ArticleMapper {
@@ -34,11 +33,10 @@ public class ArticleMapperImpl implements ArticleMapper {
         articleGetDTO.setNewspaper( newspaperToNewspaperGetDTO( article.getNewspaper() ) );
         articleGetDTO.setAnalytics( article.getAnalytics() );
         articleGetDTO.setAuthor( authorToAuthorGetDTO( article.getAuthor() ) );
+        articleGetDTO.setName( article.getName() );
         articleGetDTO.setPublisher( publisherToPublisherGetDTO( article.getPublisher() ) );
         articleGetDTO.setTopic( topicToTopicGetDTO( article.getTopic() ) );
-        articleGetDTO.setTitle( article.getTitle() );
         articleGetDTO.setContent( article.getContent() );
-        articleGetDTO.setArticleId( article.getArticleId() );
 
         return articleGetDTO;
     }
@@ -50,7 +48,6 @@ public class ArticleMapperImpl implements ArticleMapper {
 
         OwnerGetDTO ownerGetDTO = new OwnerGetDTO();
 
-        ownerGetDTO.setOwnerId( owner.getOwnerId() );
         ownerGetDTO.setName( owner.getName() );
         ownerGetDTO.setAnalytics( owner.getAnalytics() );
 
@@ -64,7 +61,6 @@ public class ArticleMapperImpl implements ArticleMapper {
 
         NewspaperGetDTO newspaperGetDTO = new NewspaperGetDTO();
 
-        newspaperGetDTO.setNewspaperId( newspaper.getNewspaperId() );
         newspaperGetDTO.setName( newspaper.getName() );
         newspaperGetDTO.setAnalytics( newspaper.getAnalytics() );
 
@@ -78,9 +74,7 @@ public class ArticleMapperImpl implements ArticleMapper {
 
         AuthorGetDTO authorGetDTO = new AuthorGetDTO();
 
-        authorGetDTO.setAuthorId( author.getAuthorId() );
         authorGetDTO.setName( author.getName() );
-        authorGetDTO.setAge( author.getAge() );
         authorGetDTO.setAnalytics( author.getAnalytics() );
 
         return authorGetDTO;
@@ -93,7 +87,6 @@ public class ArticleMapperImpl implements ArticleMapper {
 
         PublisherGetDTO publisherGetDTO = new PublisherGetDTO();
 
-        publisherGetDTO.setPublisherId( publisher.getPublisherId() );
         publisherGetDTO.setName( publisher.getName() );
         publisherGetDTO.setAnalytics( publisher.getAnalytics() );
 
@@ -107,7 +100,6 @@ public class ArticleMapperImpl implements ArticleMapper {
 
         TopicGetDTO topicGetDTO = new TopicGetDTO();
 
-        topicGetDTO.setTopicId( topic.getTopicId() );
         topicGetDTO.setName( topic.getName() );
         topicGetDTO.setAnalytics( topic.getAnalytics() );
 

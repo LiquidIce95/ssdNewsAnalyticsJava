@@ -9,7 +9,7 @@ import ssd.Entities.Topic.RESTapi.DTO.TopicGetDTO;
 
 public class ArticleGetDTO {
     private Long articleId;
-    private String title;
+    private String name;
     private AuthorGetDTO author;
     private PublisherGetDTO publisher;
     private TopicGetDTO topic;
@@ -28,12 +28,12 @@ public class ArticleGetDTO {
         this.articleId = articleId;
     }
 
-    public String getTitle() {
-        return title;
+    public String getName() {
+        return name;
     }
 
-    public void setTitle(String title) {
-        this.title = title;
+    public void setName(String title) {
+        this.name = title;
     }
 
     public AuthorGetDTO getAuthor() {

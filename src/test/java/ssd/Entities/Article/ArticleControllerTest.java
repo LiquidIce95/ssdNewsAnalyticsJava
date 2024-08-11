@@ -100,7 +100,6 @@ public class ArticleControllerTest {
 
         Author author = new Author();
         author.setName("Jane Doe");
-        author.setAge(30);
         author.setAnalytics(savedAuthorAnalytics);
         Author savedAuthor = authorRepository.saveAndFlush(author);
 
@@ -165,7 +164,7 @@ public class ArticleControllerTest {
         ArticleAnalytics savedArticleAnalytics = articleAnalyticsRepository.saveAndFlush(articleAnalytics);
 
         article = new Article();
-        article.setTitle("The Impact of Climate Change on Coastal Communities");
+        article.setName("The Impact of Climate Change on Coastal Communities");
         article.setAuthor(savedAuthor);
         article.setPublisher(savedPublisher);
         article.setTopic(savedTopic);
@@ -192,7 +191,7 @@ public class ArticleControllerTest {
         Article[] articles = response.getBody();
         assertThat(articles).isNotNull();
         assertThat(articles.length).isGreaterThan(0);
-        assertThat(articles[0].getTitle()).isEqualTo("The Impact of Climate Change on Coastal Communities");
+        assertThat(articles[0].getName()).isEqualTo("The Impact of Climate Change on Coastal Communities");
         assertThat(articles[0].getAnalytics().getBias()).isEqualTo("Neutral");
         assertThat(articles[0].getAnalytics().getViews()).isEqualTo(12000);
         assertThat(articles[0].getAnalytics().getShares()).isEqualTo(450);
@@ -208,13 +207,13 @@ public class ArticleControllerTest {
 
     @Test
     public void testGetArticleById() throws Exception {
-        Long articleId = article.getArticleId();
+        Long articleId = article.getId();
 
         ResponseEntity<Article> response = restTemplate.getForEntity("/articles/" + articleId, Article.class);
         assertThat(response.getStatusCode()).isEqualTo(HttpStatus.OK);
         Article retrievedArticle = response.getBody();
         assertThat(retrievedArticle).isNotNull();
-        assertThat(retrievedArticle.getTitle()).isEqualTo("The Impact of Climate Change on Coastal Communities");
+        assertThat(retrievedArticle.getName()).isEqualTo("The Impact of Climate Change on Coastal Communities");
         assertThat(retrievedArticle.getAnalytics().getBias()).isEqualTo("Neutral");
         assertThat(retrievedArticle.getAnalytics().getViews()).isEqualTo(12000);
         assertThat(retrievedArticle.getAnalytics().getShares()).isEqualTo(450);
@@ -236,7 +235,7 @@ public class ArticleControllerTest {
         Article[] articles = response.getBody();
         assertThat(articles).isNotNull();
         assertThat(articles.length).isGreaterThan(0);
-        assertThat(articles[0].getTitle()).isEqualTo(title);
+        assertThat(articles[0].getName()).isEqualTo(title);
         assertThat(articles[0].getAnalytics().getBias()).isEqualTo("Neutral");
         assertThat(articles[0].getAnalytics().getViews()).isEqualTo(12000);
         assertThat(articles[0].getAnalytics().getShares()).isEqualTo(450);
@@ -251,7 +250,7 @@ public class ArticleControllerTest {
         Article[] articles = response.getBody();
         assertThat(articles).isNotNull();
         assertThat(articles.length).isEqualTo(1);
-        assertThat(articles[0].getTitle()).isEqualTo("The Impact of Climate Change on Coastal Communities");
+        assertThat(articles[0].getName()).isEqualTo("The Impact of Climate Change on Coastal Communities");
         assertThat(articles[0].getAnalytics().getBias()).isEqualTo("Neutral");
         assertThat(articles[0].getAnalytics().getViews()).isEqualTo(12000);
         assertThat(articles[0].getAnalytics().getShares()).isEqualTo(450);

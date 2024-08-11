@@ -12,7 +12,6 @@ public interface AuthorMapper {
     AuthorMapper INSTANCE = Mappers.getMapper(AuthorMapper.class);
 
     @Mapping(source = "name", target = "name")
-    @Mapping(source = "age", target = "age")
     @Mapping(source = "analytics", target = "analytics")
     AuthorGetDTO convertEntityToAuthorGetDTO(Author author);
 

@@ -127,7 +127,7 @@ public class OwnerControllerTest {
     @Test
     public void testGetOwnerById() {
         Owner owner = ownerRepository.findAll().get(0);
-        Long ownerId = owner.getOwnerId();
+        Long ownerId = owner.getId();
 
         ResponseEntity<Owner> response = restTemplate.getForEntity("/owners/" + ownerId, Owner.class);
         assertThat(response.getStatusCode()).isEqualTo(HttpStatus.OK);

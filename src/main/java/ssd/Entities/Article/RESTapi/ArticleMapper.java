@@ -16,7 +16,7 @@ public interface ArticleMapper {
 
     ArticleMapper INSTANCE = Mappers.getMapper(ArticleMapper.class);
 
-    @Mapping(source = "title", target = "title")
+    @Mapping(source = "name", target = "name")
     @Mapping(source = "author", target = "author")
     @Mapping(source = "publisher", target = "publisher")
     @Mapping(source = "topic", target = "topic")

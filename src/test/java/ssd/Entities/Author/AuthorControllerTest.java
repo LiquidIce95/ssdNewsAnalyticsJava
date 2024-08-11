@@ -90,7 +90,6 @@ public class AuthorControllerTest {
 
         Author author = new Author();
         author.setName("Jane Doe");
-        author.setAge(30);
         author.setAnalytics(savedAuthorAnalytics);
         authorRepository.saveAndFlush(author);
     }
@@ -112,7 +111,6 @@ public class AuthorControllerTest {
         assertThat(authors).isNotNull();
         assertThat(authors.length).isGreaterThan(0);
         assertThat(authors[0].getName()).isEqualTo("Jane Doe");
-        assertThat(authors[0].getAge()).isEqualTo(30);
         assertThat(authors[0].getAnalytics().getBias()).isEqualTo("Neutral");
         assertThat(authors[0].getAnalytics().getViews()).isEqualTo(12000);
         assertThat(authors[0].getAnalytics().getShares()).isEqualTo(450);
@@ -129,14 +127,13 @@ public class AuthorControllerTest {
     @Test
     public void testGetAuthorById() {
         Author author = authorRepository.findAll().get(0);
-        Long authorId = author.getAuthorId();
+        Long authorId = author.getId();
 
         ResponseEntity<Author> response = restTemplate.getForEntity("/authors/" + authorId, Author.class);
         assertThat(response.getStatusCode()).isEqualTo(HttpStatus.OK);
         Author retrievedAuthor = response.getBody();
         assertThat(retrievedAuthor).isNotNull();
         assertThat(retrievedAuthor.getName()).isEqualTo("Jane Doe");
-        assertThat(retrievedAuthor.getAge()).isEqualTo(30);
         assertThat(retrievedAuthor.getAnalytics().getBias()).isEqualTo("Neutral");
         assertThat(retrievedAuthor.getAnalytics().getViews()).isEqualTo(12000);
         assertThat(retrievedAuthor.getAnalytics().getShares()).isEqualTo(450);
@@ -158,7 +155,6 @@ public class AuthorControllerTest {
         assertThat(authors).isNotNull();
         assertThat(authors.length).isGreaterThan(0);
         assertThat(authors[0].getName()).isEqualTo("Jane Doe");
-        assertThat(authors[0].getAge()).isEqualTo(30);
         assertThat(authors[0].getAnalytics().getBias()).isEqualTo("Neutral");
         assertThat(authors[0].getAnalytics().getViews()).isEqualTo(12000);
         assertThat(authors[0].getAnalytics().getShares()).isEqualTo(450);
@@ -174,7 +170,6 @@ public class AuthorControllerTest {
         assertThat(authors).isNotNull();
         assertThat(authors.length).isEqualTo(1);
         assertThat(authors[0].getName()).isEqualTo("Jane Doe");
-        assertThat(authors[0].getAge()).isEqualTo(30);
         assertThat(authors[0].getAnalytics().getBias()).isEqualTo("Neutral");
         assertThat(authors[0].getAnalytics().getViews()).isEqualTo(12000);
         assertThat(authors[0].getAnalytics().getShares()).isEqualTo(450);
