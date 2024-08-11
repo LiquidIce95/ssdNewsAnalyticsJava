@@ -1,8 +1,9 @@
 package ssd.Entities.Newspaper.Raw;
 
-import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
+import ssd.AbstractClasses.Raw.EntityRawRepository;
+
 @Repository("newspaperRawRepository")
-public interface NewspaperRawRepository extends JpaRepository<NewspaperRaw, Long> {
+public interface NewspaperRawRepository extends EntityRawRepository<NewspaperRaw>{
 }

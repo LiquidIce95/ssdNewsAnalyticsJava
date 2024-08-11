@@ -1,4 +1,4 @@
-package ssd.AbstractClasses;
+package ssd.AbstractClasses.Raw;
 
 import javax.persistence.*;
 import java.io.Serializable;

@@ -2,7 +2,7 @@ package ssd.Entities.Author.Analytics;
 
 import javax.persistence.*;
 
-import ssd.AbstractClasses.Analytics;
+import ssd.AbstractClasses.Analytics.Analytics;
 
 
 @Entity

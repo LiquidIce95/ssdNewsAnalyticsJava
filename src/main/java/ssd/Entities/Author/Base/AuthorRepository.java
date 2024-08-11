@@ -1,14 +1,12 @@
 package ssd.Entities.Author.Base;
 
-import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
-import java.util.List;
+import ssd.AbstractClasses.Base.BaseEntityRepository;
+
 
 
 @Repository("authorRepository")
-public interface AuthorRepository extends JpaRepository<Author, Long> {
-    List<Author> findByName(String name);
+public interface AuthorRepository extends BaseEntityRepository<Author> {
 
-    Author findById(long authorId);
 }

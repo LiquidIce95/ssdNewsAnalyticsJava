@@ -6,7 +6,7 @@ import ssd.Entities.Topic.Base.Topic;
 
 @Generated(
     value = "org.mapstruct.ap.MappingProcessor",
-    date = "2024-08-11T14:16:25+0200",
+    date = "2024-08-11T14:35:15+0200",
     comments = "version: 1.3.1.Final, compiler: javac, environment: Java 17.0.10 (Debian)"
 )
 public class TopicMapperImpl implements TopicMapper {

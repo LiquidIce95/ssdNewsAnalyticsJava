@@ -1,8 +1,9 @@
 package ssd.Entities.Publisher.Analytics;
 
-import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
+import ssd.AbstractClasses.Analytics.AnalyticsRepository;
+
 @Repository("publisherAnalyticsRepository")
-public interface PublisherAnalyticsRepository extends JpaRepository<PublisherAnalytics, Long> {
+public interface PublisherAnalyticsRepository extends AnalyticsRepository<PublisherAnalytics>{
 }

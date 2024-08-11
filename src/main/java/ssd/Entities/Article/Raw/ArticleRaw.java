@@ -3,7 +3,7 @@ package ssd.Entities.Article.Raw;
 import javax.persistence.Entity;
 import javax.persistence.Table;
 
-import ssd.AbstractClasses.EntityRaw;
+import ssd.AbstractClasses.Raw.EntityRaw;
 
 @Entity
 @Table(name = "article_raw")

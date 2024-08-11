@@ -1,8 +1,9 @@
 package ssd.Entities.Owner.Raw;
 
-import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
+import ssd.AbstractClasses.Raw.EntityRawRepository;
+
 @Repository("ownerRawRepository")
-public interface OwnerRawRepository extends JpaRepository<OwnerRaw, Long> {
+public interface OwnerRawRepository extends EntityRawRepository<OwnerRaw>{
 }

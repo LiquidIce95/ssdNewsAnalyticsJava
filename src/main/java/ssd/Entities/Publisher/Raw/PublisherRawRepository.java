@@ -1,8 +1,9 @@
 package ssd.Entities.Publisher.Raw;
 
-import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
+import ssd.AbstractClasses.Raw.EntityRawRepository;
+
 @Repository("publisherRawRepository")
-public interface PublisherRawRepository extends JpaRepository<PublisherRaw, Long> {
+public interface PublisherRawRepository extends EntityRawRepository<PublisherRaw>{
 }

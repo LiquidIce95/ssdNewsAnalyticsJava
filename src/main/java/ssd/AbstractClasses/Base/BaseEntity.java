@@ -1,8 +1,10 @@
-package ssd.AbstractClasses;
+package ssd.AbstractClasses.Base;
 
 import java.io.Serializable;
 
 import javax.persistence.*;
+
+import ssd.AbstractClasses.Analytics.Analytics;
 
 @MappedSuperclass
 public abstract class BaseEntity<T extends Analytics> implements Serializable{

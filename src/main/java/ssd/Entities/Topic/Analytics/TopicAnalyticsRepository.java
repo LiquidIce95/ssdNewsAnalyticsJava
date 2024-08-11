@@ -1,8 +1,9 @@
 package ssd.Entities.Topic.Analytics;
 
-import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
+import ssd.AbstractClasses.Analytics.AnalyticsRepository;
+
 @Repository("topicAnalyticsRepository")
-public interface TopicAnalyticsRepository extends JpaRepository<TopicAnalytics, Long> {
+public interface TopicAnalyticsRepository extends AnalyticsRepository<TopicAnalytics>{
 }

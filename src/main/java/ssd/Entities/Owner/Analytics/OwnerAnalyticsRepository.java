@@ -1,8 +1,9 @@
 package ssd.Entities.Owner.Analytics;
 
-import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
+import ssd.AbstractClasses.Analytics.AnalyticsRepository;
+
 @Repository("ownerAnalyticsRepository")
-public interface OwnerAnalyticsRepository extends JpaRepository<OwnerAnalytics, Long> {
+public interface OwnerAnalyticsRepository extends AnalyticsRepository<OwnerAnalytics>{
 }
