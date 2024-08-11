@@ -2,6 +2,9 @@ package ssd.Entities.Author;
 
 import javax.annotation.processing.Generated;
 
+import ssd.Entities.Author.RESTapi.AuthorMapper;
+import ssd.Entities.Author.RESTapi.DTO.AuthorGetDTO;
+
 @Generated(
     value = "org.mapstruct.ap.MappingProcessor",
     date = "2024-08-11T11:46:09+0200",

@@ -1,6 +1,9 @@
 package ssd.Entities.Newspaper;
 
 import javax.persistence.*;
+
+import ssd.Entities.Newspaper.Analytics.NewspaperAnalytics;
+
 import java.io.Serializable;
 
 @Entity

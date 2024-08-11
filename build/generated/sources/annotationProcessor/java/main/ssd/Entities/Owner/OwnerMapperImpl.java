@@ -2,6 +2,9 @@ package ssd.Entities.Owner;
 
 import javax.annotation.processing.Generated;
 
+import ssd.Entities.Owner.RESTapi.OwnerMapper;
+import ssd.Entities.Owner.RESTapi.DTO.OwnerGetDTO;
+
 @Generated(
     value = "org.mapstruct.ap.MappingProcessor",
     date = "2024-08-11T11:46:09+0200",

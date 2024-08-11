@@ -2,6 +2,9 @@ package ssd.Entities.Topic;
 
 import javax.annotation.processing.Generated;
 
+import ssd.Entities.Topic.RESTapi.TopicMapper;
+import ssd.Entities.Topic.RESTapi.DTO.TopicGetDTO;
+
 @Generated(
     value = "org.mapstruct.ap.MappingProcessor",
     date = "2024-08-11T11:46:09+0200",

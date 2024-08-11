@@ -1,16 +1,19 @@
 package ssd.Entities.Article;
 
 import javax.annotation.processing.Generated;
+
+import ssd.Entities.Article.RESTapi.ArticleMapper;
+import ssd.Entities.Article.RESTapi.DTO.ArticleGetDTO;
 import ssd.Entities.Author.Author;
-import ssd.Entities.Author.AuthorGetDTO;
+import ssd.Entities.Author.RESTapi.DTO.AuthorGetDTO;
 import ssd.Entities.Newspaper.Newspaper;
-import ssd.Entities.Newspaper.NewspaperGetDTO;
+import ssd.Entities.Newspaper.RESTapi.DTO.NewspaperGetDTO;
 import ssd.Entities.Owner.Owner;
-import ssd.Entities.Owner.OwnerGetDTO;
+import ssd.Entities.Owner.RESTapi.DTO.OwnerGetDTO;
 import ssd.Entities.Publisher.Publisher;
-import ssd.Entities.Publisher.PublisherGetDTO;
+import ssd.Entities.Publisher.RESTapi.DTO.PublisherGetDTO;
 import ssd.Entities.Topic.Topic;
-import ssd.Entities.Topic.TopicGetDTO;
+import ssd.Entities.Topic.RESTapi.DTO.TopicGetDTO;
 
 @Generated(
     value = "org.mapstruct.ap.MappingProcessor",

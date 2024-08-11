@@ -2,6 +2,8 @@ package ssd.Entities.Article;
 
 import javax.persistence.*;
 import java.io.Serializable;
+
+import ssd.Entities.Article.Analytics.ArticleAnalytics;
 import ssd.Entities.Author.*;
 import ssd.Entities.Newspaper.*;
 import ssd.Entities.Owner.*;

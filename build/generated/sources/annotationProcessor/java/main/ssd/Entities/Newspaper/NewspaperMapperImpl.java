@@ -2,6 +2,9 @@ package ssd.Entities.Newspaper;
 
 import javax.annotation.processing.Generated;
 
+import ssd.Entities.Newspaper.RESTapi.NewspaperMapper;
+import ssd.Entities.Newspaper.RESTapi.DTO.NewspaperGetDTO;
+
 @Generated(
     value = "org.mapstruct.ap.MappingProcessor",
     date = "2024-08-11T11:46:09+0200",

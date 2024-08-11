@@ -1,27 +1,10 @@
-package ssd.Entities.Publisher;
-
-import javax.persistence.*;
+package ssd.Entities.Publisher.RESTapi.DTO;
 
 import ssd.Entities.Publisher.Analytics.PublisherAnalytics;
 
-import java.io.Serializable;
-
-@Entity
-@Table(name = "publisher")
-public class Publisher implements Serializable {
-
-    private static final long serialVersionUID = 1L;
-
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "publisher_id")
+public class PublisherGetDTO {
     private Long publisherId;
-
-    @Column(name = "publisher_name",nullable = false)
     private String name;
-
-    @ManyToOne
-    @JoinColumn(name = "publisher_analytics_id",nullable = false)
     private PublisherAnalytics analytics;
 
     // Getters and Setters
