@@ -1,23 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="ssd.Entities.Newspaper.NewspaperControllerTest" tests="8" skipped="0" failures="0" errors="0" timestamp="2024-08-11T12:48:42" hostname="COMMODORE" time="0.159">
+<testsuite name="ssd.Entities.Newspaper.NewspaperControllerTest" tests="8" skipped="0" failures="0" errors="0" timestamp="2024-08-11T15:21:50" hostname="COMMODORE" time="0.181">
   <properties/>
-  <testcase name="testGetPopularNewspapers_noContent()" classname="ssd.Entities.Newspaper.NewspaperControllerTest" time="0.02"/>
-  <testcase name="testGetNewspapersByName_notFound()" classname="ssd.Entities.Newspaper.NewspaperControllerTest" time="0.02"/>
-  <testcase name="testGetAllNewspapers()" classname="ssd.Entities.Newspaper.NewspaperControllerTest" time="0.021"/>
-  <testcase name="testGetNewspaperById_notFound()" classname="ssd.Entities.Newspaper.NewspaperControllerTest" time="0.022"/>
-  <testcase name="testGetNewspaperById()" classname="ssd.Entities.Newspaper.NewspaperControllerTest" time="0.018"/>
-  <testcase name="testGetPopularNewspapers()" classname="ssd.Entities.Newspaper.NewspaperControllerTest" time="0.018"/>
+  <testcase name="testGetPopularNewspapers_noContent()" classname="ssd.Entities.Newspaper.NewspaperControllerTest" time="0.027"/>
+  <testcase name="testGetNewspapersByName_notFound()" classname="ssd.Entities.Newspaper.NewspaperControllerTest" time="0.023"/>
+  <testcase name="testGetAllNewspapers()" classname="ssd.Entities.Newspaper.NewspaperControllerTest" time="0.02"/>
+  <testcase name="testGetNewspaperById_notFound()" classname="ssd.Entities.Newspaper.NewspaperControllerTest" time="0.029"/>
+  <testcase name="testGetNewspaperById()" classname="ssd.Entities.Newspaper.NewspaperControllerTest" time="0.023"/>
+  <testcase name="testGetPopularNewspapers()" classname="ssd.Entities.Newspaper.NewspaperControllerTest" time="0.017"/>
   <testcase name="testGetAllNewspapers_emptyDatabase()" classname="ssd.Entities.Newspaper.NewspaperControllerTest" time="0.019"/>
-  <testcase name="testGetNewspapersByName()" classname="ssd.Entities.Newspaper.NewspaperControllerTest" time="0.016"/>
-  <system-out><![CDATA[2024-08-11 14:48:42.459  INFO 360784 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Neither @ContextConfiguration nor @ContextHierarchy found for test class [ssd.Entities.Newspaper.NewspaperControllerTest], using SpringBootContextLoader
-2024-08-11 14:48:42.460  INFO 360784 --- [    Test worker] o.s.t.c.support.AbstractContextLoader    : Could not detect default resource locations for test class [ssd.Entities.Newspaper.NewspaperControllerTest]: no resource found for suffixes {-context.xml, Context.groovy}.
-2024-08-11 14:48:42.460  INFO 360784 --- [    Test worker] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [ssd.Entities.Newspaper.NewspaperControllerTest]: NewspaperControllerTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
-2024-08-11 14:48:42.464  INFO 360784 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration ssd.SSDApplication for test class ssd.Entities.Newspaper.NewspaperControllerTest
-2024-08-11 14:48:42.465  INFO 360784 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.event.ApplicationEventsTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
-2024-08-11 14:48:42.465  INFO 360784 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@4a723adf, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@7f289126, org.springframework.test.context.event.ApplicationEventsTestExecutionListener@22cbbe87, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@46e32574, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@1d1c5bb5, org.springframework.test.context.support.DirtiesContextTestExecutionListener@26864891, org.springframework.test.context.transaction.TransactionalTestExecutionListener@5946e540, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@651a399, org.springframework.test.context.event.EventPublishingTestExecutionListener@79ef8115, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@6db99c79, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@3bb186b, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@8fd3eee, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@d9ff1cd, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener@2c64ee53, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@77c7d3f4]
+  <testcase name="testGetNewspapersByName()" classname="ssd.Entities.Newspaper.NewspaperControllerTest" time="0.017"/>
+  <system-out><![CDATA[2024-08-11 17:21:50.312  INFO 595111 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Neither @ContextConfiguration nor @ContextHierarchy found for test class [ssd.Entities.Newspaper.NewspaperControllerTest], using SpringBootContextLoader
+2024-08-11 17:21:50.313  INFO 595111 --- [    Test worker] o.s.t.c.support.AbstractContextLoader    : Could not detect default resource locations for test class [ssd.Entities.Newspaper.NewspaperControllerTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+2024-08-11 17:21:50.313  INFO 595111 --- [    Test worker] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [ssd.Entities.Newspaper.NewspaperControllerTest]: NewspaperControllerTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2024-08-11 17:21:50.318  INFO 595111 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration ssd.SSDApplication for test class ssd.Entities.Newspaper.NewspaperControllerTest
+2024-08-11 17:21:50.320  INFO 595111 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.event.ApplicationEventsTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
+2024-08-11 17:21:50.321  INFO 595111 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@388ad8aa, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@283240b0, org.springframework.test.context.event.ApplicationEventsTestExecutionListener@4ec78008, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@ac71bd7, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@64e6cdad, org.springframework.test.context.support.DirtiesContextTestExecutionListener@5e6b2641, org.springframework.test.context.transaction.TransactionalTestExecutionListener@2c5e2a44, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@1ef585bb, org.springframework.test.context.event.EventPublishingTestExecutionListener@4caca86d, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@4bf2c697, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@16a3d9a7, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@24c94e95, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@d8f65a1, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener@5014ccf9, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@58f259bd]
 Hibernate: 
     select
-        article0_.id as id1_0_,
+        article0_.entity_id as entity_i1_0_,
         article0_.analytics_id as analytic4_0_,
         article0_.name as name2_0_,
         article0_.author_id as author_i5_0_,
@@ -30,35 +30,35 @@ Hibernate:
         article article0_
 Hibernate: 
     select
-        newspaper0_.id as id1_6_,
+        newspaper0_.entity_id as entity_i1_6_,
         newspaper0_.analytics_id as analytic3_6_,
         newspaper0_.name as name2_6_ 
     from
         newspaper newspaper0_
 Hibernate: 
     select
-        owner0_.id as id1_9_,
+        owner0_.entity_id as entity_i1_9_,
         owner0_.analytics_id as analytic3_9_,
         owner0_.name as name2_9_ 
     from
         owner owner0_
 Hibernate: 
     select
-        topic0_.id as id1_15_,
+        topic0_.entity_id as entity_i1_15_,
         topic0_.analytics_id as analytic3_15_,
         topic0_.name as name2_15_ 
     from
         topic topic0_
 Hibernate: 
     select
-        publisher0_.id as id1_12_,
+        publisher0_.entity_id as entity_i1_12_,
         publisher0_.analytics_id as analytic3_12_,
         publisher0_.name as name2_12_ 
     from
         publisher publisher0_
 Hibernate: 
     select
-        author0_.id as id1_3_,
+        author0_.entity_id as entity_i1_3_,
         author0_.analytics_id as analytic3_3_,
         author0_.name as name2_3_ 
     from
@@ -145,7 +145,7 @@ Hibernate:
         (?, ?)
 Hibernate: 
     select
-        newspaper0_.id as id1_6_,
+        newspaper0_.entity_id as entity_i1_6_,
         newspaper0_.analytics_id as analytic3_6_,
         newspaper0_.name as name2_6_ 
     from
@@ -167,17 +167,17 @@ Hibernate:
     from
         newspaper 
     where
-        id=?
+        entity_id=?
 Hibernate: 
     select
-        newspaper0_.id as id1_6_,
+        newspaper0_.entity_id as entity_i1_6_,
         newspaper0_.analytics_id as analytic3_6_,
         newspaper0_.name as name2_6_ 
     from
         newspaper newspaper0_
 Hibernate: 
     select
-        article0_.id as id1_0_,
+        article0_.entity_id as entity_i1_0_,
         article0_.analytics_id as analytic4_0_,
         article0_.name as name2_0_,
         article0_.author_id as author_i5_0_,
@@ -190,35 +190,35 @@ Hibernate:
         article article0_
 Hibernate: 
     select
-        newspaper0_.id as id1_6_,
+        newspaper0_.entity_id as entity_i1_6_,
         newspaper0_.analytics_id as analytic3_6_,
         newspaper0_.name as name2_6_ 
     from
         newspaper newspaper0_
 Hibernate: 
     select
-        owner0_.id as id1_9_,
+        owner0_.entity_id as entity_i1_9_,
         owner0_.analytics_id as analytic3_9_,
         owner0_.name as name2_9_ 
     from
         owner owner0_
 Hibernate: 
     select
-        topic0_.id as id1_15_,
+        topic0_.entity_id as entity_i1_15_,
         topic0_.analytics_id as analytic3_15_,
         topic0_.name as name2_15_ 
     from
         topic topic0_
 Hibernate: 
     select
-        publisher0_.id as id1_12_,
+        publisher0_.entity_id as entity_i1_12_,
         publisher0_.analytics_id as analytic3_12_,
         publisher0_.name as name2_12_ 
     from
         publisher publisher0_
 Hibernate: 
     select
-        author0_.id as id1_3_,
+        author0_.entity_id as entity_i1_3_,
         author0_.analytics_id as analytic3_3_,
         author0_.name as name2_3_ 
     from
@@ -305,7 +305,7 @@ Hibernate:
         (?, ?)
 Hibernate: 
     select
-        newspaper0_.id as id1_6_,
+        newspaper0_.entity_id as entity_i1_6_,
         newspaper0_.analytics_id as analytic3_6_,
         newspaper0_.name as name2_6_ 
     from
@@ -314,7 +314,7 @@ Hibernate:
         newspaper0_.name=?
 Hibernate: 
     select
-        article0_.id as id1_0_,
+        article0_.entity_id as entity_i1_0_,
         article0_.analytics_id as analytic4_0_,
         article0_.name as name2_0_,
         article0_.author_id as author_i5_0_,
@@ -327,7 +327,7 @@ Hibernate:
         article article0_
 Hibernate: 
     select
-        newspaper0_.id as id1_6_,
+        newspaper0_.entity_id as entity_i1_6_,
         newspaper0_.analytics_id as analytic3_6_,
         newspaper0_.name as name2_6_ 
     from
@@ -349,31 +349,31 @@ Hibernate:
     from
         newspaper 
     where
-        id=?
+        entity_id=?
 Hibernate: 
     select
-        owner0_.id as id1_9_,
+        owner0_.entity_id as entity_i1_9_,
         owner0_.analytics_id as analytic3_9_,
         owner0_.name as name2_9_ 
     from
         owner owner0_
 Hibernate: 
     select
-        topic0_.id as id1_15_,
+        topic0_.entity_id as entity_i1_15_,
         topic0_.analytics_id as analytic3_15_,
         topic0_.name as name2_15_ 
     from
         topic topic0_
 Hibernate: 
     select
-        publisher0_.id as id1_12_,
+        publisher0_.entity_id as entity_i1_12_,
         publisher0_.analytics_id as analytic3_12_,
         publisher0_.name as name2_12_ 
     from
         publisher publisher0_
 Hibernate: 
     select
-        author0_.id as id1_3_,
+        author0_.entity_id as entity_i1_3_,
         author0_.analytics_id as analytic3_3_,
         author0_.name as name2_3_ 
     from
@@ -460,7 +460,7 @@ Hibernate:
         (?, ?)
 Hibernate: 
     select
-        newspaper0_.id as id1_6_,
+        newspaper0_.entity_id as entity_i1_6_,
         newspaper0_.analytics_id as analytic3_6_,
         newspaper0_.name as name2_6_ 
     from
@@ -479,7 +479,7 @@ Hibernate:
         newspapera0_.analytics_id=?
 Hibernate: 
     select
-        article0_.id as id1_0_,
+        article0_.entity_id as entity_i1_0_,
         article0_.analytics_id as analytic4_0_,
         article0_.name as name2_0_,
         article0_.author_id as author_i5_0_,
@@ -492,7 +492,7 @@ Hibernate:
         article article0_
 Hibernate: 
     select
-        newspaper0_.id as id1_6_,
+        newspaper0_.entity_id as entity_i1_6_,
         newspaper0_.analytics_id as analytic3_6_,
         newspaper0_.name as name2_6_ 
     from
@@ -514,31 +514,31 @@ Hibernate:
     from
         newspaper 
     where
-        id=?
+        entity_id=?
 Hibernate: 
     select
-        owner0_.id as id1_9_,
+        owner0_.entity_id as entity_i1_9_,
         owner0_.analytics_id as analytic3_9_,
         owner0_.name as name2_9_ 
     from
         owner owner0_
 Hibernate: 
     select
-        topic0_.id as id1_15_,
+        topic0_.entity_id as entity_i1_15_,
         topic0_.analytics_id as analytic3_15_,
         topic0_.name as name2_15_ 
     from
         topic topic0_
 Hibernate: 
     select
-        publisher0_.id as id1_12_,
+        publisher0_.entity_id as entity_i1_12_,
         publisher0_.analytics_id as analytic3_12_,
         publisher0_.name as name2_12_ 
     from
         publisher publisher0_
 Hibernate: 
     select
-        author0_.id as id1_3_,
+        author0_.entity_id as entity_i1_3_,
         author0_.analytics_id as analytic3_3_,
         author0_.name as name2_3_ 
     from
@@ -625,7 +625,7 @@ Hibernate:
         (?, ?)
 Hibernate: 
     select
-        newspaper0_.id as id1_6_0_,
+        newspaper0_.entity_id as entity_i1_6_0_,
         newspaper0_.analytics_id as analytic3_6_0_,
         newspaper0_.name as name2_6_0_,
         newspapera1_.analytics_id as analytic1_7_1_,
@@ -640,10 +640,10 @@ Hibernate:
         newspaper_analytics newspapera1_ 
             on newspaper0_.analytics_id=newspapera1_.analytics_id 
     where
-        newspaper0_.id=?
+        newspaper0_.entity_id=?
 Hibernate: 
     select
-        article0_.id as id1_0_,
+        article0_.entity_id as entity_i1_0_,
         article0_.analytics_id as analytic4_0_,
         article0_.name as name2_0_,
         article0_.author_id as author_i5_0_,
@@ -656,7 +656,7 @@ Hibernate:
         article article0_
 Hibernate: 
     select
-        newspaper0_.id as id1_6_,
+        newspaper0_.entity_id as entity_i1_6_,
         newspaper0_.analytics_id as analytic3_6_,
         newspaper0_.name as name2_6_ 
     from
@@ -678,31 +678,31 @@ Hibernate:
     from
         newspaper 
     where
-        id=?
+        entity_id=?
 Hibernate: 
     select
-        owner0_.id as id1_9_,
+        owner0_.entity_id as entity_i1_9_,
         owner0_.analytics_id as analytic3_9_,
         owner0_.name as name2_9_ 
     from
         owner owner0_
 Hibernate: 
     select
-        topic0_.id as id1_15_,
+        topic0_.entity_id as entity_i1_15_,
         topic0_.analytics_id as analytic3_15_,
         topic0_.name as name2_15_ 
     from
         topic topic0_
 Hibernate: 
     select
-        publisher0_.id as id1_12_,
+        publisher0_.entity_id as entity_i1_12_,
         publisher0_.analytics_id as analytic3_12_,
         publisher0_.name as name2_12_ 
     from
         publisher publisher0_
 Hibernate: 
     select
-        author0_.id as id1_3_,
+        author0_.entity_id as entity_i1_3_,
         author0_.analytics_id as analytic3_3_,
         author0_.name as name2_3_ 
     from
@@ -789,7 +789,7 @@ Hibernate:
         (?, ?)
 Hibernate: 
     select
-        newspaper0_.id as id1_6_,
+        newspaper0_.entity_id as entity_i1_6_,
         newspaper0_.analytics_id as analytic3_6_,
         newspaper0_.name as name2_6_ 
     from
@@ -808,7 +808,7 @@ Hibernate:
         newspapera0_.analytics_id=?
 Hibernate: 
     select
-        newspaper0_.id as id1_6_0_,
+        newspaper0_.entity_id as entity_i1_6_0_,
         newspaper0_.analytics_id as analytic3_6_0_,
         newspaper0_.name as name2_6_0_,
         newspapera1_.analytics_id as analytic1_7_1_,
@@ -823,10 +823,10 @@ Hibernate:
         newspaper_analytics newspapera1_ 
             on newspaper0_.analytics_id=newspapera1_.analytics_id 
     where
-        newspaper0_.id=?
+        newspaper0_.entity_id=?
 Hibernate: 
     select
-        article0_.id as id1_0_,
+        article0_.entity_id as entity_i1_0_,
         article0_.analytics_id as analytic4_0_,
         article0_.name as name2_0_,
         article0_.author_id as author_i5_0_,
@@ -839,7 +839,7 @@ Hibernate:
         article article0_
 Hibernate: 
     select
-        newspaper0_.id as id1_6_,
+        newspaper0_.entity_id as entity_i1_6_,
         newspaper0_.analytics_id as analytic3_6_,
         newspaper0_.name as name2_6_ 
     from
@@ -861,31 +861,31 @@ Hibernate:
     from
         newspaper 
     where
-        id=?
+        entity_id=?
 Hibernate: 
     select
-        owner0_.id as id1_9_,
+        owner0_.entity_id as entity_i1_9_,
         owner0_.analytics_id as analytic3_9_,
         owner0_.name as name2_9_ 
     from
         owner owner0_
 Hibernate: 
     select
-        topic0_.id as id1_15_,
+        topic0_.entity_id as entity_i1_15_,
         topic0_.analytics_id as analytic3_15_,
         topic0_.name as name2_15_ 
     from
         topic topic0_
 Hibernate: 
     select
-        publisher0_.id as id1_12_,
+        publisher0_.entity_id as entity_i1_12_,
         publisher0_.analytics_id as analytic3_12_,
         publisher0_.name as name2_12_ 
     from
         publisher publisher0_
 Hibernate: 
     select
-        author0_.id as id1_3_,
+        author0_.entity_id as entity_i1_3_,
         author0_.analytics_id as analytic3_3_,
         author0_.name as name2_3_ 
     from
@@ -972,7 +972,7 @@ Hibernate:
         (?, ?)
 Hibernate: 
     select
-        newspaper0_.id as id1_6_,
+        newspaper0_.entity_id as entity_i1_6_,
         newspaper0_.analytics_id as analytic3_6_,
         newspaper0_.name as name2_6_ 
     from
@@ -991,7 +991,7 @@ Hibernate:
         newspapera0_.analytics_id=?
 Hibernate: 
     select
-        article0_.id as id1_0_,
+        article0_.entity_id as entity_i1_0_,
         article0_.analytics_id as analytic4_0_,
         article0_.name as name2_0_,
         article0_.author_id as author_i5_0_,
@@ -1004,7 +1004,7 @@ Hibernate:
         article article0_
 Hibernate: 
     select
-        newspaper0_.id as id1_6_,
+        newspaper0_.entity_id as entity_i1_6_,
         newspaper0_.analytics_id as analytic3_6_,
         newspaper0_.name as name2_6_ 
     from
@@ -1026,31 +1026,31 @@ Hibernate:
     from
         newspaper 
     where
-        id=?
+        entity_id=?
 Hibernate: 
     select
-        owner0_.id as id1_9_,
+        owner0_.entity_id as entity_i1_9_,
         owner0_.analytics_id as analytic3_9_,
         owner0_.name as name2_9_ 
     from
         owner owner0_
 Hibernate: 
     select
-        topic0_.id as id1_15_,
+        topic0_.entity_id as entity_i1_15_,
         topic0_.analytics_id as analytic3_15_,
         topic0_.name as name2_15_ 
     from
         topic topic0_
 Hibernate: 
     select
-        publisher0_.id as id1_12_,
+        publisher0_.entity_id as entity_i1_12_,
         publisher0_.analytics_id as analytic3_12_,
         publisher0_.name as name2_12_ 
     from
         publisher publisher0_
 Hibernate: 
     select
-        author0_.id as id1_3_,
+        author0_.entity_id as entity_i1_3_,
         author0_.analytics_id as analytic3_3_,
         author0_.name as name2_3_ 
     from
@@ -1137,7 +1137,7 @@ Hibernate:
         (?, ?)
 Hibernate: 
     select
-        newspaper0_.id as id1_6_,
+        newspaper0_.entity_id as entity_i1_6_,
         newspaper0_.analytics_id as analytic3_6_,
         newspaper0_.name as name2_6_ 
     from
@@ -1159,17 +1159,17 @@ Hibernate:
     from
         newspaper 
     where
-        id=?
+        entity_id=?
 Hibernate: 
     select
-        newspaper0_.id as id1_6_,
+        newspaper0_.entity_id as entity_i1_6_,
         newspaper0_.analytics_id as analytic3_6_,
         newspaper0_.name as name2_6_ 
     from
         newspaper newspaper0_
 Hibernate: 
     select
-        article0_.id as id1_0_,
+        article0_.entity_id as entity_i1_0_,
         article0_.analytics_id as analytic4_0_,
         article0_.name as name2_0_,
         article0_.author_id as author_i5_0_,
@@ -1182,35 +1182,35 @@ Hibernate:
         article article0_
 Hibernate: 
     select
-        newspaper0_.id as id1_6_,
+        newspaper0_.entity_id as entity_i1_6_,
         newspaper0_.analytics_id as analytic3_6_,
         newspaper0_.name as name2_6_ 
     from
         newspaper newspaper0_
 Hibernate: 
     select
-        owner0_.id as id1_9_,
+        owner0_.entity_id as entity_i1_9_,
         owner0_.analytics_id as analytic3_9_,
         owner0_.name as name2_9_ 
     from
         owner owner0_
 Hibernate: 
     select
-        topic0_.id as id1_15_,
+        topic0_.entity_id as entity_i1_15_,
         topic0_.analytics_id as analytic3_15_,
         topic0_.name as name2_15_ 
     from
         topic topic0_
 Hibernate: 
     select
-        publisher0_.id as id1_12_,
+        publisher0_.entity_id as entity_i1_12_,
         publisher0_.analytics_id as analytic3_12_,
         publisher0_.name as name2_12_ 
     from
         publisher publisher0_
 Hibernate: 
     select
-        author0_.id as id1_3_,
+        author0_.entity_id as entity_i1_3_,
         author0_.analytics_id as analytic3_3_,
         author0_.name as name2_3_ 
     from
@@ -1297,7 +1297,7 @@ Hibernate:
         (?, ?)
 Hibernate: 
     select
-        newspaper0_.id as id1_6_,
+        newspaper0_.entity_id as entity_i1_6_,
         newspaper0_.analytics_id as analytic3_6_,
         newspaper0_.name as name2_6_ 
     from

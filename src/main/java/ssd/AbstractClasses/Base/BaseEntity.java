@@ -18,7 +18,7 @@ public abstract class BaseEntity<T extends Analytics> implements Serializable{
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "id")
+    @Column(name = "entity_id")
     private Long id;
 
    

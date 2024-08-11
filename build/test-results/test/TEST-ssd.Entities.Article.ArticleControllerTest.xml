@@ -1,23 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="ssd.Entities.Article.ArticleControllerTest" tests="8" skipped="0" failures="0" errors="0" timestamp="2024-08-11T12:48:41" hostname="COMMODORE" time="0.753">
+<testsuite name="ssd.Entities.Article.ArticleControllerTest" tests="8" skipped="0" failures="0" errors="0" timestamp="2024-08-11T15:21:49" hostname="COMMODORE" time="0.79">
   <properties/>
-  <testcase name="testGetArticlesByTitle()" classname="ssd.Entities.Article.ArticleControllerTest" time="0.367"/>
-  <testcase name="testGetPopularArticles()" classname="ssd.Entities.Article.ArticleControllerTest" time="0.066"/>
-  <testcase name="testGetArticleById()" classname="ssd.Entities.Article.ArticleControllerTest" time="0.07"/>
-  <testcase name="testGetArticleById_notFound()" classname="ssd.Entities.Article.ArticleControllerTest" time="0.053"/>
-  <testcase name="testGetArticlesByTitle_notFound()" classname="ssd.Entities.Article.ArticleControllerTest" time="0.056"/>
-  <testcase name="testGetPopularArticles_noContent()" classname="ssd.Entities.Article.ArticleControllerTest" time="0.045"/>
-  <testcase name="testGetAllArticles()" classname="ssd.Entities.Article.ArticleControllerTest" time="0.044"/>
-  <testcase name="testGetAllArticles_emptyDatabase()" classname="ssd.Entities.Article.ArticleControllerTest" time="0.045"/>
-  <system-out><![CDATA[2024-08-11 14:48:41.473  INFO 360784 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Neither @ContextConfiguration nor @ContextHierarchy found for test class [ssd.Entities.Article.ArticleControllerTest], using SpringBootContextLoader
-2024-08-11 14:48:41.474  INFO 360784 --- [    Test worker] o.s.t.c.support.AbstractContextLoader    : Could not detect default resource locations for test class [ssd.Entities.Article.ArticleControllerTest]: no resource found for suffixes {-context.xml, Context.groovy}.
-2024-08-11 14:48:41.475  INFO 360784 --- [    Test worker] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [ssd.Entities.Article.ArticleControllerTest]: ArticleControllerTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
-2024-08-11 14:48:41.479  INFO 360784 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration ssd.SSDApplication for test class ssd.Entities.Article.ArticleControllerTest
-2024-08-11 14:48:41.480  INFO 360784 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.event.ApplicationEventsTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
-2024-08-11 14:48:41.480  INFO 360784 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@45e49d3d, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@72e5206, org.springframework.test.context.event.ApplicationEventsTestExecutionListener@4615bc00, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@37f75ebf, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@569b3009, org.springframework.test.context.support.DirtiesContextTestExecutionListener@23d0f6be, org.springframework.test.context.transaction.TransactionalTestExecutionListener@48cebb78, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@45c10678, org.springframework.test.context.event.EventPublishingTestExecutionListener@4ad57db1, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@6e140753, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@53bc6492, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@1e834a5b, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@7fda84cf, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener@313a3af8, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@19240b9]
+  <testcase name="testGetArticlesByTitle()" classname="ssd.Entities.Article.ArticleControllerTest" time="0.345"/>
+  <testcase name="testGetPopularArticles()" classname="ssd.Entities.Article.ArticleControllerTest" time="0.082"/>
+  <testcase name="testGetArticleById()" classname="ssd.Entities.Article.ArticleControllerTest" time="0.076"/>
+  <testcase name="testGetArticleById_notFound()" classname="ssd.Entities.Article.ArticleControllerTest" time="0.066"/>
+  <testcase name="testGetArticlesByTitle_notFound()" classname="ssd.Entities.Article.ArticleControllerTest" time="0.059"/>
+  <testcase name="testGetPopularArticles_noContent()" classname="ssd.Entities.Article.ArticleControllerTest" time="0.055"/>
+  <testcase name="testGetAllArticles()" classname="ssd.Entities.Article.ArticleControllerTest" time="0.052"/>
+  <testcase name="testGetAllArticles_emptyDatabase()" classname="ssd.Entities.Article.ArticleControllerTest" time="0.048"/>
+  <system-out><![CDATA[2024-08-11 17:21:49.270  INFO 595111 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Neither @ContextConfiguration nor @ContextHierarchy found for test class [ssd.Entities.Article.ArticleControllerTest], using SpringBootContextLoader
+2024-08-11 17:21:49.270  INFO 595111 --- [    Test worker] o.s.t.c.support.AbstractContextLoader    : Could not detect default resource locations for test class [ssd.Entities.Article.ArticleControllerTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+2024-08-11 17:21:49.271  INFO 595111 --- [    Test worker] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [ssd.Entities.Article.ArticleControllerTest]: ArticleControllerTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2024-08-11 17:21:49.276  INFO 595111 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration ssd.SSDApplication for test class ssd.Entities.Article.ArticleControllerTest
+2024-08-11 17:21:49.277  INFO 595111 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.event.ApplicationEventsTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
+2024-08-11 17:21:49.277  INFO 595111 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@75f9a35a, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@7acbd3d0, org.springframework.test.context.event.ApplicationEventsTestExecutionListener@49d5c751, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@40e90634, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@78b29e00, org.springframework.test.context.support.DirtiesContextTestExecutionListener@5c438795, org.springframework.test.context.transaction.TransactionalTestExecutionListener@3b4b2c03, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@339b45f8, org.springframework.test.context.event.EventPublishingTestExecutionListener@5fb58f15, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@1f8ac459, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@7d43c89f, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@149ef64a, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@67201eeb, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener@2e41b65a, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@4d25943d]
 Hibernate: 
     select
-        article0_.id as id1_0_,
+        article0_.entity_id as entity_i1_0_,
         article0_.analytics_id as analytic4_0_,
         article0_.name as name2_0_,
         article0_.author_id as author_i5_0_,
@@ -42,7 +42,7 @@ Hibernate:
         articleana0_.analytics_id=?
 Hibernate: 
     select
-        author0_.id as id1_3_0_,
+        author0_.entity_id as entity_i1_3_0_,
         author0_.analytics_id as analytic3_3_0_,
         author0_.name as name2_3_0_,
         authoranal1_.analytics_id as analytic1_4_1_,
@@ -57,10 +57,10 @@ Hibernate:
         author_analytics authoranal1_ 
             on author0_.analytics_id=authoranal1_.analytics_id 
     where
-        author0_.id=?
+        author0_.entity_id=?
 Hibernate: 
     select
-        newspaper0_.id as id1_6_0_,
+        newspaper0_.entity_id as entity_i1_6_0_,
         newspaper0_.analytics_id as analytic3_6_0_,
         newspaper0_.name as name2_6_0_,
         newspapera1_.analytics_id as analytic1_7_1_,
@@ -75,10 +75,10 @@ Hibernate:
         newspaper_analytics newspapera1_ 
             on newspaper0_.analytics_id=newspapera1_.analytics_id 
     where
-        newspaper0_.id=?
+        newspaper0_.entity_id=?
 Hibernate: 
     select
-        owner0_.id as id1_9_0_,
+        owner0_.entity_id as entity_i1_9_0_,
         owner0_.analytics_id as analytic3_9_0_,
         owner0_.name as name2_9_0_,
         owneranaly1_.analytics_id as analytic1_10_1_,
@@ -93,10 +93,10 @@ Hibernate:
         owner_analytics owneranaly1_ 
             on owner0_.analytics_id=owneranaly1_.analytics_id 
     where
-        owner0_.id=?
+        owner0_.entity_id=?
 Hibernate: 
     select
-        publisher0_.id as id1_12_0_,
+        publisher0_.entity_id as entity_i1_12_0_,
         publisher0_.analytics_id as analytic3_12_0_,
         publisher0_.name as name2_12_0_,
         publishera1_.analytics_id as analytic1_13_1_,
@@ -111,10 +111,10 @@ Hibernate:
         publisher_analytics publishera1_ 
             on publisher0_.analytics_id=publishera1_.analytics_id 
     where
-        publisher0_.id=?
+        publisher0_.entity_id=?
 Hibernate: 
     select
-        topic0_.id as id1_15_0_,
+        topic0_.entity_id as entity_i1_15_0_,
         topic0_.analytics_id as analytic3_15_0_,
         topic0_.name as name2_15_0_,
         topicanaly1_.analytics_id as analytic1_16_1_,
@@ -129,16 +129,16 @@ Hibernate:
         topic_analytics topicanaly1_ 
             on topic0_.analytics_id=topicanaly1_.analytics_id 
     where
-        topic0_.id=?
+        topic0_.entity_id=?
 Hibernate: 
     delete 
     from
         article 
     where
-        id=?
+        entity_id=?
 Hibernate: 
     select
-        author0_.id as id1_3_,
+        author0_.entity_id as entity_i1_3_,
         author0_.analytics_id as analytic3_3_,
         author0_.name as name2_3_ 
     from
@@ -160,10 +160,10 @@ Hibernate:
     from
         author 
     where
-        id=?
+        entity_id=?
 Hibernate: 
     select
-        publisher0_.id as id1_12_,
+        publisher0_.entity_id as entity_i1_12_,
         publisher0_.analytics_id as analytic3_12_,
         publisher0_.name as name2_12_ 
     from
@@ -181,32 +181,14 @@ Hibernate:
     where
         publishera0_.analytics_id=?
 Hibernate: 
-    select
-        publishera0_.analytics_id as analytic1_13_0_,
-        publishera0_.bias as bias2_13_0_,
-        publishera0_.engagement_rate as engageme3_13_0_,
-        publishera0_.likes as likes4_13_0_,
-        publishera0_.shares as shares5_13_0_,
-        publishera0_.views as views6_13_0_ 
-    from
-        publisher_analytics publishera0_ 
-    where
-        publishera0_.analytics_id=?
-Hibernate: 
     delete 
     from
         publisher 
     where
-        id=?
-Hibernate: 
-    delete 
-    from
-        publisher 
-    where
-        id=?
+        entity_id=?
 Hibernate: 
     select
-        topic0_.id as id1_15_,
+        topic0_.entity_id as entity_i1_15_,
         topic0_.analytics_id as analytic3_15_,
         topic0_.name as name2_15_ 
     from
@@ -224,14 +206,32 @@ Hibernate:
     where
         topicanaly0_.analytics_id=?
 Hibernate: 
+    select
+        topicanaly0_.analytics_id as analytic1_16_0_,
+        topicanaly0_.bias as bias2_16_0_,
+        topicanaly0_.engagement_rate as engageme3_16_0_,
+        topicanaly0_.likes as likes4_16_0_,
+        topicanaly0_.shares as shares5_16_0_,
+        topicanaly0_.views as views6_16_0_ 
+    from
+        topic_analytics topicanaly0_ 
+    where
+        topicanaly0_.analytics_id=?
+Hibernate: 
     delete 
     from
         topic 
     where
-        id=?
+        entity_id=?
+Hibernate: 
+    delete 
+    from
+        topic 
+    where
+        entity_id=?
 Hibernate: 
     select
-        owner0_.id as id1_9_,
+        owner0_.entity_id as entity_i1_9_,
         owner0_.analytics_id as analytic3_9_,
         owner0_.name as name2_9_ 
     from
@@ -253,10 +253,10 @@ Hibernate:
     from
         owner 
     where
-        id=?
+        entity_id=?
 Hibernate: 
     select
-        newspaper0_.id as id1_6_,
+        newspaper0_.entity_id as entity_i1_6_,
         newspaper0_.analytics_id as analytic3_6_,
         newspaper0_.name as name2_6_ 
     from
@@ -278,7 +278,7 @@ Hibernate:
     from
         newspaper 
     where
-        id=?
+        entity_id=?
 Hibernate: 
     select
         articleana0_.analytics_id as analytic1_1_,
@@ -328,12 +328,6 @@ Hibernate:
     where
         analytics_id=?
 Hibernate: 
-    delete 
-    from
-        publisher_analytics 
-    where
-        analytics_id=?
-Hibernate: 
     select
         topicanaly0_.analytics_id as analytic1_16_,
         topicanaly0_.bias as bias2_16_,
@@ -343,6 +337,12 @@ Hibernate:
         topicanaly0_.views as views6_16_ 
     from
         topic_analytics topicanaly0_
+Hibernate: 
+    delete 
+    from
+        topic_analytics 
+    where
+        analytics_id=?
 Hibernate: 
     delete 
     from
@@ -465,12 +465,12 @@ Hibernate:
         (analytics_id, name, author_id, content, newspaper_id, owner_id, publisher_id, topic_id) 
     values
         (?, ?, ?, ?, ?, ?, ?, ?)
-2024-08-11 14:48:41.728  INFO 360784 --- [nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2024-08-11 14:48:41.729  INFO 360784 --- [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2024-08-11 14:48:41.730  INFO 360784 --- [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2024-08-11 17:21:49.502  INFO 595111 --- [nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-08-11 17:21:49.502  INFO 595111 --- [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-08-11 17:21:49.503  INFO 595111 --- [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
 Hibernate: 
     select
-        article0_.id as id1_0_,
+        article0_.entity_id as entity_i1_0_,
         article0_.analytics_id as analytic4_0_,
         article0_.name as name2_0_,
         article0_.author_id as author_i5_0_,
@@ -497,7 +497,7 @@ Hibernate:
         articleana0_.analytics_id=?
 Hibernate: 
     select
-        author0_.id as id1_3_0_,
+        author0_.entity_id as entity_i1_3_0_,
         author0_.analytics_id as analytic3_3_0_,
         author0_.name as name2_3_0_,
         authoranal1_.analytics_id as analytic1_4_1_,
@@ -512,10 +512,10 @@ Hibernate:
         author_analytics authoranal1_ 
             on author0_.analytics_id=authoranal1_.analytics_id 
     where
-        author0_.id=?
+        author0_.entity_id=?
 Hibernate: 
     select
-        newspaper0_.id as id1_6_0_,
+        newspaper0_.entity_id as entity_i1_6_0_,
         newspaper0_.analytics_id as analytic3_6_0_,
         newspaper0_.name as name2_6_0_,
         newspapera1_.analytics_id as analytic1_7_1_,
@@ -530,10 +530,10 @@ Hibernate:
         newspaper_analytics newspapera1_ 
             on newspaper0_.analytics_id=newspapera1_.analytics_id 
     where
-        newspaper0_.id=?
+        newspaper0_.entity_id=?
 Hibernate: 
     select
-        owner0_.id as id1_9_0_,
+        owner0_.entity_id as entity_i1_9_0_,
         owner0_.analytics_id as analytic3_9_0_,
         owner0_.name as name2_9_0_,
         owneranaly1_.analytics_id as analytic1_10_1_,
@@ -548,10 +548,10 @@ Hibernate:
         owner_analytics owneranaly1_ 
             on owner0_.analytics_id=owneranaly1_.analytics_id 
     where
-        owner0_.id=?
+        owner0_.entity_id=?
 Hibernate: 
     select
-        publisher0_.id as id1_12_0_,
+        publisher0_.entity_id as entity_i1_12_0_,
         publisher0_.analytics_id as analytic3_12_0_,
         publisher0_.name as name2_12_0_,
         publishera1_.analytics_id as analytic1_13_1_,
@@ -566,10 +566,10 @@ Hibernate:
         publisher_analytics publishera1_ 
             on publisher0_.analytics_id=publishera1_.analytics_id 
     where
-        publisher0_.id=?
+        publisher0_.entity_id=?
 Hibernate: 
     select
-        topic0_.id as id1_15_0_,
+        topic0_.entity_id as entity_i1_15_0_,
         topic0_.analytics_id as analytic3_15_0_,
         topic0_.name as name2_15_0_,
         topicanaly1_.analytics_id as analytic1_16_1_,
@@ -584,10 +584,10 @@ Hibernate:
         topic_analytics topicanaly1_ 
             on topic0_.analytics_id=topicanaly1_.analytics_id 
     where
-        topic0_.id=?
+        topic0_.entity_id=?
 Hibernate: 
     select
-        article0_.id as id1_0_,
+        article0_.entity_id as entity_i1_0_,
         article0_.analytics_id as analytic4_0_,
         article0_.name as name2_0_,
         article0_.author_id as author_i5_0_,
@@ -612,7 +612,7 @@ Hibernate:
         articleana0_.analytics_id=?
 Hibernate: 
     select
-        author0_.id as id1_3_0_,
+        author0_.entity_id as entity_i1_3_0_,
         author0_.analytics_id as analytic3_3_0_,
         author0_.name as name2_3_0_,
         authoranal1_.analytics_id as analytic1_4_1_,
@@ -627,10 +627,10 @@ Hibernate:
         author_analytics authoranal1_ 
             on author0_.analytics_id=authoranal1_.analytics_id 
     where
-        author0_.id=?
+        author0_.entity_id=?
 Hibernate: 
     select
-        newspaper0_.id as id1_6_0_,
+        newspaper0_.entity_id as entity_i1_6_0_,
         newspaper0_.analytics_id as analytic3_6_0_,
         newspaper0_.name as name2_6_0_,
         newspapera1_.analytics_id as analytic1_7_1_,
@@ -645,10 +645,10 @@ Hibernate:
         newspaper_analytics newspapera1_ 
             on newspaper0_.analytics_id=newspapera1_.analytics_id 
     where
-        newspaper0_.id=?
+        newspaper0_.entity_id=?
 Hibernate: 
     select
-        owner0_.id as id1_9_0_,
+        owner0_.entity_id as entity_i1_9_0_,
         owner0_.analytics_id as analytic3_9_0_,
         owner0_.name as name2_9_0_,
         owneranaly1_.analytics_id as analytic1_10_1_,
@@ -663,10 +663,10 @@ Hibernate:
         owner_analytics owneranaly1_ 
             on owner0_.analytics_id=owneranaly1_.analytics_id 
     where
-        owner0_.id=?
+        owner0_.entity_id=?
 Hibernate: 
     select
-        publisher0_.id as id1_12_0_,
+        publisher0_.entity_id as entity_i1_12_0_,
         publisher0_.analytics_id as analytic3_12_0_,
         publisher0_.name as name2_12_0_,
         publishera1_.analytics_id as analytic1_13_1_,
@@ -681,10 +681,10 @@ Hibernate:
         publisher_analytics publishera1_ 
             on publisher0_.analytics_id=publishera1_.analytics_id 
     where
-        publisher0_.id=?
+        publisher0_.entity_id=?
 Hibernate: 
     select
-        topic0_.id as id1_15_0_,
+        topic0_.entity_id as entity_i1_15_0_,
         topic0_.analytics_id as analytic3_15_0_,
         topic0_.name as name2_15_0_,
         topicanaly1_.analytics_id as analytic1_16_1_,
@@ -699,16 +699,16 @@ Hibernate:
         topic_analytics topicanaly1_ 
             on topic0_.analytics_id=topicanaly1_.analytics_id 
     where
-        topic0_.id=?
+        topic0_.entity_id=?
 Hibernate: 
     delete 
     from
         article 
     where
-        id=?
+        entity_id=?
 Hibernate: 
     select
-        author0_.id as id1_3_,
+        author0_.entity_id as entity_i1_3_,
         author0_.analytics_id as analytic3_3_,
         author0_.name as name2_3_ 
     from
@@ -730,10 +730,10 @@ Hibernate:
     from
         author 
     where
-        id=?
+        entity_id=?
 Hibernate: 
     select
-        publisher0_.id as id1_12_,
+        publisher0_.entity_id as entity_i1_12_,
         publisher0_.analytics_id as analytic3_12_,
         publisher0_.name as name2_12_ 
     from
@@ -755,10 +755,10 @@ Hibernate:
     from
         publisher 
     where
-        id=?
+        entity_id=?
 Hibernate: 
     select
-        topic0_.id as id1_15_,
+        topic0_.entity_id as entity_i1_15_,
         topic0_.analytics_id as analytic3_15_,
         topic0_.name as name2_15_ 
     from
@@ -780,10 +780,10 @@ Hibernate:
     from
         topic 
     where
-        id=?
+        entity_id=?
 Hibernate: 
     select
-        owner0_.id as id1_9_,
+        owner0_.entity_id as entity_i1_9_,
         owner0_.analytics_id as analytic3_9_,
         owner0_.name as name2_9_ 
     from
@@ -805,10 +805,10 @@ Hibernate:
     from
         owner 
     where
-        id=?
+        entity_id=?
 Hibernate: 
     select
-        newspaper0_.id as id1_6_,
+        newspaper0_.entity_id as entity_i1_6_,
         newspaper0_.analytics_id as analytic3_6_,
         newspaper0_.name as name2_6_ 
     from
@@ -830,7 +830,7 @@ Hibernate:
     from
         newspaper 
     where
-        id=?
+        entity_id=?
 Hibernate: 
     select
         articleana0_.analytics_id as analytic1_1_,
@@ -1013,7 +1013,7 @@ Hibernate:
         (?, ?, ?, ?, ?, ?, ?, ?)
 Hibernate: 
     select
-        article0_.id as id1_0_,
+        article0_.entity_id as entity_i1_0_,
         article0_.analytics_id as analytic4_0_,
         article0_.name as name2_0_,
         article0_.author_id as author_i5_0_,
@@ -1038,7 +1038,7 @@ Hibernate:
         articleana0_.analytics_id=?
 Hibernate: 
     select
-        author0_.id as id1_3_0_,
+        author0_.entity_id as entity_i1_3_0_,
         author0_.analytics_id as analytic3_3_0_,
         author0_.name as name2_3_0_,
         authoranal1_.analytics_id as analytic1_4_1_,
@@ -1053,10 +1053,10 @@ Hibernate:
         author_analytics authoranal1_ 
             on author0_.analytics_id=authoranal1_.analytics_id 
     where
-        author0_.id=?
+        author0_.entity_id=?
 Hibernate: 
     select
-        newspaper0_.id as id1_6_0_,
+        newspaper0_.entity_id as entity_i1_6_0_,
         newspaper0_.analytics_id as analytic3_6_0_,
         newspaper0_.name as name2_6_0_,
         newspapera1_.analytics_id as analytic1_7_1_,
@@ -1071,10 +1071,10 @@ Hibernate:
         newspaper_analytics newspapera1_ 
             on newspaper0_.analytics_id=newspapera1_.analytics_id 
     where
-        newspaper0_.id=?
+        newspaper0_.entity_id=?
 Hibernate: 
     select
-        owner0_.id as id1_9_0_,
+        owner0_.entity_id as entity_i1_9_0_,
         owner0_.analytics_id as analytic3_9_0_,
         owner0_.name as name2_9_0_,
         owneranaly1_.analytics_id as analytic1_10_1_,
@@ -1089,10 +1089,10 @@ Hibernate:
         owner_analytics owneranaly1_ 
             on owner0_.analytics_id=owneranaly1_.analytics_id 
     where
-        owner0_.id=?
+        owner0_.entity_id=?
 Hibernate: 
     select
-        publisher0_.id as id1_12_0_,
+        publisher0_.entity_id as entity_i1_12_0_,
         publisher0_.analytics_id as analytic3_12_0_,
         publisher0_.name as name2_12_0_,
         publishera1_.analytics_id as analytic1_13_1_,
@@ -1107,10 +1107,10 @@ Hibernate:
         publisher_analytics publishera1_ 
             on publisher0_.analytics_id=publishera1_.analytics_id 
     where
-        publisher0_.id=?
+        publisher0_.entity_id=?
 Hibernate: 
     select
-        topic0_.id as id1_15_0_,
+        topic0_.entity_id as entity_i1_15_0_,
         topic0_.analytics_id as analytic3_15_0_,
         topic0_.name as name2_15_0_,
         topicanaly1_.analytics_id as analytic1_16_1_,
@@ -1125,10 +1125,10 @@ Hibernate:
         topic_analytics topicanaly1_ 
             on topic0_.analytics_id=topicanaly1_.analytics_id 
     where
-        topic0_.id=?
+        topic0_.entity_id=?
 Hibernate: 
     select
-        article0_.id as id1_0_,
+        article0_.entity_id as entity_i1_0_,
         article0_.analytics_id as analytic4_0_,
         article0_.name as name2_0_,
         article0_.author_id as author_i5_0_,
@@ -1153,7 +1153,7 @@ Hibernate:
         articleana0_.analytics_id=?
 Hibernate: 
     select
-        author0_.id as id1_3_0_,
+        author0_.entity_id as entity_i1_3_0_,
         author0_.analytics_id as analytic3_3_0_,
         author0_.name as name2_3_0_,
         authoranal1_.analytics_id as analytic1_4_1_,
@@ -1168,10 +1168,10 @@ Hibernate:
         author_analytics authoranal1_ 
             on author0_.analytics_id=authoranal1_.analytics_id 
     where
-        author0_.id=?
+        author0_.entity_id=?
 Hibernate: 
     select
-        newspaper0_.id as id1_6_0_,
+        newspaper0_.entity_id as entity_i1_6_0_,
         newspaper0_.analytics_id as analytic3_6_0_,
         newspaper0_.name as name2_6_0_,
         newspapera1_.analytics_id as analytic1_7_1_,
@@ -1186,10 +1186,10 @@ Hibernate:
         newspaper_analytics newspapera1_ 
             on newspaper0_.analytics_id=newspapera1_.analytics_id 
     where
-        newspaper0_.id=?
+        newspaper0_.entity_id=?
 Hibernate: 
     select
-        owner0_.id as id1_9_0_,
+        owner0_.entity_id as entity_i1_9_0_,
         owner0_.analytics_id as analytic3_9_0_,
         owner0_.name as name2_9_0_,
         owneranaly1_.analytics_id as analytic1_10_1_,
@@ -1204,10 +1204,10 @@ Hibernate:
         owner_analytics owneranaly1_ 
             on owner0_.analytics_id=owneranaly1_.analytics_id 
     where
-        owner0_.id=?
+        owner0_.entity_id=?
 Hibernate: 
     select
-        publisher0_.id as id1_12_0_,
+        publisher0_.entity_id as entity_i1_12_0_,
         publisher0_.analytics_id as analytic3_12_0_,
         publisher0_.name as name2_12_0_,
         publishera1_.analytics_id as analytic1_13_1_,
@@ -1222,10 +1222,10 @@ Hibernate:
         publisher_analytics publishera1_ 
             on publisher0_.analytics_id=publishera1_.analytics_id 
     where
-        publisher0_.id=?
+        publisher0_.entity_id=?
 Hibernate: 
     select
-        topic0_.id as id1_15_0_,
+        topic0_.entity_id as entity_i1_15_0_,
         topic0_.analytics_id as analytic3_15_0_,
         topic0_.name as name2_15_0_,
         topicanaly1_.analytics_id as analytic1_16_1_,
@@ -1240,16 +1240,16 @@ Hibernate:
         topic_analytics topicanaly1_ 
             on topic0_.analytics_id=topicanaly1_.analytics_id 
     where
-        topic0_.id=?
+        topic0_.entity_id=?
 Hibernate: 
     delete 
     from
         article 
     where
-        id=?
+        entity_id=?
 Hibernate: 
     select
-        author0_.id as id1_3_,
+        author0_.entity_id as entity_i1_3_,
         author0_.analytics_id as analytic3_3_,
         author0_.name as name2_3_ 
     from
@@ -1271,10 +1271,10 @@ Hibernate:
     from
         author 
     where
-        id=?
+        entity_id=?
 Hibernate: 
     select
-        publisher0_.id as id1_12_,
+        publisher0_.entity_id as entity_i1_12_,
         publisher0_.analytics_id as analytic3_12_,
         publisher0_.name as name2_12_ 
     from
@@ -1296,10 +1296,10 @@ Hibernate:
     from
         publisher 
     where
-        id=?
+        entity_id=?
 Hibernate: 
     select
-        topic0_.id as id1_15_,
+        topic0_.entity_id as entity_i1_15_,
         topic0_.analytics_id as analytic3_15_,
         topic0_.name as name2_15_ 
     from
@@ -1321,10 +1321,10 @@ Hibernate:
     from
         topic 
     where
-        id=?
+        entity_id=?
 Hibernate: 
     select
-        owner0_.id as id1_9_,
+        owner0_.entity_id as entity_i1_9_,
         owner0_.analytics_id as analytic3_9_,
         owner0_.name as name2_9_ 
     from
@@ -1346,10 +1346,10 @@ Hibernate:
     from
         owner 
     where
-        id=?
+        entity_id=?
 Hibernate: 
     select
-        newspaper0_.id as id1_6_,
+        newspaper0_.entity_id as entity_i1_6_,
         newspaper0_.analytics_id as analytic3_6_,
         newspaper0_.name as name2_6_ 
     from
@@ -1371,7 +1371,7 @@ Hibernate:
     from
         newspaper 
     where
-        id=?
+        entity_id=?
 Hibernate: 
     select
         articleana0_.analytics_id as analytic1_1_,
@@ -1554,7 +1554,7 @@ Hibernate:
         (?, ?, ?, ?, ?, ?, ?, ?)
 Hibernate: 
     select
-        article0_.id as id1_0_0_,
+        article0_.entity_id as entity_i1_0_0_,
         article0_.analytics_id as analytic4_0_0_,
         article0_.name as name2_0_0_,
         article0_.author_id as author_i5_0_0_,
@@ -1569,7 +1569,7 @@ Hibernate:
         articleana1_.likes as likes4_1_1_,
         articleana1_.shares as shares5_1_1_,
         articleana1_.views as views6_1_1_,
-        author2_.id as id1_3_2_,
+        author2_.entity_id as entity_i1_3_2_,
         author2_.analytics_id as analytic3_3_2_,
         author2_.name as name2_3_2_,
         authoranal3_.analytics_id as analytic1_4_3_,
@@ -1578,7 +1578,7 @@ Hibernate:
         authoranal3_.likes as likes4_4_3_,
         authoranal3_.shares as shares5_4_3_,
         authoranal3_.views as views6_4_3_,
-        newspaper4_.id as id1_6_4_,
+        newspaper4_.entity_id as entity_i1_6_4_,
         newspaper4_.analytics_id as analytic3_6_4_,
         newspaper4_.name as name2_6_4_,
         newspapera5_.analytics_id as analytic1_7_5_,
@@ -1587,7 +1587,7 @@ Hibernate:
         newspapera5_.likes as likes4_7_5_,
         newspapera5_.shares as shares5_7_5_,
         newspapera5_.views as views6_7_5_,
-        owner6_.id as id1_9_6_,
+        owner6_.entity_id as entity_i1_9_6_,
         owner6_.analytics_id as analytic3_9_6_,
         owner6_.name as name2_9_6_,
         owneranaly7_.analytics_id as analytic1_10_7_,
@@ -1596,7 +1596,7 @@ Hibernate:
         owneranaly7_.likes as likes4_10_7_,
         owneranaly7_.shares as shares5_10_7_,
         owneranaly7_.views as views6_10_7_,
-        publisher8_.id as id1_12_8_,
+        publisher8_.entity_id as entity_i1_12_8_,
         publisher8_.analytics_id as analytic3_12_8_,
         publisher8_.name as name2_12_8_,
         publishera9_.analytics_id as analytic1_13_9_,
@@ -1605,7 +1605,7 @@ Hibernate:
         publishera9_.likes as likes4_13_9_,
         publishera9_.shares as shares5_13_9_,
         publishera9_.views as views6_13_9_,
-        topic10_.id as id1_15_10_,
+        topic10_.entity_id as entity_i1_15_10_,
         topic10_.analytics_id as analytic3_15_10_,
         topic10_.name as name2_15_10_,
         topicanaly11_.analytics_id as analytic1_16_11_,
@@ -1621,39 +1621,39 @@ Hibernate:
             on article0_.analytics_id=articleana1_.analytics_id 
     inner join
         author author2_ 
-            on article0_.author_id=author2_.id 
+            on article0_.author_id=author2_.entity_id 
     inner join
         author_analytics authoranal3_ 
             on author2_.analytics_id=authoranal3_.analytics_id 
     inner join
         newspaper newspaper4_ 
-            on article0_.newspaper_id=newspaper4_.id 
+            on article0_.newspaper_id=newspaper4_.entity_id 
     inner join
         newspaper_analytics newspapera5_ 
             on newspaper4_.analytics_id=newspapera5_.analytics_id 
     inner join
         owner owner6_ 
-            on article0_.owner_id=owner6_.id 
+            on article0_.owner_id=owner6_.entity_id 
     inner join
         owner_analytics owneranaly7_ 
             on owner6_.analytics_id=owneranaly7_.analytics_id 
     inner join
         publisher publisher8_ 
-            on article0_.publisher_id=publisher8_.id 
+            on article0_.publisher_id=publisher8_.entity_id 
     inner join
         publisher_analytics publishera9_ 
             on publisher8_.analytics_id=publishera9_.analytics_id 
     inner join
         topic topic10_ 
-            on article0_.topic_id=topic10_.id 
+            on article0_.topic_id=topic10_.entity_id 
     inner join
         topic_analytics topicanaly11_ 
             on topic10_.analytics_id=topicanaly11_.analytics_id 
     where
-        article0_.id=?
+        article0_.entity_id=?
 Hibernate: 
     select
-        article0_.id as id1_0_,
+        article0_.entity_id as entity_i1_0_,
         article0_.analytics_id as analytic4_0_,
         article0_.name as name2_0_,
         article0_.author_id as author_i5_0_,
@@ -1678,7 +1678,7 @@ Hibernate:
         articleana0_.analytics_id=?
 Hibernate: 
     select
-        author0_.id as id1_3_0_,
+        author0_.entity_id as entity_i1_3_0_,
         author0_.analytics_id as analytic3_3_0_,
         author0_.name as name2_3_0_,
         authoranal1_.analytics_id as analytic1_4_1_,
@@ -1693,10 +1693,10 @@ Hibernate:
         author_analytics authoranal1_ 
             on author0_.analytics_id=authoranal1_.analytics_id 
     where
-        author0_.id=?
+        author0_.entity_id=?
 Hibernate: 
     select
-        newspaper0_.id as id1_6_0_,
+        newspaper0_.entity_id as entity_i1_6_0_,
         newspaper0_.analytics_id as analytic3_6_0_,
         newspaper0_.name as name2_6_0_,
         newspapera1_.analytics_id as analytic1_7_1_,
@@ -1711,10 +1711,10 @@ Hibernate:
         newspaper_analytics newspapera1_ 
             on newspaper0_.analytics_id=newspapera1_.analytics_id 
     where
-        newspaper0_.id=?
+        newspaper0_.entity_id=?
 Hibernate: 
     select
-        owner0_.id as id1_9_0_,
+        owner0_.entity_id as entity_i1_9_0_,
         owner0_.analytics_id as analytic3_9_0_,
         owner0_.name as name2_9_0_,
         owneranaly1_.analytics_id as analytic1_10_1_,
@@ -1729,10 +1729,10 @@ Hibernate:
         owner_analytics owneranaly1_ 
             on owner0_.analytics_id=owneranaly1_.analytics_id 
     where
-        owner0_.id=?
+        owner0_.entity_id=?
 Hibernate: 
     select
-        publisher0_.id as id1_12_0_,
+        publisher0_.entity_id as entity_i1_12_0_,
         publisher0_.analytics_id as analytic3_12_0_,
         publisher0_.name as name2_12_0_,
         publishera1_.analytics_id as analytic1_13_1_,
@@ -1747,10 +1747,10 @@ Hibernate:
         publisher_analytics publishera1_ 
             on publisher0_.analytics_id=publishera1_.analytics_id 
     where
-        publisher0_.id=?
+        publisher0_.entity_id=?
 Hibernate: 
     select
-        topic0_.id as id1_15_0_,
+        topic0_.entity_id as entity_i1_15_0_,
         topic0_.analytics_id as analytic3_15_0_,
         topic0_.name as name2_15_0_,
         topicanaly1_.analytics_id as analytic1_16_1_,
@@ -1765,16 +1765,16 @@ Hibernate:
         topic_analytics topicanaly1_ 
             on topic0_.analytics_id=topicanaly1_.analytics_id 
     where
-        topic0_.id=?
+        topic0_.entity_id=?
 Hibernate: 
     delete 
     from
         article 
     where
-        id=?
+        entity_id=?
 Hibernate: 
     select
-        author0_.id as id1_3_,
+        author0_.entity_id as entity_i1_3_,
         author0_.analytics_id as analytic3_3_,
         author0_.name as name2_3_ 
     from
@@ -1796,10 +1796,10 @@ Hibernate:
     from
         author 
     where
-        id=?
+        entity_id=?
 Hibernate: 
     select
-        publisher0_.id as id1_12_,
+        publisher0_.entity_id as entity_i1_12_,
         publisher0_.analytics_id as analytic3_12_,
         publisher0_.name as name2_12_ 
     from
@@ -1821,10 +1821,10 @@ Hibernate:
     from
         publisher 
     where
-        id=?
+        entity_id=?
 Hibernate: 
     select
-        topic0_.id as id1_15_,
+        topic0_.entity_id as entity_i1_15_,
         topic0_.analytics_id as analytic3_15_,
         topic0_.name as name2_15_ 
     from
@@ -1846,10 +1846,10 @@ Hibernate:
     from
         topic 
     where
-        id=?
+        entity_id=?
 Hibernate: 
     select
-        owner0_.id as id1_9_,
+        owner0_.entity_id as entity_i1_9_,
         owner0_.analytics_id as analytic3_9_,
         owner0_.name as name2_9_ 
     from
@@ -1871,10 +1871,10 @@ Hibernate:
     from
         owner 
     where
-        id=?
+        entity_id=?
 Hibernate: 
     select
-        newspaper0_.id as id1_6_,
+        newspaper0_.entity_id as entity_i1_6_,
         newspaper0_.analytics_id as analytic3_6_,
         newspaper0_.name as name2_6_ 
     from
@@ -1896,7 +1896,7 @@ Hibernate:
     from
         newspaper 
     where
-        id=?
+        entity_id=?
 Hibernate: 
     select
         articleana0_.analytics_id as analytic1_1_,
@@ -2079,7 +2079,7 @@ Hibernate:
         (?, ?, ?, ?, ?, ?, ?, ?)
 Hibernate: 
     select
-        article0_.id as id1_0_0_,
+        article0_.entity_id as entity_i1_0_0_,
         article0_.analytics_id as analytic4_0_0_,
         article0_.name as name2_0_0_,
         article0_.author_id as author_i5_0_0_,
@@ -2094,7 +2094,7 @@ Hibernate:
         articleana1_.likes as likes4_1_1_,
         articleana1_.shares as shares5_1_1_,
         articleana1_.views as views6_1_1_,
-        author2_.id as id1_3_2_,
+        author2_.entity_id as entity_i1_3_2_,
         author2_.analytics_id as analytic3_3_2_,
         author2_.name as name2_3_2_,
         authoranal3_.analytics_id as analytic1_4_3_,
@@ -2103,7 +2103,7 @@ Hibernate:
         authoranal3_.likes as likes4_4_3_,
         authoranal3_.shares as shares5_4_3_,
         authoranal3_.views as views6_4_3_,
-        newspaper4_.id as id1_6_4_,
+        newspaper4_.entity_id as entity_i1_6_4_,
         newspaper4_.analytics_id as analytic3_6_4_,
         newspaper4_.name as name2_6_4_,
         newspapera5_.analytics_id as analytic1_7_5_,
@@ -2112,7 +2112,7 @@ Hibernate:
         newspapera5_.likes as likes4_7_5_,
         newspapera5_.shares as shares5_7_5_,
         newspapera5_.views as views6_7_5_,
-        owner6_.id as id1_9_6_,
+        owner6_.entity_id as entity_i1_9_6_,
         owner6_.analytics_id as analytic3_9_6_,
         owner6_.name as name2_9_6_,
         owneranaly7_.analytics_id as analytic1_10_7_,
@@ -2121,7 +2121,7 @@ Hibernate:
         owneranaly7_.likes as likes4_10_7_,
         owneranaly7_.shares as shares5_10_7_,
         owneranaly7_.views as views6_10_7_,
-        publisher8_.id as id1_12_8_,
+        publisher8_.entity_id as entity_i1_12_8_,
         publisher8_.analytics_id as analytic3_12_8_,
         publisher8_.name as name2_12_8_,
         publishera9_.analytics_id as analytic1_13_9_,
@@ -2130,7 +2130,7 @@ Hibernate:
         publishera9_.likes as likes4_13_9_,
         publishera9_.shares as shares5_13_9_,
         publishera9_.views as views6_13_9_,
-        topic10_.id as id1_15_10_,
+        topic10_.entity_id as entity_i1_15_10_,
         topic10_.analytics_id as analytic3_15_10_,
         topic10_.name as name2_15_10_,
         topicanaly11_.analytics_id as analytic1_16_11_,
@@ -2146,39 +2146,39 @@ Hibernate:
             on article0_.analytics_id=articleana1_.analytics_id 
     inner join
         author author2_ 
-            on article0_.author_id=author2_.id 
+            on article0_.author_id=author2_.entity_id 
     inner join
         author_analytics authoranal3_ 
             on author2_.analytics_id=authoranal3_.analytics_id 
     inner join
         newspaper newspaper4_ 
-            on article0_.newspaper_id=newspaper4_.id 
+            on article0_.newspaper_id=newspaper4_.entity_id 
     inner join
         newspaper_analytics newspapera5_ 
             on newspaper4_.analytics_id=newspapera5_.analytics_id 
     inner join
         owner owner6_ 
-            on article0_.owner_id=owner6_.id 
+            on article0_.owner_id=owner6_.entity_id 
     inner join
         owner_analytics owneranaly7_ 
             on owner6_.analytics_id=owneranaly7_.analytics_id 
     inner join
         publisher publisher8_ 
-            on article0_.publisher_id=publisher8_.id 
+            on article0_.publisher_id=publisher8_.entity_id 
     inner join
         publisher_analytics publishera9_ 
             on publisher8_.analytics_id=publishera9_.analytics_id 
     inner join
         topic topic10_ 
-            on article0_.topic_id=topic10_.id 
+            on article0_.topic_id=topic10_.entity_id 
     inner join
         topic_analytics topicanaly11_ 
             on topic10_.analytics_id=topicanaly11_.analytics_id 
     where
-        article0_.id=?
+        article0_.entity_id=?
 Hibernate: 
     select
-        article0_.id as id1_0_,
+        article0_.entity_id as entity_i1_0_,
         article0_.analytics_id as analytic4_0_,
         article0_.name as name2_0_,
         article0_.author_id as author_i5_0_,
@@ -2203,7 +2203,7 @@ Hibernate:
         articleana0_.analytics_id=?
 Hibernate: 
     select
-        author0_.id as id1_3_0_,
+        author0_.entity_id as entity_i1_3_0_,
         author0_.analytics_id as analytic3_3_0_,
         author0_.name as name2_3_0_,
         authoranal1_.analytics_id as analytic1_4_1_,
@@ -2218,10 +2218,10 @@ Hibernate:
         author_analytics authoranal1_ 
             on author0_.analytics_id=authoranal1_.analytics_id 
     where
-        author0_.id=?
+        author0_.entity_id=?
 Hibernate: 
     select
-        newspaper0_.id as id1_6_0_,
+        newspaper0_.entity_id as entity_i1_6_0_,
         newspaper0_.analytics_id as analytic3_6_0_,
         newspaper0_.name as name2_6_0_,
         newspapera1_.analytics_id as analytic1_7_1_,
@@ -2236,10 +2236,10 @@ Hibernate:
         newspaper_analytics newspapera1_ 
             on newspaper0_.analytics_id=newspapera1_.analytics_id 
     where
-        newspaper0_.id=?
+        newspaper0_.entity_id=?
 Hibernate: 
     select
-        owner0_.id as id1_9_0_,
+        owner0_.entity_id as entity_i1_9_0_,
         owner0_.analytics_id as analytic3_9_0_,
         owner0_.name as name2_9_0_,
         owneranaly1_.analytics_id as analytic1_10_1_,
@@ -2254,10 +2254,10 @@ Hibernate:
         owner_analytics owneranaly1_ 
             on owner0_.analytics_id=owneranaly1_.analytics_id 
     where
-        owner0_.id=?
+        owner0_.entity_id=?
 Hibernate: 
     select
-        publisher0_.id as id1_12_0_,
+        publisher0_.entity_id as entity_i1_12_0_,
         publisher0_.analytics_id as analytic3_12_0_,
         publisher0_.name as name2_12_0_,
         publishera1_.analytics_id as analytic1_13_1_,
@@ -2272,10 +2272,10 @@ Hibernate:
         publisher_analytics publishera1_ 
             on publisher0_.analytics_id=publishera1_.analytics_id 
     where
-        publisher0_.id=?
+        publisher0_.entity_id=?
 Hibernate: 
     select
-        topic0_.id as id1_15_0_,
+        topic0_.entity_id as entity_i1_15_0_,
         topic0_.analytics_id as analytic3_15_0_,
         topic0_.name as name2_15_0_,
         topicanaly1_.analytics_id as analytic1_16_1_,
@@ -2290,16 +2290,16 @@ Hibernate:
         topic_analytics topicanaly1_ 
             on topic0_.analytics_id=topicanaly1_.analytics_id 
     where
-        topic0_.id=?
+        topic0_.entity_id=?
 Hibernate: 
     delete 
     from
         article 
     where
-        id=?
+        entity_id=?
 Hibernate: 
     select
-        author0_.id as id1_3_,
+        author0_.entity_id as entity_i1_3_,
         author0_.analytics_id as analytic3_3_,
         author0_.name as name2_3_ 
     from
@@ -2321,10 +2321,10 @@ Hibernate:
     from
         author 
     where
-        id=?
+        entity_id=?
 Hibernate: 
     select
-        publisher0_.id as id1_12_,
+        publisher0_.entity_id as entity_i1_12_,
         publisher0_.analytics_id as analytic3_12_,
         publisher0_.name as name2_12_ 
     from
@@ -2346,10 +2346,10 @@ Hibernate:
     from
         publisher 
     where
-        id=?
+        entity_id=?
 Hibernate: 
     select
-        topic0_.id as id1_15_,
+        topic0_.entity_id as entity_i1_15_,
         topic0_.analytics_id as analytic3_15_,
         topic0_.name as name2_15_ 
     from
@@ -2371,10 +2371,10 @@ Hibernate:
     from
         topic 
     where
-        id=?
+        entity_id=?
 Hibernate: 
     select
-        owner0_.id as id1_9_,
+        owner0_.entity_id as entity_i1_9_,
         owner0_.analytics_id as analytic3_9_,
         owner0_.name as name2_9_ 
     from
@@ -2396,10 +2396,10 @@ Hibernate:
     from
         owner 
     where
-        id=?
+        entity_id=?
 Hibernate: 
     select
-        newspaper0_.id as id1_6_,
+        newspaper0_.entity_id as entity_i1_6_,
         newspaper0_.analytics_id as analytic3_6_,
         newspaper0_.name as name2_6_ 
     from
@@ -2421,7 +2421,7 @@ Hibernate:
     from
         newspaper 
     where
-        id=?
+        entity_id=?
 Hibernate: 
     select
         articleana0_.analytics_id as analytic1_1_,
@@ -2604,7 +2604,7 @@ Hibernate:
         (?, ?, ?, ?, ?, ?, ?, ?)
 Hibernate: 
     select
-        article0_.id as id1_0_,
+        article0_.entity_id as entity_i1_0_,
         article0_.analytics_id as analytic4_0_,
         article0_.name as name2_0_,
         article0_.author_id as author_i5_0_,
@@ -2619,7 +2619,7 @@ Hibernate:
         article0_.name=?
 Hibernate: 
     select
-        article0_.id as id1_0_,
+        article0_.entity_id as entity_i1_0_,
         article0_.analytics_id as analytic4_0_,
         article0_.name as name2_0_,
         article0_.author_id as author_i5_0_,
@@ -2644,7 +2644,7 @@ Hibernate:
         articleana0_.analytics_id=?
 Hibernate: 
     select
-        author0_.id as id1_3_0_,
+        author0_.entity_id as entity_i1_3_0_,
         author0_.analytics_id as analytic3_3_0_,
         author0_.name as name2_3_0_,
         authoranal1_.analytics_id as analytic1_4_1_,
@@ -2659,10 +2659,10 @@ Hibernate:
         author_analytics authoranal1_ 
             on author0_.analytics_id=authoranal1_.analytics_id 
     where
-        author0_.id=?
+        author0_.entity_id=?
 Hibernate: 
     select
-        newspaper0_.id as id1_6_0_,
+        newspaper0_.entity_id as entity_i1_6_0_,
         newspaper0_.analytics_id as analytic3_6_0_,
         newspaper0_.name as name2_6_0_,
         newspapera1_.analytics_id as analytic1_7_1_,
@@ -2677,10 +2677,10 @@ Hibernate:
         newspaper_analytics newspapera1_ 
             on newspaper0_.analytics_id=newspapera1_.analytics_id 
     where
-        newspaper0_.id=?
+        newspaper0_.entity_id=?
 Hibernate: 
     select
-        owner0_.id as id1_9_0_,
+        owner0_.entity_id as entity_i1_9_0_,
         owner0_.analytics_id as analytic3_9_0_,
         owner0_.name as name2_9_0_,
         owneranaly1_.analytics_id as analytic1_10_1_,
@@ -2695,10 +2695,10 @@ Hibernate:
         owner_analytics owneranaly1_ 
             on owner0_.analytics_id=owneranaly1_.analytics_id 
     where
-        owner0_.id=?
+        owner0_.entity_id=?
 Hibernate: 
     select
-        publisher0_.id as id1_12_0_,
+        publisher0_.entity_id as entity_i1_12_0_,
         publisher0_.analytics_id as analytic3_12_0_,
         publisher0_.name as name2_12_0_,
         publishera1_.analytics_id as analytic1_13_1_,
@@ -2713,10 +2713,10 @@ Hibernate:
         publisher_analytics publishera1_ 
             on publisher0_.analytics_id=publishera1_.analytics_id 
     where
-        publisher0_.id=?
+        publisher0_.entity_id=?
 Hibernate: 
     select
-        topic0_.id as id1_15_0_,
+        topic0_.entity_id as entity_i1_15_0_,
         topic0_.analytics_id as analytic3_15_0_,
         topic0_.name as name2_15_0_,
         topicanaly1_.analytics_id as analytic1_16_1_,
@@ -2731,16 +2731,16 @@ Hibernate:
         topic_analytics topicanaly1_ 
             on topic0_.analytics_id=topicanaly1_.analytics_id 
     where
-        topic0_.id=?
+        topic0_.entity_id=?
 Hibernate: 
     delete 
     from
         article 
     where
-        id=?
+        entity_id=?
 Hibernate: 
     select
-        author0_.id as id1_3_,
+        author0_.entity_id as entity_i1_3_,
         author0_.analytics_id as analytic3_3_,
         author0_.name as name2_3_ 
     from
@@ -2762,10 +2762,10 @@ Hibernate:
     from
         author 
     where
-        id=?
+        entity_id=?
 Hibernate: 
     select
-        publisher0_.id as id1_12_,
+        publisher0_.entity_id as entity_i1_12_,
         publisher0_.analytics_id as analytic3_12_,
         publisher0_.name as name2_12_ 
     from
@@ -2787,10 +2787,10 @@ Hibernate:
     from
         publisher 
     where
-        id=?
+        entity_id=?
 Hibernate: 
     select
-        topic0_.id as id1_15_,
+        topic0_.entity_id as entity_i1_15_,
         topic0_.analytics_id as analytic3_15_,
         topic0_.name as name2_15_ 
     from
@@ -2812,10 +2812,10 @@ Hibernate:
     from
         topic 
     where
-        id=?
+        entity_id=?
 Hibernate: 
     select
-        owner0_.id as id1_9_,
+        owner0_.entity_id as entity_i1_9_,
         owner0_.analytics_id as analytic3_9_,
         owner0_.name as name2_9_ 
     from
@@ -2837,10 +2837,10 @@ Hibernate:
     from
         owner 
     where
-        id=?
+        entity_id=?
 Hibernate: 
     select
-        newspaper0_.id as id1_6_,
+        newspaper0_.entity_id as entity_i1_6_,
         newspaper0_.analytics_id as analytic3_6_,
         newspaper0_.name as name2_6_ 
     from
@@ -2862,7 +2862,7 @@ Hibernate:
     from
         newspaper 
     where
-        id=?
+        entity_id=?
 Hibernate: 
     select
         articleana0_.analytics_id as analytic1_1_,
@@ -3045,7 +3045,7 @@ Hibernate:
         (?, ?, ?, ?, ?, ?, ?, ?)
 Hibernate: 
     select
-        article0_.id as id1_0_,
+        article0_.entity_id as entity_i1_0_,
         article0_.analytics_id as analytic4_0_,
         article0_.name as name2_0_,
         article0_.author_id as author_i5_0_,
@@ -3070,7 +3070,7 @@ Hibernate:
         articleana0_.analytics_id=?
 Hibernate: 
     select
-        author0_.id as id1_3_0_,
+        author0_.entity_id as entity_i1_3_0_,
         author0_.analytics_id as analytic3_3_0_,
         author0_.name as name2_3_0_,
         authoranal1_.analytics_id as analytic1_4_1_,
@@ -3085,10 +3085,10 @@ Hibernate:
         author_analytics authoranal1_ 
             on author0_.analytics_id=authoranal1_.analytics_id 
     where
-        author0_.id=?
+        author0_.entity_id=?
 Hibernate: 
     select
-        newspaper0_.id as id1_6_0_,
+        newspaper0_.entity_id as entity_i1_6_0_,
         newspaper0_.analytics_id as analytic3_6_0_,
         newspaper0_.name as name2_6_0_,
         newspapera1_.analytics_id as analytic1_7_1_,
@@ -3103,10 +3103,10 @@ Hibernate:
         newspaper_analytics newspapera1_ 
             on newspaper0_.analytics_id=newspapera1_.analytics_id 
     where
-        newspaper0_.id=?
+        newspaper0_.entity_id=?
 Hibernate: 
     select
-        owner0_.id as id1_9_0_,
+        owner0_.entity_id as entity_i1_9_0_,
         owner0_.analytics_id as analytic3_9_0_,
         owner0_.name as name2_9_0_,
         owneranaly1_.analytics_id as analytic1_10_1_,
@@ -3121,10 +3121,10 @@ Hibernate:
         owner_analytics owneranaly1_ 
             on owner0_.analytics_id=owneranaly1_.analytics_id 
     where
-        owner0_.id=?
+        owner0_.entity_id=?
 Hibernate: 
     select
-        publisher0_.id as id1_12_0_,
+        publisher0_.entity_id as entity_i1_12_0_,
         publisher0_.analytics_id as analytic3_12_0_,
         publisher0_.name as name2_12_0_,
         publishera1_.analytics_id as analytic1_13_1_,
@@ -3139,10 +3139,10 @@ Hibernate:
         publisher_analytics publishera1_ 
             on publisher0_.analytics_id=publishera1_.analytics_id 
     where
-        publisher0_.id=?
+        publisher0_.entity_id=?
 Hibernate: 
     select
-        topic0_.id as id1_15_0_,
+        topic0_.entity_id as entity_i1_15_0_,
         topic0_.analytics_id as analytic3_15_0_,
         topic0_.name as name2_15_0_,
         topicanaly1_.analytics_id as analytic1_16_1_,
@@ -3157,16 +3157,16 @@ Hibernate:
         topic_analytics topicanaly1_ 
             on topic0_.analytics_id=topicanaly1_.analytics_id 
     where
-        topic0_.id=?
+        topic0_.entity_id=?
 Hibernate: 
     delete 
     from
         article 
     where
-        id=?
+        entity_id=?
 Hibernate: 
     select
-        article0_.id as id1_0_,
+        article0_.entity_id as entity_i1_0_,
         article0_.analytics_id as analytic4_0_,
         article0_.name as name2_0_,
         article0_.author_id as author_i5_0_,
@@ -3179,7 +3179,7 @@ Hibernate:
         article article0_
 Hibernate: 
     select
-        article0_.id as id1_0_,
+        article0_.entity_id as entity_i1_0_,
         article0_.analytics_id as analytic4_0_,
         article0_.name as name2_0_,
         article0_.author_id as author_i5_0_,
@@ -3192,7 +3192,7 @@ Hibernate:
         article article0_
 Hibernate: 
     select
-        author0_.id as id1_3_,
+        author0_.entity_id as entity_i1_3_,
         author0_.analytics_id as analytic3_3_,
         author0_.name as name2_3_ 
     from
@@ -3214,10 +3214,10 @@ Hibernate:
     from
         author 
     where
-        id=?
+        entity_id=?
 Hibernate: 
     select
-        publisher0_.id as id1_12_,
+        publisher0_.entity_id as entity_i1_12_,
         publisher0_.analytics_id as analytic3_12_,
         publisher0_.name as name2_12_ 
     from
@@ -3239,10 +3239,10 @@ Hibernate:
     from
         publisher 
     where
-        id=?
+        entity_id=?
 Hibernate: 
     select
-        topic0_.id as id1_15_,
+        topic0_.entity_id as entity_i1_15_,
         topic0_.analytics_id as analytic3_15_,
         topic0_.name as name2_15_ 
     from
@@ -3264,10 +3264,10 @@ Hibernate:
     from
         topic 
     where
-        id=?
+        entity_id=?
 Hibernate: 
     select
-        owner0_.id as id1_9_,
+        owner0_.entity_id as entity_i1_9_,
         owner0_.analytics_id as analytic3_9_,
         owner0_.name as name2_9_ 
     from
@@ -3289,10 +3289,10 @@ Hibernate:
     from
         owner 
     where
-        id=?
+        entity_id=?
 Hibernate: 
     select
-        newspaper0_.id as id1_6_,
+        newspaper0_.entity_id as entity_i1_6_,
         newspaper0_.analytics_id as analytic3_6_,
         newspaper0_.name as name2_6_ 
     from
@@ -3314,7 +3314,7 @@ Hibernate:
     from
         newspaper 
     where
-        id=?
+        entity_id=?
 Hibernate: 
     select
         articleana0_.analytics_id as analytic1_1_,
@@ -3497,7 +3497,7 @@ Hibernate:
         (?, ?, ?, ?, ?, ?, ?, ?)
 Hibernate: 
     select
-        article0_.id as id1_0_,
+        article0_.entity_id as entity_i1_0_,
         article0_.analytics_id as analytic4_0_,
         article0_.name as name2_0_,
         article0_.author_id as author_i5_0_,
@@ -3522,7 +3522,7 @@ Hibernate:
         articleana0_.analytics_id=?
 Hibernate: 
     select
-        author0_.id as id1_3_0_,
+        author0_.entity_id as entity_i1_3_0_,
         author0_.analytics_id as analytic3_3_0_,
         author0_.name as name2_3_0_,
         authoranal1_.analytics_id as analytic1_4_1_,
@@ -3537,10 +3537,10 @@ Hibernate:
         author_analytics authoranal1_ 
             on author0_.analytics_id=authoranal1_.analytics_id 
     where
-        author0_.id=?
+        author0_.entity_id=?
 Hibernate: 
     select
-        newspaper0_.id as id1_6_0_,
+        newspaper0_.entity_id as entity_i1_6_0_,
         newspaper0_.analytics_id as analytic3_6_0_,
         newspaper0_.name as name2_6_0_,
         newspapera1_.analytics_id as analytic1_7_1_,
@@ -3555,10 +3555,10 @@ Hibernate:
         newspaper_analytics newspapera1_ 
             on newspaper0_.analytics_id=newspapera1_.analytics_id 
     where
-        newspaper0_.id=?
+        newspaper0_.entity_id=?
 Hibernate: 
     select
-        owner0_.id as id1_9_0_,
+        owner0_.entity_id as entity_i1_9_0_,
         owner0_.analytics_id as analytic3_9_0_,
         owner0_.name as name2_9_0_,
         owneranaly1_.analytics_id as analytic1_10_1_,
@@ -3573,10 +3573,10 @@ Hibernate:
         owner_analytics owneranaly1_ 
             on owner0_.analytics_id=owneranaly1_.analytics_id 
     where
-        owner0_.id=?
+        owner0_.entity_id=?
 Hibernate: 
     select
-        publisher0_.id as id1_12_0_,
+        publisher0_.entity_id as entity_i1_12_0_,
         publisher0_.analytics_id as analytic3_12_0_,
         publisher0_.name as name2_12_0_,
         publishera1_.analytics_id as analytic1_13_1_,
@@ -3591,10 +3591,10 @@ Hibernate:
         publisher_analytics publishera1_ 
             on publisher0_.analytics_id=publishera1_.analytics_id 
     where
-        publisher0_.id=?
+        publisher0_.entity_id=?
 Hibernate: 
     select
-        topic0_.id as id1_15_0_,
+        topic0_.entity_id as entity_i1_15_0_,
         topic0_.analytics_id as analytic3_15_0_,
         topic0_.name as name2_15_0_,
         topicanaly1_.analytics_id as analytic1_16_1_,
@@ -3609,10 +3609,10 @@ Hibernate:
         topic_analytics topicanaly1_ 
             on topic0_.analytics_id=topicanaly1_.analytics_id 
     where
-        topic0_.id=?
+        topic0_.entity_id=?
 Hibernate: 
     select
-        article0_.id as id1_0_,
+        article0_.entity_id as entity_i1_0_,
         article0_.analytics_id as analytic4_0_,
         article0_.name as name2_0_,
         article0_.author_id as author_i5_0_,
@@ -3637,7 +3637,7 @@ Hibernate:
         articleana0_.analytics_id=?
 Hibernate: 
     select
-        author0_.id as id1_3_0_,
+        author0_.entity_id as entity_i1_3_0_,
         author0_.analytics_id as analytic3_3_0_,
         author0_.name as name2_3_0_,
         authoranal1_.analytics_id as analytic1_4_1_,
@@ -3652,10 +3652,10 @@ Hibernate:
         author_analytics authoranal1_ 
             on author0_.analytics_id=authoranal1_.analytics_id 
     where
-        author0_.id=?
+        author0_.entity_id=?
 Hibernate: 
     select
-        newspaper0_.id as id1_6_0_,
+        newspaper0_.entity_id as entity_i1_6_0_,
         newspaper0_.analytics_id as analytic3_6_0_,
         newspaper0_.name as name2_6_0_,
         newspapera1_.analytics_id as analytic1_7_1_,
@@ -3670,10 +3670,10 @@ Hibernate:
         newspaper_analytics newspapera1_ 
             on newspaper0_.analytics_id=newspapera1_.analytics_id 
     where
-        newspaper0_.id=?
+        newspaper0_.entity_id=?
 Hibernate: 
     select
-        owner0_.id as id1_9_0_,
+        owner0_.entity_id as entity_i1_9_0_,
         owner0_.analytics_id as analytic3_9_0_,
         owner0_.name as name2_9_0_,
         owneranaly1_.analytics_id as analytic1_10_1_,
@@ -3688,10 +3688,10 @@ Hibernate:
         owner_analytics owneranaly1_ 
             on owner0_.analytics_id=owneranaly1_.analytics_id 
     where
-        owner0_.id=?
+        owner0_.entity_id=?
 Hibernate: 
     select
-        publisher0_.id as id1_12_0_,
+        publisher0_.entity_id as entity_i1_12_0_,
         publisher0_.analytics_id as analytic3_12_0_,
         publisher0_.name as name2_12_0_,
         publishera1_.analytics_id as analytic1_13_1_,
@@ -3706,10 +3706,10 @@ Hibernate:
         publisher_analytics publishera1_ 
             on publisher0_.analytics_id=publishera1_.analytics_id 
     where
-        publisher0_.id=?
+        publisher0_.entity_id=?
 Hibernate: 
     select
-        topic0_.id as id1_15_0_,
+        topic0_.entity_id as entity_i1_15_0_,
         topic0_.analytics_id as analytic3_15_0_,
         topic0_.name as name2_15_0_,
         topicanaly1_.analytics_id as analytic1_16_1_,
@@ -3724,16 +3724,16 @@ Hibernate:
         topic_analytics topicanaly1_ 
             on topic0_.analytics_id=topicanaly1_.analytics_id 
     where
-        topic0_.id=?
+        topic0_.entity_id=?
 Hibernate: 
     delete 
     from
         article 
     where
-        id=?
+        entity_id=?
 Hibernate: 
     select
-        author0_.id as id1_3_,
+        author0_.entity_id as entity_i1_3_,
         author0_.analytics_id as analytic3_3_,
         author0_.name as name2_3_ 
     from
@@ -3755,10 +3755,10 @@ Hibernate:
     from
         author 
     where
-        id=?
+        entity_id=?
 Hibernate: 
     select
-        publisher0_.id as id1_12_,
+        publisher0_.entity_id as entity_i1_12_,
         publisher0_.analytics_id as analytic3_12_,
         publisher0_.name as name2_12_ 
     from
@@ -3780,10 +3780,10 @@ Hibernate:
     from
         publisher 
     where
-        id=?
+        entity_id=?
 Hibernate: 
     select
-        topic0_.id as id1_15_,
+        topic0_.entity_id as entity_i1_15_,
         topic0_.analytics_id as analytic3_15_,
         topic0_.name as name2_15_ 
     from
@@ -3805,10 +3805,10 @@ Hibernate:
     from
         topic 
     where
-        id=?
+        entity_id=?
 Hibernate: 
     select
-        owner0_.id as id1_9_,
+        owner0_.entity_id as entity_i1_9_,
         owner0_.analytics_id as analytic3_9_,
         owner0_.name as name2_9_ 
     from
@@ -3830,10 +3830,10 @@ Hibernate:
     from
         owner 
     where
-        id=?
+        entity_id=?
 Hibernate: 
     select
-        newspaper0_.id as id1_6_,
+        newspaper0_.entity_id as entity_i1_6_,
         newspaper0_.analytics_id as analytic3_6_,
         newspaper0_.name as name2_6_ 
     from
@@ -3855,7 +3855,7 @@ Hibernate:
     from
         newspaper 
     where
-        id=?
+        entity_id=?
 Hibernate: 
     select
         articleana0_.analytics_id as analytic1_1_,
@@ -4038,7 +4038,7 @@ Hibernate:
         (?, ?, ?, ?, ?, ?, ?, ?)
 Hibernate: 
     select
-        article0_.id as id1_0_,
+        article0_.entity_id as entity_i1_0_,
         article0_.analytics_id as analytic4_0_,
         article0_.name as name2_0_,
         article0_.author_id as author_i5_0_,
@@ -4063,7 +4063,7 @@ Hibernate:
         articleana0_.analytics_id=?
 Hibernate: 
     select
-        author0_.id as id1_3_0_,
+        author0_.entity_id as entity_i1_3_0_,
         author0_.analytics_id as analytic3_3_0_,
         author0_.name as name2_3_0_,
         authoranal1_.analytics_id as analytic1_4_1_,
@@ -4078,10 +4078,10 @@ Hibernate:
         author_analytics authoranal1_ 
             on author0_.analytics_id=authoranal1_.analytics_id 
     where
-        author0_.id=?
+        author0_.entity_id=?
 Hibernate: 
     select
-        newspaper0_.id as id1_6_0_,
+        newspaper0_.entity_id as entity_i1_6_0_,
         newspaper0_.analytics_id as analytic3_6_0_,
         newspaper0_.name as name2_6_0_,
         newspapera1_.analytics_id as analytic1_7_1_,
@@ -4096,10 +4096,10 @@ Hibernate:
         newspaper_analytics newspapera1_ 
             on newspaper0_.analytics_id=newspapera1_.analytics_id 
     where
-        newspaper0_.id=?
+        newspaper0_.entity_id=?
 Hibernate: 
     select
-        owner0_.id as id1_9_0_,
+        owner0_.entity_id as entity_i1_9_0_,
         owner0_.analytics_id as analytic3_9_0_,
         owner0_.name as name2_9_0_,
         owneranaly1_.analytics_id as analytic1_10_1_,
@@ -4114,10 +4114,10 @@ Hibernate:
         owner_analytics owneranaly1_ 
             on owner0_.analytics_id=owneranaly1_.analytics_id 
     where
-        owner0_.id=?
+        owner0_.entity_id=?
 Hibernate: 
     select
-        publisher0_.id as id1_12_0_,
+        publisher0_.entity_id as entity_i1_12_0_,
         publisher0_.analytics_id as analytic3_12_0_,
         publisher0_.name as name2_12_0_,
         publishera1_.analytics_id as analytic1_13_1_,
@@ -4132,10 +4132,10 @@ Hibernate:
         publisher_analytics publishera1_ 
             on publisher0_.analytics_id=publishera1_.analytics_id 
     where
-        publisher0_.id=?
+        publisher0_.entity_id=?
 Hibernate: 
     select
-        topic0_.id as id1_15_0_,
+        topic0_.entity_id as entity_i1_15_0_,
         topic0_.analytics_id as analytic3_15_0_,
         topic0_.name as name2_15_0_,
         topicanaly1_.analytics_id as analytic1_16_1_,
@@ -4150,16 +4150,16 @@ Hibernate:
         topic_analytics topicanaly1_ 
             on topic0_.analytics_id=topicanaly1_.analytics_id 
     where
-        topic0_.id=?
+        topic0_.entity_id=?
 Hibernate: 
     delete 
     from
         article 
     where
-        id=?
+        entity_id=?
 Hibernate: 
     select
-        article0_.id as id1_0_,
+        article0_.entity_id as entity_i1_0_,
         article0_.analytics_id as analytic4_0_,
         article0_.name as name2_0_,
         article0_.author_id as author_i5_0_,
