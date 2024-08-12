@@ -1,18 +1,20 @@
 package ssd.Entities.Newspaper.Base.RESTapi;
 
 import javax.annotation.processing.Generated;
+import org.springframework.stereotype.Component;
 import ssd.Entities.Newspaper.Base.Newspaper;
 import ssd.Entities.Newspaper.Base.RESTapi.DTO.NewspaperGetDTO;
 
 @Generated(
     value = "org.mapstruct.ap.MappingProcessor",
-    date = "2024-08-12T15:16:10+0200",
+    date = "2024-08-12T15:42:38+0200",
     comments = "version: 1.3.1.Final, compiler: javac, environment: Java 17.0.10 (Debian)"
 )
+@Component
 public class NewspaperMapperImpl implements NewspaperMapper {
 
     @Override
-    public NewspaperGetDTO convertEntityToNewspaperGetDTO(Newspaper newspaper) {
+    public NewspaperGetDTO convertEntityToGetDTO(Newspaper newspaper) {
         if ( newspaper == null ) {
             return null;
         }
@@ -21,6 +23,7 @@ public class NewspaperMapperImpl implements NewspaperMapper {
 
         newspaperGetDTO.setAnalytics( newspaper.getAnalytics() );
         newspaperGetDTO.setName( newspaper.getName() );
+        newspaperGetDTO.setId( newspaper.getId() );
 
         return newspaperGetDTO;
     }

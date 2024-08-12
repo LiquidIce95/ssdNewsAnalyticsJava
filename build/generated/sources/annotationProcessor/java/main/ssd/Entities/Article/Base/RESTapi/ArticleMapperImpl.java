@@ -17,7 +17,7 @@ import ssd.Entities.Topic.Base.Topic;
 
 @Generated(
     value = "org.mapstruct.ap.MappingProcessor",
-    date = "2024-08-12T15:16:10+0200",
+    date = "2024-08-12T15:42:38+0200",
     comments = "version: 1.3.1.Final, compiler: javac, environment: Java 17.0.10 (Debian)"
 )
 @Component
@@ -51,6 +51,7 @@ public class ArticleMapperImpl implements ArticleMapper {
 
         OwnerGetDTO ownerGetDTO = new OwnerGetDTO();
 
+        ownerGetDTO.setId( owner.getId() );
         ownerGetDTO.setName( owner.getName() );
         ownerGetDTO.setAnalytics( owner.getAnalytics() );
 
@@ -64,6 +65,7 @@ public class ArticleMapperImpl implements ArticleMapper {
 
         NewspaperGetDTO newspaperGetDTO = new NewspaperGetDTO();
 
+        newspaperGetDTO.setId( newspaper.getId() );
         newspaperGetDTO.setName( newspaper.getName() );
         newspaperGetDTO.setAnalytics( newspaper.getAnalytics() );
 
@@ -77,6 +79,7 @@ public class ArticleMapperImpl implements ArticleMapper {
 
         AuthorGetDTO authorGetDTO = new AuthorGetDTO();
 
+        authorGetDTO.setId( author.getId() );
         authorGetDTO.setName( author.getName() );
         authorGetDTO.setAnalytics( author.getAnalytics() );
 
@@ -90,6 +93,7 @@ public class ArticleMapperImpl implements ArticleMapper {
 
         PublisherGetDTO publisherGetDTO = new PublisherGetDTO();
 
+        publisherGetDTO.setId( publisher.getId() );
         publisherGetDTO.setName( publisher.getName() );
         publisherGetDTO.setAnalytics( publisher.getAnalytics() );
 
@@ -103,6 +107,7 @@ public class ArticleMapperImpl implements ArticleMapper {
 
         TopicGetDTO topicGetDTO = new TopicGetDTO();
 
+        topicGetDTO.setId( topic.getId() );
         topicGetDTO.setName( topic.getName() );
         topicGetDTO.setAnalytics( topic.getAnalytics() );
 

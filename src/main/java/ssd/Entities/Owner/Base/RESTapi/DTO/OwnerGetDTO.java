@@ -1,35 +1,8 @@
 package ssd.Entities.Owner.Base.RESTapi.DTO;
 
+import ssd.AbstractClasses.Base.RESTapi.DTO.BaseEntityGetDTO;
 import ssd.Entities.Owner.Analytics.OwnerAnalytics;
 
-public class OwnerGetDTO {
-    private Long ownerId;
-    private String name;
-    private OwnerAnalytics analytics;
-
-    // Getters and Setters
-
-    public Long getOwnerId() {
-        return ownerId;
-    }
-
-    public void setOwnerId(Long ownerId) {
-        this.ownerId = ownerId;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public OwnerAnalytics getAnalytics() {
-        return analytics;
-    }
-
-    public void setAnalytics(OwnerAnalytics analytics) {
-        this.analytics = analytics;
-    }
+public class OwnerGetDTO extends BaseEntityGetDTO<OwnerAnalytics>{
+    
 }
