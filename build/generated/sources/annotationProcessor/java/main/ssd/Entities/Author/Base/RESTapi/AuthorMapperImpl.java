@@ -7,7 +7,7 @@ import ssd.Entities.Author.Base.RESTapi.DTO.AuthorGetDTO;
 
 @Generated(
     value = "org.mapstruct.ap.MappingProcessor",
-    date = "2024-08-12T15:42:38+0200",
+    date = "2024-08-12T17:24:38+0200",
     comments = "version: 1.3.1.Final, compiler: javac, environment: Java 17.0.10 (Debian)"
 )
 @Component

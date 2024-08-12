@@ -1,20 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="ssd.Entities.Author.AuthorControllerTest" tests="8" skipped="0" failures="0" errors="0" timestamp="2024-08-12T13:42:43" hostname="COMMODORE" time="0.182">
+<testsuite name="ssd.Entities.Author.AuthorControllerTest" tests="8" skipped="0" failures="0" errors="0" timestamp="2024-08-12T15:24:43" hostname="COMMODORE" time="0.259">
   <properties/>
-  <testcase name="testGetAllAuthors()" classname="ssd.Entities.Author.AuthorControllerTest" time="0.035"/>
-  <testcase name="testGetAuthorsByName_notFound()" classname="ssd.Entities.Author.AuthorControllerTest" time="0.019"/>
-  <testcase name="testGetPopularAuthors()" classname="ssd.Entities.Author.AuthorControllerTest" time="0.02"/>
-  <testcase name="testGetAuthorsByName()" classname="ssd.Entities.Author.AuthorControllerTest" time="0.018"/>
-  <testcase name="testGetAuthorById()" classname="ssd.Entities.Author.AuthorControllerTest" time="0.024"/>
-  <testcase name="testGetAuthorById_notFound()" classname="ssd.Entities.Author.AuthorControllerTest" time="0.017"/>
-  <testcase name="testGetAllAuthors_emptyDatabase()" classname="ssd.Entities.Author.AuthorControllerTest" time="0.018"/>
-  <testcase name="testGetPopularAuthors_noContent()" classname="ssd.Entities.Author.AuthorControllerTest" time="0.025"/>
-  <system-out><![CDATA[2024-08-12 15:42:43.800  INFO 161534 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Neither @ContextConfiguration nor @ContextHierarchy found for test class [ssd.Entities.Author.AuthorControllerTest], using SpringBootContextLoader
-2024-08-12 15:42:43.801  INFO 161534 --- [    Test worker] o.s.t.c.support.AbstractContextLoader    : Could not detect default resource locations for test class [ssd.Entities.Author.AuthorControllerTest]: no resource found for suffixes {-context.xml, Context.groovy}.
-2024-08-12 15:42:43.801  INFO 161534 --- [    Test worker] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [ssd.Entities.Author.AuthorControllerTest]: AuthorControllerTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
-2024-08-12 15:42:43.805  INFO 161534 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration ssd.SSDApplication for test class ssd.Entities.Author.AuthorControllerTest
-2024-08-12 15:42:43.806  INFO 161534 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.event.ApplicationEventsTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
-2024-08-12 15:42:43.806  INFO 161534 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@42102827, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@5896899d, org.springframework.test.context.event.ApplicationEventsTestExecutionListener@6d4062fd, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@4b024fb2, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@89017e5, org.springframework.test.context.support.DirtiesContextTestExecutionListener@6426ad0b, org.springframework.test.context.transaction.TransactionalTestExecutionListener@a9f7cf8, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@5339cdc6, org.springframework.test.context.event.EventPublishingTestExecutionListener@5b9ed77b, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@a8177f6, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@7b88a2e2, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@664217a8, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@4b4a3114, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener@4af5c14c, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@74d4f542]
+  <testcase name="testGetAllAuthors()" classname="ssd.Entities.Author.AuthorControllerTest" time="0.055"/>
+  <testcase name="testGetAuthorsByName_notFound()" classname="ssd.Entities.Author.AuthorControllerTest" time="0.023"/>
+  <testcase name="testGetPopularAuthors()" classname="ssd.Entities.Author.AuthorControllerTest" time="0.031"/>
+  <testcase name="testGetAuthorsByName()" classname="ssd.Entities.Author.AuthorControllerTest" time="0.03"/>
+  <testcase name="testGetAuthorById()" classname="ssd.Entities.Author.AuthorControllerTest" time="0.027"/>
+  <testcase name="testGetAuthorById_notFound()" classname="ssd.Entities.Author.AuthorControllerTest" time="0.028"/>
+  <testcase name="testGetAllAuthors_emptyDatabase()" classname="ssd.Entities.Author.AuthorControllerTest" time="0.033"/>
+  <testcase name="testGetPopularAuthors_noContent()" classname="ssd.Entities.Author.AuthorControllerTest" time="0.023"/>
+  <system-out><![CDATA[2024-08-12 17:24:43.626  INFO 322418 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Neither @ContextConfiguration nor @ContextHierarchy found for test class [ssd.Entities.Author.AuthorControllerTest], using SpringBootContextLoader
+2024-08-12 17:24:43.627  INFO 322418 --- [    Test worker] o.s.t.c.support.AbstractContextLoader    : Could not detect default resource locations for test class [ssd.Entities.Author.AuthorControllerTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+2024-08-12 17:24:43.627  INFO 322418 --- [    Test worker] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [ssd.Entities.Author.AuthorControllerTest]: AuthorControllerTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2024-08-12 17:24:43.631  INFO 322418 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration ssd.SSDApplication for test class ssd.Entities.Author.AuthorControllerTest
+2024-08-12 17:24:43.633  INFO 322418 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.event.ApplicationEventsTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
+2024-08-12 17:24:43.633  INFO 322418 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@5122387, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@9abbe39, org.springframework.test.context.event.ApplicationEventsTestExecutionListener@11b234aa, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@1455a374, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@cfb462, org.springframework.test.context.support.DirtiesContextTestExecutionListener@54418834, org.springframework.test.context.transaction.TransactionalTestExecutionListener@54d6f172, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@6d21a69f, org.springframework.test.context.event.EventPublishingTestExecutionListener@10b063fd, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@48e859f7, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@2bd67cf9, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@4ba32242, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@581f1f40, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener@52b2c255, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@4a9b4d4e]
 Hibernate: 
     select
         article0_.entity_id as entity_i1_0_,
@@ -30,19 +30,19 @@ Hibernate:
         article article0_
 Hibernate: 
     select
-        newspaper0_.entity_id as entity_i1_6_,
-        newspaper0_.analytics_id as analytic3_6_,
-        newspaper0_.name as name2_6_ 
+        newspaper0_.entity_id as entity_i1_4_,
+        newspaper0_.analytics_id as analytic3_4_,
+        newspaper0_.name as name2_4_ 
     from
         newspaper newspaper0_
 Hibernate: 
     select
-        newspapera0_.analytics_id as analytic1_7_0_,
-        newspapera0_.bias as bias2_7_0_,
-        newspapera0_.engagement_rate as engageme3_7_0_,
-        newspapera0_.likes as likes4_7_0_,
-        newspapera0_.shares as shares5_7_0_,
-        newspapera0_.views as views6_7_0_ 
+        newspapera0_.analytics_id as analytic1_5_0_,
+        newspapera0_.bias as bias2_5_0_,
+        newspapera0_.engagement_rate as engageme3_5_0_,
+        newspapera0_.likes as likes4_5_0_,
+        newspapera0_.shares as shares5_5_0_,
+        newspapera0_.views as views6_5_0_ 
     from
         newspaper_analytics newspapera0_ 
     where
@@ -55,19 +55,19 @@ Hibernate:
         entity_id=?
 Hibernate: 
     select
-        owner0_.entity_id as entity_i1_9_,
-        owner0_.analytics_id as analytic3_9_,
-        owner0_.name as name2_9_ 
+        owner0_.entity_id as entity_i1_6_,
+        owner0_.analytics_id as analytic3_6_,
+        owner0_.name as name2_6_ 
     from
         owner owner0_
 Hibernate: 
     select
-        owneranaly0_.analytics_id as analytic1_10_0_,
-        owneranaly0_.bias as bias2_10_0_,
-        owneranaly0_.engagement_rate as engageme3_10_0_,
-        owneranaly0_.likes as likes4_10_0_,
-        owneranaly0_.shares as shares5_10_0_,
-        owneranaly0_.views as views6_10_0_ 
+        owneranaly0_.analytics_id as analytic1_7_0_,
+        owneranaly0_.bias as bias2_7_0_,
+        owneranaly0_.engagement_rate as engageme3_7_0_,
+        owneranaly0_.likes as likes4_7_0_,
+        owneranaly0_.shares as shares5_7_0_,
+        owneranaly0_.views as views6_7_0_ 
     from
         owner_analytics owneranaly0_ 
     where
@@ -80,19 +80,19 @@ Hibernate:
         entity_id=?
 Hibernate: 
     select
-        topic0_.entity_id as entity_i1_15_,
-        topic0_.analytics_id as analytic3_15_,
-        topic0_.name as name2_15_ 
+        topic0_.entity_id as entity_i1_10_,
+        topic0_.analytics_id as analytic3_10_,
+        topic0_.name as name2_10_ 
     from
         topic topic0_
 Hibernate: 
     select
-        topicanaly0_.analytics_id as analytic1_16_0_,
-        topicanaly0_.bias as bias2_16_0_,
-        topicanaly0_.engagement_rate as engageme3_16_0_,
-        topicanaly0_.likes as likes4_16_0_,
-        topicanaly0_.shares as shares5_16_0_,
-        topicanaly0_.views as views6_16_0_ 
+        topicanaly0_.analytics_id as analytic1_11_0_,
+        topicanaly0_.bias as bias2_11_0_,
+        topicanaly0_.engagement_rate as engageme3_11_0_,
+        topicanaly0_.likes as likes4_11_0_,
+        topicanaly0_.shares as shares5_11_0_,
+        topicanaly0_.views as views6_11_0_ 
     from
         topic_analytics topicanaly0_ 
     where
@@ -105,19 +105,19 @@ Hibernate:
         entity_id=?
 Hibernate: 
     select
-        publisher0_.entity_id as entity_i1_12_,
-        publisher0_.analytics_id as analytic3_12_,
-        publisher0_.name as name2_12_ 
+        publisher0_.entity_id as entity_i1_8_,
+        publisher0_.analytics_id as analytic3_8_,
+        publisher0_.name as name2_8_ 
     from
         publisher publisher0_
 Hibernate: 
     select
-        publishera0_.analytics_id as analytic1_13_0_,
-        publishera0_.bias as bias2_13_0_,
-        publishera0_.engagement_rate as engageme3_13_0_,
-        publishera0_.likes as likes4_13_0_,
-        publishera0_.shares as shares5_13_0_,
-        publishera0_.views as views6_13_0_ 
+        publishera0_.analytics_id as analytic1_9_0_,
+        publishera0_.bias as bias2_9_0_,
+        publishera0_.engagement_rate as engageme3_9_0_,
+        publishera0_.likes as likes4_9_0_,
+        publishera0_.shares as shares5_9_0_,
+        publishera0_.views as views6_9_0_ 
     from
         publisher_analytics publishera0_ 
     where
@@ -130,19 +130,19 @@ Hibernate:
         entity_id=?
 Hibernate: 
     select
-        author0_.entity_id as entity_i1_3_,
-        author0_.analytics_id as analytic3_3_,
-        author0_.name as name2_3_ 
+        author0_.entity_id as entity_i1_2_,
+        author0_.analytics_id as analytic3_2_,
+        author0_.name as name2_2_ 
     from
         author author0_
 Hibernate: 
     select
-        authoranal0_.analytics_id as analytic1_4_0_,
-        authoranal0_.bias as bias2_4_0_,
-        authoranal0_.engagement_rate as engageme3_4_0_,
-        authoranal0_.likes as likes4_4_0_,
-        authoranal0_.shares as shares5_4_0_,
-        authoranal0_.views as views6_4_0_ 
+        authoranal0_.analytics_id as analytic1_3_0_,
+        authoranal0_.bias as bias2_3_0_,
+        authoranal0_.engagement_rate as engageme3_3_0_,
+        authoranal0_.likes as likes4_3_0_,
+        authoranal0_.shares as shares5_3_0_,
+        authoranal0_.views as views6_3_0_ 
     from
         author_analytics authoranal0_ 
     where
@@ -171,12 +171,12 @@ Hibernate:
         analytics_id=?
 Hibernate: 
     select
-        newspapera0_.analytics_id as analytic1_7_,
-        newspapera0_.bias as bias2_7_,
-        newspapera0_.engagement_rate as engageme3_7_,
-        newspapera0_.likes as likes4_7_,
-        newspapera0_.shares as shares5_7_,
-        newspapera0_.views as views6_7_ 
+        newspapera0_.analytics_id as analytic1_5_,
+        newspapera0_.bias as bias2_5_,
+        newspapera0_.engagement_rate as engageme3_5_,
+        newspapera0_.likes as likes4_5_,
+        newspapera0_.shares as shares5_5_,
+        newspapera0_.views as views6_5_ 
     from
         newspaper_analytics newspapera0_
 Hibernate: 
@@ -187,12 +187,12 @@ Hibernate:
         analytics_id=?
 Hibernate: 
     select
-        owneranaly0_.analytics_id as analytic1_10_,
-        owneranaly0_.bias as bias2_10_,
-        owneranaly0_.engagement_rate as engageme3_10_,
-        owneranaly0_.likes as likes4_10_,
-        owneranaly0_.shares as shares5_10_,
-        owneranaly0_.views as views6_10_ 
+        owneranaly0_.analytics_id as analytic1_7_,
+        owneranaly0_.bias as bias2_7_,
+        owneranaly0_.engagement_rate as engageme3_7_,
+        owneranaly0_.likes as likes4_7_,
+        owneranaly0_.shares as shares5_7_,
+        owneranaly0_.views as views6_7_ 
     from
         owner_analytics owneranaly0_
 Hibernate: 
@@ -203,12 +203,12 @@ Hibernate:
         analytics_id=?
 Hibernate: 
     select
-        topicanaly0_.analytics_id as analytic1_16_,
-        topicanaly0_.bias as bias2_16_,
-        topicanaly0_.engagement_rate as engageme3_16_,
-        topicanaly0_.likes as likes4_16_,
-        topicanaly0_.shares as shares5_16_,
-        topicanaly0_.views as views6_16_ 
+        topicanaly0_.analytics_id as analytic1_11_,
+        topicanaly0_.bias as bias2_11_,
+        topicanaly0_.engagement_rate as engageme3_11_,
+        topicanaly0_.likes as likes4_11_,
+        topicanaly0_.shares as shares5_11_,
+        topicanaly0_.views as views6_11_ 
     from
         topic_analytics topicanaly0_
 Hibernate: 
@@ -219,12 +219,12 @@ Hibernate:
         analytics_id=?
 Hibernate: 
     select
-        publishera0_.analytics_id as analytic1_13_,
-        publishera0_.bias as bias2_13_,
-        publishera0_.engagement_rate as engageme3_13_,
-        publishera0_.likes as likes4_13_,
-        publishera0_.shares as shares5_13_,
-        publishera0_.views as views6_13_ 
+        publishera0_.analytics_id as analytic1_9_,
+        publishera0_.bias as bias2_9_,
+        publishera0_.engagement_rate as engageme3_9_,
+        publishera0_.likes as likes4_9_,
+        publishera0_.shares as shares5_9_,
+        publishera0_.views as views6_9_ 
     from
         publisher_analytics publishera0_
 Hibernate: 
@@ -235,12 +235,12 @@ Hibernate:
         analytics_id=?
 Hibernate: 
     select
-        authoranal0_.analytics_id as analytic1_4_,
-        authoranal0_.bias as bias2_4_,
-        authoranal0_.engagement_rate as engageme3_4_,
-        authoranal0_.likes as likes4_4_,
-        authoranal0_.shares as shares5_4_,
-        authoranal0_.views as views6_4_ 
+        authoranal0_.analytics_id as analytic1_3_,
+        authoranal0_.bias as bias2_3_,
+        authoranal0_.engagement_rate as engageme3_3_,
+        authoranal0_.likes as likes4_3_,
+        authoranal0_.shares as shares5_3_,
+        authoranal0_.views as views6_3_ 
     from
         author_analytics authoranal0_
 Hibernate: 
@@ -265,19 +265,19 @@ Hibernate:
         (?, ?)
 Hibernate: 
     select
-        author0_.entity_id as entity_i1_3_,
-        author0_.analytics_id as analytic3_3_,
-        author0_.name as name2_3_ 
+        author0_.entity_id as entity_i1_2_,
+        author0_.analytics_id as analytic3_2_,
+        author0_.name as name2_2_ 
     from
         author author0_
 Hibernate: 
     select
-        authoranal0_.analytics_id as analytic1_4_0_,
-        authoranal0_.bias as bias2_4_0_,
-        authoranal0_.engagement_rate as engageme3_4_0_,
-        authoranal0_.likes as likes4_4_0_,
-        authoranal0_.shares as shares5_4_0_,
-        authoranal0_.views as views6_4_0_ 
+        authoranal0_.analytics_id as analytic1_3_0_,
+        authoranal0_.bias as bias2_3_0_,
+        authoranal0_.engagement_rate as engageme3_3_0_,
+        authoranal0_.likes as likes4_3_0_,
+        authoranal0_.shares as shares5_3_0_,
+        authoranal0_.views as views6_3_0_ 
     from
         author_analytics authoranal0_ 
     where
@@ -297,47 +297,47 @@ Hibernate:
         article article0_
 Hibernate: 
     select
-        newspaper0_.entity_id as entity_i1_6_,
-        newspaper0_.analytics_id as analytic3_6_,
-        newspaper0_.name as name2_6_ 
+        newspaper0_.entity_id as entity_i1_4_,
+        newspaper0_.analytics_id as analytic3_4_,
+        newspaper0_.name as name2_4_ 
     from
         newspaper newspaper0_
 Hibernate: 
     select
-        owner0_.entity_id as entity_i1_9_,
-        owner0_.analytics_id as analytic3_9_,
-        owner0_.name as name2_9_ 
+        owner0_.entity_id as entity_i1_6_,
+        owner0_.analytics_id as analytic3_6_,
+        owner0_.name as name2_6_ 
     from
         owner owner0_
 Hibernate: 
     select
-        topic0_.entity_id as entity_i1_15_,
-        topic0_.analytics_id as analytic3_15_,
-        topic0_.name as name2_15_ 
+        topic0_.entity_id as entity_i1_10_,
+        topic0_.analytics_id as analytic3_10_,
+        topic0_.name as name2_10_ 
     from
         topic topic0_
 Hibernate: 
     select
-        publisher0_.entity_id as entity_i1_12_,
-        publisher0_.analytics_id as analytic3_12_,
-        publisher0_.name as name2_12_ 
+        publisher0_.entity_id as entity_i1_8_,
+        publisher0_.analytics_id as analytic3_8_,
+        publisher0_.name as name2_8_ 
     from
         publisher publisher0_
 Hibernate: 
     select
-        author0_.entity_id as entity_i1_3_,
-        author0_.analytics_id as analytic3_3_,
-        author0_.name as name2_3_ 
+        author0_.entity_id as entity_i1_2_,
+        author0_.analytics_id as analytic3_2_,
+        author0_.name as name2_2_ 
     from
         author author0_
 Hibernate: 
     select
-        authoranal0_.analytics_id as analytic1_4_0_,
-        authoranal0_.bias as bias2_4_0_,
-        authoranal0_.engagement_rate as engageme3_4_0_,
-        authoranal0_.likes as likes4_4_0_,
-        authoranal0_.shares as shares5_4_0_,
-        authoranal0_.views as views6_4_0_ 
+        authoranal0_.analytics_id as analytic1_3_0_,
+        authoranal0_.bias as bias2_3_0_,
+        authoranal0_.engagement_rate as engageme3_3_0_,
+        authoranal0_.likes as likes4_3_0_,
+        authoranal0_.shares as shares5_3_0_,
+        authoranal0_.views as views6_3_0_ 
     from
         author_analytics authoranal0_ 
     where
@@ -360,52 +360,52 @@ Hibernate:
         article_analytics articleana0_
 Hibernate: 
     select
-        newspapera0_.analytics_id as analytic1_7_,
-        newspapera0_.bias as bias2_7_,
-        newspapera0_.engagement_rate as engageme3_7_,
-        newspapera0_.likes as likes4_7_,
-        newspapera0_.shares as shares5_7_,
-        newspapera0_.views as views6_7_ 
+        newspapera0_.analytics_id as analytic1_5_,
+        newspapera0_.bias as bias2_5_,
+        newspapera0_.engagement_rate as engageme3_5_,
+        newspapera0_.likes as likes4_5_,
+        newspapera0_.shares as shares5_5_,
+        newspapera0_.views as views6_5_ 
     from
         newspaper_analytics newspapera0_
 Hibernate: 
     select
-        owneranaly0_.analytics_id as analytic1_10_,
-        owneranaly0_.bias as bias2_10_,
-        owneranaly0_.engagement_rate as engageme3_10_,
-        owneranaly0_.likes as likes4_10_,
-        owneranaly0_.shares as shares5_10_,
-        owneranaly0_.views as views6_10_ 
+        owneranaly0_.analytics_id as analytic1_7_,
+        owneranaly0_.bias as bias2_7_,
+        owneranaly0_.engagement_rate as engageme3_7_,
+        owneranaly0_.likes as likes4_7_,
+        owneranaly0_.shares as shares5_7_,
+        owneranaly0_.views as views6_7_ 
     from
         owner_analytics owneranaly0_
 Hibernate: 
     select
-        topicanaly0_.analytics_id as analytic1_16_,
-        topicanaly0_.bias as bias2_16_,
-        topicanaly0_.engagement_rate as engageme3_16_,
-        topicanaly0_.likes as likes4_16_,
-        topicanaly0_.shares as shares5_16_,
-        topicanaly0_.views as views6_16_ 
+        topicanaly0_.analytics_id as analytic1_11_,
+        topicanaly0_.bias as bias2_11_,
+        topicanaly0_.engagement_rate as engageme3_11_,
+        topicanaly0_.likes as likes4_11_,
+        topicanaly0_.shares as shares5_11_,
+        topicanaly0_.views as views6_11_ 
     from
         topic_analytics topicanaly0_
 Hibernate: 
     select
-        publishera0_.analytics_id as analytic1_13_,
-        publishera0_.bias as bias2_13_,
-        publishera0_.engagement_rate as engageme3_13_,
-        publishera0_.likes as likes4_13_,
-        publishera0_.shares as shares5_13_,
-        publishera0_.views as views6_13_ 
+        publishera0_.analytics_id as analytic1_9_,
+        publishera0_.bias as bias2_9_,
+        publishera0_.engagement_rate as engageme3_9_,
+        publishera0_.likes as likes4_9_,
+        publishera0_.shares as shares5_9_,
+        publishera0_.views as views6_9_ 
     from
         publisher_analytics publishera0_
 Hibernate: 
     select
-        authoranal0_.analytics_id as analytic1_4_,
-        authoranal0_.bias as bias2_4_,
-        authoranal0_.engagement_rate as engageme3_4_,
-        authoranal0_.likes as likes4_4_,
-        authoranal0_.shares as shares5_4_,
-        authoranal0_.views as views6_4_ 
+        authoranal0_.analytics_id as analytic1_3_,
+        authoranal0_.bias as bias2_3_,
+        authoranal0_.engagement_rate as engageme3_3_,
+        authoranal0_.likes as likes4_3_,
+        authoranal0_.shares as shares5_3_,
+        authoranal0_.views as views6_3_ 
     from
         author_analytics authoranal0_
 Hibernate: 
@@ -430,9 +430,9 @@ Hibernate:
         (?, ?)
 Hibernate: 
     select
-        author0_.entity_id as entity_i1_3_,
-        author0_.analytics_id as analytic3_3_,
-        author0_.name as name2_3_ 
+        author0_.entity_id as entity_i1_2_,
+        author0_.analytics_id as analytic3_2_,
+        author0_.name as name2_2_ 
     from
         author author0_ 
     where
@@ -452,47 +452,47 @@ Hibernate:
         article article0_
 Hibernate: 
     select
-        newspaper0_.entity_id as entity_i1_6_,
-        newspaper0_.analytics_id as analytic3_6_,
-        newspaper0_.name as name2_6_ 
+        newspaper0_.entity_id as entity_i1_4_,
+        newspaper0_.analytics_id as analytic3_4_,
+        newspaper0_.name as name2_4_ 
     from
         newspaper newspaper0_
 Hibernate: 
     select
-        owner0_.entity_id as entity_i1_9_,
-        owner0_.analytics_id as analytic3_9_,
-        owner0_.name as name2_9_ 
+        owner0_.entity_id as entity_i1_6_,
+        owner0_.analytics_id as analytic3_6_,
+        owner0_.name as name2_6_ 
     from
         owner owner0_
 Hibernate: 
     select
-        topic0_.entity_id as entity_i1_15_,
-        topic0_.analytics_id as analytic3_15_,
-        topic0_.name as name2_15_ 
+        topic0_.entity_id as entity_i1_10_,
+        topic0_.analytics_id as analytic3_10_,
+        topic0_.name as name2_10_ 
     from
         topic topic0_
 Hibernate: 
     select
-        publisher0_.entity_id as entity_i1_12_,
-        publisher0_.analytics_id as analytic3_12_,
-        publisher0_.name as name2_12_ 
+        publisher0_.entity_id as entity_i1_8_,
+        publisher0_.analytics_id as analytic3_8_,
+        publisher0_.name as name2_8_ 
     from
         publisher publisher0_
 Hibernate: 
     select
-        author0_.entity_id as entity_i1_3_,
-        author0_.analytics_id as analytic3_3_,
-        author0_.name as name2_3_ 
+        author0_.entity_id as entity_i1_2_,
+        author0_.analytics_id as analytic3_2_,
+        author0_.name as name2_2_ 
     from
         author author0_
 Hibernate: 
     select
-        authoranal0_.analytics_id as analytic1_4_0_,
-        authoranal0_.bias as bias2_4_0_,
-        authoranal0_.engagement_rate as engageme3_4_0_,
-        authoranal0_.likes as likes4_4_0_,
-        authoranal0_.shares as shares5_4_0_,
-        authoranal0_.views as views6_4_0_ 
+        authoranal0_.analytics_id as analytic1_3_0_,
+        authoranal0_.bias as bias2_3_0_,
+        authoranal0_.engagement_rate as engageme3_3_0_,
+        authoranal0_.likes as likes4_3_0_,
+        authoranal0_.shares as shares5_3_0_,
+        authoranal0_.views as views6_3_0_ 
     from
         author_analytics authoranal0_ 
     where
@@ -515,52 +515,52 @@ Hibernate:
         article_analytics articleana0_
 Hibernate: 
     select
-        newspapera0_.analytics_id as analytic1_7_,
-        newspapera0_.bias as bias2_7_,
-        newspapera0_.engagement_rate as engageme3_7_,
-        newspapera0_.likes as likes4_7_,
-        newspapera0_.shares as shares5_7_,
-        newspapera0_.views as views6_7_ 
+        newspapera0_.analytics_id as analytic1_5_,
+        newspapera0_.bias as bias2_5_,
+        newspapera0_.engagement_rate as engageme3_5_,
+        newspapera0_.likes as likes4_5_,
+        newspapera0_.shares as shares5_5_,
+        newspapera0_.views as views6_5_ 
     from
         newspaper_analytics newspapera0_
 Hibernate: 
     select
-        owneranaly0_.analytics_id as analytic1_10_,
-        owneranaly0_.bias as bias2_10_,
-        owneranaly0_.engagement_rate as engageme3_10_,
-        owneranaly0_.likes as likes4_10_,
-        owneranaly0_.shares as shares5_10_,
-        owneranaly0_.views as views6_10_ 
+        owneranaly0_.analytics_id as analytic1_7_,
+        owneranaly0_.bias as bias2_7_,
+        owneranaly0_.engagement_rate as engageme3_7_,
+        owneranaly0_.likes as likes4_7_,
+        owneranaly0_.shares as shares5_7_,
+        owneranaly0_.views as views6_7_ 
     from
         owner_analytics owneranaly0_
 Hibernate: 
     select
-        topicanaly0_.analytics_id as analytic1_16_,
-        topicanaly0_.bias as bias2_16_,
-        topicanaly0_.engagement_rate as engageme3_16_,
-        topicanaly0_.likes as likes4_16_,
-        topicanaly0_.shares as shares5_16_,
-        topicanaly0_.views as views6_16_ 
+        topicanaly0_.analytics_id as analytic1_11_,
+        topicanaly0_.bias as bias2_11_,
+        topicanaly0_.engagement_rate as engageme3_11_,
+        topicanaly0_.likes as likes4_11_,
+        topicanaly0_.shares as shares5_11_,
+        topicanaly0_.views as views6_11_ 
     from
         topic_analytics topicanaly0_
 Hibernate: 
     select
-        publishera0_.analytics_id as analytic1_13_,
-        publishera0_.bias as bias2_13_,
-        publishera0_.engagement_rate as engageme3_13_,
-        publishera0_.likes as likes4_13_,
-        publishera0_.shares as shares5_13_,
-        publishera0_.views as views6_13_ 
+        publishera0_.analytics_id as analytic1_9_,
+        publishera0_.bias as bias2_9_,
+        publishera0_.engagement_rate as engageme3_9_,
+        publishera0_.likes as likes4_9_,
+        publishera0_.shares as shares5_9_,
+        publishera0_.views as views6_9_ 
     from
         publisher_analytics publishera0_
 Hibernate: 
     select
-        authoranal0_.analytics_id as analytic1_4_,
-        authoranal0_.bias as bias2_4_,
-        authoranal0_.engagement_rate as engageme3_4_,
-        authoranal0_.likes as likes4_4_,
-        authoranal0_.shares as shares5_4_,
-        authoranal0_.views as views6_4_ 
+        authoranal0_.analytics_id as analytic1_3_,
+        authoranal0_.bias as bias2_3_,
+        authoranal0_.engagement_rate as engageme3_3_,
+        authoranal0_.likes as likes4_3_,
+        authoranal0_.shares as shares5_3_,
+        authoranal0_.views as views6_3_ 
     from
         author_analytics authoranal0_
 Hibernate: 
@@ -585,19 +585,19 @@ Hibernate:
         (?, ?)
 Hibernate: 
     select
-        author0_.entity_id as entity_i1_3_,
-        author0_.analytics_id as analytic3_3_,
-        author0_.name as name2_3_ 
+        author0_.entity_id as entity_i1_2_,
+        author0_.analytics_id as analytic3_2_,
+        author0_.name as name2_2_ 
     from
         author author0_
 Hibernate: 
     select
-        authoranal0_.analytics_id as analytic1_4_0_,
-        authoranal0_.bias as bias2_4_0_,
-        authoranal0_.engagement_rate as engageme3_4_0_,
-        authoranal0_.likes as likes4_4_0_,
-        authoranal0_.shares as shares5_4_0_,
-        authoranal0_.views as views6_4_0_ 
+        authoranal0_.analytics_id as analytic1_3_0_,
+        authoranal0_.bias as bias2_3_0_,
+        authoranal0_.engagement_rate as engageme3_3_0_,
+        authoranal0_.likes as likes4_3_0_,
+        authoranal0_.shares as shares5_3_0_,
+        authoranal0_.views as views6_3_0_ 
     from
         author_analytics authoranal0_ 
     where
@@ -617,47 +617,47 @@ Hibernate:
         article article0_
 Hibernate: 
     select
-        newspaper0_.entity_id as entity_i1_6_,
-        newspaper0_.analytics_id as analytic3_6_,
-        newspaper0_.name as name2_6_ 
+        newspaper0_.entity_id as entity_i1_4_,
+        newspaper0_.analytics_id as analytic3_4_,
+        newspaper0_.name as name2_4_ 
     from
         newspaper newspaper0_
 Hibernate: 
     select
-        owner0_.entity_id as entity_i1_9_,
-        owner0_.analytics_id as analytic3_9_,
-        owner0_.name as name2_9_ 
+        owner0_.entity_id as entity_i1_6_,
+        owner0_.analytics_id as analytic3_6_,
+        owner0_.name as name2_6_ 
     from
         owner owner0_
 Hibernate: 
     select
-        topic0_.entity_id as entity_i1_15_,
-        topic0_.analytics_id as analytic3_15_,
-        topic0_.name as name2_15_ 
+        topic0_.entity_id as entity_i1_10_,
+        topic0_.analytics_id as analytic3_10_,
+        topic0_.name as name2_10_ 
     from
         topic topic0_
 Hibernate: 
     select
-        publisher0_.entity_id as entity_i1_12_,
-        publisher0_.analytics_id as analytic3_12_,
-        publisher0_.name as name2_12_ 
+        publisher0_.entity_id as entity_i1_8_,
+        publisher0_.analytics_id as analytic3_8_,
+        publisher0_.name as name2_8_ 
     from
         publisher publisher0_
 Hibernate: 
     select
-        author0_.entity_id as entity_i1_3_,
-        author0_.analytics_id as analytic3_3_,
-        author0_.name as name2_3_ 
+        author0_.entity_id as entity_i1_2_,
+        author0_.analytics_id as analytic3_2_,
+        author0_.name as name2_2_ 
     from
         author author0_
 Hibernate: 
     select
-        authoranal0_.analytics_id as analytic1_4_0_,
-        authoranal0_.bias as bias2_4_0_,
-        authoranal0_.engagement_rate as engageme3_4_0_,
-        authoranal0_.likes as likes4_4_0_,
-        authoranal0_.shares as shares5_4_0_,
-        authoranal0_.views as views6_4_0_ 
+        authoranal0_.analytics_id as analytic1_3_0_,
+        authoranal0_.bias as bias2_3_0_,
+        authoranal0_.engagement_rate as engageme3_3_0_,
+        authoranal0_.likes as likes4_3_0_,
+        authoranal0_.shares as shares5_3_0_,
+        authoranal0_.views as views6_3_0_ 
     from
         author_analytics authoranal0_ 
     where
@@ -680,52 +680,52 @@ Hibernate:
         article_analytics articleana0_
 Hibernate: 
     select
-        newspapera0_.analytics_id as analytic1_7_,
-        newspapera0_.bias as bias2_7_,
-        newspapera0_.engagement_rate as engageme3_7_,
-        newspapera0_.likes as likes4_7_,
-        newspapera0_.shares as shares5_7_,
-        newspapera0_.views as views6_7_ 
+        newspapera0_.analytics_id as analytic1_5_,
+        newspapera0_.bias as bias2_5_,
+        newspapera0_.engagement_rate as engageme3_5_,
+        newspapera0_.likes as likes4_5_,
+        newspapera0_.shares as shares5_5_,
+        newspapera0_.views as views6_5_ 
     from
         newspaper_analytics newspapera0_
 Hibernate: 
     select
-        owneranaly0_.analytics_id as analytic1_10_,
-        owneranaly0_.bias as bias2_10_,
-        owneranaly0_.engagement_rate as engageme3_10_,
-        owneranaly0_.likes as likes4_10_,
-        owneranaly0_.shares as shares5_10_,
-        owneranaly0_.views as views6_10_ 
+        owneranaly0_.analytics_id as analytic1_7_,
+        owneranaly0_.bias as bias2_7_,
+        owneranaly0_.engagement_rate as engageme3_7_,
+        owneranaly0_.likes as likes4_7_,
+        owneranaly0_.shares as shares5_7_,
+        owneranaly0_.views as views6_7_ 
     from
         owner_analytics owneranaly0_
 Hibernate: 
     select
-        topicanaly0_.analytics_id as analytic1_16_,
-        topicanaly0_.bias as bias2_16_,
-        topicanaly0_.engagement_rate as engageme3_16_,
-        topicanaly0_.likes as likes4_16_,
-        topicanaly0_.shares as shares5_16_,
-        topicanaly0_.views as views6_16_ 
+        topicanaly0_.analytics_id as analytic1_11_,
+        topicanaly0_.bias as bias2_11_,
+        topicanaly0_.engagement_rate as engageme3_11_,
+        topicanaly0_.likes as likes4_11_,
+        topicanaly0_.shares as shares5_11_,
+        topicanaly0_.views as views6_11_ 
     from
         topic_analytics topicanaly0_
 Hibernate: 
     select
-        publishera0_.analytics_id as analytic1_13_,
-        publishera0_.bias as bias2_13_,
-        publishera0_.engagement_rate as engageme3_13_,
-        publishera0_.likes as likes4_13_,
-        publishera0_.shares as shares5_13_,
-        publishera0_.views as views6_13_ 
+        publishera0_.analytics_id as analytic1_9_,
+        publishera0_.bias as bias2_9_,
+        publishera0_.engagement_rate as engageme3_9_,
+        publishera0_.likes as likes4_9_,
+        publishera0_.shares as shares5_9_,
+        publishera0_.views as views6_9_ 
     from
         publisher_analytics publishera0_
 Hibernate: 
     select
-        authoranal0_.analytics_id as analytic1_4_,
-        authoranal0_.bias as bias2_4_,
-        authoranal0_.engagement_rate as engageme3_4_,
-        authoranal0_.likes as likes4_4_,
-        authoranal0_.shares as shares5_4_,
-        authoranal0_.views as views6_4_ 
+        authoranal0_.analytics_id as analytic1_3_,
+        authoranal0_.bias as bias2_3_,
+        authoranal0_.engagement_rate as engageme3_3_,
+        authoranal0_.likes as likes4_3_,
+        authoranal0_.shares as shares5_3_,
+        authoranal0_.views as views6_3_ 
     from
         author_analytics authoranal0_
 Hibernate: 
@@ -750,21 +750,21 @@ Hibernate:
         (?, ?)
 Hibernate: 
     select
-        author0_.entity_id as entity_i1_3_,
-        author0_.analytics_id as analytic3_3_,
-        author0_.name as name2_3_ 
+        author0_.entity_id as entity_i1_2_,
+        author0_.analytics_id as analytic3_2_,
+        author0_.name as name2_2_ 
     from
         author author0_ 
     where
         author0_.name=?
 Hibernate: 
     select
-        authoranal0_.analytics_id as analytic1_4_0_,
-        authoranal0_.bias as bias2_4_0_,
-        authoranal0_.engagement_rate as engageme3_4_0_,
-        authoranal0_.likes as likes4_4_0_,
-        authoranal0_.shares as shares5_4_0_,
-        authoranal0_.views as views6_4_0_ 
+        authoranal0_.analytics_id as analytic1_3_0_,
+        authoranal0_.bias as bias2_3_0_,
+        authoranal0_.engagement_rate as engageme3_3_0_,
+        authoranal0_.likes as likes4_3_0_,
+        authoranal0_.shares as shares5_3_0_,
+        authoranal0_.views as views6_3_0_ 
     from
         author_analytics authoranal0_ 
     where
@@ -784,47 +784,47 @@ Hibernate:
         article article0_
 Hibernate: 
     select
-        newspaper0_.entity_id as entity_i1_6_,
-        newspaper0_.analytics_id as analytic3_6_,
-        newspaper0_.name as name2_6_ 
+        newspaper0_.entity_id as entity_i1_4_,
+        newspaper0_.analytics_id as analytic3_4_,
+        newspaper0_.name as name2_4_ 
     from
         newspaper newspaper0_
 Hibernate: 
     select
-        owner0_.entity_id as entity_i1_9_,
-        owner0_.analytics_id as analytic3_9_,
-        owner0_.name as name2_9_ 
+        owner0_.entity_id as entity_i1_6_,
+        owner0_.analytics_id as analytic3_6_,
+        owner0_.name as name2_6_ 
     from
         owner owner0_
 Hibernate: 
     select
-        topic0_.entity_id as entity_i1_15_,
-        topic0_.analytics_id as analytic3_15_,
-        topic0_.name as name2_15_ 
+        topic0_.entity_id as entity_i1_10_,
+        topic0_.analytics_id as analytic3_10_,
+        topic0_.name as name2_10_ 
     from
         topic topic0_
 Hibernate: 
     select
-        publisher0_.entity_id as entity_i1_12_,
-        publisher0_.analytics_id as analytic3_12_,
-        publisher0_.name as name2_12_ 
+        publisher0_.entity_id as entity_i1_8_,
+        publisher0_.analytics_id as analytic3_8_,
+        publisher0_.name as name2_8_ 
     from
         publisher publisher0_
 Hibernate: 
     select
-        author0_.entity_id as entity_i1_3_,
-        author0_.analytics_id as analytic3_3_,
-        author0_.name as name2_3_ 
+        author0_.entity_id as entity_i1_2_,
+        author0_.analytics_id as analytic3_2_,
+        author0_.name as name2_2_ 
     from
         author author0_
 Hibernate: 
     select
-        authoranal0_.analytics_id as analytic1_4_0_,
-        authoranal0_.bias as bias2_4_0_,
-        authoranal0_.engagement_rate as engageme3_4_0_,
-        authoranal0_.likes as likes4_4_0_,
-        authoranal0_.shares as shares5_4_0_,
-        authoranal0_.views as views6_4_0_ 
+        authoranal0_.analytics_id as analytic1_3_0_,
+        authoranal0_.bias as bias2_3_0_,
+        authoranal0_.engagement_rate as engageme3_3_0_,
+        authoranal0_.likes as likes4_3_0_,
+        authoranal0_.shares as shares5_3_0_,
+        authoranal0_.views as views6_3_0_ 
     from
         author_analytics authoranal0_ 
     where
@@ -847,52 +847,52 @@ Hibernate:
         article_analytics articleana0_
 Hibernate: 
     select
-        newspapera0_.analytics_id as analytic1_7_,
-        newspapera0_.bias as bias2_7_,
-        newspapera0_.engagement_rate as engageme3_7_,
-        newspapera0_.likes as likes4_7_,
-        newspapera0_.shares as shares5_7_,
-        newspapera0_.views as views6_7_ 
+        newspapera0_.analytics_id as analytic1_5_,
+        newspapera0_.bias as bias2_5_,
+        newspapera0_.engagement_rate as engageme3_5_,
+        newspapera0_.likes as likes4_5_,
+        newspapera0_.shares as shares5_5_,
+        newspapera0_.views as views6_5_ 
     from
         newspaper_analytics newspapera0_
 Hibernate: 
     select
-        owneranaly0_.analytics_id as analytic1_10_,
-        owneranaly0_.bias as bias2_10_,
-        owneranaly0_.engagement_rate as engageme3_10_,
-        owneranaly0_.likes as likes4_10_,
-        owneranaly0_.shares as shares5_10_,
-        owneranaly0_.views as views6_10_ 
+        owneranaly0_.analytics_id as analytic1_7_,
+        owneranaly0_.bias as bias2_7_,
+        owneranaly0_.engagement_rate as engageme3_7_,
+        owneranaly0_.likes as likes4_7_,
+        owneranaly0_.shares as shares5_7_,
+        owneranaly0_.views as views6_7_ 
     from
         owner_analytics owneranaly0_
 Hibernate: 
     select
-        topicanaly0_.analytics_id as analytic1_16_,
-        topicanaly0_.bias as bias2_16_,
-        topicanaly0_.engagement_rate as engageme3_16_,
-        topicanaly0_.likes as likes4_16_,
-        topicanaly0_.shares as shares5_16_,
-        topicanaly0_.views as views6_16_ 
+        topicanaly0_.analytics_id as analytic1_11_,
+        topicanaly0_.bias as bias2_11_,
+        topicanaly0_.engagement_rate as engageme3_11_,
+        topicanaly0_.likes as likes4_11_,
+        topicanaly0_.shares as shares5_11_,
+        topicanaly0_.views as views6_11_ 
     from
         topic_analytics topicanaly0_
 Hibernate: 
     select
-        publishera0_.analytics_id as analytic1_13_,
-        publishera0_.bias as bias2_13_,
-        publishera0_.engagement_rate as engageme3_13_,
-        publishera0_.likes as likes4_13_,
-        publishera0_.shares as shares5_13_,
-        publishera0_.views as views6_13_ 
+        publishera0_.analytics_id as analytic1_9_,
+        publishera0_.bias as bias2_9_,
+        publishera0_.engagement_rate as engageme3_9_,
+        publishera0_.likes as likes4_9_,
+        publishera0_.shares as shares5_9_,
+        publishera0_.views as views6_9_ 
     from
         publisher_analytics publishera0_
 Hibernate: 
     select
-        authoranal0_.analytics_id as analytic1_4_,
-        authoranal0_.bias as bias2_4_,
-        authoranal0_.engagement_rate as engageme3_4_,
-        authoranal0_.likes as likes4_4_,
-        authoranal0_.shares as shares5_4_,
-        authoranal0_.views as views6_4_ 
+        authoranal0_.analytics_id as analytic1_3_,
+        authoranal0_.bias as bias2_3_,
+        authoranal0_.engagement_rate as engageme3_3_,
+        authoranal0_.likes as likes4_3_,
+        authoranal0_.shares as shares5_3_,
+        authoranal0_.views as views6_3_ 
     from
         author_analytics authoranal0_
 Hibernate: 
@@ -917,34 +917,34 @@ Hibernate:
         (?, ?)
 Hibernate: 
     select
-        author0_.entity_id as entity_i1_3_,
-        author0_.analytics_id as analytic3_3_,
-        author0_.name as name2_3_ 
+        author0_.entity_id as entity_i1_2_,
+        author0_.analytics_id as analytic3_2_,
+        author0_.name as name2_2_ 
     from
         author author0_
 Hibernate: 
     select
-        authoranal0_.analytics_id as analytic1_4_0_,
-        authoranal0_.bias as bias2_4_0_,
-        authoranal0_.engagement_rate as engageme3_4_0_,
-        authoranal0_.likes as likes4_4_0_,
-        authoranal0_.shares as shares5_4_0_,
-        authoranal0_.views as views6_4_0_ 
+        authoranal0_.analytics_id as analytic1_3_0_,
+        authoranal0_.bias as bias2_3_0_,
+        authoranal0_.engagement_rate as engageme3_3_0_,
+        authoranal0_.likes as likes4_3_0_,
+        authoranal0_.shares as shares5_3_0_,
+        authoranal0_.views as views6_3_0_ 
     from
         author_analytics authoranal0_ 
     where
         authoranal0_.analytics_id=?
 Hibernate: 
     select
-        author0_.entity_id as entity_i1_3_0_,
-        author0_.analytics_id as analytic3_3_0_,
-        author0_.name as name2_3_0_,
-        authoranal1_.analytics_id as analytic1_4_1_,
-        authoranal1_.bias as bias2_4_1_,
-        authoranal1_.engagement_rate as engageme3_4_1_,
-        authoranal1_.likes as likes4_4_1_,
-        authoranal1_.shares as shares5_4_1_,
-        authoranal1_.views as views6_4_1_ 
+        author0_.entity_id as entity_i1_2_0_,
+        author0_.analytics_id as analytic3_2_0_,
+        author0_.name as name2_2_0_,
+        authoranal1_.analytics_id as analytic1_3_1_,
+        authoranal1_.bias as bias2_3_1_,
+        authoranal1_.engagement_rate as engageme3_3_1_,
+        authoranal1_.likes as likes4_3_1_,
+        authoranal1_.shares as shares5_3_1_,
+        authoranal1_.views as views6_3_1_ 
     from
         author author0_ 
     inner join
@@ -967,47 +967,47 @@ Hibernate:
         article article0_
 Hibernate: 
     select
-        newspaper0_.entity_id as entity_i1_6_,
-        newspaper0_.analytics_id as analytic3_6_,
-        newspaper0_.name as name2_6_ 
+        newspaper0_.entity_id as entity_i1_4_,
+        newspaper0_.analytics_id as analytic3_4_,
+        newspaper0_.name as name2_4_ 
     from
         newspaper newspaper0_
 Hibernate: 
     select
-        owner0_.entity_id as entity_i1_9_,
-        owner0_.analytics_id as analytic3_9_,
-        owner0_.name as name2_9_ 
+        owner0_.entity_id as entity_i1_6_,
+        owner0_.analytics_id as analytic3_6_,
+        owner0_.name as name2_6_ 
     from
         owner owner0_
 Hibernate: 
     select
-        topic0_.entity_id as entity_i1_15_,
-        topic0_.analytics_id as analytic3_15_,
-        topic0_.name as name2_15_ 
+        topic0_.entity_id as entity_i1_10_,
+        topic0_.analytics_id as analytic3_10_,
+        topic0_.name as name2_10_ 
     from
         topic topic0_
 Hibernate: 
     select
-        publisher0_.entity_id as entity_i1_12_,
-        publisher0_.analytics_id as analytic3_12_,
-        publisher0_.name as name2_12_ 
+        publisher0_.entity_id as entity_i1_8_,
+        publisher0_.analytics_id as analytic3_8_,
+        publisher0_.name as name2_8_ 
     from
         publisher publisher0_
 Hibernate: 
     select
-        author0_.entity_id as entity_i1_3_,
-        author0_.analytics_id as analytic3_3_,
-        author0_.name as name2_3_ 
+        author0_.entity_id as entity_i1_2_,
+        author0_.analytics_id as analytic3_2_,
+        author0_.name as name2_2_ 
     from
         author author0_
 Hibernate: 
     select
-        authoranal0_.analytics_id as analytic1_4_0_,
-        authoranal0_.bias as bias2_4_0_,
-        authoranal0_.engagement_rate as engageme3_4_0_,
-        authoranal0_.likes as likes4_4_0_,
-        authoranal0_.shares as shares5_4_0_,
-        authoranal0_.views as views6_4_0_ 
+        authoranal0_.analytics_id as analytic1_3_0_,
+        authoranal0_.bias as bias2_3_0_,
+        authoranal0_.engagement_rate as engageme3_3_0_,
+        authoranal0_.likes as likes4_3_0_,
+        authoranal0_.shares as shares5_3_0_,
+        authoranal0_.views as views6_3_0_ 
     from
         author_analytics authoranal0_ 
     where
@@ -1030,52 +1030,52 @@ Hibernate:
         article_analytics articleana0_
 Hibernate: 
     select
-        newspapera0_.analytics_id as analytic1_7_,
-        newspapera0_.bias as bias2_7_,
-        newspapera0_.engagement_rate as engageme3_7_,
-        newspapera0_.likes as likes4_7_,
-        newspapera0_.shares as shares5_7_,
-        newspapera0_.views as views6_7_ 
+        newspapera0_.analytics_id as analytic1_5_,
+        newspapera0_.bias as bias2_5_,
+        newspapera0_.engagement_rate as engageme3_5_,
+        newspapera0_.likes as likes4_5_,
+        newspapera0_.shares as shares5_5_,
+        newspapera0_.views as views6_5_ 
     from
         newspaper_analytics newspapera0_
 Hibernate: 
     select
-        owneranaly0_.analytics_id as analytic1_10_,
-        owneranaly0_.bias as bias2_10_,
-        owneranaly0_.engagement_rate as engageme3_10_,
-        owneranaly0_.likes as likes4_10_,
-        owneranaly0_.shares as shares5_10_,
-        owneranaly0_.views as views6_10_ 
+        owneranaly0_.analytics_id as analytic1_7_,
+        owneranaly0_.bias as bias2_7_,
+        owneranaly0_.engagement_rate as engageme3_7_,
+        owneranaly0_.likes as likes4_7_,
+        owneranaly0_.shares as shares5_7_,
+        owneranaly0_.views as views6_7_ 
     from
         owner_analytics owneranaly0_
 Hibernate: 
     select
-        topicanaly0_.analytics_id as analytic1_16_,
-        topicanaly0_.bias as bias2_16_,
-        topicanaly0_.engagement_rate as engageme3_16_,
-        topicanaly0_.likes as likes4_16_,
-        topicanaly0_.shares as shares5_16_,
-        topicanaly0_.views as views6_16_ 
+        topicanaly0_.analytics_id as analytic1_11_,
+        topicanaly0_.bias as bias2_11_,
+        topicanaly0_.engagement_rate as engageme3_11_,
+        topicanaly0_.likes as likes4_11_,
+        topicanaly0_.shares as shares5_11_,
+        topicanaly0_.views as views6_11_ 
     from
         topic_analytics topicanaly0_
 Hibernate: 
     select
-        publishera0_.analytics_id as analytic1_13_,
-        publishera0_.bias as bias2_13_,
-        publishera0_.engagement_rate as engageme3_13_,
-        publishera0_.likes as likes4_13_,
-        publishera0_.shares as shares5_13_,
-        publishera0_.views as views6_13_ 
+        publishera0_.analytics_id as analytic1_9_,
+        publishera0_.bias as bias2_9_,
+        publishera0_.engagement_rate as engageme3_9_,
+        publishera0_.likes as likes4_9_,
+        publishera0_.shares as shares5_9_,
+        publishera0_.views as views6_9_ 
     from
         publisher_analytics publishera0_
 Hibernate: 
     select
-        authoranal0_.analytics_id as analytic1_4_,
-        authoranal0_.bias as bias2_4_,
-        authoranal0_.engagement_rate as engageme3_4_,
-        authoranal0_.likes as likes4_4_,
-        authoranal0_.shares as shares5_4_,
-        authoranal0_.views as views6_4_ 
+        authoranal0_.analytics_id as analytic1_3_,
+        authoranal0_.bias as bias2_3_,
+        authoranal0_.engagement_rate as engageme3_3_,
+        authoranal0_.likes as likes4_3_,
+        authoranal0_.shares as shares5_3_,
+        authoranal0_.views as views6_3_ 
     from
         author_analytics authoranal0_
 Hibernate: 
@@ -1100,15 +1100,15 @@ Hibernate:
         (?, ?)
 Hibernate: 
     select
-        author0_.entity_id as entity_i1_3_0_,
-        author0_.analytics_id as analytic3_3_0_,
-        author0_.name as name2_3_0_,
-        authoranal1_.analytics_id as analytic1_4_1_,
-        authoranal1_.bias as bias2_4_1_,
-        authoranal1_.engagement_rate as engageme3_4_1_,
-        authoranal1_.likes as likes4_4_1_,
-        authoranal1_.shares as shares5_4_1_,
-        authoranal1_.views as views6_4_1_ 
+        author0_.entity_id as entity_i1_2_0_,
+        author0_.analytics_id as analytic3_2_0_,
+        author0_.name as name2_2_0_,
+        authoranal1_.analytics_id as analytic1_3_1_,
+        authoranal1_.bias as bias2_3_1_,
+        authoranal1_.engagement_rate as engageme3_3_1_,
+        authoranal1_.likes as likes4_3_1_,
+        authoranal1_.shares as shares5_3_1_,
+        authoranal1_.views as views6_3_1_ 
     from
         author author0_ 
     inner join
@@ -1131,47 +1131,47 @@ Hibernate:
         article article0_
 Hibernate: 
     select
-        newspaper0_.entity_id as entity_i1_6_,
-        newspaper0_.analytics_id as analytic3_6_,
-        newspaper0_.name as name2_6_ 
+        newspaper0_.entity_id as entity_i1_4_,
+        newspaper0_.analytics_id as analytic3_4_,
+        newspaper0_.name as name2_4_ 
     from
         newspaper newspaper0_
 Hibernate: 
     select
-        owner0_.entity_id as entity_i1_9_,
-        owner0_.analytics_id as analytic3_9_,
-        owner0_.name as name2_9_ 
+        owner0_.entity_id as entity_i1_6_,
+        owner0_.analytics_id as analytic3_6_,
+        owner0_.name as name2_6_ 
     from
         owner owner0_
 Hibernate: 
     select
-        topic0_.entity_id as entity_i1_15_,
-        topic0_.analytics_id as analytic3_15_,
-        topic0_.name as name2_15_ 
+        topic0_.entity_id as entity_i1_10_,
+        topic0_.analytics_id as analytic3_10_,
+        topic0_.name as name2_10_ 
     from
         topic topic0_
 Hibernate: 
     select
-        publisher0_.entity_id as entity_i1_12_,
-        publisher0_.analytics_id as analytic3_12_,
-        publisher0_.name as name2_12_ 
+        publisher0_.entity_id as entity_i1_8_,
+        publisher0_.analytics_id as analytic3_8_,
+        publisher0_.name as name2_8_ 
     from
         publisher publisher0_
 Hibernate: 
     select
-        author0_.entity_id as entity_i1_3_,
-        author0_.analytics_id as analytic3_3_,
-        author0_.name as name2_3_ 
+        author0_.entity_id as entity_i1_2_,
+        author0_.analytics_id as analytic3_2_,
+        author0_.name as name2_2_ 
     from
         author author0_
 Hibernate: 
     select
-        authoranal0_.analytics_id as analytic1_4_0_,
-        authoranal0_.bias as bias2_4_0_,
-        authoranal0_.engagement_rate as engageme3_4_0_,
-        authoranal0_.likes as likes4_4_0_,
-        authoranal0_.shares as shares5_4_0_,
-        authoranal0_.views as views6_4_0_ 
+        authoranal0_.analytics_id as analytic1_3_0_,
+        authoranal0_.bias as bias2_3_0_,
+        authoranal0_.engagement_rate as engageme3_3_0_,
+        authoranal0_.likes as likes4_3_0_,
+        authoranal0_.shares as shares5_3_0_,
+        authoranal0_.views as views6_3_0_ 
     from
         author_analytics authoranal0_ 
     where
@@ -1194,52 +1194,52 @@ Hibernate:
         article_analytics articleana0_
 Hibernate: 
     select
-        newspapera0_.analytics_id as analytic1_7_,
-        newspapera0_.bias as bias2_7_,
-        newspapera0_.engagement_rate as engageme3_7_,
-        newspapera0_.likes as likes4_7_,
-        newspapera0_.shares as shares5_7_,
-        newspapera0_.views as views6_7_ 
+        newspapera0_.analytics_id as analytic1_5_,
+        newspapera0_.bias as bias2_5_,
+        newspapera0_.engagement_rate as engageme3_5_,
+        newspapera0_.likes as likes4_5_,
+        newspapera0_.shares as shares5_5_,
+        newspapera0_.views as views6_5_ 
     from
         newspaper_analytics newspapera0_
 Hibernate: 
     select
-        owneranaly0_.analytics_id as analytic1_10_,
-        owneranaly0_.bias as bias2_10_,
-        owneranaly0_.engagement_rate as engageme3_10_,
-        owneranaly0_.likes as likes4_10_,
-        owneranaly0_.shares as shares5_10_,
-        owneranaly0_.views as views6_10_ 
+        owneranaly0_.analytics_id as analytic1_7_,
+        owneranaly0_.bias as bias2_7_,
+        owneranaly0_.engagement_rate as engageme3_7_,
+        owneranaly0_.likes as likes4_7_,
+        owneranaly0_.shares as shares5_7_,
+        owneranaly0_.views as views6_7_ 
     from
         owner_analytics owneranaly0_
 Hibernate: 
     select
-        topicanaly0_.analytics_id as analytic1_16_,
-        topicanaly0_.bias as bias2_16_,
-        topicanaly0_.engagement_rate as engageme3_16_,
-        topicanaly0_.likes as likes4_16_,
-        topicanaly0_.shares as shares5_16_,
-        topicanaly0_.views as views6_16_ 
+        topicanaly0_.analytics_id as analytic1_11_,
+        topicanaly0_.bias as bias2_11_,
+        topicanaly0_.engagement_rate as engageme3_11_,
+        topicanaly0_.likes as likes4_11_,
+        topicanaly0_.shares as shares5_11_,
+        topicanaly0_.views as views6_11_ 
     from
         topic_analytics topicanaly0_
 Hibernate: 
     select
-        publishera0_.analytics_id as analytic1_13_,
-        publishera0_.bias as bias2_13_,
-        publishera0_.engagement_rate as engageme3_13_,
-        publishera0_.likes as likes4_13_,
-        publishera0_.shares as shares5_13_,
-        publishera0_.views as views6_13_ 
+        publishera0_.analytics_id as analytic1_9_,
+        publishera0_.bias as bias2_9_,
+        publishera0_.engagement_rate as engageme3_9_,
+        publishera0_.likes as likes4_9_,
+        publishera0_.shares as shares5_9_,
+        publishera0_.views as views6_9_ 
     from
         publisher_analytics publishera0_
 Hibernate: 
     select
-        authoranal0_.analytics_id as analytic1_4_,
-        authoranal0_.bias as bias2_4_,
-        authoranal0_.engagement_rate as engageme3_4_,
-        authoranal0_.likes as likes4_4_,
-        authoranal0_.shares as shares5_4_,
-        authoranal0_.views as views6_4_ 
+        authoranal0_.analytics_id as analytic1_3_,
+        authoranal0_.bias as bias2_3_,
+        authoranal0_.engagement_rate as engageme3_3_,
+        authoranal0_.likes as likes4_3_,
+        authoranal0_.shares as shares5_3_,
+        authoranal0_.views as views6_3_ 
     from
         author_analytics authoranal0_
 Hibernate: 
@@ -1264,19 +1264,19 @@ Hibernate:
         (?, ?)
 Hibernate: 
     select
-        author0_.entity_id as entity_i1_3_,
-        author0_.analytics_id as analytic3_3_,
-        author0_.name as name2_3_ 
+        author0_.entity_id as entity_i1_2_,
+        author0_.analytics_id as analytic3_2_,
+        author0_.name as name2_2_ 
     from
         author author0_
 Hibernate: 
     select
-        authoranal0_.analytics_id as analytic1_4_0_,
-        authoranal0_.bias as bias2_4_0_,
-        authoranal0_.engagement_rate as engageme3_4_0_,
-        authoranal0_.likes as likes4_4_0_,
-        authoranal0_.shares as shares5_4_0_,
-        authoranal0_.views as views6_4_0_ 
+        authoranal0_.analytics_id as analytic1_3_0_,
+        authoranal0_.bias as bias2_3_0_,
+        authoranal0_.engagement_rate as engageme3_3_0_,
+        authoranal0_.likes as likes4_3_0_,
+        authoranal0_.shares as shares5_3_0_,
+        authoranal0_.views as views6_3_0_ 
     from
         author_analytics authoranal0_ 
     where
@@ -1289,9 +1289,9 @@ Hibernate:
         entity_id=?
 Hibernate: 
     select
-        author0_.entity_id as entity_i1_3_,
-        author0_.analytics_id as analytic3_3_,
-        author0_.name as name2_3_ 
+        author0_.entity_id as entity_i1_2_,
+        author0_.analytics_id as analytic3_2_,
+        author0_.name as name2_2_ 
     from
         author author0_
 Hibernate: 
@@ -1309,37 +1309,37 @@ Hibernate:
         article article0_
 Hibernate: 
     select
-        newspaper0_.entity_id as entity_i1_6_,
-        newspaper0_.analytics_id as analytic3_6_,
-        newspaper0_.name as name2_6_ 
+        newspaper0_.entity_id as entity_i1_4_,
+        newspaper0_.analytics_id as analytic3_4_,
+        newspaper0_.name as name2_4_ 
     from
         newspaper newspaper0_
 Hibernate: 
     select
-        owner0_.entity_id as entity_i1_9_,
-        owner0_.analytics_id as analytic3_9_,
-        owner0_.name as name2_9_ 
+        owner0_.entity_id as entity_i1_6_,
+        owner0_.analytics_id as analytic3_6_,
+        owner0_.name as name2_6_ 
     from
         owner owner0_
 Hibernate: 
     select
-        topic0_.entity_id as entity_i1_15_,
-        topic0_.analytics_id as analytic3_15_,
-        topic0_.name as name2_15_ 
+        topic0_.entity_id as entity_i1_10_,
+        topic0_.analytics_id as analytic3_10_,
+        topic0_.name as name2_10_ 
     from
         topic topic0_
 Hibernate: 
     select
-        publisher0_.entity_id as entity_i1_12_,
-        publisher0_.analytics_id as analytic3_12_,
-        publisher0_.name as name2_12_ 
+        publisher0_.entity_id as entity_i1_8_,
+        publisher0_.analytics_id as analytic3_8_,
+        publisher0_.name as name2_8_ 
     from
         publisher publisher0_
 Hibernate: 
     select
-        author0_.entity_id as entity_i1_3_,
-        author0_.analytics_id as analytic3_3_,
-        author0_.name as name2_3_ 
+        author0_.entity_id as entity_i1_2_,
+        author0_.analytics_id as analytic3_2_,
+        author0_.name as name2_2_ 
     from
         author author0_
 Hibernate: 
@@ -1354,52 +1354,52 @@ Hibernate:
         article_analytics articleana0_
 Hibernate: 
     select
-        newspapera0_.analytics_id as analytic1_7_,
-        newspapera0_.bias as bias2_7_,
-        newspapera0_.engagement_rate as engageme3_7_,
-        newspapera0_.likes as likes4_7_,
-        newspapera0_.shares as shares5_7_,
-        newspapera0_.views as views6_7_ 
+        newspapera0_.analytics_id as analytic1_5_,
+        newspapera0_.bias as bias2_5_,
+        newspapera0_.engagement_rate as engageme3_5_,
+        newspapera0_.likes as likes4_5_,
+        newspapera0_.shares as shares5_5_,
+        newspapera0_.views as views6_5_ 
     from
         newspaper_analytics newspapera0_
 Hibernate: 
     select
-        owneranaly0_.analytics_id as analytic1_10_,
-        owneranaly0_.bias as bias2_10_,
-        owneranaly0_.engagement_rate as engageme3_10_,
-        owneranaly0_.likes as likes4_10_,
-        owneranaly0_.shares as shares5_10_,
-        owneranaly0_.views as views6_10_ 
+        owneranaly0_.analytics_id as analytic1_7_,
+        owneranaly0_.bias as bias2_7_,
+        owneranaly0_.engagement_rate as engageme3_7_,
+        owneranaly0_.likes as likes4_7_,
+        owneranaly0_.shares as shares5_7_,
+        owneranaly0_.views as views6_7_ 
     from
         owner_analytics owneranaly0_
 Hibernate: 
     select
-        topicanaly0_.analytics_id as analytic1_16_,
-        topicanaly0_.bias as bias2_16_,
-        topicanaly0_.engagement_rate as engageme3_16_,
-        topicanaly0_.likes as likes4_16_,
-        topicanaly0_.shares as shares5_16_,
-        topicanaly0_.views as views6_16_ 
+        topicanaly0_.analytics_id as analytic1_11_,
+        topicanaly0_.bias as bias2_11_,
+        topicanaly0_.engagement_rate as engageme3_11_,
+        topicanaly0_.likes as likes4_11_,
+        topicanaly0_.shares as shares5_11_,
+        topicanaly0_.views as views6_11_ 
     from
         topic_analytics topicanaly0_
 Hibernate: 
     select
-        publishera0_.analytics_id as analytic1_13_,
-        publishera0_.bias as bias2_13_,
-        publishera0_.engagement_rate as engageme3_13_,
-        publishera0_.likes as likes4_13_,
-        publishera0_.shares as shares5_13_,
-        publishera0_.views as views6_13_ 
+        publishera0_.analytics_id as analytic1_9_,
+        publishera0_.bias as bias2_9_,
+        publishera0_.engagement_rate as engageme3_9_,
+        publishera0_.likes as likes4_9_,
+        publishera0_.shares as shares5_9_,
+        publishera0_.views as views6_9_ 
     from
         publisher_analytics publishera0_
 Hibernate: 
     select
-        authoranal0_.analytics_id as analytic1_4_,
-        authoranal0_.bias as bias2_4_,
-        authoranal0_.engagement_rate as engageme3_4_,
-        authoranal0_.likes as likes4_4_,
-        authoranal0_.shares as shares5_4_,
-        authoranal0_.views as views6_4_ 
+        authoranal0_.analytics_id as analytic1_3_,
+        authoranal0_.bias as bias2_3_,
+        authoranal0_.engagement_rate as engageme3_3_,
+        authoranal0_.likes as likes4_3_,
+        authoranal0_.shares as shares5_3_,
+        authoranal0_.views as views6_3_ 
     from
         author_analytics authoranal0_
 Hibernate: 
@@ -1424,19 +1424,19 @@ Hibernate:
         (?, ?)
 Hibernate: 
     select
-        author0_.entity_id as entity_i1_3_,
-        author0_.analytics_id as analytic3_3_,
-        author0_.name as name2_3_ 
+        author0_.entity_id as entity_i1_2_,
+        author0_.analytics_id as analytic3_2_,
+        author0_.name as name2_2_ 
     from
         author author0_
 Hibernate: 
     select
-        authoranal0_.analytics_id as analytic1_4_0_,
-        authoranal0_.bias as bias2_4_0_,
-        authoranal0_.engagement_rate as engageme3_4_0_,
-        authoranal0_.likes as likes4_4_0_,
-        authoranal0_.shares as shares5_4_0_,
-        authoranal0_.views as views6_4_0_ 
+        authoranal0_.analytics_id as analytic1_3_0_,
+        authoranal0_.bias as bias2_3_0_,
+        authoranal0_.engagement_rate as engageme3_3_0_,
+        authoranal0_.likes as likes4_3_0_,
+        authoranal0_.shares as shares5_3_0_,
+        authoranal0_.views as views6_3_0_ 
     from
         author_analytics authoranal0_ 
     where
@@ -1449,9 +1449,9 @@ Hibernate:
         entity_id=?
 Hibernate: 
     select
-        author0_.entity_id as entity_i1_3_,
-        author0_.analytics_id as analytic3_3_,
-        author0_.name as name2_3_ 
+        author0_.entity_id as entity_i1_2_,
+        author0_.analytics_id as analytic3_2_,
+        author0_.name as name2_2_ 
     from
         author author0_
 ]]></system-out>
