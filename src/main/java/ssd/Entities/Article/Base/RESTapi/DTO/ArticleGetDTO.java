@@ -1,5 +1,6 @@
 package ssd.Entities.Article.Base.RESTapi.DTO;
 
+import ssd.AbstractClasses.Base.RESTapi.DTO.BaseEntityGetDTO;
 import ssd.Entities.Article.Analytics.ArticleAnalytics;
 import ssd.Entities.Author.Base.RESTapi.DTO.AuthorGetDTO;
 import ssd.Entities.Newspaper.Base.RESTapi.DTO.NewspaperGetDTO;
@@ -7,34 +8,16 @@ import ssd.Entities.Owner.Base.RESTapi.DTO.OwnerGetDTO;
 import ssd.Entities.Publisher.Base.RESTapi.DTO.PublisherGetDTO;
 import ssd.Entities.Topic.Base.RESTapi.DTO.TopicGetDTO;
 
-public class ArticleGetDTO {
-    private Long articleId;
-    private String name;
+public class ArticleGetDTO extends BaseEntityGetDTO<ArticleAnalytics> {
+
     private AuthorGetDTO author;
     private PublisherGetDTO publisher;
     private TopicGetDTO topic;
     private OwnerGetDTO owner;
     private NewspaperGetDTO newspaper;
     private String content;
-    private ArticleAnalytics analytics;
 
     // Getters and Setters
-
-    public Long getArticleId() {
-        return articleId;
-    }
-
-    public void setArticleId(Long articleId) {
-        this.articleId = articleId;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String title) {
-        this.name = title;
-    }
 
     public AuthorGetDTO getAuthor() {
         return author;
@@ -82,13 +65,5 @@ public class ArticleGetDTO {
 
     public void setContent(String content) {
         this.content = content;
-    }
-
-    public ArticleAnalytics getAnalytics() {
-        return analytics;
-    }
-
-    public void setAnalytics(ArticleAnalytics articleAnalytics) {
-        this.analytics = articleAnalytics;
     }
 }

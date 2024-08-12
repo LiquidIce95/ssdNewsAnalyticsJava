@@ -227,15 +227,15 @@ public class ArticleControllerTest {
     }
 
     @Test
-    public void testGetArticlesByTitle_notFound() throws Exception {
-        ResponseEntity<String> response = restTemplate.getForEntity("/articles/title/Nonexistent Title", String.class);
+    public void testGetArticlesByName_notFound() throws Exception {
+        ResponseEntity<String> response = restTemplate.getForEntity("/articles/name/Nonexistent Title", String.class);
         assertThat(response.getStatusCode()).isEqualTo(HttpStatus.NOT_FOUND);
     }
 
     @Test
-    public void testGetArticlesByTitle() throws Exception {
+    public void testGetArticlesByName() throws Exception {
         String title = "The Impact of Climate Change on Coastal Communities";
-        ResponseEntity<Article[]> response = restTemplate.getForEntity("/articles/title/" + title, Article[].class);
+        ResponseEntity<Article[]> response = restTemplate.getForEntity("/articles/name/" + title, Article[].class);
         assertThat(response.getStatusCode()).isEqualTo(HttpStatus.OK);
         Article[] articles = response.getBody();
         assertThat(articles).isNotNull();

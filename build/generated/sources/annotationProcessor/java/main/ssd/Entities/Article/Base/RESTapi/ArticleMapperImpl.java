@@ -1,6 +1,7 @@
 package ssd.Entities.Article.Base.RESTapi;
 
 import javax.annotation.processing.Generated;
+import org.springframework.stereotype.Component;
 import ssd.Entities.Article.Base.Article;
 import ssd.Entities.Article.Base.RESTapi.DTO.ArticleGetDTO;
 import ssd.Entities.Author.Base.Author;
@@ -16,13 +17,14 @@ import ssd.Entities.Topic.Base.Topic;
 
 @Generated(
     value = "org.mapstruct.ap.MappingProcessor",
-    date = "2024-08-11T17:21:43+0200",
+    date = "2024-08-12T15:16:10+0200",
     comments = "version: 1.3.1.Final, compiler: javac, environment: Java 17.0.10 (Debian)"
 )
+@Component
 public class ArticleMapperImpl implements ArticleMapper {
 
     @Override
-    public ArticleGetDTO convertEntityToArticleGetDTO(Article article) {
+    public ArticleGetDTO convertEntityToGetDTO(Article article) {
         if ( article == null ) {
             return null;
         }
@@ -36,6 +38,7 @@ public class ArticleMapperImpl implements ArticleMapper {
         articleGetDTO.setName( article.getName() );
         articleGetDTO.setPublisher( publisherToPublisherGetDTO( article.getPublisher() ) );
         articleGetDTO.setTopic( topicToTopicGetDTO( article.getTopic() ) );
+        articleGetDTO.setId( article.getId() );
         articleGetDTO.setContent( article.getContent() );
 
         return articleGetDTO;
