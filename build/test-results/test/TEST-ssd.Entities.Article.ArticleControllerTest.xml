@@ -1,20 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="ssd.Entities.Article.ArticleControllerTest" tests="8" skipped="0" failures="0" errors="0" timestamp="2024-08-12T15:24:42" hostname="COMMODORE" time="0.684">
+<testsuite name="ssd.Entities.Article.ArticleControllerTest" tests="8" skipped="0" failures="0" errors="0" timestamp="2024-08-13T08:52:12" hostname="COMMODORE" time="0.705">
   <properties/>
-  <testcase name="testGetPopularArticles()" classname="ssd.Entities.Article.ArticleControllerTest" time="0.314"/>
-  <testcase name="testGetArticleById()" classname="ssd.Entities.Article.ArticleControllerTest" time="0.068"/>
-  <testcase name="testGetArticleById_notFound()" classname="ssd.Entities.Article.ArticleControllerTest" time="0.047"/>
-  <testcase name="testGetArticlesByName()" classname="ssd.Entities.Article.ArticleControllerTest" time="0.065"/>
-  <testcase name="testGetPopularArticles_noContent()" classname="ssd.Entities.Article.ArticleControllerTest" time="0.061"/>
-  <testcase name="testGetAllArticles()" classname="ssd.Entities.Article.ArticleControllerTest" time="0.04"/>
-  <testcase name="testGetArticlesByName_notFound()" classname="ssd.Entities.Article.ArticleControllerTest" time="0.041"/>
-  <testcase name="testGetAllArticles_emptyDatabase()" classname="ssd.Entities.Article.ArticleControllerTest" time="0.042"/>
-  <system-out><![CDATA[2024-08-12 17:24:42.927  INFO 322418 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Neither @ContextConfiguration nor @ContextHierarchy found for test class [ssd.Entities.Article.ArticleControllerTest], using SpringBootContextLoader
-2024-08-12 17:24:42.928  INFO 322418 --- [    Test worker] o.s.t.c.support.AbstractContextLoader    : Could not detect default resource locations for test class [ssd.Entities.Article.ArticleControllerTest]: no resource found for suffixes {-context.xml, Context.groovy}.
-2024-08-12 17:24:42.928  INFO 322418 --- [    Test worker] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [ssd.Entities.Article.ArticleControllerTest]: ArticleControllerTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
-2024-08-12 17:24:42.932  INFO 322418 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration ssd.SSDApplication for test class ssd.Entities.Article.ArticleControllerTest
-2024-08-12 17:24:42.933  INFO 322418 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.event.ApplicationEventsTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
-2024-08-12 17:24:42.934  INFO 322418 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@1da5635e, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@7c35d7d, org.springframework.test.context.event.ApplicationEventsTestExecutionListener@24ccc91b, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@d0538b3, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@3b8c15de, org.springframework.test.context.support.DirtiesContextTestExecutionListener@26398f67, org.springframework.test.context.transaction.TransactionalTestExecutionListener@64ff0eaa, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@401b7226, org.springframework.test.context.event.EventPublishingTestExecutionListener@1b62ad1e, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@714a4ba2, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@6ddc817f, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@764d54a0, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@78c91d2a, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener@5b7d5eca, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@52a3eba3]
+  <testcase name="testGetPopularArticles()" classname="ssd.Entities.Article.ArticleControllerTest" time="0.308"/>
+  <testcase name="testGetArticleById()" classname="ssd.Entities.Article.ArticleControllerTest" time="0.072"/>
+  <testcase name="testGetArticleById_notFound()" classname="ssd.Entities.Article.ArticleControllerTest" time="0.059"/>
+  <testcase name="testGetArticlesByName()" classname="ssd.Entities.Article.ArticleControllerTest" time="0.072"/>
+  <testcase name="testGetPopularArticles_noContent()" classname="ssd.Entities.Article.ArticleControllerTest" time="0.051"/>
+  <testcase name="testGetAllArticles()" classname="ssd.Entities.Article.ArticleControllerTest" time="0.048"/>
+  <testcase name="testGetArticlesByName_notFound()" classname="ssd.Entities.Article.ArticleControllerTest" time="0.042"/>
+  <testcase name="testGetAllArticles_emptyDatabase()" classname="ssd.Entities.Article.ArticleControllerTest" time="0.043"/>
+  <system-out><![CDATA[2024-08-13 10:52:12.809  INFO 135058 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Neither @ContextConfiguration nor @ContextHierarchy found for test class [ssd.Entities.Article.ArticleControllerTest], using SpringBootContextLoader
+2024-08-13 10:52:12.810  INFO 135058 --- [    Test worker] o.s.t.c.support.AbstractContextLoader    : Could not detect default resource locations for test class [ssd.Entities.Article.ArticleControllerTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+2024-08-13 10:52:12.810  INFO 135058 --- [    Test worker] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [ssd.Entities.Article.ArticleControllerTest]: ArticleControllerTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2024-08-13 10:52:12.813  INFO 135058 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration ssd.SSDApplication for test class ssd.Entities.Article.ArticleControllerTest
+2024-08-13 10:52:12.814  INFO 135058 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.event.ApplicationEventsTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
+2024-08-13 10:52:12.814  INFO 135058 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@78c91d2a, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@5b7d5eca, org.springframework.test.context.event.ApplicationEventsTestExecutionListener@52a3eba3, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@4ed74d03, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@7ec729be, org.springframework.test.context.support.DirtiesContextTestExecutionListener@4f7da3a2, org.springframework.test.context.transaction.TransactionalTestExecutionListener@24ea71d, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@76055d02, org.springframework.test.context.event.EventPublishingTestExecutionListener@31c800a5, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@130ad58d, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@648bfebe, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@383a5260, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@4986b0ea, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener@ce5a2ea, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@37a0c3c6]
 Hibernate: 
     select
         article0_.entity_id as entity_i1_0_,
@@ -181,24 +181,6 @@ Hibernate:
     where
         publishera0_.analytics_id=?
 Hibernate: 
-    select
-        publishera0_.analytics_id as analytic1_9_0_,
-        publishera0_.bias as bias2_9_0_,
-        publishera0_.engagement_rate as engageme3_9_0_,
-        publishera0_.likes as likes4_9_0_,
-        publishera0_.shares as shares5_9_0_,
-        publishera0_.views as views6_9_0_ 
-    from
-        publisher_analytics publishera0_ 
-    where
-        publishera0_.analytics_id=?
-Hibernate: 
-    delete 
-    from
-        publisher 
-    where
-        entity_id=?
-Hibernate: 
     delete 
     from
         publisher 
@@ -223,6 +205,24 @@ Hibernate:
         topic_analytics topicanaly0_ 
     where
         topicanaly0_.analytics_id=?
+Hibernate: 
+    select
+        topicanaly0_.analytics_id as analytic1_11_0_,
+        topicanaly0_.bias as bias2_11_0_,
+        topicanaly0_.engagement_rate as engageme3_11_0_,
+        topicanaly0_.likes as likes4_11_0_,
+        topicanaly0_.shares as shares5_11_0_,
+        topicanaly0_.views as views6_11_0_ 
+    from
+        topic_analytics topicanaly0_ 
+    where
+        topicanaly0_.analytics_id=?
+Hibernate: 
+    delete 
+    from
+        topic 
+    where
+        entity_id=?
 Hibernate: 
     delete 
     from
@@ -328,12 +328,6 @@ Hibernate:
     where
         analytics_id=?
 Hibernate: 
-    delete 
-    from
-        publisher_analytics 
-    where
-        analytics_id=?
-Hibernate: 
     select
         topicanaly0_.analytics_id as analytic1_11_,
         topicanaly0_.bias as bias2_11_,
@@ -343,6 +337,12 @@ Hibernate:
         topicanaly0_.views as views6_11_ 
     from
         topic_analytics topicanaly0_
+Hibernate: 
+    delete 
+    from
+        topic_analytics 
+    where
+        analytics_id=?
 Hibernate: 
     delete 
     from
@@ -465,9 +465,9 @@ Hibernate:
         (analytics_id, name, author_id, content, newspaper_id, owner_id, publisher_id, topic_id) 
     values
         (?, ?, ?, ?, ?, ?, ?, ?)
-2024-08-12 17:24:43.155  INFO 322418 --- [nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2024-08-12 17:24:43.155  INFO 322418 --- [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2024-08-12 17:24:43.155  INFO 322418 --- [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
+2024-08-13 10:52:13.028  INFO 135058 --- [nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-08-13 10:52:13.029  INFO 135058 --- [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-08-13 10:52:13.030  INFO 135058 --- [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
 Hibernate: 
     select
         article0_.entity_id as entity_i1_0_,

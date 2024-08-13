@@ -41,7 +41,7 @@
 </td>
 <td>
 <div class="infoBox" id="duration">
-<div class="counter">0.250s</div>
+<div class="counter">0.184s</div>
 <p>duration</p>
 </div>
 </td>
@@ -79,42 +79,42 @@
 </thead>
 <tr>
 <td class="success">testGetAllAuthors()</td>
-<td class="success">0.055s</td>
+<td class="success">0.034s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">testGetAllAuthors_emptyDatabase()</td>
-<td class="success">0.033s</td>
+<td class="success">0.018s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">testGetAuthorById()</td>
-<td class="success">0.027s</td>
+<td class="success">0.020s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">testGetAuthorById_notFound()</td>
-<td class="success">0.028s</td>
+<td class="success">0.016s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">testGetAuthorsByName()</td>
-<td class="success">0.030s</td>
+<td class="success">0.019s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">testGetAuthorsByName_notFound()</td>
-<td class="success">0.023s</td>
+<td class="success">0.022s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">testGetPopularAuthors()</td>
-<td class="success">0.031s</td>
+<td class="success">0.022s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">testGetPopularAuthors_noContent()</td>
-<td class="success">0.023s</td>
+<td class="success">0.033s</td>
 <td class="success">passed</td>
 </tr>
 </table>
@@ -122,12 +122,12 @@
 <div id="tab1" class="tab">
 <h2>Standard output</h2>
 <span class="code">
-<pre>2024-08-12 17:24:43.626  INFO 322418 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Neither @ContextConfiguration nor @ContextHierarchy found for test class [ssd.Entities.Author.AuthorControllerTest], using SpringBootContextLoader
-2024-08-12 17:24:43.627  INFO 322418 --- [    Test worker] o.s.t.c.support.AbstractContextLoader    : Could not detect default resource locations for test class [ssd.Entities.Author.AuthorControllerTest]: no resource found for suffixes {-context.xml, Context.groovy}.
-2024-08-12 17:24:43.627  INFO 322418 --- [    Test worker] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [ssd.Entities.Author.AuthorControllerTest]: AuthorControllerTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
-2024-08-12 17:24:43.631  INFO 322418 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration ssd.SSDApplication for test class ssd.Entities.Author.AuthorControllerTest
-2024-08-12 17:24:43.633  INFO 322418 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.event.ApplicationEventsTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
-2024-08-12 17:24:43.633  INFO 322418 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@5122387, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@9abbe39, org.springframework.test.context.event.ApplicationEventsTestExecutionListener@11b234aa, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@1455a374, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@cfb462, org.springframework.test.context.support.DirtiesContextTestExecutionListener@54418834, org.springframework.test.context.transaction.TransactionalTestExecutionListener@54d6f172, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@6d21a69f, org.springframework.test.context.event.EventPublishingTestExecutionListener@10b063fd, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@48e859f7, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@2bd67cf9, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@4ba32242, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@581f1f40, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener@52b2c255, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@4a9b4d4e]
+<pre>2024-08-13 10:52:13.524  INFO 135058 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Neither @ContextConfiguration nor @ContextHierarchy found for test class [ssd.Entities.Author.AuthorControllerTest], using SpringBootContextLoader
+2024-08-13 10:52:13.525  INFO 135058 --- [    Test worker] o.s.t.c.support.AbstractContextLoader    : Could not detect default resource locations for test class [ssd.Entities.Author.AuthorControllerTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+2024-08-13 10:52:13.525  INFO 135058 --- [    Test worker] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [ssd.Entities.Author.AuthorControllerTest]: AuthorControllerTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2024-08-13 10:52:13.529  INFO 135058 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration ssd.SSDApplication for test class ssd.Entities.Author.AuthorControllerTest
+2024-08-13 10:52:13.530  INFO 135058 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.event.ApplicationEventsTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
+2024-08-13 10:52:13.531  INFO 135058 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@4a9b4d4e, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@18f8c76d, org.springframework.test.context.event.ApplicationEventsTestExecutionListener@383d2e2d, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@7c59f315, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@6c3830ed, org.springframework.test.context.support.DirtiesContextTestExecutionListener@32a541a8, org.springframework.test.context.transaction.TransactionalTestExecutionListener@63b85d97, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@50cadbae, org.springframework.test.context.event.EventPublishingTestExecutionListener@7d583602, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@65689000, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@441d3ddf, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@420c9959, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@7e584f3c, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener@5f113867, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@72cf159f]
 Hibernate: 
     select
         article0_.entity_id as entity_i1_0_,
@@ -1578,7 +1578,7 @@ Hibernate:
 <input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
 </label>
 </div>Generated by 
-<a href="http://www.gradle.org">Gradle 7.6</a> at Aug 12, 2024, 5:24:44 PM</p>
+<a href="http://www.gradle.org">Gradle 7.6</a> at Aug 13, 2024, 10:52:14 AM</p>
 </div>
 </div>
 </body>

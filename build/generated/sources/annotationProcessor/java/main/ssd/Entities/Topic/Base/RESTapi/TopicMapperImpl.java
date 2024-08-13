@@ -7,7 +7,7 @@ import ssd.Entities.Topic.Base.Topic;
 
 @Generated(
     value = "org.mapstruct.ap.MappingProcessor",
-    date = "2024-08-12T17:24:38+0200",
+    date = "2024-08-13T10:52:08+0200",
     comments = "version: 1.3.1.Final, compiler: javac, environment: Java 17.0.10 (Debian)"
 )
 @Component
